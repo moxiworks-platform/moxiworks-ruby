@@ -59,6 +59,19 @@ module MoxiworksPlatform
       'application/x-www-form-urlencoded'
     end
 
+    def self.check_for_error_in_response(response)
+      begin
+        json = JSON.parse(response)
+      rescue => e
+        raise MoxiworksPlatform::Exception::RemoteRequestFailure, "unable to parse remote response #{e}\n response:\n  #{response}"
+      end
+      message = "unable to perform remote action on Moxi Works platform\n"
+      message << json['messages'].join(',') unless json['messages'].nil?
+
+      raise MoxiworksPlatform::Exception::RemoteRequestFailure, message  if
+          not json['status'].nil? and  json['status'] == 'error'
+    end
+
     # maps Hash values to Instance variables for mapping JSON object values to our Class attributes
     #
     def initialize(hash={})

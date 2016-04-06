@@ -7,5 +7,7 @@ module MoxiworksPlatform
     class ArgumentError < PlatformError; end
 
     class AuthorizationError < PlatformError; end
+
+    class RemoteRequestFailure < PlatformError; end
   end
 end

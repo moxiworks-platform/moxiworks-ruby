@@ -626,7 +626,9 @@ module MoxiworksPlatform
                                   url: url,
                                   payload: opts, headers: self.headers) do |response|
         puts response if MoxiworksPlatform::Config.debug
+        self.check_for_error_in_response(response)
         json = JSON.parse(response)
+        return false if not json['status'].nil? and json['status'] =='fail'
         contact = MoxiworksPlatform::Contact.new(json) unless json.nil? or json.empty?
       end
       contact

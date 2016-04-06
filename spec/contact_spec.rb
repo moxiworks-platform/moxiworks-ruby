@@ -102,6 +102,101 @@ describe MoxiworksPlatform::Contact do
   end
 
 
+  describe :instance_methods do
+    let!(:platform_id){'abc123'}
+    let!(:platform_secret) { 'secret' }
+    let!(:agent_id) { '1234abcd' }
+    let!(:contact_id) { 'booyuh' }
+
+    before :each do
+      @contact = MoxiworksPlatform::Contact.new(moxi_works_agent_id: agent_id,
+                                                partner_contact_id: contact_id)
+    end
+
+    context :save do
+      context :credentials_required do
+        it 'should raise a MoxiworksPlatform::AuthorizationError if save is called without authorization' do
+          VCR.use_cassette('contact_update_success', record: :none) do
+            expect {@contact.save }.to raise_exception(MoxiworksPlatform::Exception::AuthorizationError)
+          end
+        end
+      end
+
+      context :test_response_data_handling do
+        before :each do
+          MoxiworksPlatform::Credentials.new(platform_id, platform_secret)
+        end
+
+        after :each do
+          MoxiworksPlatform::Credentials.platform_identifier = nil
+          MoxiworksPlatform::Credentials.platform_secret = nil
+          MoxiworksPlatform::Credentials.instance = nil
+        end
+
+
+        context :save_success do
+          it 'should return a MoxiworksPlatform::Contact Object when save is called' do
+            VCR.use_cassette('contact_create', record: :none) do
+              response = @contact.save
+              expect(response.class).to eq(MoxiworksPlatform::Contact)
+            end
+          end
+        end
+
+        context :save_fail do
+          it 'should return a MoxiworksPlatform::Contact Object when save is called' do
+            VCR.use_cassette('contact_create_fail', record: :none) do
+              response = @contact.save
+              expect(response).to be_falsey
+            end
+          end
+        end
+      end
+    end
+
+    context :delete do
+      context :credentials_required do
+        it 'should raise a MoxiworksPlatform::AuthorizationError if delete is called without authorization' do
+          VCR.use_cassette('contact_delete_success', record: :none) do
+            expect {@contact.delete }.to raise_exception(MoxiworksPlatform::Exception::AuthorizationError)
+          end
+        end
+      end
+
+      context :test_response_data_handling do
+        before :each do
+          MoxiworksPlatform::Credentials.new(platform_id, platform_secret)
+        end
+
+        after :each do
+          MoxiworksPlatform::Credentials.platform_identifier = nil
+          MoxiworksPlatform::Credentials.platform_secret = nil
+          MoxiworksPlatform::Credentials.instance = nil
+        end
+
+
+        context :delete_success do
+          it 'should return a MoxiworksPlatform::Contact Object when delete is called' do
+            VCR.use_cassette('contact_delete_success', record: :none) do
+              response = @contact.delete
+              expect(response).to be_truthy
+            end
+          end
+        end
+
+        context :delete_fail do
+          it 'should return a MoxiworksPlatform::Contact Object when delete is called' do
+            VCR.use_cassette('contact_delete_fail', record: :none) do
+              response = @contact.delete
+              expect(response).to be_falsey
+            end
+          end
+        end
+      end
+    end
+
+  end
+
 
   describe :class_methods do
     let!(:platform_id){'abc123'}
@@ -134,8 +229,17 @@ describe MoxiworksPlatform::Contact do
         context :delete_success do
           it 'should return a MoxiworksPlatform::Contact Object when find is called' do
             VCR.use_cassette('contact_delete_success', record: :none) do
-              response = MoxiworksPlatform::Contact.find(moxi_works_agent_id: agent_id, partner_contact_id: contact_id)
-              expect(contact.class).to eq(MoxiworksPlatform::Contact)
+              response = MoxiworksPlatform::Contact.delete(moxi_works_agent_id: agent_id, partner_contact_id: contact_id)
+              expect(response).to be_truthy
+            end
+          end
+        end
+
+        context :delete_fail do
+          it 'should return a MoxiworksPlatform::Contact Object when find is called' do
+            VCR.use_cassette('contact_delete_fail', record: :none) do
+              response = MoxiworksPlatform::Contact.delete(moxi_works_agent_id: agent_id, partner_contact_id: contact_id)
+              expect(response).to be_falsey
             end
           end
         end
