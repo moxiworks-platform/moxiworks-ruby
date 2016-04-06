@@ -101,7 +101,7 @@ module MoxiworksPlatform
     # Removing the secret access key from the default inspect string.
     # @api private
     def inspect
-      "#<#{self.class.name} access_key_id=#{platform_identifier.inspect}>"
+      "#<#{self.class.name} platform_identifier=#{platform_identifier.inspect}>"
     end
 
   end
