@@ -9,8 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Tres Wong-Godfrey"]
   spec.email         = ["tres.wong-godfrey@moxiworks.com"]
 
+  spec.description    =  %q{Moxi Works Platform Client Library For Ruby. Partners can use the Moxi Works Platform Library to quickly integrate into the Moxi Works Platform}
   spec.summary       = %q{Ruby Moxi Works Platform Client}
-  spec.homepage      = 'https://github.io/moxiworks-platform/moxiworks-ruby'
+  spec.homepage      = 'https://github.com/moxiworks-platform/moxiworks-ruby'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
