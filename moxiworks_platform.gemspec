@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["tres.wong-godfrey@moxiworks.com"]
 
   spec.summary       = %q{Ruby Moxi Works Platform Client}
-  spec.homepage      = 'http://github.io/moxiworks-platform/moxiworks-platform-ruby'
+  spec.homepage      = 'https://github.io/moxiworks-platform/moxiworks-ruby'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
@@ -21,6 +21,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency 'rest-client'
-  spec.add_dependency 'hashie'
+  gem 'factory_girl_rails', '~> 4.5.0'
 
 end

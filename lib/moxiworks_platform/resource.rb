@@ -38,7 +38,7 @@ module MoxiworksPlatform
     #
     # @return [String] Authorization header content
     def self.auth_header
-      raise 'MoxiworksPlatform::Credentials must be set before using' unless
+      raise ::MoxiworksPlatform::Exception::AuthorizationError, 'MoxiworksPlatform::Credentials must be set before using' unless
           MoxiworksPlatform::Credentials.set?
       identifier = MoxiworksPlatform::Credentials.platform_identifier
       secret = MoxiworksPlatform::Credentials.platform_secret
@@ -82,7 +82,6 @@ module MoxiworksPlatform
       self.attributes.each {|attr| hash[attr.to_sym] = self.send(attr)}
       hash
     end
-
 
   end
 

@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://abc123:secret@api.moxiworks.com/api/contacts/booyuh
+    body:
+      encoding: UTF-8
+      string: partner_contact_id=booyuh&moxi_works_agent_id=1234abcd
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '50'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"42c51a279cbe7301f9be3e14b88ddffc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e976552b-8433-4506-9839-b1426de79f1a
+      X-Runtime:
+      - '1.951105'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 05 Apr 2016 03:11:27 GMT
+      Content-Length:
+      - '1034'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _wms_svc_public_session=UEdrN0tud05vUkRqbnZuNGtvd3I0a3UxRlR1aDdaZGZxMGFvSzJVdTF5cjBONzVnbXI2OVpaRjJwRG1tc1hGSFJTS2paemFTc1FYbktVMDJVS1kyKzViVFlONUM5RldpQTdLVVAvY3BKM2hLQ3lsWjlMbjE3all0UldQNkRyRjFWNjVzY2pkZHJLZmhlam8xQzByc1J2cjg0L1JQZk13aU9GZk9IL0R2MUNjPS0tZXlITDY4NDl6dnU0ekd5SlBpdG4zQT09--82c328bdd379ec795a8982707d8676ddc812ea48;
+        path=/; HttpOnly
+      - request_method=PUT; path=/
+    body:
+      encoding: UTF-8
+      string: '{"moxi_works_agent_id":"1234abcd","partner_agent_id":"foo","partner_contact_id":"booyuh","moxi_works_contact_id":"009b9297977c","contact_name":"Alfred Ernest Winter","gender":"m","primary_email_address":"alfred.e@winter.is.comi.ng","secondary_email_address":"they.killed@sean.bean","primary_phone_number":"9876654432","secondary_phone_number":"123456778","home_street_address":"26 Winterfell Ave","home_city":"WinterfellCity","home_state":"WinterfellState","home_zip":"123123","home_neighborhood":"WinterfellNeighborhood","home_country":"Westeros","job_title":"King","occupation":"Ruler","business_website":"http://i.yam.winterf.ell","property_url":"Sold Out","property_mls_id":"123123abac","property_street_address":"21 Palace Drive","property_city":"Kings Landing","property_state":"Luberd","property_zip":"91818","property_beds":"12","property_baths":"3.5","property_list_price":"123123","property_listing_status":"Sold","property_photo_url":"http://here.com/is/a/pic.jpg","search_city":"Kings Landing","search_state":"upton","search_zip":"129299","search_min_beds":"32","search_min_baths":"12.75","search_min_price":"129292","search_max_price":"2992999","search_min_sq_ft":"1234","search_max_sq_ft":"1235","search_min_lot_size":"1234","search_max_lot_size":"4321","search_min_year_built":"1234","search_max_year_built":"4321","search_property_types":"Condo, Townhouse, Castle"}'
+    http_version: 
+  recorded_at: Tue, 05 Apr 2016 03:11:27 GMT
+recorded_with: VCR 2.9.3

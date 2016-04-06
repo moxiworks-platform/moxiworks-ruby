@@ -6,5 +6,6 @@ module MoxiworksPlatform
     # an expected argument is not defined, or the argument is in an unexpected form
     class ArgumentError < PlatformError; end
 
+    class AuthorizationError < PlatformError; end
   end
 end

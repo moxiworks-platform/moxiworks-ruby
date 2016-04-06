@@ -24,7 +24,7 @@ module MoxiworksPlatform
     #   Moxi Works Platform ID for the Contact
     #
     #   @return [String] Moxi Works Platform ID for the contact
-    attr_accessor :partner_contact_id
+    attr_accessor :moxi_works_contact_id
 
 
     # @!attribute business_website
@@ -534,7 +534,19 @@ module MoxiworksPlatform
     #   success = MoxiWorksPlatform::Contact.delete(moxi_works_agent_id: '123abcd', partner_contact_id: 'myUniqueContactId' )
     #
     def self.delete(opts={})
-      self.send_request(:delete, opts)
+      url = "#{MoxiworksPlatform::Config.url}/api/contacts/#{opts[:partner_contact_id]}"
+      required_opts = [:moxi_works_agent_id, :partner_contact_id]
+      required_opts.each do |opt|
+        raise ::MoxiworksPlatform::Exception::ArgumentError, "#{opt} required" if
+            opts[opt].nil? or opts[opt].empty?
+      end
+      RestClient::Request.execute(method: :delete,
+                                  url: url,
+                                  payload: opts, headers: self.headers) do |response|
+        puts response if MoxiworksPlatform::Config.debug
+        json = JSON.parse(response)
+        json['status'] == 'success'
+      end
     end
 
     # Send our remote request to the Moxi Works Platform
@@ -642,8 +654,8 @@ module MoxiworksPlatform
     # @example
     #   contact = MoxiWorksPlatform::Contact.find(moxi_works_agent_id: '123abcd', partner_contact_id: 'myUniqueContactId' )
     #   success = contact.delete
-    def delete(opts={})
-      MoxiworksPlatform::Contact.delete(opts)
+    def delete
+      MoxiworksPlatform::Contact.delete(self.to_hash)
     end
 
     private
@@ -665,7 +677,9 @@ module MoxiworksPlatform
 
     def numeric_value_for(attr_name, opts={})
       val = self.instance_variable_get("@#{attr_name}")
+      return val.to_i if val.is_a? Numeric and opts[:type] == :integer
       return val if val.is_a? Numeric
+      val.gsub!(/[^[:digit:]|\.]/, '') if val.is_a? String
       case opts[:type]
         when :integer
           instance_variable_set("@#{attr_name}", (val.nil? or val.empty?) ? nil : val.to_i)

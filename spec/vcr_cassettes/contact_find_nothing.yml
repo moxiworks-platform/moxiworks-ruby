@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://abc123:secret@api.moxiworks.com/api/contacts
+    body:
+      encoding: UTF-8
+      string: partner_contact_id=booyuh&moxi_works_agent_id=1234abcd&contact_id=booyuh
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '88'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"99914b932bd37a50b983c5e7c90ae93b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 61717bdf-f46f-449a-af0a-65d443e8a989
+      X-Runtime:
+      - '0.151632'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 05 Apr 2016 12:23:11 GMT
+      Content-Length:
+      - '2'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _wms_svc_public_session=QkJTeEZiaFJuK01iWWZhREsrVmV1S2NIVVZBWlBGbnIrUXgrWC9sd0hEbFhiZW9oS3ZZV2dvcGtpUmM0a1pRWVVCcFUzeHh6c3VaSXJnVTNEYlMwRE5CTldjZnpCL0FpdnpkQ3lCZTYzNjl6SXV5VXJROHB0K0hoWHFZcDUzK3FMc294VVBlUWxIY1pydEU4WUlsck9TbFF2M0Q2OUREeDA1a0Fvbm5XQVFVPS0tVHdtbVJlbkNxZzBDbERqR0UraCtDdz09--452f58ef4ec0409d2612eea939c2c4a12f96481f;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Tue, 05 Apr 2016 12:23:11 GMT
+recorded_with: VCR 2.9.3
