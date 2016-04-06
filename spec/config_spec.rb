@@ -43,13 +43,17 @@ describe MoxiworksPlatform::Config do
     end
 
     it 'should allow setting of debug attribute' do
+      before =       MoxiworksPlatform::Config.debug
       MoxiworksPlatform::Config.debug = true
       expect(@debug).to_not eq MoxiworksPlatform::Config.debug
+      MoxiworksPlatform::Config.debug = before
     end
 
     it 'should return the same value that was set' do
+      before =       MoxiworksPlatform::Config.debug
       MoxiworksPlatform::Config.debug = true
       expect(MoxiworksPlatform::Config.debug).to eq true
+      MoxiworksPlatform::Config.debug = before
     end
 
   end

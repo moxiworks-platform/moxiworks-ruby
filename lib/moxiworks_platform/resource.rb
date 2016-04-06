@@ -30,7 +30,7 @@ module MoxiworksPlatform
       {
           Authorization: auth_header,
           Accept: accept_header,
-          'Content-Type' =>  content_type
+          'Content-Type' =>  content_type_header
       }
     end
 
@@ -38,7 +38,8 @@ module MoxiworksPlatform
     #
     # @return [String] Authorization header content
     def self.auth_header
-      raise ::MoxiworksPlatform::Exception::AuthorizationError, 'MoxiworksPlatform::Credentials must be set before using' unless
+      raise MoxiworksPlatform::Exception::AuthorizationError,
+            'MoxiworksPlatform::Credentials must be set before using' unless
           MoxiworksPlatform::Credentials.set?
       identifier = MoxiworksPlatform::Credentials.platform_identifier
       secret = MoxiworksPlatform::Credentials.platform_secret
@@ -55,7 +56,7 @@ module MoxiworksPlatform
     # formatted Content-Type header
     #
     # @return [String] Content-Type header content
-    def self.content_type
+    def self.content_type_header
       'application/x-www-form-urlencoded'
     end
 
@@ -69,7 +70,7 @@ module MoxiworksPlatform
       message << json['messages'].join(',') unless json['messages'].nil?
 
       raise MoxiworksPlatform::Exception::RemoteRequestFailure, message  if
-          not json['status'].nil? and  json['status'] == 'error'
+          not json['status'].nil? and (%w(error fail).include?(json['status']))
     end
 
     # maps Hash values to Instance variables for mapping JSON object values to our Class attributes

@@ -14,3 +14,10 @@ end
 def symbolize_keys(hash)
   Hash[hash.map { |k, v| [k.to_sym, v] }]
 end
+
+
+def nullify_credentials
+  MoxiworksPlatform::Credentials.platform_identifier = nil
+  MoxiworksPlatform::Credentials.platform_secret = nil
+  MoxiworksPlatform::Credentials.instance = nil
+end
