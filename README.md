@@ -19,10 +19,15 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
+require 'moxiworks_platform'
+
+
 platform_identifier = 'abc1234'
 platform_secret = 'secretkey'
-require 'moxiworks_platform'
+
+
 MoxiworksPlatform::Credentials.new(platform_identifier, platform_secret)
+
 contact = MoxiworksPlatform::Contact.create(moxi_works_agent_id: '123abcd', partner_contact_id: 'my_unique_id')
 ```
 
@@ -34,5 +39,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/moxiworks_platform.
+Bug reports and pull requests are welcome on GitHub at https://github.com/moxiworks-platform/moxiworks-ruby
 

@@ -144,8 +144,8 @@ describe MoxiworksPlatform::Contact do
         end
 
         context :save_fail do
-          it 'should return a MoxiworksPlatform::Contact Object when save is called' do
-            VCR.use_cassette('contact_create_fail', record: :none) do
+          it 'should raise RemoteRequestFailure if contact request fails' do
+            VCR.use_cassette('contact_update_fail', record: :none) do
               expect {@contact.save }.to raise_exception(MoxiworksPlatform::Exception::RemoteRequestFailure)
             end
           end
