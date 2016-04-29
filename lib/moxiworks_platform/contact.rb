@@ -19,14 +19,6 @@ module MoxiworksPlatform
     #   @return [String] your system's unique ID for the contact
     attr_accessor :partner_contact_id
 
-
-    # @!attribute moxi_works_contact_id
-    #   Moxi Works Platform ID for the Contact
-    #
-    #   @return [String] Moxi Works Platform ID for the contact
-    attr_accessor :moxi_works_contact_id
-
-
     # @!attribute business_website
     #   the full URL of the business website to be associated with this Contact
     #
@@ -404,6 +396,11 @@ module MoxiworksPlatform
     # @option opts [Integer] :search_min_year_built the minimum year built this contact has used as criteria when searching for a listing
     # @option opts [String] :search_property_types property types this contact has searched for; ex: 'Single Family, Condo, Townhouse'
     #
+    # @return [MoxiworksPlatform::Contact]
+    #
+    # @raise ::MoxiworksPlatform::Exception::ArgumentError if required
+    #     named parameters aren't included
+    #
     # @example
     #   MoxiworksPlatform::Contact.create(
     #     moxi_works_agent_id: '123abc',
@@ -421,7 +418,7 @@ module MoxiworksPlatform
     #     primary_phone_number: '123213',
     #     property_mls_id: '1232312abcv',
     #     secondary_phone_number: '1234567890')
-    # @return [MoxiworksPlatform::Contact]
+    #
     def self.create(opts={})
       self.send_request(:post, opts)
     end
@@ -431,10 +428,59 @@ module MoxiworksPlatform
     # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this contact is to be associated
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for this contact.
     #
-    #   returns [MoxiworksPlatform::Contact]
+    # @return [MoxiworksPlatform::Contact]
+    #
+    # @raise ::MoxiworksPlatform::Exception::ArgumentError if required
+    #     named parameters aren't included
+    #
     def self.find(opts={})
-      self.send_request(:get, opts)
+      url = "#{MoxiworksPlatform::Config.url}/api/contacts/#{opts[:partner_contact_id]}"
+      self.send_request(:get, opts, url)
     end
+
+    # Search an Agent's Contacts in Moxi Works Platform
+    # @param [Hash] opts named parameter Hash
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this contact is to be associated
+    #
+    #     optional Search parameters
+    #
+    # @option opts [String] :contact_name  full name of the contact
+    # @option opts [String] :email_address full email address of the contact
+    # @option opts [String] :phone_number  full phone number of the contact
+    #
+    # @return [Array] containing MoxiworkPlatform::Contact objects
+    #
+    # @raise ::MoxiworksPlatform::Exception::ArgumentError if required
+    #     named parameters aren't included
+    #
+    # @example
+    #     results = MoxiworksPlatform::Contact.search(
+    #     moxi_works_agent_id: '123abc',
+    #     contact_name: 'george p warshington',
+    #       )
+    #
+    def self.search(opts={})
+      url ||= "#{MoxiworksPlatform::Config.url}/api/contacts"
+      required_opts = [:moxi_works_agent_id]
+      required_opts.each do |opt|
+        raise ::MoxiworksPlatform::Exception::ArgumentError, "#{opt} required" if
+            opts[opt].nil? or opts[opt].empty?
+      end
+      results = []
+      RestClient::Request.execute(method: :get,
+                                  url: url,
+                                  payload: opts, headers: self.headers) do |response|
+        puts response if MoxiworksPlatform::Config.debug
+        self.check_for_error_in_response(response)
+        json = JSON.parse(response)
+        json.each do |r|
+          results << MoxiworksPlatform::Contact.new(r) unless r.nil? or r.empty?
+        end
+      end
+      results
+    end
+
+
 
     # Updates a previously created Contact in Moxi Works Platform
     # @param [Hash] opts
@@ -443,7 +489,6 @@ module MoxiworksPlatform
     #
     #     optional Contact parameters
     #
-    # @option opts [String] :moxi_works_contact_id Moxi Works Platform contact ID
     # @option opts [String] :business_website  full url of a website associated with this contact
     # @option opts [String] :contact_name full name of this contact in format "Firstname Middlename Lastname"
     # @option opts [String, Enumerated] :gender can be "male" or "female" or "m" or "f"
@@ -497,6 +542,9 @@ module MoxiworksPlatform
     #
     # @return [MoxiworksPlatform::Contact]
     #
+    # @raise ::MoxiworksPlatform::Exception::ArgumentError if required
+    #     named parameters aren't included
+    #
     # @example
     #   MoxiworksPlatform::Contact.update(
     #     moxi_works_agent_id: '123abc',
@@ -514,9 +562,11 @@ module MoxiworksPlatform
     #     primary_phone_number: '123213',
     #     property_mls_id: '1232312abcv',
     #     secondary_phone_number: '1234567890')
+    #
+    #
     def self.update(opts={})
-      opts[:contact_id] = opts[:partner_contact_id] || opts[:moxi_works_contact_id]
-      url = "#{MoxiworksPlatform::Config.url}/api/contacts/#{opts[:contact_id]}"
+      opts[:contact_id] = opts[:partner_contact_id]
+      url = "#{MoxiworksPlatform::Config.url}/api/contacts/#{opts[:partner_contact_id]}"
       self.send_request(:put, opts, url)
     end
 
@@ -529,6 +579,9 @@ module MoxiworksPlatform
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for this contact.
     #
     # @return [Boolean] -- success of the delete action
+    #
+    # @raise ::MoxiworksPlatform::Exception::ArgumentError if required
+    #     named parameters aren't included
     #
     # @example
     #   success = MoxiWorksPlatform::Contact.delete(moxi_works_agent_id: '123abcd', partner_contact_id: 'myUniqueContactId' )
@@ -558,7 +611,6 @@ module MoxiworksPlatform
     #
     #     optional Contact parameters
     #
-    # @option opts [String] :moxi_works_contact_id Moxi Works Platform contact ID
     # @option opts [String] :business_website  full url of a website associated with this contact
     # @option opts [String] :contact_name full name of this contact in format "Firstname Middlename Lastname"
     # @option opts [String, Enumerated] :gender can be "male" or "female" or "m" or "f"
@@ -612,15 +664,15 @@ module MoxiworksPlatform
     #
     # @param [String] url The full URLto connect to
     # @return [MoxiworksPlatform::Contact]
+    #
     def self.send_request(method, opts={}, url=nil)
       url ||= "#{MoxiworksPlatform::Config.url}/api/contacts"
-      opts[:contact_id] = opts[:partner_contact_id] || opts[:moxi_works_contact_id]
-      required_opts = [:moxi_works_agent_id, :contact_id]
+      required_opts = [:moxi_works_agent_id, :partner_contact_id]
       required_opts.each do |opt|
-        message = opt == :contact_id ? 'partner_contact_id or moxi_works_contact_id required' : "#{opt} required"
-        raise ::MoxiworksPlatform::Exception::ArgumentError, message if
+        raise ::MoxiworksPlatform::Exception::ArgumentError, "#{opt} required" if
             opts[opt].nil? or opts[opt].empty?
       end
+      opts[:contact_id] = opts[:partner_contact_id]
       contact = nil
       RestClient::Request.execute(method: method,
                                   url: url,
@@ -646,7 +698,7 @@ module MoxiworksPlatform
     #   contact.primary_email_address = 'j.jonah.jameson@househun.ter'
     #   contact.save
     def save
-      MoxiworksPlatform::Contact.create(self.to_hash)
+      MoxiworksPlatform::Contact.update(self.to_hash)
     end
 
     # Delete an instance of MoxiWorksPlatform::Contact from Moxi Works Platform
@@ -656,6 +708,7 @@ module MoxiworksPlatform
     # @example
     #   contact = MoxiWorksPlatform::Contact.find(moxi_works_agent_id: '123abcd', partner_contact_id: 'myUniqueContactId' )
     #   success = contact.delete
+    #
     def delete
       MoxiworksPlatform::Contact.delete(self.to_hash)
     end

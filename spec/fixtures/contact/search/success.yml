@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://abc123:secret@api.moxiworks.com/api/contacts
+    body:
+      encoding: UTF-8
+      string: contact_name=buckminster%20fuller&moxi_works_agent_id=1234abcd
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '53'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"162bff511246998c9953f24795a65416"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9801bfdd-dd4d-4960-b739-0c17784e0e10
+      X-Runtime:
+      - '1.156039'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Fri, 29 Apr 2016 11:32:18 GMT
+      Content-Length:
+      - '2805'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _wms_svc_public_session=ckFIc2o2SWJHSG43ZS9EM0xrei9idVJrZ0owN1ZRSnhhdE1PNHhwWlpKbzFvMlR1UTFPUnEwbUlTKzU2eWN5eVBWc2RKb3BsZnl1ODRBQmZiVDh6VnNxUzAxTFhxL0ZJVjZuSU5xYXpFSVh1WWRqcXNMc3RnTy9laXU1a0NlL1dIVUticEdiQWs4cjBUUWpaMDk0MG5iV1MzeC9EUzZ0WVZCSXdNQzByMjRrPS0tYy9VTTcxd1JveGZVVWNmYld6Y0Q5Zz09--227e059db7ea11f0a0754dabafe770f9276459ed;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '[{"moxi_works_agent_id":"1234abcd","partner_contact_id":"buckminsterfuller","contact_name":"buckminster
+        fuller","gender":null,"primary_email_address":"whatevers2009@bearwrasslers.com","secondary_email_address":"meow@23bearwrassler.com","primary_phone_number":"8675309","secondary_phone_number":"99999999","home_street_address":"1234
+        bear wrassler st","home_city":"ooville","home_state":"IN","home_zip":null,"home_country":"oosa","job_title":"senior
+        bear wrassler","occupation":"bear wrassler","business_website":"http://bear.wrass.ler","property_url":"http://bear-wrassler-properties.com/properteeeeeeeee=12321321","property_mls_id":"bear-wrassler-123123","property_street_address":"1234
+        bear wrassler ave ne Bear Wrasslerville, IN 918181","property_city":"Bear
+        Wrasslerville","property_state":"IN","property_zip":"918181","property_beds":"123","property_baths":"3.5","property_list_price":"123445","property_listing_status":"sold","property_photo_url":"http://bear-wrassler-properties.com/imageeeeeeeee=2kljdslojfs","search_city":"Great
+        Wrassles","search_state":"OH","search_zip":"229999","search_min_beds":"1","search_min_baths":"0.125","search_min_price":"12","search_max_price":"34","search_min_sq_ft":"12","search_max_sq_ft":"23","search_min_lot_size":"","search_max_lot_size":"199292992","search_min_year_built":"1992","search_max_year_built":"1993","search_property_types":"condo,
+        townhouse, single-family"},{"moxi_works_agent_id":"1234abcd","partner_contact_id":"buckminsterripples","contact_name":"buckminster
+        fuller","gender":null,"primary_email_address":"whatevers2009@bearwrasslers.com","secondary_email_address":"meow@23bearwrassler.com","primary_phone_number":"8675309","secondary_phone_number":"99999999","home_street_address":"1234
+        bear wrassler st","home_city":"ooville","home_state":"IN","home_zip":null,"home_country":"oosa","job_title":"senior
+        bear wrassler","occupation":"bear wrassler","business_website":"http://bear.wrass.ler","property_url":"http://bear-wrassler-properties.com/properteeeeeeeee=12321321","property_mls_id":"bear-wrassler-123123","property_street_address":"1234
+        bear wrassler ave ne Bear Wrasslerville, IN 918181","property_city":"Bear
+        Wrasslerville","property_state":"IN","property_zip":"918181","property_beds":"123","property_baths":"3.5","property_list_price":"123445","property_listing_status":"sold","property_photo_url":"http://bear-wrassler-properties.com/imageeeeeeeee=2kljdslojfs","search_city":"Great
+        Wrassles","search_state":"OH","search_zip":"229999","search_min_beds":"1","search_min_baths":"0.125","search_min_price":"12","search_max_price":"34","search_min_sq_ft":"12","search_max_sq_ft":"23","search_min_lot_size":"","search_max_lot_size":"199292992","search_min_year_built":"1992","search_max_year_built":"1993","search_property_types":"condo,
+        townhouse, single-family"}]'
+    http_version: 
+  recorded_at: Fri, 29 Apr 2016 11:32:18 GMT
+recorded_with: VCR 3.0.1

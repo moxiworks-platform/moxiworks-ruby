@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://abc123:secret@api.moxiworks.com/api/contacts
+    uri: https://abc123:secret@api.moxiworks.com/api/contacts/booyuh
     body:
       encoding: UTF-8
       string: partner_contact_id=booyuh&moxi_works_agent_id=1234abcd&contact_id=booyuh

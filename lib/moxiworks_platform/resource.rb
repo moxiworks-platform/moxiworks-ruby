@@ -63,6 +63,7 @@ module MoxiworksPlatform
     def self.check_for_error_in_response(response)
       begin
         json = JSON.parse(response)
+        return if json.is_a?(Array)
       rescue => e
         raise MoxiworksPlatform::Exception::RemoteRequestFailure, "unable to parse remote response #{e}\n response:\n  #{response}"
       end
