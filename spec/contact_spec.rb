@@ -32,7 +32,7 @@ describe MoxiworksPlatform::Contact do
     end
 
 
-    context :attribute_accessors do
+    context :accessors do
       contact_accessors.each do |attr_accessor|
         it "should return for contact attribute #{attr_accessor}" do
           expect(@contact.send("#{attr_accessor.to_s}")).to eq nil
@@ -322,7 +322,7 @@ describe MoxiworksPlatform::Contact do
         context :empty_response do
           empty_response = JSON.parse( '{"moxi_works_agent_id":"1234abcd","partner_agent_id":"","partner_contact_id":"booyuh","moxi_works_contact_id":"009b9297977c","contact_name":null,"gender":null,"primary_email_address":null,"secondary_email_address":null,"primary_phone_number":null,"secondary_phone_number":null,"home_street_address":null,"home_city":null,"home_state":null,"home_zip":null,"home_neighborhood":null,"home_country":null,"job_title":null,"occupation":null,"business_website":null,"property_url":"","property_mls_id":"","property_street_address":"","property_city":"","property_state":"","property_zip":"","property_beds":"","property_baths":"","property_list_price":"","property_listing_status":"","property_photo_url":"","search_city":"","search_state":"","search_zip":"","search_min_beds":"","search_min_baths":"","search_min_price":"","search_max_price":"","search_min_sq_ft":"","search_max_sq_ft":"","search_min_lot_size":"","search_max_lot_size":"","search_min_year_built":"","search_max_year_built":"","search_property_types":""}')
           it 'should return a MoxiworksPlatform::Contact Object when find is called' do
-            VCR.use_cassette('contact/find/success', record: :none) do
+            VCR.use_cassette('contact/find/empty', record: :none) do
               search_attrs = empty_response.select {|key, value| %w(moxi_works_agent_id partner_contact_id).include?(key) }
               contact = MoxiworksPlatform::Contact.find(symbolize_keys(search_attrs))
               expect(contact.class).to eq(MoxiworksPlatform::Contact)
