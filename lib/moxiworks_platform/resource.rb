@@ -74,6 +74,20 @@ module MoxiworksPlatform
           not json['status'].nil? and (%w(error fail).include?(json['status']))
     end
 
+    # modify an external ID so that it's fetchable via URL.
+    #
+    # IDs that contain things like dots cause problems when attempting to fetch resources
+    # that use those IDs as primary keys when fetching via RESTful routes
+    # this method converts stuff that isn't handled well, ensuring that we have a uniform
+    # ID and ensuring that those IDs are usable via URL.
+    #
+    # @param [String] an ID to be converted into a URL ready ID
+    #
+    # @return [String] the ID with all the bad stuff converted into URL ready stuff
+    def self.safe_id(id)
+      Base64.urlsafe_encode64(id)
+    end
+
     # maps Hash values to Instance variables for mapping JSON object values to our Class attributes
     #
     def initialize(hash={})
@@ -96,6 +110,18 @@ module MoxiworksPlatform
       hash = {}
       self.attributes.each {|attr| hash[attr.to_sym] = self.send(attr)}
       hash
+    end
+
+    def self.send_request(method, opts={}, url=nil)
+      RestClient::Request.execute(method: method,
+                                  url: url,
+                                  payload: opts, headers: self.headers) do |response|
+        puts response if MoxiworksPlatform::Config.debug
+        self.check_for_error_in_response(response)
+        json = JSON.parse(response)
+        return false if not json['status'].nil? and json['status'] =='fail'
+        self.new(json) unless json.nil? or json.empty?
+      end
     end
 
   end

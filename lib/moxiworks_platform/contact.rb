@@ -434,7 +434,7 @@ module MoxiworksPlatform
     #     named parameters aren't included
     #
     def self.find(opts={})
-      url = "#{MoxiworksPlatform::Config.url}/api/contacts/#{opts[:partner_contact_id]}"
+      url = "#{MoxiworksPlatform::Config.url}/api/contacts/#{self.safe_id(opts[:partner_contact_id])}"
       self.send_request(:get, opts, url)
     end
 
@@ -566,7 +566,7 @@ module MoxiworksPlatform
     #
     def self.update(opts={})
       opts[:contact_id] = opts[:partner_contact_id]
-      url = "#{MoxiworksPlatform::Config.url}/api/contacts/#{opts[:partner_contact_id]}"
+      url = "#{MoxiworksPlatform::Config.url}/api/contacts/#{self.safe_id(opts[:partner_contact_id])}"
       self.send_request(:put, opts, url)
     end
 
@@ -587,7 +587,7 @@ module MoxiworksPlatform
     #   success = MoxiWorksPlatform::Contact.delete(moxi_works_agent_id: '123abcd', partner_contact_id: 'myUniqueContactId' )
     #
     def self.delete(opts={})
-      url = "#{MoxiworksPlatform::Config.url}/api/contacts/#{opts[:partner_contact_id]}"
+      url = "#{MoxiworksPlatform::Config.url}/api/contacts/#{self.safe_id(opts[:partner_contact_id])}"
       required_opts = [:moxi_works_agent_id, :partner_contact_id]
       required_opts.each do |opt|
         raise ::MoxiworksPlatform::Exception::ArgumentError, "#{opt} required" if
@@ -673,17 +673,7 @@ module MoxiworksPlatform
             opts[opt].nil? or opts[opt].empty?
       end
       opts[:contact_id] = opts[:partner_contact_id]
-      contact = nil
-      RestClient::Request.execute(method: method,
-                                  url: url,
-                                  payload: opts, headers: self.headers) do |response|
-        puts response if MoxiworksPlatform::Config.debug
-        self.check_for_error_in_response(response)
-        json = JSON.parse(response)
-        return false if not json['status'].nil? and json['status'] =='fail'
-        contact = MoxiworksPlatform::Contact.new(json) unless json.nil? or json.empty?
-      end
-      contact
+      super(method, opts, url)
     end
 
     # Save an instance of MoxiWorksPlatform::Contact to Moxi Works Platform
