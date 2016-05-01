@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://abc123:secret@api.moxiworks.com/api/agents/MTIzNGFiY2Q=
+    uri: https://abc123:secret@api.moxiworks.com/api/agents/1234abcd
     body:
       encoding: UTF-8
       string: moxi_works_agent_id=not%40hereere

@@ -74,19 +74,6 @@ module MoxiworksPlatform
           not json['status'].nil? and (%w(error fail).include?(json['status']))
     end
 
-    # modify an external ID so that it's fetchable via URL.
-    #
-    # IDs that contain things like dots cause problems when attempting to fetch resources
-    # that use those IDs as primary keys when fetching via RESTful routes
-    # this method converts stuff that isn't handled well, ensuring that we have a uniform
-    # ID and ensuring that those IDs are usable via URL.
-    #
-    # @param [String] an ID to be converted into a URL ready ID
-    #
-    # @return [String] the ID with all the bad stuff converted into URL ready stuff
-    def self.safe_id(id)
-      Base64.urlsafe_encode64(id)
-    end
 
     # maps Hash values to Instance variables for mapping JSON object values to our Class attributes
     #
