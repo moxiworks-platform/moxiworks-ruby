@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://abc123:secret@api.moxiworks.com/api/events/17c58ff85172093286272cffa4897610
+    body:
+      encoding: UTF-8
+      string: moxi_works_agent_id=BiaB_test9%40windermeretest.com&partner_event_id=17c58ff85172093286272cffa4897610&event_id=17c58ff85172093286272cffa4897610
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '143'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"7ab1b6e7efdfa67244b50a29de6a9027"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 810d5c1a-9d90-412e-8adb-7c1fe50967b9
+      X-Runtime:
+      - '2.841680'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Thu, 05 May 2016 22:48:29 GMT
+      Content-Length:
+      - '140'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"status":"success","deleted":true,"messages":["event 17c58ff85172093286272cffa4897610
+        deleted from account BiaB_test9@windermeretest.com"]}'
+    http_version: 
+  recorded_at: Thu, 05 May 2016 22:48:29 GMT
+recorded_with: VCR 3.0.1

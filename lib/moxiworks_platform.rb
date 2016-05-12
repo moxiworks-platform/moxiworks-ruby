@@ -5,9 +5,10 @@ require 'moxiworks_platform/resource'
 require 'moxiworks_platform/credentials'
 require 'moxiworks_platform/contact'
 require 'moxiworks_platform/agent'
+require 'moxiworks_platform/event'
 
 
 
 module MoxiworksPlatform
-  # Your code goes here...
+
 end

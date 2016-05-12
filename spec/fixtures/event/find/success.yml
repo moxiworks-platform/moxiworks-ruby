@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://abc123:secret@api.moxiworks.com/api/events/17c58ff85172093286272cffa4897610
+    body:
+      encoding: UTF-8
+      string: moxi_works_agent_id=BiaB_test9%40windermeretest.com&partner_event_id=17c58ff85172093286272cffa4897610&event_id=17c58ff85172093286272cffa4897610
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '143'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a633796323b3ed7713cbea3613265e69"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 09e70b8d-c611-4b2d-a06a-ac615da9c454
+      X-Runtime:
+      - '0.209555'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Thu, 05 May 2016 18:58:19 GMT
+      Content-Length:
+      - '376'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _wms_svc_public_session=ZmlSQ3JXU00zMkhQaXkxSVVaQjdnWGpBZlNiU2s1dnpoTmpzUnZldHc5Tzk1Q1BIR1ROME5KdWF4dVM4blVPRHJVR2t6MCtYQzlmODg4KzRzUDVhaDVDMXhZK2hBRkZkcFpTVmlLbHhFR1BzODhqY1IwNUVjRmxET2E4QlFKYWtBb2ZOdnhqVUppbkdZQzhCRENTNDJNbjBBUDY1SmRwWnRzNDFDa3o2NUJvPS0tbXlwdDQxbFJMTzV1QVgxSTFYTzZXdz09--0e311c4d779b108b6d98c029a7ec128e2bee3bcc;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"partner_event_id":"17c58ff85172093286272cffa4897610","moxi_works_agent_id":"BiaB_test9@windermeretest.com","event_subject":"foo
+        deeaz","event_location":"1234 there ave","note":"yo, whatup?","send_reminder":true,"remind_minutes_before":10,"is_meeting":false,"event_start":1462376100,"event_end":1462462520,"cancelled":false,"recurring":false,"all_day":false,"attendees":null}'
+    http_version: 
+  recorded_at: Thu, 05 May 2016 18:58:19 GMT
+recorded_with: VCR 3.0.1

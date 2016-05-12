@@ -83,6 +83,15 @@ module MoxiworksPlatform
       end
     end
 
+    def method_missing(meth, *args, &block)
+      name = meth.to_sym
+      if numeric_attrs.include? name
+        return numeric_value_for(name, type: :integer) if int_attrs.include? name
+        return numeric_value_for(name, type: :float) if float_attrs.include? name
+      end
+      super(meth, *args, &block)
+    end
+
     # all available accessors defined in this class
     #
     # @return [Array][String] all defined accessors of this class
@@ -109,6 +118,42 @@ module MoxiworksPlatform
         return false if not json['status'].nil? and json['status'] =='fail'
         self.new(json) unless json.nil? or json.empty?
       end
+    end
+
+    def numeric_value_for(attr_name, opts={})
+      val = self.instance_variable_get("@#{attr_name}")
+      return val.to_i if val.is_a? Numeric and opts[:type] == :integer
+      return val if val.is_a? Numeric
+      val.gsub!(/[^[:digit:]|\.]/, '') if val.is_a? String
+      case opts[:type]
+        when :integer
+          instance_variable_set("@#{attr_name}", (val.nil? or val.empty?) ? nil : val.to_i)
+        when :float
+          instance_variable_set("@#{attr_name}", (val.nil? or val.empty?) ? nil : val.to_f)
+        else
+          instance_variable_set("@#{attr_name}", nil)
+      end
+      self.instance_variable_get("@#{attr_name}")
+    rescue => e
+      puts "problem with auto conversion: #{e.message} #{e.backtrace}"
+      nil
+    end
+
+    # used by method_missing to ensure that a number is the type we expect it to be
+    def numeric_attrs
+      int_attrs + float_attrs
+    end
+
+    # used by method_missing to ensure that a number is the type we expect it to be
+    # this should be overridden if we have any int values we want to return as ints
+    def int_attrs
+      []
+    end
+
+    # used by method_missing to ensure that a number is the type we expect it to be
+    # this should be overridden if we have any float values we want to return as floats
+    def float_attrs
+      []
     end
 
   end

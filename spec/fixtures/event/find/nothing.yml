@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://abc123:secret@api.moxiworks.com/api/events/17c58ff85172093286272cffa4897610
+    body:
+      encoding: UTF-8
+      string: moxi_works_agent_id=BiaB_test9%40windermeretest.com&partner_event_id=17c58ff85172093286272cffa4897610&event_id=17c58ff85172093286272cffa4897610
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '109'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"99914b932bd37a50b983c5e7c90ae93b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b4359ce6-00d9-4f70-97b2-e12c55d0bd07
+      X-Runtime:
+      - '0.248941'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Thu, 05 May 2016 18:56:32 GMT
+      Content-Length:
+      - '2'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _wms_svc_public_session=dW1TVk1GTURRVFNkTnU2eWNpek94NEk4b0FnLzEwV1orekppL3N0djJ5aW5uSFVzUjVFa0lXNE53NUdPd2pWYkRDejZUYW1iVEcrZk82eCtJRjlrUDFjajNGVWVPbkVDeVErWDN3K3Zmbm1BZ2hUWVhEdHRYREhlckdwRVlzODRVbFpka2JocnZ3dXcyazJBUFRjdGE2b1dpUkhLOXFQaVFvZVFSYkJsd0t3PS0tbjM4bkhVcVZNV3J5YzVwNDc0VklDQT09--5da9cf980163b330b5b5b5e205769c3f5ed3fdec;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Thu, 05 May 2016 18:56:32 GMT
+recorded_with: VCR 3.0.1

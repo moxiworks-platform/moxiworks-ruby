@@ -425,7 +425,7 @@ module MoxiworksPlatform
 
     # Find a Contact  your system has previously created in Moxi Works Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this contact is to be associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this contact is associated
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for this contact.
     #
     # @return [MoxiworksPlatform::Contact]
@@ -440,7 +440,7 @@ module MoxiworksPlatform
 
     # Search an Agent's Contacts in Moxi Works Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this contact is to be associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this contact is associated
     #
     #     optional Search parameters
     #
@@ -691,7 +691,7 @@ module MoxiworksPlatform
       MoxiworksPlatform::Contact.update(self.to_hash)
     end
 
-    # Delete an instance of MoxiWorksPlatform::Contact from Moxi Works Platform
+    # Delete an instance of MoxiWorksPlatform::Contact from Moxi Works Platform that your system has previously created
     #
     # @return [Boolean] -- success of the delete action
     #
@@ -704,39 +704,16 @@ module MoxiworksPlatform
     end
 
     private
-    def method_missing(meth, *args, &block)
-      float_attrs = [:property_baths, :search_min_baths]
-      int_attrs = [:property_beds, :property_list_price, :search_min_year_built,
-                   :search_min_sq_ft, :search_min_price, :search_min_beds,
-                   :search_max_year_built, :search_max_sq_ft, :search_max_price,
-                   :search_max_lot_size]
-      all_attrs = float_attrs + int_attrs
 
-      name = meth.to_sym
-      if all_attrs.include? name
-        return numeric_value_for(name, type: :integer) if int_attrs.include? name
-        return numeric_value_for(name, type: :float) if float_attrs.include? name
-      end
-      super(meth, *args, &block)
+    def float_attrs
+      [:property_baths, :search_min_baths]
     end
 
-    def numeric_value_for(attr_name, opts={})
-      val = self.instance_variable_get("@#{attr_name}")
-      return val.to_i if val.is_a? Numeric and opts[:type] == :integer
-      return val if val.is_a? Numeric
-      val.gsub!(/[^[:digit:]|\.]/, '') if val.is_a? String
-      case opts[:type]
-        when :integer
-          instance_variable_set("@#{attr_name}", (val.nil? or val.empty?) ? nil : val.to_i)
-        when :float
-          instance_variable_set("@#{attr_name}", (val.nil? or val.empty?) ? nil : val.to_f)
-        else
-          instance_variable_set("@#{attr_name}", nil)
-      end
-      self.instance_variable_get("@#{attr_name}")
-    rescue => e
-      puts "problem with auto conversion: #{e.message} #{e.backtrace}"
-      nil
+    def int_attrs
+      [:property_beds, :property_list_price, :search_min_year_built,
+                         :search_min_sq_ft, :search_min_price, :search_min_beds,
+                         :search_max_year_built, :search_max_sq_ft, :search_max_price,
+                         :search_max_lot_size]
     end
 
   end

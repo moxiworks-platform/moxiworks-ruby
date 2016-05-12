@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://abc123:secret@api.moxiworks.com/api/events/17c58ff85172093286272cffa4897610
+    body:
+      encoding: UTF-8
+      string: moxi_works_agent_id=BiaB_test9%40windermeretest.com&partner_contact_id=&partner_event_id=17c58ff85172093286272cffa4897610&event_subject=foo%20deeaz&event_location=1234%20there%20ave&note=yo%2C%20whatup%3F&send_reminder=true&remind_minutes_before=10&is_meeting=false&event_start=1462235921&event_end=1462322321&cancelled=false&recurring=false&all_day=false&attendees=&event_id=17c58ff85172093286272cffa4897610
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '408'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"3110ec567259e7ad714af35b0bc0e4b7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d87bcdba-0294-4555-b87d-1b83ae9f51d2
+      X-Runtime:
+      - '9.394791'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 10 May 2016 17:29:17 GMT
+      Content-Length:
+      - '376'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"status":"fail"}'
+    http_version:
+  recorded_at: Tue, 10 May 2016 17:29:17 GMT
+recorded_with: VCR 3.0.1

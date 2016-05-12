@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://abc123:secret@api.moxiworks.com/api/events
+    body:
+      encoding: UTF-8
+      string: moxi_works_agent_id=BiaB_test9%40windermeretest.com&date_start=1461178675&date_end=1462388205
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '93'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 500
+      message: 'Internal Server Error '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 154bfd78-a62c-473f-9010-aa0b738f9209
+      X-Runtime:
+      - '0.415576'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 10 May 2016 17:54:06 GMT
+      Content-Length:
+      - '19065'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _wms_svc_public_session=YWEreUpWcEh3Z1EzaFNXNmdWZ2hNWlpQcWFMMkRST1Z4Mmdkc2hSYjROVFFNWXNuY0ZkM2JjYldLemhadGlCTEV2eEhJRW9teUU0VFZPTEhaZW5DdmtOZnFWaXd5a0RwTmREOEFKc29oZjFkNy9rYVkxcGdIMjZMYmo4b1NVVXRFYnp3SEhBTTR6dTFwSDF3SEF1YmZ3YkdTQ2p5eU84eGEwYStTU0JHQllJPS0tS0JmUm1TK3RKaG5sZnc4OXBqUUVCZz09--98815d8f1446837f8607c001469b4c7648357a9d;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"status":"error","messages":["arbitrary error message"],"status_code":5000}'
+    http_version: 
+  recorded_at: Tue, 10 May 2016 17:54:06 GMT
+recorded_with: VCR 3.0.1
