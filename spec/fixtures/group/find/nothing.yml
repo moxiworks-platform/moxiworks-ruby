@@ -1,11 +1,11 @@
 ---
 http_interactions:
 - request:
-    method: delete
-    uri: https://abc123:secret@api.moxiworks.com/api/events/17c58ff85172093286272cffa4897610
+    method: get
+    uri: https://abc123:secret@api.moxiworks.com/api/groups/foobar
     body:
       encoding: UTF-8
-      string: moxi_works_agent_id=BiaB_test9%40moxiworkstest.com&partner_event_id=17c58ff85172093286272cffa4897610&event_id=17c58ff85172093286272cffa4897610
+      string: moxi_works_agent_id=BiaB_test9%40moxiworkstest.com&moxi_works_group_name=blarf
     headers:
       Accept:
       - application/vnd.moxi-platform+json;version=1
@@ -14,7 +14,7 @@ http_interactions:
       Content-Type:
       - application/x-www-form-urlencoded
       Content-Length:
-      - '143'
+      - '79'
       User-Agent:
       - Ruby
   response:
@@ -31,25 +31,27 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"7ab1b6e7efdfa67244b50a29de6a9027"
+      - W/"99914b932bd37a50b983c5e7c90ae93b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 810d5c1a-9d90-412e-8adb-7c1fe50967b9
+      - 8392cc41-a0c3-447e-a461-8cc8eb0f7db9
       X-Runtime:
-      - '2.841680'
+      - '0.533514'
       Server:
       - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
       Date:
-      - Thu, 05 May 2016 22:48:29 GMT
+      - Wed, 25 May 2016 12:46:19 GMT
       Content-Length:
-      - '140'
+      - '2'
       Connection:
       - Keep-Alive
+      Set-Cookie:
+      - _wms_svc_public_session=bXFaOVB6ay9BY2V2U1pBeXJaQU4wR0d2M3pDbDkvR29hMnFLbmxUN1JZeVdqamljU3RxaDNFWUV0d1VFMnFLQ2grK3FZQ2FtZkFEeWIxMVh1c3B2aFI4REw5d2REdDF5Ri9STkwveHRvcmdIVEF4cXdlN2pyekpTeTcvVForQmJ6ekdPdERhUk91b2dOU1FmMnAzYlVqazd3eUZrYkFqOHdjc1JuTjhPUk5zPS0tUlZCUGJNL0h1Z3IrZ1RBbVFSV1R5Zz09--2d65797c79bc54eeead4e8c4e281aafa16e1b148;
+        path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '{"status":"success","deleted":true,"messages":["event 17c58ff85172093286272cffa4897610
-        deleted from account BiaB_test9@moxiworkstest.com"]}'
+      string: "{}"
     http_version: 
-  recorded_at: Thu, 05 May 2016 22:48:29 GMT
+  recorded_at: Wed, 25 May 2016 12:46:19 GMT
 recorded_with: VCR 3.0.1

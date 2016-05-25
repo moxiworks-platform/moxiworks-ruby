@@ -86,6 +86,12 @@ module MoxiworksPlatform
     #   @return [String] -- Default ''
     attr_accessor :job_title
 
+    # @!attribute note
+    #   more detailed information about the Contact
+    #
+    #   @return [String] -- Default ''
+    attr_accessor :note
+
     # @!attribute occupation
     #   the general occupation of this contact; ex: 'Software Developer'
     #
@@ -301,6 +307,15 @@ module MoxiworksPlatform
     #
     #   @return [Integer] -- Default nil
     attr_writer :search_min_beds
+
+    # @!attribute search_min_lot_size
+    #
+    #   the minimum lot size used by the contact when searching for listings
+    #
+    #   Property Search (PS) attribute
+    #
+    #   @return [Integer] -- Default nil
+    attr_writer :search_min_lot_size
 
     # @!attribute search_min_price
     #
@@ -713,7 +728,7 @@ module MoxiworksPlatform
       [:property_beds, :property_list_price, :search_min_year_built,
                          :search_min_sq_ft, :search_min_price, :search_min_beds,
                          :search_max_year_built, :search_max_sq_ft, :search_max_price,
-                         :search_max_lot_size]
+                         :search_min_lot_size, :search_max_lot_size]
     end
 
   end

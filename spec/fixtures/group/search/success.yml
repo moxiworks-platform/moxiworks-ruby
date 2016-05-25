@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://abc123:secret@api.moxiworks.com/api/groups
+    body:
+      encoding: UTF-8
+      string: moxi_works_agent_id=BiaB_test9%40moxiworkstest.com
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '51'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1f162f178a957433dfdd3e393c44ed95"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8e31800d-faa6-4871-b275-4f617daf8163
+      X-Runtime:
+      - '0.243077'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Wed, 25 May 2016 13:24:34 GMT
+      Content-Length:
+      - '495'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _wms_svc_public_session=c2JWTG9LWXhrK0R1QVZmSkt2NWpQNDE3VVFPa0tVTGpybEJ4d1pLUHpLd0lCMGpTZ1NKK3dQZnIyVHhDcExUMTN0cDVXY0taQzBPSnpHTW9VLzcwSHdEcnNYbllMSVNVRFExT2ZpeFZoTGVCZGpFQzRRWjFFOExhU05YbC9oaG5aczBrLzNuSWVKTS9kN3Z3Q1VzYnJwV3BQZ0N3T0IyZVNINUNCL1o3cGUwPS0tWndnSWdJNUE4bW9vcVV1a2V2NEV0UT09--c9a8607a425cea4918432c681807620d261bcd6e;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '[{"moxi_works_group_name":"\u003ci\u003e"},{"moxi_works_group_name":"Christmas
+        Cards"},{"moxi_works_group_name":"dfgdfg"},{"moxi_works_group_name":"fdgdfg"},{"moxi_works_group_name":"one"},{"moxi_works_group_name":"reallylonggroupnamewithoutbreaksintheworkd"},{"moxi_works_group_name":"foobar"},{"moxi_works_group_name":"Test
+        GR"},{"moxi_works_group_name":"TestEmailAddresses"},{"moxi_works_group_name":"todelete"},{"moxi_works_group_name":"TwoMore"},{"moxi_works_group_name":"Visibility
+        Plus"}]'
+    http_version: 
+  recorded_at: Wed, 25 May 2016 13:24:34 GMT
+recorded_with: VCR 3.0.1

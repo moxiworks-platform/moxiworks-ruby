@@ -90,11 +90,11 @@ describe MoxiworksPlatform::Event do
     let!(:platform_id){'abc123'}
     let!(:platform_secret) { 'secret' }
     let!(:event_id) {'17c58ff85172093286272cffa4897610'}
-    let!(:agent_id) { 'BiaB_test9@windermeretest.com' }
+    let!(:agent_id) { 'BiaB_test9@moxiworkstest.com' }
 
     let!(:create_params) do
       {
-          moxi_works_agent_id: 'BiaB_test9@windermeretest.com',
+          moxi_works_agent_id: 'BiaB_test9@moxiworkstest.com',
           partner_event_id: '17c58ff85172093286272cffa4897610',
           event_subject: 'foo deeaz',
           event_location: '1234 there ave',
@@ -204,7 +204,7 @@ describe MoxiworksPlatform::Event do
     let!(:platform_id){'abc123'}
     let!(:platform_secret) { 'secret' }
     let!(:event_id) {'17c58ff85172093286272cffa4897610'}
-    let!(:agent_id) { 'BiaB_test9@windermeretest.com' }
+    let!(:agent_id) { 'BiaB_test9@moxiworkstest.com' }
 
     context :delete do
       context :credentials_required do
@@ -281,7 +281,7 @@ describe MoxiworksPlatform::Event do
         end
 
         context :full_response do
-          full_response = JSON.parse('{"partner_event_id":"17c58ff85172093286272cffa4897610","moxi_works_agent_id":"BiaB_test9@windermeretest.com","event_subject":"foo deeaz","event_location":"1234 there ave","note":"yo, whatup?","send_reminder":true,"remind_minutes_before":10,"is_meeting":false,"event_start":1462376100,"event_end":1462462520,"cancelled":false,"recurring":false,"all_day":false,"attendees":null}')
+          full_response = JSON.parse('{"partner_event_id":"17c58ff85172093286272cffa4897610","moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","event_subject":"foo deeaz","event_location":"1234 there ave","note":"yo, whatup?","send_reminder":true,"remind_minutes_before":10,"is_meeting":false,"event_start":1462376100,"event_end":1462462520,"cancelled":false,"recurring":false,"all_day":false,"attendees":null}')
           it 'should return a MoxiworksPlatform::Event Object when find is called' do
             VCR.use_cassette('event/find/success', record: :none) do
               search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id partner_event_id).include?(key) }
@@ -350,7 +350,7 @@ describe MoxiworksPlatform::Event do
 
 
         context :full_response do
-          full_response = JSON.parse('{"partner_event_id":"17c58ff85172093286272cffa4897610","moxi_works_agent_id":"BiaB_test9@windermeretest.com","event_subject":"foo deeaz","event_location":"1234 there ave","note":"yo, whatup?","send_reminder":true,"remind_minutes_before":10,"is_meeting":false,"event_start":1462376100,"event_end":1462462520,"cancelled":false,"recurring":false,"all_day":false,"attendees":null}')
+          full_response = JSON.parse('{"partner_event_id":"17c58ff85172093286272cffa4897610","moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","event_subject":"foo deeaz","event_location":"1234 there ave","note":"yo, whatup?","send_reminder":true,"remind_minutes_before":10,"is_meeting":false,"event_start":1462376100,"event_end":1462462520,"cancelled":false,"recurring":false,"all_day":false,"attendees":null}')
           it 'should return a MoxiworksPlatform::Event Object when find is called' do
             VCR.use_cassette('event/search/success', record: :none) do
               search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id event_name).include?(key) }
@@ -445,7 +445,7 @@ describe MoxiworksPlatform::Event do
         end
 
         context :full_response do
-          full_response = JSON.parse('{"partner_event_id":"17c58ff85172093286272cffa4897610","moxi_works_agent_id":"BiaB_test9@windermeretest.com","event_subject":"foo deeaz","event_location":"1234 there ave","note":"yo, whatup?","send_reminder":true,"remind_minutes_before":10,"is_meeting":false,"event_start":1462235921,"event_end":1462322321,"cancelled":false,"recurring":false,"all_day":false,"attendees":null}')
+          full_response = JSON.parse('{"partner_event_id":"17c58ff85172093286272cffa4897610","moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","event_subject":"foo deeaz","event_location":"1234 there ave","note":"yo, whatup?","send_reminder":true,"remind_minutes_before":10,"is_meeting":false,"event_start":1462235921,"event_end":1462322321,"cancelled":false,"recurring":false,"all_day":false,"attendees":null}')
           it 'should return a MoxiworksPlatform::Event Object when update is called' do
             VCR.use_cassette('event/update/success', record: :none) do
               event = MoxiworksPlatform::Event.update(symbolize_keys(full_response))
@@ -483,7 +483,7 @@ describe MoxiworksPlatform::Event do
         end
 
         context :empty_response do
-          empty_response = JSON.parse( '{"partner_event_id":"17c58ff85172093286272cffa4897610","moxi_works_agent_id":"BiaB_test9@windermeretest.com","event_subject":"foo deeaz","event_location":"1234 there ave","note":"yo, whatup?","send_reminder":true,"remind_minutes_before":10,"is_meeting":false,"event_start":1462376100,"event_end":1462462520,"cancelled":false,"recurring":false,"all_day":false,"attendees":null}')
+          empty_response = JSON.parse( '{"partner_event_id":"17c58ff85172093286272cffa4897610","moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","event_subject":"foo deeaz","event_location":"1234 there ave","note":"yo, whatup?","send_reminder":true,"remind_minutes_before":10,"is_meeting":false,"event_start":1462376100,"event_end":1462462520,"cancelled":false,"recurring":false,"all_day":false,"attendees":null}')
 
           it 'should return a MoxiworksPlatform::Event Object when update is called' do
             VCR.use_cassette('event/update/success', record: :none) do
@@ -519,7 +519,7 @@ describe MoxiworksPlatform::Event do
         end
 
         context :full_response do
-          full_response = JSON.parse('{"partner_event_id":"17c58ff85172093286272cffa4897610","moxi_works_agent_id":"BiaB_test9@windermeretest.com","event_subject":"foo deeaz","event_location":"1234 there ave","note":"yo, whatup?","send_reminder":true,"remind_minutes_before":10,"is_meeting":false,"event_start":1462376120,"event_end":1462462520,"cancelled":false,"recurring":false,"all_day":false,"attendees":null}')
+          full_response = JSON.parse('{"partner_event_id":"17c58ff85172093286272cffa4897610","moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","event_subject":"foo deeaz","event_location":"1234 there ave","note":"yo, whatup?","send_reminder":true,"remind_minutes_before":10,"is_meeting":false,"event_start":1462376120,"event_end":1462462520,"cancelled":false,"recurring":false,"all_day":false,"attendees":null}')
           it 'should return a MoxiworksPlatform::Event Object when create is called' do
             VCR.use_cassette('event/create/success', record: :none) do
               event = MoxiworksPlatform::Event.create(symbolize_keys(full_response))

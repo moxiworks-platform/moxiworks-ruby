@@ -124,6 +124,7 @@ module MoxiworksPlatform
       val = self.instance_variable_get("@#{attr_name}")
       return val.to_i if val.is_a? Numeric and opts[:type] == :integer
       return val if val.is_a? Numeric
+      return 0 if val.nil? or val.empty?
       val.gsub!(/[^[:digit:]|\.]/, '') if val.is_a? String
       case opts[:type]
         when :integer

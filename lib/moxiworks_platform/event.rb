@@ -34,14 +34,8 @@ module MoxiworksPlatform
     # @return [String]
     attr_accessor :note
 
-    # @!attribute send_reminder
-    # whether a reminder should be sent to the agent
-    #
-    # @return [Boolean]
-    attr_accessor :send_reminder
-
     # @!attribute remind_minutes_before
-    # how many minutes before the event a reminder should be sent (if send_reminder is true)
+    # how many minutes before the event a reminder should be sent
     #
     # @return [Integer]
     attr_writer :remind_minutes_before
@@ -64,12 +58,6 @@ module MoxiworksPlatform
     # @return [Integer]
     attr_writer :event_end
 
-    # @!attribute recurring
-    # whether the event is recurring
-    #
-    # @return [Boolean]
-    attr_accessor :recurring
-
     # @!attribute all_day
     # whether the event is an all day event
     #
@@ -87,12 +75,10 @@ module MoxiworksPlatform
     # @option opts [String] :event_subject  a brief human-readable description of the event
     # @option opts [String] :event_location human-readable description of the event's location
     # @option opts [String] :note human-readable details regarding the event
-    # @option opts [Boolean] :send_reminder whether a reminder should be sent beforehand
-    # @option opts [Integer] :remind_minutes_before how many minutes before the event the reminder should be sent (if send_reminder is true)
+    # @option opts [Integer] :remind_minutes_before how many minutes before the event the reminder should be sent
     # @option opts [Boolean] :is_meeting whether the event is a meeting
     # @option opts [Integer] :event_start Unix timestamp representing the start time of the event
     # @option opts [Integer] :event_end Unix timestamp representing the end time of the event
-    # @option opts [Boolean] :recurring whether the event is a recurring event
     # @option opts [Boolean] :all_day whether the event is an all day event
     #
     # @return [MoxiworksPlatform::Event]
@@ -106,12 +92,10 @@ module MoxiworksPlatform
     #         event_subject: 'foo deeaz',
     #         event_location: '1234 there ave',
     #         note: 'yo, whatup?',
-    #         send_reminder: true,
     #         remind_minutes_before: 10,
     #         is_meeting: true,
     #         event_start: Time.now.to_i,
     #         event_end: Time.now.to_i + 86400,
-    #         recurring: false,
     #         all_day: false
     #     )
     #
@@ -145,7 +129,7 @@ module MoxiworksPlatform
     #   {   "date" => "MM/DD/YY",
     #       "events" => [ MoxiworkPlatform::Event, MoxiworkPlatform::Event ]
     #   }
-     #
+    #
     # @raise ::MoxiworksPlatform::Exception::ArgumentError if required
     #     named parameters aren't included
     #
@@ -193,12 +177,10 @@ module MoxiworksPlatform
     # @option opts [String] :event_subject  a brief human-readable description of the event
     # @option opts [String] :event_location human-readable description of the event's location
     # @option opts [String] :note human-readable details regarding the event
-    # @option opts [Boolean] :send_reminder whether a reminder should be sent beforehand
-    # @option opts [Integer] :remind_minutes_before how many minutes before the event the reminder should be sent (if send_reminder is true)
+    # @option opts [Integer] :remind_minutes_before how many minutes before the event the reminder should be sent
     # @option opts [Boolean] :is_meeting whether the event is a meeting
     # @option opts [Integer] :event_start Unix timestamp representing the start time of the event
     # @option opts [Integer] :event_end Unix timestamp representing the end time of the event
-    # @option opts [Boolean] :recurring whether the event is a recurring event
     # @option opts [Boolean] :all_day whether the event is an all day event
     #
     # @return [MoxiworksPlatform::Event]
@@ -212,12 +194,10 @@ module MoxiworksPlatform
     #         event_subject: 'foo deeaz',
     #         event_location: '1234 there ave',
     #         note: 'yo, whatup?',
-    #         send_reminder: true,
     #         remind_minutes_before: 10,
     #         is_meeting: true,
     #         event_start: Time.now.to_i,
     #         event_end: Time.now.to_i + 86400,
-    #         recurring: false,
     #         all_day: false
     #     )
     #
@@ -273,8 +253,7 @@ module MoxiworksPlatform
     # @option opts [String] :event_subject  a brief human-readable description of the event
     # @option opts [String] :event_location human-readable description of the event's location
     # @option opts [String] :note human-readable details regarding the event
-    # @option opts [Boolean] :send_reminder whether a reminder should be sent beforehand
-    # @option opts [Integer] :remind_minutes_before how many minutes before the event the reminder should be sent (if send_reminder is true)
+    # @option opts [Integer] :remind_minutes_before how many minutes before the event the reminder should be sent
     # @option opts [Boolean] :is_meeting whether the event is a meeting
     # @option opts [Integer] :event_start Unix timestamp representing the start time of the event
     # @option opts [Integer] :event_end Unix timestamp representing the end time of the event

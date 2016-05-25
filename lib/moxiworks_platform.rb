@@ -6,6 +6,7 @@ require 'moxiworks_platform/credentials'
 require 'moxiworks_platform/contact'
 require 'moxiworks_platform/agent'
 require 'moxiworks_platform/event'
+require 'moxiworks_platform/group'
 
 
 

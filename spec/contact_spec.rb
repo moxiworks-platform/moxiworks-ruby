@@ -15,7 +15,7 @@ describe MoxiworksPlatform::Contact do
                        :search_max_lot_size, :search_max_price, :search_max_sq_ft,
                        :search_max_year_built, :search_min_baths, :search_min_beds,
                        :search_min_price, :search_min_sq_ft, :search_min_year_built,
-                       :search_property_types]
+                       :search_property_types, :note]
 
   integer_accessors =  [:property_beds, :property_list_price, :search_min_year_built,
                         :search_min_sq_ft, :search_min_price, :search_min_beds,
