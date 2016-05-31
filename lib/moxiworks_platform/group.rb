@@ -42,30 +42,14 @@ module MoxiworksPlatform
     #       )
     #
     def self.find(opts={})
-      required_opts = [:moxi_works_agent_id, :moxi_works_group_name]
-      required_opts.each do |opt|
-        raise ::MoxiworksPlatform::Exception::ArgumentError, "#{opt} required" if
-            opts[opt].nil? or opts[opt].empty?
-      end
       url = "#{MoxiworksPlatform::Config.url}/api/groups/#{opts[:moxi_works_group_name]}"
-      group = nil
-      RestClient::Request.execute(method: :get,
-                                  url: url,
-                                  payload: opts, headers: self.headers) do |response|
-        puts response if MoxiworksPlatform::Config.debug
-        self.check_for_error_in_response(response)
-        json = JSON.parse(response)
-        return false if not json['status'].nil? and json['status'] =='fail'
-        group = MoxiworksPlatform::Group.new(json) unless json.nil? or json.empty?
-      end
-      group
+      self.send_request(:get, opts, url)
     end
-
 
     # Search an Agent's Groups in Moxi Works Platform
     # @param [Hash] opts named parameter Hash
     # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this event is associated
-    # @option opts [String]  :moxi_works_group_name optional name to search for. If no name is provided, all of the Agent's Groups will be returned
+    # @option opts [String]  :name optional name to search for. If no name is provided, all of the Agent's Groups will be returned
     #
     # @return [Array] containing MoxiworksPlatform::Group objects formatted as follows:
     #
@@ -109,5 +93,17 @@ module MoxiworksPlatform
       end
       new_contacts
     end
+
+    protected
+    def self.send_request(method, opts={}, url=nil)
+      url ||= "#{MoxiworksPlatform::Config.url}/api/agents"
+      required_opts = [:moxi_works_agent_id]
+      required_opts.each do |opt|
+        raise ::MoxiworksPlatform::Exception::ArgumentError, "#{opt} required" if
+            opts[opt].nil? or opts[opt].empty?
+      end
+      super(method, opts, url)
+    end
+
   end
 end

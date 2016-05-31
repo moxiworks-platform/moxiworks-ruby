@@ -38,7 +38,7 @@ describe MoxiworksPlatform::Group do
         contact = contacts.first
         expect(@group.contacts.first.class).to eq MoxiworksPlatform::Contact
         contact.each do |k, v|
-          puts "#{k} => #{@group.contacts.first.send(k.to_s)} == #{contact[k.to_s].to_i}"
+          puts "#{k} => #{@group.contacts.first.send(k.to_s)} == #{contact[k.to_s]}"
           if integer_accessors.include? k.to_sym
             expect(@group.contacts.first.send(k.to_s)).to eq contact[k.to_s].to_i
           elsif float_accessors.include? k.to_sym
