@@ -5,7 +5,7 @@ http_interactions:
     uri: https://abc123:secret@api.moxiworks.com/api/events/17c58ff85172093286272cffa4897610
     body:
       encoding: UTF-8
-      string: moxi_works_agent_id=BiaB_test9%40moxiworkstest.com&partner_contact_id=&partner_event_id=17c58ff85172093286272cffa4897610&event_subject=foo%20deeaz&event_location=1234%20there%20ave&note=yo%2C%20whatup%3F&send_reminder=true&remind_minutes_before=10&is_meeting=false&event_start=1462235921&event_end=1462322321&cancelled=false&recurring=false&all_day=false&attendees=&event_id=17c58ff85172093286272cffa4897610
+      string: moxi_works_agent_id=BiaB_test9%40moxiworkstest.com&partner_contact_id=&partner_event_id=17c58ff85172093286272cffa4897610&event_subject=foo%20deeaz&event_location=1234%20there%20ave&note=yo%2C%20whatup%3F&send_reminder=true&remind_minutes_before=10&is_meeting=false&event_start=1462235921&event_end=1462322321&cancelled=false&recurring=false&all_day=false&required_attendees=&optional_attendees=&event_id=17c58ff85172093286272cffa4897610
     headers:
       Accept:
       - application/vnd.moxi-platform+json;version=1

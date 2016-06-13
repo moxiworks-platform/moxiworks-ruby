@@ -64,6 +64,17 @@ module MoxiworksPlatform
     # @return [Boolean]
     attr_accessor :all_day
 
+    # @!attribute required_attendees
+    # a comma separated list of attendee IDs
+    #
+    # @return [String]
+    attr_accessor :required_attendees
+
+    # @!attribute optional_attendees
+    # a comma separated list of attendee IDs
+    #
+    # @return [String]
+    attr_accessor :optional_attendees
 
     # Creates a new Event in Moxi Works Platform
     # @param [Hash] opts named parameter Hash
@@ -80,6 +91,8 @@ module MoxiworksPlatform
     # @option opts [Integer] :event_start Unix timestamp representing the start time of the event
     # @option opts [Integer] :event_end Unix timestamp representing the end time of the event
     # @option opts [Boolean] :all_day whether the event is an all day event
+    # @option opts [String] :required_attendees comma separated list of attendee IDs using Contact IDs from your system (partner_contact_id) that have already been added to The Moxi Works Platform as a Contact
+    # @option opts [String] :optional_attendees comma separated list of attendee IDs using Contact IDs from your system (partner_contact_id) that have already been added to The Moxi Works Platform as a Contact
     #
     # @return [MoxiworksPlatform::Event]
     #
@@ -182,6 +195,8 @@ module MoxiworksPlatform
     # @option opts [Integer] :event_start Unix timestamp representing the start time of the event
     # @option opts [Integer] :event_end Unix timestamp representing the end time of the event
     # @option opts [Boolean] :all_day whether the event is an all day event
+    # @option opts [String] :required_attendees comma separated list of attendee IDs using Contact IDs from your system (partner_contact_id) that have already been added to The Moxi Works Platform as a Contact
+    # @option opts [String] :optional_attendees comma separated list of attendee IDs using Contact IDs from your system (partner_contact_id) that have already been added to The Moxi Works Platform as a Contact
     #
     # @return [MoxiworksPlatform::Event]
     #
@@ -259,6 +274,8 @@ module MoxiworksPlatform
     # @option opts [Integer] :event_end Unix timestamp representing the end time of the event
     # @option opts [Boolean] :recurring whether the event is a recurring event
     # @option opts [Boolean] :all_day whether the event is an all day event
+    # @option opts [String] :required_attendees comma separated list of attendee IDs using Contact IDs from your system (partner_contact_id) that have already been added to The Moxi Works Platform as a Contact
+    # @option opts [String] :optional_attendees comma separated list of attendee IDs using Contact IDs from your system (partner_contact_id) that have already been added to The Moxi Works Platform as a Contact
     #
     # @return [MoxiworksPlatform::Event]
     #
