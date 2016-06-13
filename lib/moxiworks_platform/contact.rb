@@ -19,12 +19,6 @@ module MoxiworksPlatform
     #   @return [String] your system's unique ID for the contact
     attr_accessor :partner_contact_id
 
-    # @!attribute business_website
-    #   the full URL of the business website to be associated with this Contact
-    #
-    #   @return [String]-- Default ''
-    attr_accessor :business_website
-
     # @!attribute contact_name
     #   the full name of this Contact
     #
@@ -360,7 +354,6 @@ module MoxiworksPlatform
     #
     #     optional Contact parameters
     #
-    # @option opts [String] :business_website  full url of a website associated with this contact
     # @option opts [String] :contact_name full name of this contact in format "Firstname Middlename Lastname"
     # @option opts [String, Enumerated] :gender can be "male" or "female" or "m" or "f"
     # @option opts [String] :home_street_address the street address and street on which the contact lives
@@ -428,7 +421,6 @@ module MoxiworksPlatform
     #     home_neighborhood: 'my hood',
     #     job_title: 'junior bacon burner',
     #     occupation: 'chef',
-    #     business_website: 'http://bear.wrass.ler',
     #     primary_email_address: 'goo@goo.goo',
     #     primary_phone_number: '123213',
     #     property_mls_id: '1232312abcv',
@@ -504,7 +496,6 @@ module MoxiworksPlatform
     #
     #     optional Contact parameters
     #
-    # @option opts [String] :business_website  full url of a website associated with this contact
     # @option opts [String] :contact_name full name of this contact in format "Firstname Middlename Lastname"
     # @option opts [String, Enumerated] :gender can be "male" or "female" or "m" or "f"
     # @option opts [String] :home_street_address the street address and street on which the contact lives
@@ -572,7 +563,6 @@ module MoxiworksPlatform
     #     home_neighborhood: 'my hood',
     #     job_title: 'junior bacon burner',
     #     occupation: 'chef',
-    #     business_website: 'http://bear.wrass.ler',
     #     primary_email_address: 'goo@goo.goo',
     #     primary_phone_number: '123213',
     #     property_mls_id: '1232312abcv',
@@ -626,7 +616,6 @@ module MoxiworksPlatform
     #
     #     optional Contact parameters
     #
-    # @option opts [String] :business_website  full url of a website associated with this contact
     # @option opts [String] :contact_name full name of this contact in format "Firstname Middlename Lastname"
     # @option opts [String, Enumerated] :gender can be "male" or "female" or "m" or "f"
     # @option opts [String] :home_street_address the street address and street on which the contact lives

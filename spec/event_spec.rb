@@ -327,13 +327,14 @@ describe MoxiworksPlatform::Event do
 
 
     context :search do
-      let!(:event_name) {'firstname lastname'}
+      let!(:date_start) {'1461178675'}
+      let!(:date_end) {'1462388205'}
       context :credentials_required do
         it 'should raise a MoxiworksPlatform::AuthorizationError if find is called without authorization' do
           VCR.use_cassette('event/search/success', record: :none) do
             expect {MoxiworksPlatform::Event.search(
                 moxi_works_agent_id: agent_id,
-                event_name: event_name) }.to raise_exception(MoxiworksPlatform::Exception::AuthorizationError)
+                date_start: date_start, date_end: date_end) }.to raise_exception(MoxiworksPlatform::Exception::AuthorizationError)
           end
         end
       end
@@ -376,7 +377,7 @@ describe MoxiworksPlatform::Event do
             it "should have populated attribute #{attr_accessor} when update with all attributes populated" do
               VCR.use_cassette('event/search/success', record: :none) do
                 results = MoxiworksPlatform::Event.search(
-                    moxi_works_agent_id: agent_id, event_name: event_name)
+                    moxi_works_agent_id: agent_id, date_start: date_start, date_end: date_end)
                 result_with_events = nil
                 results.each do |r|
                   if r[:events].count > 0
