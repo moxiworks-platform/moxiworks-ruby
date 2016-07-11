@@ -122,33 +122,6 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#business_website-instance_method" title="#business_website (instance method)">- (String) <strong>business_website</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>the full URL of the business website to be associated with this Contact.</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#contact_name-instance_method" title="#contact_name (instance method)">- (String) <strong>contact_name</strong> </a>
     
 
@@ -413,6 +386,33 @@ Operations&#39;.</p>
     <span class="summary_desc"><div class='inline'>
 <p>moxi_works_agent_id is the Moxi Works Platform ID of the agent which a
 contact is or is to be associated with.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#note-instance_method" title="#note (instance method)">- (String) <strong>note</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>more detailed information about the Contact.</p>
 </div></span>
   
 </li>
@@ -1052,6 +1052,33 @@ listings.</p>
       <li class="public ">
   <span class="summary_signature">
     
+      <a href="#search_min_lot_size-instance_method" title="#search_min_lot_size (instance method)">- (Integer) <strong>search_min_lot_size</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>the minimum lot size used by the contact when searching for listings.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#search_min_price-instance_method" title="#search_min_price (instance method)">- (Integer) <strong>search_min_price</strong> </a>
     
 
@@ -1516,70 +1543,9 @@ that your system has previously created.</p>
     <h2>Instance Attribute Details</h2>
     
       
-      <span id="business_website=-instance_method"></span>
-      <div class="method_details first">
-  <h3 class="signature first" id="business_website-instance_method">
-  
-    - (<tt>String</tt>) <strong>business_website</strong> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>the full URL of the business website to be associated with this Contact</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Returns:</p>
-<ul class="return">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>– Default &#39;&#39;</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-26
-27
-28</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 26</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_business_website'>business_website</span>
-  <span class='ivar'>@business_website</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
       <span id="contact_name=-instance_method"></span>
-      <div class="method_details ">
-  <h3 class="signature " id="contact_name-instance_method">
+      <div class="method_details first">
+  <h3 class="signature first" id="contact_name-instance_method">
   
     - (<tt>String</tt>) <strong>contact_name</strong> 
   
@@ -1622,12 +1588,12 @@ that your system has previously created.</p>
       <pre class="lines">
 
 
-32
-33
-34</pre>
+26
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_contact_name'>contact_name</span>
   <span class='ivar'>@contact_name</span>
@@ -1694,12 +1660,12 @@ used or the full word &#39;male&#39; or &#39;female.&#39;</p>
       <pre class="lines">
 
 
-41
-42
-43</pre>
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_gender'>gender</span>
   <span class='ivar'>@gender</span>
@@ -1755,12 +1721,12 @@ used or the full word &#39;male&#39; or &#39;female.&#39;</p>
       <pre class="lines">
 
 
-53
-54
-55</pre>
+47
+48
+49</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 53</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 47</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_home_city'>home_city</span>
   <span class='ivar'>@home_city</span>
@@ -1819,12 +1785,12 @@ country</p>
       <pre class="lines">
 
 
-81
-82
-83</pre>
+75
+76
+77</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 81</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 75</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_home_country'>home_country</span>
   <span class='ivar'>@home_country</span>
@@ -1880,12 +1846,12 @@ country</p>
       <pre class="lines">
 
 
-73
-74
-75</pre>
+67
+68
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 67</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_home_neighborhood'>home_neighborhood</span>
   <span class='ivar'>@home_neighborhood</span>
@@ -1944,12 +1910,12 @@ state</p>
       <pre class="lines">
 
 
-61
-62
-63</pre>
+55
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_home_state'>home_state</span>
   <span class='ivar'>@home_state</span>
@@ -2005,12 +1971,12 @@ state</p>
       <pre class="lines">
 
 
-47
-48
-49</pre>
+41
+42
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 47</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_home_street_address'>home_street_address</span>
   <span class='ivar'>@home_street_address</span>
@@ -2066,12 +2032,12 @@ state</p>
       <pre class="lines">
 
 
-67
-68
-69</pre>
+61
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_home_zip'>home_zip</span>
   <span class='ivar'>@home_zip</span>
@@ -2128,12 +2094,12 @@ Operations&#39;</p>
       <pre class="lines">
 
 
-87
-88
-89</pre>
+81
+82
+83</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_job_title'>job_title</span>
   <span class='ivar'>@job_title</span>
@@ -2201,6 +2167,67 @@ contact is or is to be associated with.</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_moxi_works_agent_id'>moxi_works_agent_id</span>
   <span class='ivar'>@moxi_works_agent_id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="note=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="note-instance_method">
+  
+    - (<tt>String</tt>) <strong>note</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>more detailed information about the Contact</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>– Default &#39;&#39;</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 87</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_note'>note</span>
+  <span class='ivar'>@note</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3624,6 +3651,65 @@ listings</p>
 </div>
     
       
+      <span id="search_min_lot_size=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="search_min_lot_size-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>search_min_lot_size</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>the minimum lot size used by the contact when searching for listings</p>
+
+<p>Property Search (PS) attribute</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>– Default nil</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+312</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 312</span>
+
+<span class='id identifier rubyid_attr_writer'>attr_writer</span> <span class='symbol'>:search_min_lot_size</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
       <span id="search_min_price=-instance_method"></span>
       <div class="method_details ">
   <h3 class="signature " id="search_min_price-instance_method">
@@ -3671,10 +3757,10 @@ listings</p>
       <pre class="lines">
 
 
-312</pre>
+321</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 312</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 321</span>
 
 <span class='id identifier rubyid_attr_writer'>attr_writer</span> <span class='symbol'>:search_min_price</span></pre>
     </td>
@@ -3730,10 +3816,10 @@ listings</p>
       <pre class="lines">
 
 
-321</pre>
+330</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 321</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 330</span>
 
 <span class='id identifier rubyid_attr_writer'>attr_writer</span> <span class='symbol'>:search_min_sq_ft</span></pre>
     </td>
@@ -3789,10 +3875,10 @@ listings</p>
       <pre class="lines">
 
 
-330</pre>
+339</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 330</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 339</span>
 
 <span class='id identifier rubyid_attr_writer'>attr_writer</span> <span class='symbol'>:search_min_year_built</span></pre>
     </td>
@@ -3849,12 +3935,12 @@ listings</p>
       <pre class="lines">
 
 
-339
-340
-341</pre>
+348
+349
+350</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 339</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 348</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_search_property_types'>search_property_types</span>
   <span class='ivar'>@search_property_types</span>
@@ -4153,7 +4239,6 @@ listings</p>
   <span class='label'>home_neighborhood:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>my hood</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
   <span class='label'>job_title:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>junior bacon burner</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
   <span class='label'>occupation:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>chef</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-  <span class='label'>business_website:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>http://bear.wrass.ler</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
   <span class='label'>primary_email_address:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>goo@goo.goo</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
   <span class='label'>primary_phone_number:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>123213</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
   <span class='label'>property_mls_id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1232312abcv</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
@@ -4214,19 +4299,6 @@ this contact is to be associated</p>
 <p><strong>REQUIRED</strong> Your system&#39;s unique ID for this contact.</p>
 
 <p>optional Contact parameters</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">:business_website</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>full url of a website associated with this contact</p>
 </div>
           
         </li>
@@ -4817,12 +4889,12 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-422
-423
-424</pre>
+429
+430
+431</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 422</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 429</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='symbol'>:post</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span>
@@ -4963,11 +5035,6 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-589
-590
-591
-592
-593
 594
 595
 596
@@ -4977,10 +5044,15 @@ aren&#39;t included</p>
 600
 601
 602
-603</pre>
+603
+604
+605
+606
+607
+608</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 589</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 594</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/contacts/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:partner_contact_id</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -5118,13 +5190,13 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-436
-437
-438
-439</pre>
+443
+444
+445
+446</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 436</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 443</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/contacts/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:partner_contact_id</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -5295,13 +5367,6 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-462
-463
-464
-465
-466
-467
-468
 469
 470
 471
@@ -5314,10 +5379,17 @@ aren&#39;t included</p>
 478
 479
 480
-481</pre>
+481
+482
+483
+484
+485
+486
+487
+488</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 462</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 469</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_url'>url</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/contacts</span><span class='tstring_end'>&quot;</span></span>
@@ -5447,19 +5519,6 @@ this contact is to be associated</p>
 <p><strong>REQUIRED</strong> Your system&#39;s unique ID for this contact.</p>
 
 <p>optional Contact parameters</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">:business_website</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>full url of a website associated with this contact</p>
 </div>
           
         </li>
@@ -6033,19 +6092,19 @@ Condo, Townhouse&#39;</p>
       <pre class="lines">
 
 
-668
-669
-670
-671
 672
 673
 674
 675
 676
-677</pre>
+677
+678
+679
+680
+681</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 668</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 672</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_url'>url</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_url'>url</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/contacts</span><span class='tstring_end'>&quot;</span></span>
@@ -6096,7 +6155,6 @@ Condo, Townhouse&#39;</p>
   <span class='label'>home_neighborhood:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>my hood</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
   <span class='label'>job_title:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>junior bacon burner</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
   <span class='label'>occupation:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>chef</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-  <span class='label'>business_website:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>http://bear.wrass.ler</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
   <span class='label'>primary_email_address:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>goo@goo.goo</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
   <span class='label'>primary_phone_number:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>123213</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
   <span class='label'>property_mls_id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1232312abcv</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
@@ -6152,19 +6210,6 @@ this contact is to be associated</p>
 <p><strong>REQUIRED</strong> Your system&#39;s unique ID for this contact.</p>
 
 <p>optional Contact parameters</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">:business_website</span>
-          <span class="type">(<tt>String</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'>
-<p>full url of a website associated with this contact</p>
 </div>
           
         </li>
@@ -6755,14 +6800,14 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-567
-568
-569
-570
-571</pre>
+572
+573
+574
+575
+576</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 567</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 572</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:contact_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:partner_contact_id</span><span class='rbracket'>]</span>
@@ -6834,12 +6879,12 @@ that your system has previously created</p>
       <pre class="lines">
 
 
-702
-703
-704</pre>
+706
+707
+708</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 702</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 706</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span>
   <span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Contact</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='rparen'>)</span>
@@ -6901,12 +6946,12 @@ that your system has previously created</p>
       <pre class="lines">
 
 
-690
-691
-692</pre>
+694
+695
+696</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 690</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 694</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_save'>save</span>
   <span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Contact</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='rparen'>)</span>
@@ -6921,7 +6966,7 @@ that your system has previously created</p>
 </div>
 
     <div id="footer">
-  Generated on Mon May 23 10:15:24 2016 by
+  Generated on Mon Jul 11 16:22:36 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.4).
 </div>
