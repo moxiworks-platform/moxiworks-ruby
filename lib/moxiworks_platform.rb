@@ -7,6 +7,7 @@ require 'moxiworks_platform/contact'
 require 'moxiworks_platform/agent'
 require 'moxiworks_platform/event'
 require 'moxiworks_platform/group'
+require 'moxiworks_platform/action_log'
 
 
 

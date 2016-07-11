@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://abc123:secret@api.moxiworks.com/api/action_logs
+    body:
+      encoding: UTF-8
+      string: moxi_works_agent_id=BiaB_test9%40moxiworkstest.com&partner_contact_id=booyuh&title=foo&body=bar
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '85'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a02520d08ecf22c2732ae5c1364cb24e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 969749fa-fd33-4ddc-8638-8e8850f440ed
+      X-Runtime:
+      - '0.749981'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Mon, 11 Jul 2016 19:46:50 GMT
+      Content-Length:
+      - '226'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"moxi_works_agent_id":"1234abcd","partner_contact_id":"booyuh","moxi_works_action_log_id":"35a14e7e47a011e68a085254000f954a","type":"api_action_log_entry_general","timestamp":1468266410,"title":"foo","body":"bar"}'
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 19:46:50 GMT
+recorded_with: VCR 3.0.1

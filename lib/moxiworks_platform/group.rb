@@ -1,5 +1,5 @@
 module MoxiworksPlatform
-  # = Moxi Works Platform Event
+  # = Moxi Works Platform Group
   class Group < MoxiworksPlatform::Resource
     # @!attribute moxi_works_agent_id
     #   moxi_works_agent_id is the Moxi Works Platform ID of the agent which the group is
@@ -11,7 +11,7 @@ module MoxiworksPlatform
     attr_accessor :moxi_works_agent_id
 
     # @!attribute moxi_works_group_id
-    # your system's event ID for the event
+    # your system's group ID for the group
     #
     # @return [String] representing the name of the group on the Moxi Works Platform
     attr_accessor :moxi_works_group_name
@@ -22,9 +22,9 @@ module MoxiworksPlatform
     # @return [Array] of MoxiworksPlatform::Contact objects
     attr_reader :contacts
 
-    # Find an Event  your system has previously created in Moxi Works Platform
+    # Find a Group  your system has previously created in Moxi Works Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this event is associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this group is associated
     # @option opts [Integer]  :moxi_works_group_id *REQUIRED* The Moxi Works Group ID for this group.
     #
     # @return [MoxiworksPlatform::Group]
@@ -43,12 +43,19 @@ module MoxiworksPlatform
     #
     def self.find(opts={})
       url = "#{MoxiworksPlatform::Config.url}/api/groups/#{opts[:moxi_works_group_name]}"
-      self.send_request(:get, opts, url)
+      contacts = []
+      response = self.send_request(:get, opts, url)
+
+      response.contacts.each do |c|
+        contacts << MoxiworksPlatform::Contact.new(c) unless c.nil? or c.empty?
+      end
+      response.contacts = contacts
+      response
     end
 
     # Search an Agent's Groups in Moxi Works Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this event is associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this group is associated
     # @option opts [String]  :name optional name to search for. If no name is provided, all of the Agent's Groups will be returned
     #
     # @return [Array] containing MoxiworksPlatform::Group objects formatted as follows:
