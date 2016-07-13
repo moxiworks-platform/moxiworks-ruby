@@ -112,7 +112,7 @@
 
 </div><div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="ActionLog.html" title="MoxiworksPlatform::ActionLog (class)">ActionLog</a></span>, <span class='object_link'><a href="Agent.html" title="MoxiworksPlatform::Agent (class)">Agent</a></span>, <span class='object_link'><a href="Contact.html" title="MoxiworksPlatform::Contact (class)">Contact</a></span>, <span class='object_link'><a href="Event.html" title="MoxiworksPlatform::Event (class)">Event</a></span>, <span class='object_link'><a href="Group.html" title="MoxiworksPlatform::Group (class)">Group</a></span></p>
+  <p class="children"><span class='object_link'><a href="ActionLog.html" title="MoxiworksPlatform::ActionLog (class)">ActionLog</a></span>, <span class='object_link'><a href="Agent.html" title="MoxiworksPlatform::Agent (class)">Agent</a></span>, <span class='object_link'><a href="Contact.html" title="MoxiworksPlatform::Contact (class)">Contact</a></span>, <span class='object_link'><a href="Event.html" title="MoxiworksPlatform::Event (class)">Event</a></span>, <span class='object_link'><a href="Group.html" title="MoxiworksPlatform::Group (class)">Group</a></span>, <span class='object_link'><a href="Task.html" title="MoxiworksPlatform::Task (class)">Task</a></span></p>
 </div>
 
 
@@ -1184,7 +1184,7 @@ in Moxi Works Platform</p>
       <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 98</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attributes'>attributes</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>+</span> <span class='id identifier rubyid_numeric_attrs'>numeric_attrs</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1450,7 +1450,7 @@ names and attribute values are Hash values</p>
 </div>
 
     <div id="footer">
-  Generated on Mon Jul 11 16:22:36 2016 by
+  Generated on Wed Jul 13 14:48:19 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.4).
 </div>
