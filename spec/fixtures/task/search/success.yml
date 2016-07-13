@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://abc123:secret@api.moxiworks.com/api/tasks
+    body:
+      encoding: UTF-8
+      string: moxi_works_agent_id=BiaB_test9%40moxiworkstest.com&due_date_start=1467067247&due_date_end=1468363247
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '74'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4ba3dbd0f8b9264095fc8ea41571cc9d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e997ee2b-ae6c-4149-97d5-e49ef46593f4
+      X-Runtime:
+      - '1.126629'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 12 Jul 2016 22:40:48 GMT
+      Content-Length:
+      - '1316'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _wms_svc_public_session=OVVMQnVIRW95bGdtRFdUbWxmWit1WU83U21XbTc0Z0RVN29KQUtSK20vVmNuVWRUaVcwbG1YZzFLNVJBUHFrUmZDNklZZjhpa1hqVjVIQjVZUzEwanI4Ym5kQldiZUdLaHB5UHZidWVCcEl2Nmxhb0RxVHFiTnlEMlBnM2xGcVJveDc3MHN1d1hVcWJwRk1ESGppMzFTK2lFdW43RFV3T0Nzalh6SWhQZGxzPS0tVDdvT2Y2dW5LWlF1b3NwRGdidDNIUT09--cb8beba018b7ff56cd82dc4558a625ae0a76153f;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"page_number":1,"total_pages":1,"tasks":[{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":null,"partner_task_id":null,"name":"Reach
+        Out to this New Lead!","description":"Call your new lead while it''s still
+        hot! The longer you wait to make first contact, the colder this lead becomes.","due_at":"1467841223","duration":15,"status":"active","created_at":"1467409223","completed_at":null},{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":null,"partner_task_id":null,"name":"Follow-up
+        Email","description":"Send a follow-up email after your call to make sure
+        your new lead has your contact information and confirmation on the next steps.","due_at":"1467841223","duration":15,"status":"active","created_at":"1467409223","completed_at":null},{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":null,"partner_task_id":null,"name":"Update
+        Team on Status of Lead","description":"Don''t forget to send an update to
+        your team or manager on the status of this lead.","due_at":"1468273223","duration":15,"status":"active","created_at":"1467409223","completed_at":null},{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":null,"partner_task_id":"whaterfverss","name":"Updated
+        Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}]}'
+    http_version: 
+  recorded_at: Tue, 12 Jul 2016 22:40:48 GMT
+recorded_with: VCR 3.0.1

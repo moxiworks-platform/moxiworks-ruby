@@ -73,7 +73,7 @@ module MoxiworksPlatform
       required_opts = [:moxi_works_agent_id]
       required_opts.each do |opt|
         raise ::MoxiworksPlatform::Exception::ArgumentError, "#{opt} required" if
-            opts[opt].nil? or opts[opt].empty?
+            opts[opt].nil? or opts[opt].to_s.empty?
       end
       results = []
       RestClient::Request.execute(method: :get,
@@ -107,7 +107,7 @@ module MoxiworksPlatform
       required_opts = [:moxi_works_agent_id]
       required_opts.each do |opt|
         raise ::MoxiworksPlatform::Exception::ArgumentError, "#{opt} required" if
-            opts[opt].nil? or opts[opt].empty?
+            opts[opt].nil? or opts[opt].to_s.empty?
       end
       super(method, opts, url)
     end

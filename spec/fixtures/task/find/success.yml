@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://abc123:secret@api.moxiworks.com/api/tasks/whaterfverss
+    body:
+      encoding: UTF-8
+      string: moxi_works_agent_id=moxi_works_agent_id=BiaB_test9%40moxiworkstest.com&partner_contact_id=booyuh&partner_task_id=whaterfverss
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '98'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fb108237f3df733126d18abd450d640c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e7069b16-e766-42ab-bf62-097cd8087083
+      X-Runtime:
+      - '0.438575'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 12 Jul 2016 20:56:07 GMT
+      Content-Length:
+      - '275'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _wms_svc_public_session=YW14U1lkT2FEODE5M2xRMWpKQ3VteDF5WjR6RGY0d0RxMFlTWUY2VU1qbTNjR2ZoZlUrV1RtUFVFdzNadWorK0xSYzQ2RGwwNzBqRE9NN0FQVmVOZDFmOXBaczlXSWszK0ozcVVuU0MzZGZvaTllOWY4RnBZdXRCQWR0eitWL3ZFQ1FTb1FhSUJwWG9XNm13NjZLbkNBWStTZ0R2eitwck8xTXU4d3U0MERnPS0tZDA0U24vamFZeWZmZzdkUnN5YXpxQT09--1dd33aaa70a4a9820a104e8d939738846559c0a6;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated
+        Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}'
+    http_version: 
+  recorded_at: Tue, 12 Jul 2016 20:56:07 GMT
+recorded_with: VCR 3.0.1

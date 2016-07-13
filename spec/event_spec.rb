@@ -3,8 +3,8 @@ require 'vcr'
 
 describe MoxiworksPlatform::Event do
   event_accessors = [:moxi_works_agent_id, :partner_event_id, :partner_event_id,
-                     :event_subject, :event_location, :note, :send_reminder, :is_meeting, 
-                     :recurring, :all_day, :required_attendees, :optional_attendees]
+                     :event_subject, :event_location, :note, :is_meeting,
+                      :all_day, :required_attendees, :optional_attendees]
   
   integer_accessors = [:remind_minutes_before, :event_start, :event_end]
   
@@ -356,6 +356,8 @@ describe MoxiworksPlatform::Event do
           it 'should return a MoxiworksPlatform::Event Object when find is called' do
             VCR.use_cassette('event/search/success', record: :none) do
               search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id event_name).include?(key) }
+              search_attrs[:date_start] = 1461178675
+              search_attrs[:date_end] = 1462388205
               results = MoxiworksPlatform::Event.search(symbolize_keys(search_attrs))
               event = results.first
               expect(event.class).to eq(Hash)
@@ -395,6 +397,8 @@ describe MoxiworksPlatform::Event do
             it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
               VCR.use_cassette('event/search/success', record: :none) do
                 search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id event_name).include?(key) }
+                search_attrs[:date_start] = 1461178675
+                search_attrs[:date_end] = 1462388205
                 results = MoxiworksPlatform::Event.search(symbolize_keys(search_attrs))
                 result_with_events = nil
                 results.each do |r|

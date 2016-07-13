@@ -8,6 +8,7 @@ require 'moxiworks_platform/agent'
 require 'moxiworks_platform/event'
 require 'moxiworks_platform/group'
 require 'moxiworks_platform/action_log'
+require 'moxiworks_platform/task'
 
 
 

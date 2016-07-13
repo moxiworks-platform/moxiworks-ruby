@@ -96,7 +96,7 @@ module MoxiworksPlatform
     #
     # @return [Array][String] all defined accessors of this class
     def attributes
-      self.class.attributes
+      self.class.attributes + numeric_attrs
     end
 
     # convert this class into a Hash structure where attributes are Hash key names and attribute values are Hash values
