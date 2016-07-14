@@ -86,12 +86,12 @@ module  MoxiworksPlatform
     # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this task is to be associated
     # @option opts [String]  :partner_task_id *REQUIRED* Your system's unique ID for this task.
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for the Contact for whom this Task is to be associated.
+    # @option opts [Integer] :due_at *REQUIRED* Unix timestamp representing the due date
     #
     #     optional Task parameters
     #
     # @option opts [String] :name short description of the task
     # @option opts [String] :description longer description of the task
-    # @option opts [Integer] :due_at Unix timestamp representing the due date
     # @option opts [Integer] :duration Length of time in minutes that the task should take
     #
     # @return [MoxiworksPlatform::Task]
@@ -199,13 +199,13 @@ module  MoxiworksPlatform
     # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this task is to be associated
     # @option opts [String]  :partner_task_id *REQUIRED* Your system's unique ID for this task.
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for the Contact for whom this Task is to be associated.
+    # @option opts [Integer] :due_at Unix timestamp representing the due date
+    # @option opts [Integer] :duration Length of time in minutes that the task should take
     #
     #     optional Task parameters
     #
     # @option opts [String] :name short description of the task
     # @option opts [String] :description longer description of the task
-    # @option opts [Integer] :due_at Unix timestamp representing the due date
-    # @option opts [Integer] :duration Length of time in minutes that the task should take
     # @option opts [Integer] :completed_at Unix timestamp representing the date the task was completed
     # @option opts [String] :status enumerated string representing task status
     #
