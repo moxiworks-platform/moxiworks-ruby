@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://abc123:secret@api.moxiworks.com/api/email_campaigns
+    body:
+      encoding: UTF-8
+      string:  moxi_works_agent_id=BiaB_test9%40moxiworkstest.com&partner_contact_id=booyuh
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '66'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5c1798da407823e2d8d042ba4eff0bd8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7d8bbfad-6c6e-46df-90a6-3d57fb94d330
+      X-Runtime:
+      - '0.361147'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Fri, 15 Jul 2016 22:46:57 GMT
+      Content-Length:
+      - '190'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _wms_svc_public_session=L0pxUVltRmFKaFp4V1R0ZWE0Q1UzbGdFbExITTUrL3QybkJDQmFXS2puQUtNNUwxa3RqWUwxNnVmUGUvOE0zSllpYmtOOTZtZkdyZ0VrazdHTTlWVS8wYkdBQVJnK3lDck5LZTMycjJXMXNMM3NzMFkxS0V3VUVMZmVsazllRVVHaEtJWTR2Mm15N1prVUU4OW4rYXhHK0l2bzFXM1NQUHFEcW41QTJpL0tRPS0tRkVmVWZkVDZ6TDZ1TmZacnlIM25MZz09--f3b8638771abebe3f8be80c7886db51fa6905573;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '[{"subscription_type":"NeighborhoodNews::Subscription","email_address":"qatest@moxitest.com","subscribed_at":1467409224,"created_by":"agent","area":"98225","last_sent":0,"next_scheduled":0}]'
+    http_version: 
+  recorded_at: Fri, 15 Jul 2016 22:46:57 GMT
+recorded_with: VCR 3.0.1
