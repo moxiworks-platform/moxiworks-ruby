@@ -43,14 +43,7 @@ module MoxiworksPlatform
     #
     def self.find(opts={})
       url = "#{MoxiworksPlatform::Config.url}/api/groups/#{opts[:moxi_works_group_name]}"
-      contacts = []
-      response = self.send_request(:get, opts, url)
-
-      response.contacts.each do |c|
-        contacts << MoxiworksPlatform::Contact.new(c) unless c.nil? or c.empty?
-      end
-      response.contacts = contacts
-      response
+      self.send_request(:get, opts, url)
     end
 
     # Search an Agent's Groups in Moxi Works Platform

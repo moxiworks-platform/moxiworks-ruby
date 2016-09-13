@@ -7,13 +7,10 @@ describe MoxiworksPlatform::Contact do
                        :gender, :home_street_address, :home_city, :home_state,
                        :home_zip, :home_country, :job_title, :occupation, :partner_agent_id,
                        :primary_email_address, :secondary_email_address, :primary_phone_number,
-                       :secondary_phone_number, :property_baths, :property_beds, :property_city,
-                       :property_list_price, :property_listing_status, :property_mls_id,
+                       :secondary_phone_number, :property_city,
+                       :property_listing_status, :property_mls_id,
                        :property_photo_url, :property_state, :property_street_address,
                        :property_url, :property_zip, :search_city, :search_state, :search_zip,
-                       :search_max_lot_size, :search_max_price, :search_max_sq_ft,
-                       :search_max_year_built, :search_min_baths, :search_min_beds,
-                       :search_min_price, :search_min_sq_ft, :search_min_year_built,
                        :search_property_types, :note]
 
   integer_accessors =  [:property_beds, :property_list_price, :search_min_year_built,
@@ -357,21 +354,21 @@ describe MoxiworksPlatform::Contact do
           end
 
           integer_accessors.each do |attr_accessor|
-            it "should return nil for integer attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
+            it "should return 0 for integer attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
               VCR.use_cassette('contact/find/empty', record: :none) do
                 search_attrs = empty_response.select {|key, value| %w(moxi_works_agent_id partner_contact_id).include?(key) }
                 contact = MoxiworksPlatform::Contact.find(symbolize_keys(search_attrs))
-                expect(contact.send(attr_accessor.to_s)).to be_nil
+                expect(contact.send(attr_accessor.to_s)).to equal(0)
               end
             end
           end
 
           float_accessors.each do |attr_accessor|
-            it "should return nil for  float attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
+            it "should return 0 for  float attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
               VCR.use_cassette('contact/find/empty', record: :none) do
                 search_attrs = empty_response.select {|key, value| %w(moxi_works_agent_id partner_contact_id).include?(key) }
                 contact = MoxiworksPlatform::Contact.find(symbolize_keys(search_attrs))
-                expect(contact.send(attr_accessor.to_s)).to be_nil
+                expect(contact.send(attr_accessor.to_s)).to equal(0)
               end
             end
           end
@@ -568,19 +565,19 @@ describe MoxiworksPlatform::Contact do
           end
 
           integer_accessors.each do |attr_accessor|
-            it "should return nil for integer attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
+            it "should return 0 for integer attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
               VCR.use_cassette('contact/update/empty', record: :none) do
                 contact = MoxiworksPlatform::Contact.update(symbolize_keys(empty_response))
-                expect(contact.send(attr_accessor.to_s)).to be_nil
+                expect(contact.send(attr_accessor.to_s)).to equal(0)
               end
             end
           end
 
           float_accessors.each do |attr_accessor|
-            it "should return nil for  float attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
+            it "should return 0 for  float attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
               VCR.use_cassette('contact/update/empty', record: :none) do
                 contact = MoxiworksPlatform::Contact.update(symbolize_keys(empty_response))
-                expect(contact.send(attr_accessor.to_s)).to be_nil
+                expect(contact.send(attr_accessor.to_s)).to equal(0)
               end
             end
           end
@@ -679,19 +676,19 @@ describe MoxiworksPlatform::Contact do
           end
 
           integer_accessors.each do |attr_accessor|
-            it "should return nil for integer attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
+            it "should return 0 for integer attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
               VCR.use_cassette('contact/create/empty', record: :none) do
                 contact = MoxiworksPlatform::Contact.create(symbolize_keys(empty_response))
-                expect(contact.send(attr_accessor.to_s)).to be_nil
+                expect(contact.send(attr_accessor.to_s)).to equal(0)
               end
             end
           end
 
           float_accessors.each do |attr_accessor|
-            it "should return nil for  float attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
+            it "should return 0 for  float attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
               VCR.use_cassette('contact/create/empty', record: :none) do
                 contact = MoxiworksPlatform::Contact.create(symbolize_keys(empty_response))
-                expect(contact.send(attr_accessor.to_s)).to be_nil
+                expect(contact.send(attr_accessor.to_s)).to equal(0)
               end
             end
           end

@@ -11,16 +11,6 @@ module MoxiworksPlatform
     #   @return [String] the Moxi Works Platform ID of the agent
     attr_accessor :moxi_works_agent_id
 
-    # @!attribute mls
-    #
-    # @return [Array] containing strings representing the MLSs the agent is a member of
-    attr_accessor :mls
-
-    # @!attribute accreditation
-    #
-    # @return [String] containing any accreditation the agent has
-    attr_accessor :accreditation
-
     # @!attribute address_street
     #
     # @return [String] the agent's address, street and number
@@ -66,20 +56,10 @@ module MoxiworksPlatform
     # @return [String] the agent's full name
     attr_accessor :name
 
-    # @!attribute license
-    #
-    # @return [String] the agent's license number
-    attr_accessor :license
-
     # @!attribute mobile_phone_number
     #
     # @return [String] the agent's mobile phone number
     attr_accessor :mobile_phone_number
-
-    # @!attribute home_phone_number
-    #
-    # @return [String] the agent's home phone number
-    attr_accessor :home_phone_number
 
     # @!attribute mobile_phone_number
     #
@@ -106,11 +86,6 @@ module MoxiworksPlatform
     # @return [String] the agent's secondary email address
     attr_accessor :secondary_email_address
 
-    # @!attribute languages
-    #
-    # @return [Array] an array of strings representing any languages the agent speaks
-    attr_accessor :languages
-
     # @!attribute twitter
     #
     # @return [String] the agent's twitter handle
@@ -130,16 +105,6 @@ module MoxiworksPlatform
     #
     # @return [String] the agent's home page url
     attr_accessor :home_page
-
-    # @!attribute primary_email_address
-    #
-    # @return [String] the agent's date of birth
-    attr_accessor :birth_date
-
-    # @!attribute title
-    #
-    # @return [String] the agent's title
-    attr_accessor :title
 
     # @!attribute profile_image_url
     #
