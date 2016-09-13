@@ -58,7 +58,7 @@ module  MoxiworksPlatform
     # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this ActionLog is associated
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for the contact for whom the ActionLog entry is being created.
     #
-    # @return [Array] containing MoxiworksPlatform::ActionLog objects formatted as follows:
+    # @return [Array] containing MoxiworksPlatform::ActionLog objects
     #
     # @raise ::MoxiworksPlatform::Exception::ArgumentError if required
     #     named parameters aren't included
@@ -69,6 +69,8 @@ module  MoxiworksPlatform
     #        )
     #
     def self.search(opts={})
+      raise ::MoxiworksPlatform::Exception::ArgumentError,
+            'arguments must be passed as named parameters' unless opts.is_a? Hash
       url ||= "#{MoxiworksPlatform::Config.url}/api/action_logs"
       required_opts = [:moxi_works_agent_id, :partner_contact_id]
       required_opts.each do |opt|
@@ -105,6 +107,8 @@ module  MoxiworksPlatform
     #     named parameters aren't included
     #
     def self.send_request(method, opts={}, url=nil)
+      raise ::MoxiworksPlatform::Exception::ArgumentError,
+            'arguments must be passed as named parameters' unless opts.is_a? Hash
       url ||= "#{MoxiworksPlatform::Config.url}/api/action_logs"
       required_opts = [:moxi_works_agent_id, :partner_contact_id, :title, :body]
       required_opts.each do |opt|

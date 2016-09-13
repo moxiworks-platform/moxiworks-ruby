@@ -154,6 +154,8 @@ module MoxiworksPlatform
     #       )
     #
     def self.search(opts={})
+      raise ::MoxiworksPlatform::Exception::ArgumentError,
+            'arguments must be passed as named parameters' unless opts.is_a? Hash
       url ||= "#{MoxiworksPlatform::Config.url}/api/events"
       required_opts = [:moxi_works_agent_id, :date_start, :date_end]
       required_opts.each do |opt|
@@ -239,6 +241,8 @@ module MoxiworksPlatform
     #   success = MoxiWorksPlatform::Event.delete(moxi_works_agent_id: '123abcd', partner_event_id: 'myUniqueEventId' )
     #
     def self.delete(opts={})
+      raise ::MoxiworksPlatform::Exception::ArgumentError,
+            'arguments must be passed as named parameters' unless opts.is_a? Hash
       url = "#{MoxiworksPlatform::Config.url}/api/events/#{opts[:partner_event_id]}"
       required_opts = [:moxi_works_agent_id, :partner_event_id]
       required_opts.each do |opt|
@@ -283,6 +287,8 @@ module MoxiworksPlatform
     #     named parameters aren't included
     #
     def self.send_request(method, opts={}, url=nil)
+      raise ::MoxiworksPlatform::Exception::ArgumentError,
+            'arguments must be passed as named parameters' unless opts.is_a? Hash
       url ||= "#{MoxiworksPlatform::Config.url}/api/events"
       required_opts = [:moxi_works_agent_id, :partner_event_id]
       required_opts.each do |opt|

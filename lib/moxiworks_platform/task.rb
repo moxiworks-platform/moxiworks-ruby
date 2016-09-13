@@ -172,6 +172,8 @@ module  MoxiworksPlatform
     #     )
     #
     def self.search(opts={})
+      raise ::MoxiworksPlatform::Exception::ArgumentError,
+            'arguments must be passed as named parameters' unless opts.is_a? Hash
       url ||= "#{MoxiworksPlatform::Config.url}/api/tasks"
       required_opts = [:moxi_works_agent_id, :due_date_start, :due_date_end]
       required_opts.each do |opt|
@@ -260,6 +262,8 @@ module  MoxiworksPlatform
     #     named parameters aren't included
     #
     def self.send_request(method, opts={}, url=nil)
+      raise ::MoxiworksPlatform::Exception::ArgumentError,
+            'arguments must be passed as named parameters' unless opts.is_a? Hash
       url ||= "#{MoxiworksPlatform::Config.url}/api/tasks"
       required_opts = [:moxi_works_agent_id, :partner_task_id]
       required_opts.each do |opt|

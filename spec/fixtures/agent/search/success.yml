@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://abc123:secret@api.moxiworks.com/api/agents
+    body:
+      encoding: UTF-8
+      string: moxi_works_company_id=helgas_better_homes&updated_since=1472428427
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.2.0 x86_64) ruby/2.2.4p230
+      Authorization:
+      - Basic NWQzOWJhNTgtYmZjMy0xMWU1LWE0ZTMtZDBlMTQwOGU4MDI2OmE1NnN0aGhpZFRsVXNMeXA4ZUZaQlF0dA==
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '57'
+      Host:
+      - api.moxiworks.com
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e78e1322499338988cf7eff85574eae1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 921947a5-7d93-4905-b36f-d109fc3bf594
+      X-Runtime:
+      - '1.743990'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Mon, 12 Sep 2016 23:53:49 GMT
+      Content-Length:
+      - '4528'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _wms_svc_public_session=Tlp0VlowOHhsYlVwaXJmeHY2aTRPM3ByeEdIRDk3dnB4VWJuTlJlVHFSN0Rua1VsZ1lNTURmcHZqK0hVVGRiZmY0a2NwWEtGSlVvSzN4RFdwdTFrTTB0L2M5REdpSkhNZmEvYXcwNVdna2NkRjduaVFnSmRQazRNSjFwd1hEVzl2c3RqamNkTStqemRaK2pDZzRWRStwQVhpbHQwdllXc3hwcjNkZEZVdDY4PS0tYUphcTlpck02aHVEaXdlWThJdlB4Zz09--8c38c8b65ca37eb5ea4b21ecc6af9e0c7b79ecd9;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"page_number":1,"total_pages":1,"agents":[{"moxi_works_agent_id":"afdfadafdfad@daadfadfsdfsa.com","office_address_street":"18811
+        28th Ave W, Suite J","office_address_city":"Lynnwood","office_address_state":"WY","office_address_zip":"98036","name":"Affdasfadsdfas
+        Adfsafdsadfsadsf","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"(555)
+        776-9580","primary_email_address":"afdfadafdfad@daadfadfsdfsa.com","secondary_email_address":"asdfdfsaadfsfads@dfaadfafdafs.com","twitter":null,"google_plus":null,"facebook":null,"home_page":"www.google.com","profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"},{"moxi_works_agent_id":"asdfasdfasdfasdfasfd@asdf.com","office_address_street":null,"office_address_city":"Seattle","office_address_state":"WY","office_address_zip":"","name":"Asdf
+        Asdf","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"","primary_email_address":"asdfasdfasdfasdfasfd@asdf.com","secondary_email_address":null,"twitter":null,"google_plus":null,"facebook":null,"home_page":null,"profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"},{"moxi_works_agent_id":"BiaB_test3@hhooommmestest.com","office_address_street":"3933
+        Lk Washington Blvd NE, Suite 100","office_address_city":"Kirkland","office_address_state":"WY","office_address_zip":"98033","name":"Freddy
+        B Kruger","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"(555)
+        822-5100","primary_email_address":"beaupain_alt@hhooommmestest.com","secondary_email_address":"beaupain_alt@hhooommmestest.com","twitter":null,"google_plus":null,"facebook":null,"home_page":"foo.com","profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"},{"moxi_works_agent_id":"dummy_1283251@agentdigs.com","office_address_street":"251
+        E. Front Street, Ste. 400","office_address_city":"Boise","office_address_state":"ID","office_address_zip":"83702","name":"Jason
+        Sommers","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"(555)
+        381-8000","primary_email_address":"dummy_1283251@agentdigs.com","secondary_email_address":null,"twitter":null,"google_plus":null,"facebook":null,"home_page":"hhooommmes.com","profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"},{"moxi_works_agent_id":"aroop28@gmail.com","office_address_street":"3933
+        Lk Washington Blvd NE, Suite 100","office_address_city":"Kirkland","office_address_state":"WY","office_address_zip":"98033","name":"Michael Meyers","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"(425)
+        822-5100","primary_email_address":"ahearl@hhooommmestest.com","secondary_email_address":null,"twitter":null,"google_plus":null,"facebook":null,"home_page":"www.hhooommmes.com","profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"},{"moxi_works_agent_id":"test_user27@hhooommmestest.com","office_address_street":"Sdfg","office_address_city":"adsf","office_address_state":"CO","office_address_zip":"98654","name":"Test
+        ABC DefG User27 III","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"(555)
+        555-5555","primary_email_address":"test_user27@hhooommmestest.com","secondary_email_address":null,"twitter":null,"google_plus":null,"facebook":null,"home_page":"","profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"}]}'
+    http_version: 
+  recorded_at: Mon, 12 Sep 2016 23:53:49 GMT
+recorded_with: VCR 3.0.3

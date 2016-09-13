@@ -1,5 +1,6 @@
 require 'rest-client'
 require 'base64'
+require 'json'
 
 module MoxiworksPlatform
   #  provides underlying logic for connecting to Moxi Works Platform over HTTPS

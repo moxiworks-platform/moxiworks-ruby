@@ -168,11 +168,64 @@ module MoxiworksPlatform
     def self.send_request(method, opts={}, url=nil)
       url ||= "#{MoxiworksPlatform::Config.url}/api/agents"
       required_opts = [:moxi_works_agent_id]
+      raise ::MoxiworksPlatform::Exception::ArgumentError,
+            'arguments must be passed as named parameters' unless opts.is_a? Hash
       required_opts.each do |opt|
         raise ::MoxiworksPlatform::Exception::ArgumentError, "#{opt} required" if
             opts[opt].nil? or opts[opt].to_s.empty?
       end
       super(method, opts, url)
+    end
+
+    # Search For Agents in Moxi Works Platform
+    # @param [Hash] opts named parameter Hash
+    # @option opts [String]  :moxi_works_company_id *REQUIRED* The Moxi Works Company ID For the search (use Company.search to determine available moxi_works_company_id)
+    # @option opts [Integer] :updated_since  *REQUIRED*  Unix timestamp; Only Agents updated after this date will be returned
+    #
+    #
+    #     optional Search parameters
+    #
+    # @option opts [Integer] :page_number the page of results to return
+    #
+    # @return [Hash] with the format:
+    #   {
+    #     page_number: [Integer],
+    #     total_pages: [Integer],
+    #     agents:  [Array] containing MoxiworkPlatform::Agent objects
+    #   }
+    #
+    #
+    # @raise ::MoxiworksPlatform::Exception::ArgumentError if required
+    #     named parameters aren't included
+    #
+    # @example
+    #     results = MoxiworksPlatform::Agent.search(
+    #     moxi_works_company_id: 'the_company',
+    #     updated_since:  Time.now.to_i - 1296000,
+    #     page_number: 2
+    #     )
+    #
+    def self.search(opts={})
+      url ||= "#{MoxiworksPlatform::Config.url}/api/agents"
+      required_opts = [:moxi_works_company_id, :updated_since]
+      required_opts.each do |opt|
+        raise ::MoxiworksPlatform::Exception::ArgumentError, "#{opt} required" if
+            opts[opt].nil? or opts[opt].to_s.empty?
+      end
+      results = []
+      json = { 'page_number': 1, 'total_pages': 0, 'tasks':[]}
+      RestClient::Request.execute(method: :get,
+                                  url: url,
+                                  payload: opts, headers: self.headers) do |response|
+        puts response if MoxiworksPlatform::Config.debug
+        self.check_for_error_in_response(response)
+        json = JSON.parse(response)
+        json['agents'].each do |r|
+          results << MoxiworksPlatform::Agent.new(r) unless r.nil? or r.empty?
+        end
+        json['agents'] = results
+      end
+      json
     end
 
 

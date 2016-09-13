@@ -2,13 +2,13 @@ require 'spec_helper'
 require 'vcr'
 
 describe MoxiworksPlatform::Agent do
-  agent_accesors = [:moxi_works_agent_id, :mls, :accreditation, :address_street,
+  agent_accesors = [:moxi_works_agent_id, :address_street,
                     :address_city, :address_state, :address_zip, :office_address_street,
                     :office_address_city, :office_address_state, :office_address_zip,
-                    :name, :license, :mobile_phone_number, :home_phone_number,
+                    :name, :mobile_phone_number, :home_phone_number,
                     :fax_phone_number, :main_phone_number, :primary_email_address,
                     :secondary_email_address, :languages, :twitter, :google_plus,
-                    :facebook, :home_page, :birth_date, :title, :profile_image_url,
+                    :facebook, :home_page, :profile_image_url,
                     :profile_thumb_url]
 
   describe :attr_accessors do
@@ -30,8 +30,8 @@ describe MoxiworksPlatform::Agent do
       end
     end
     it 'should raise exception when trying to set an attribute that is not defined' do
-          expect {@agent.foobar = 'broked' }.to raise_exception(NoMethodError)
-        end
+      expect {@agent.foobar = 'broked' }.to raise_exception(NoMethodError)
+    end
   end
 
   describe :class_methods do
@@ -122,6 +122,46 @@ describe MoxiworksPlatform::Agent do
       end
     end
 
+    context :search do
+      let!(:moxi_works_company_id) {'abc123'}
+      let!(:updated_since) {'1468363247'}
+      context :credentials_required do
+        it 'should raise a MoxiworksPlatform::AuthorizationError if find is called without authorization' do
+          VCR.use_cassette('agent/search/success', record: :none) do
+            expect {MoxiworksPlatform::Agent.search(
+                moxi_works_company_id: moxi_works_company_id,
+                updated_since: updated_since) }.to raise_exception(MoxiworksPlatform::Exception::AuthorizationError)
+          end
+        end
+      end
 
+      context :test_response_data_handling do
+        before :each do
+          MoxiworksPlatform::Credentials.new(platform_id, platform_secret)
+        end
+
+        after :each do
+          MoxiworksPlatform::Credentials.platform_identifier = nil
+          MoxiworksPlatform::Credentials.platform_secret = nil
+          MoxiworksPlatform::Credentials.instance = nil
+        end
+
+
+        context :full_response do
+          it 'should return a MoxiworksPlatform::Agent Object when find is called' do
+            VCR.use_cassette('agent/search/success', record: :none) do
+              results = MoxiworksPlatform::Agent.search(
+                  moxi_works_company_id: moxi_works_company_id,
+                  updated_since: updated_since)
+              expect(results.class).to eq(Hash)
+              expect(results['agents'].class).to eq(Array)
+              expect(results['agents'].first.class).to eq(MoxiworksPlatform::Agent)
+            end
+          end
+        end
+      end
     end
+
+
+  end
 end

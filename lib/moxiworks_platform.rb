@@ -10,6 +10,7 @@ require 'moxiworks_platform/group'
 require 'moxiworks_platform/action_log'
 require 'moxiworks_platform/task'
 require 'moxiworks_platform/email_campaign'
+require 'moxiworks_platform/company'
 
 
 
