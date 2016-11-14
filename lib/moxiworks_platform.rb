@@ -11,7 +11,7 @@ require 'moxiworks_platform/action_log'
 require 'moxiworks_platform/task'
 require 'moxiworks_platform/email_campaign'
 require 'moxiworks_platform/company'
-
+require 'moxiworks_platform/listing'
 
 
 module MoxiworksPlatform

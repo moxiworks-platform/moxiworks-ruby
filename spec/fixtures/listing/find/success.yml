@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://abc123:secret@api.moxiworks.com/api/listings/abc123
+    body:
+      encoding: UTF-8
+      string: moxi_works_company_id=windermere&moxi_works_listing_id=5ce0e9a5-6015-fec5-aadf-a328af1fdc5c
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.2.0 x86_64) ruby/2.2.4p230
+      Authorization:
+      - Basic NWQzOWJhNTgtYmZjMy0xMWU1LWE0ZTMtZDBlMTQwOGU4MDI2OmE1NnN0aGhpZFRsVXNMeXA4ZUZaQlF0dA==
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '91'
+      Host:
+      - localhost:3000
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - b32e92fa-fb07-4293-bdaf-3dff2b0a8ff3
+      X-Runtime:
+      - '2.913929'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Fri, 28 Oct 2016 21:17:10 GMT
+      Content-Length:
+      - '169'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _wms_svc_public_session=dWYxR3RXbTUzRXYxV05uMjE4dk1HSkptSFdLNmlJc0psY2VNK0ZCd0pxLzFBeU1iWnpMQWpIdWdEc3RpUmZ6QWgrdExJMGo1YXZpbHRCcTFDUURYaXBUL1JESlM2RDhYdVdxemFKQkVJQ2NRdHNOelMxMHhuTEdJdjVIZEFLYXUrREhobmV3VUNFTVBHSjNEc0UxZmRqSENwbUVCTVQxdWt1ZzdzSHVqWXFZPS0tVk9naEp2WDkyTWJoUVpyMTVtaUg0Zz09--c024126601b43b1bee687a25283403f2f87768e5;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"LotSizeAcres":0.0,"BathroomsFull":3,"BathroomsHalf":0,"BathroomsOneQuarter":null,"BathroomsPartial":null,"BathroomsThreeQuarter":null,"BathroomsTotalInteger":3,"BathroomsTotal":3.0,"BedroomsTotal":8,"PublicRemarks":"Publicalistically Remarkabalistically! REMARKABLE!!","ModificationTimestamp":"11/01/2016","InternetAddressDisplayYN":true,"DaysOnMarket":0,"ListingContractDate":"07/27/2016","CreatedDate":"11/01/2016","ElementarySchool":null,"GarageSpaces":4,"WaterfrontYN":false,"HighSchool":null,"AssociationFee":null,"ListOfficeName":"Keller Williams Realty Hudson Valley United M","ListPrice":599000,"ListingID":"44616","ListAgentFullName":null,"ListingImages":[{"FullURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","GalleryURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","RawURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","SmallURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","ThumbURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png"}],"Address":"97 Hilltop Road","Address2":null,"City":"Monticello","CountyOrParish":null,"Latitude":"47.723251","Longitude":"-122.171745","StateOrProvince":"NY","PostalCode":"12701","LotSizeSquareFeet":null,"InternetEntireListingDisplayYN":true,"MiddleOrJuniorSchool":null,"ListOfficeAOR":"WHATEVERS MLS","PoolYN":false,"PropertyType":"Residential","TaxAnnualAmount":13652,"TaxYear":2015,"SingleStory":false,"LivingArea":3640,"ViewYN":false,"YearBuilt":1989,"OnMarket":true,"MoxiWorksListingId":"5ce0e9a5-6015-fec5-aadf-a328af2c4cdc"}'
+    http_version: 
+  recorded_at: Fri, 28 Oct 2016 21:17:10 GMT
+recorded_with: VCR 3.0.3

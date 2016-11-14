@@ -11,6 +11,11 @@ module MoxiworksPlatform
     #   @return [String] the Moxi Works Platform ID of the agent
     attr_accessor :moxi_works_agent_id
 
+    # @!attribute moxi_works_office_id
+    #
+    # @return [String] the UUID of the office which the Agent is associated
+    attr_accessor :moxi_works_office_id
+
     # @!attribute address_street
     #
     # @return [String] the agent's address, street and number
@@ -116,11 +121,16 @@ module MoxiworksPlatform
     # @return [String] url to a thumb size image of the agent
     attr_accessor :profile_thumb_url
 
+    # @!attribute title
+    #
+    # @return [String] any business related titles associated with the agent
+    attr_accessor :title
+
     # Find an Agent on the  Moxi Works Platform
     # @param [Hash] opts named parameter Hash
     # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this contact is to be associated
     #
-    # @return [MoxiworksPlatform::Contact]
+    # @return [MoxiworksPlatform::Agent]
     #
     # @raise ::MoxiworksPlatform::Exception::ArgumentError if required
     #     named parameters aren't included
@@ -178,7 +188,7 @@ module MoxiworksPlatform
             opts[opt].nil? or opts[opt].to_s.empty?
       end
       results = []
-      json = { 'page_number': 1, 'total_pages': 0, 'tasks':[]}
+      json = { 'page_number': 1, 'total_pages': 0, 'agents':[]}
       RestClient::Request.execute(method: :get,
                                   url: url,
                                   payload: opts, headers: self.headers) do |response|

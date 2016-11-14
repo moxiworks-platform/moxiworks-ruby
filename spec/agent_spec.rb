@@ -9,7 +9,7 @@ describe MoxiworksPlatform::Agent do
                     :fax_phone_number, :main_phone_number, :primary_email_address,
                     :secondary_email_address, :twitter, :google_plus,
                     :facebook, :home_page, :profile_image_url,
-                    :profile_thumb_url]
+                    :profile_thumb_url, :title, :moxi_works_office_id]
 
   describe :attr_accessors do
     before :each do

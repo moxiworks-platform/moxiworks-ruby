@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://abc123:secret@api.moxiworks.com/api/listings
+    body:
+      encoding: UTF-8
+      string: moxi_works_company_id=abc123&updated_since=1477584220
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.2.0 x86_64) ruby/2.2.4p230
+      Authorization:
+      - Basic NWQzOWJhNTgtYmZjMy0xMWU1LWE0ZTMtZDBlMTQwOGU4MDI2OmE1NnN0aGhpZFRsVXNMeXA4ZUZaQlF0dA==
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '57'
+      Host:
+      - localhost:3000
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0ec15dec30feab427330f0167090c205"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 594c90f4-8645-4d29-8b04-361ace8552e6
+      X-Runtime:
+      - '3.127497'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Fri, 28 Oct 2016 19:50:23 GMT
+      Content-Length:
+      - '16205'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _wms_svc_public_session=VTcyQUg2SE8wS2VPNm56RFJKYlRoeTgyNXJiUmhjQnpyQ3RJUTJlcmxXeUxPQXdEUDI0ZDhhd0hwSGlGTFYybjUrQzFBbGxxanN6NjB0TGFMQXQ3SGZwNngwOWlFdytXTEptNlVGMFo2MUUzRGp5L3lBSG1vZk9CNUVxV2E1V2tzditEcFR4TXpldW9yc2VPaGN6bk9TaFZqOEgyQzM4VVVuV25vZzBsaXBNPS0taDIvclZ5Ni9vNXREbnFucVlkQjVQUT09--a4aff948fb09670675c98d74c5e684be3b071856;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"final_page":true,"listings":[{"LotSizeAcres":0.0,"BathroomsFull":3,"BathroomsHalf":0,"BathroomsOneQuarter":null,"BathroomsPartial":null,"BathroomsThreeQuarter":null,"BathroomsTotalInteger":3,"BathroomsTotal":3.0,"BedroomsTotal":8,"PublicRemarks":"Publicalistically Remarkabalistically! REMARKABLE!!","ModificationTimestamp":"11/01/2016","InternetAddressDisplayYN":true,"DaysOnMarket":0,"ListingContractDate":"07/27/2016","CreatedDate":"11/01/2016","ElementarySchool":null,"GarageSpaces":4,"WaterfrontYN":false,"HighSchool":null,"AssociationFee":null,"ListOfficeName":"Keller Williams Realty Hudson Valley United M","ListPrice":599000,"ListingID":"44616","ListAgentFullName":null,"ListingImages":[{"FullURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","GalleryURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","RawURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","SmallURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","ThumbURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png"}],"Address":"97 Hilltop Road","Address2":null,"City":"Monticello","CountyOrParish":null,"Latitude":null,"Longitude":null,"StateOrProvince":"NY","PostalCode":"12701","LotSizeSquareFeet":null,"InternetEntireListingDisplayYN":true,"MiddleOrJuniorSchool":null,"ListOfficeAOR":"WHATEVERS MLS","PoolYN":false,"PropertyType":"Residential","TaxAnnualAmount":13652,"TaxYear":2015,"SingleStory":false,"LivingArea":3640,"ViewYN":false,"YearBuilt":1989,"OnMarket":true,"MoxiWorksListingId":"5ce0e9a5-6015-fec5-aadf-a328af2c4cdc"},{"LotSizeAcres":0.0,"BathroomsFull":1,"BathroomsHalf":0,"BathroomsOneQuarter":null,"BathroomsPartial":null,"BathroomsThreeQuarter":null,"BathroomsTotalInteger":1,"BathroomsTotal":1.0,"BedroomsTotal":2,"PublicRemarks":"STATE LAND RIGHT ACROSS THE ROAD....Dont let handyman scare you..With a bit of sweat equity and a small investment you have a great house..almost one acre and a garage within a 2 hour ride of NYC.and in the town of neversink where the taxes are low...would make a good home base for a hunting cabin or weekend or year round retreat..","ModificationTimestamp":"11/01/2016","InternetAddressDisplayYN":true,"DaysOnMarket":0,"ListingContractDate":"07/28/2016","CreatedDate":"11/01/2016","ElementarySchool":null,"GarageSpaces":1,"WaterfrontYN":false,"HighSchool":null,"AssociationFee":null,"ListOfficeName":"Berkshire Hathaway Homeservices Peters Realty","ListPrice":65000,"ListingID":"44618","ListAgentFullName":null,"ListingImages":[{"FullURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","GalleryURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","RawURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","SmallURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","ThumbURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png"}],"Address":"1250 Cooley Road","Address2":null,"City":"Parksville","CountyOrParish":null,"Latitude":null,"Longitude":null,"StateOrProvince":"NY","PostalCode":"12768","LotSizeSquareFeet":null,"InternetEntireListingDisplayYN":true,"MiddleOrJuniorSchool":null,"ListOfficeAOR":"WHATEVERS MLS","PoolYN":false,"PropertyType":"Residential","TaxAnnualAmount":3581,"TaxYear":2016,"SingleStory":true,"LivingArea":1032,"ViewYN":false,"YearBuilt":1950,"OnMarket":true,"MoxiWorksListingId":"5ce0e9a5-6015-fec5-aadf-a328af2c4cdd"},{"LotSizeAcres":0.0,"BathroomsFull":2,"BathroomsHalf":2,"BathroomsOneQuarter":null,"BathroomsPartial":null,"BathroomsThreeQuarter":null,"BathroomsTotalInteger":2,"BathroomsTotal":2.2,"BedroomsTotal":3,"PublicRemarks":"GUMAZIN!!! WE LUBBA DIS PLACE!!","ModificationTimestamp":"11/01/2016","InternetAddressDisplayYN":true,"DaysOnMarket":0,"ListingContractDate":"07/29/2016","CreatedDate":"11/01/2016","ElementarySchool":null,"GarageSpaces":2,"WaterfrontYN":false,"HighSchool":null,"AssociationFee":null,"ListOfficeName":"Resort Realty","ListPrice":199900,"ListingID":"44619","ListAgentFullName":null,"ListingImages":[{"FullURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","GalleryURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","RawURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","SmallURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","ThumbURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png"}],"Address":"56 E Pebble","Address2":null,"City":"Rock Hill","CountyOrParish":null,"Latitude":null,"Longitude":null,"StateOrProvince":"NY","PostalCode":"12775","LotSizeSquareFeet":null,"InternetEntireListingDisplayYN":true,"MiddleOrJuniorSchool":null,"ListOfficeAOR":"WHATEVERS MLS","PoolYN":false,"PropertyType":"Residential","TaxAnnualAmount":7135,"TaxYear":2016,"SingleStory":true,"LivingArea":2160,"ViewYN":false,"YearBuilt":1977,"OnMarket":true,"MoxiWorksListingId":"5ce0e9a5-6015-fec5-aadf-a328af2c4cde"},{"LotSizeAcres":0.0,"BathroomsFull":2,"BathroomsHalf":0,"BathroomsOneQuarter":null,"BathroomsPartial":null,"BathroomsThreeQuarter":null,"BathroomsTotalInteger":2,"BathroomsTotal":2.0,"BedroomsTotal":3,"PublicRemarks":"BY GRAPTHARS HAMMER, WOW, WHAT A SAVINGS!","ModificationTimestamp":"11/01/2016","InternetAddressDisplayYN":true,"DaysOnMarket":0,"ListingContractDate":"07/30/2016","CreatedDate":"11/01/2016","ElementarySchool":null,"GarageSpaces":5,"WaterfrontYN":false,"HighSchool":null,"AssociationFee":null,"ListOfficeName":"Berkshire Hathaway Homeservices Peters Realty","ListPrice":279000,"ListingID":"44626","ListAgentFullName":null,"ListingImages":[{"FullURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","GalleryURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","RawURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","SmallURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png","ThumbURL":"http://images-static-qa.moxiworks.com/static/images/br/windermere/default_property_image_wre-326x250.png"}],"Address":"1730 Old Rt 17","Address2":null,"City":"Roscoe","CountyOrParish":null,"Latitude":null,"Longitude":null,"StateOrProvince":"NY","PostalCode":"12776","LotSizeSquareFeet":null,"InternetEntireListingDisplayYN":true,"MiddleOrJuniorSchool":null,"ListOfficeAOR":"WHATEVERS MLS","PoolYN":true,"PropertyType":"Residential","TaxAnnualAmount":7743,"TaxYear":2015,"SingleStory":true,"LivingArea":2185,"ViewYN":true,"YearBuilt":1968,"OnMarket":true,"MoxiWorksListingId":"5ce0e9a5-6015-fec5-aadf-a328af2c4cdf"}]}'
+    http_version:
+  recorded_at: Fri, 28 Oct 2016 19:50:23 GMT
+recorded_with: VCR 3.0.3
