@@ -31,6 +31,9 @@ MoxiworksPlatform::Credentials.new(platform_identifier, platform_secret)
 contact = MoxiworksPlatform::Contact.create(moxi_works_agent_id: '123abcd', partner_contact_id: 'my_unique_id')
 ```
 
+## Building Docs
+run `./publish_docs.sh`
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
