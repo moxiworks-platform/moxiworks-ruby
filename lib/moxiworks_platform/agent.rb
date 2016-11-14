@@ -41,6 +41,11 @@ module MoxiworksPlatform
     # @return [String] the agent's office address, street and number
     attr_accessor :office_address_street
 
+    # @!attribute office_address_street2
+    #
+    # @return [String] the agent's office address, suite or office number
+    attr_accessor :office_address_street2
+
     # @!attribute office_address_city
     #
     # @return [String] the agent's office address, city
