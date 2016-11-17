@@ -77,7 +77,7 @@ module MoxiworksPlatform
 
     # @!attribute bathrooms_total_integer
     #
-    # @return [Integer|nil] number partial bathrooms | nil if no data available
+    # @return [Integer|nil] number of rooms that are bathrooms | nil if no data available
     attr_accessor :bathrooms_total_integer
 
     # @!attribute bathrooms_three_quarter
