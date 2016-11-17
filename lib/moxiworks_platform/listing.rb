@@ -225,11 +225,6 @@ module MoxiworksPlatform
     # @return [Integer] square footage of the building
     attr_accessor :living_area
 
-    # @!attribute title
-    #
-    # @return [String] a short description of the property
-    attr_accessor :title
-
     # @!attribute view_yn
     #
     # @return [Boolean] whether the property has a view
