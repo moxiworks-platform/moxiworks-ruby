@@ -90,7 +90,7 @@ module MoxiworksPlatform
     # @return [Integer|nil] number bathrooms | nil if no data available
     attr_accessor :bathrooms_total
 
-    # @!attribute bedrooms
+    # @!attribute bedrooms_total
     #
     # @return [Integer] number of bedrooms
     attr_accessor :bedrooms_total
