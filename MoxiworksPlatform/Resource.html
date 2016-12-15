@@ -114,7 +114,7 @@
 
 </div><div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="ActionLog.html" title="MoxiworksPlatform::ActionLog (class)">ActionLog</a></span>, <span class='object_link'><a href="Agent.html" title="MoxiworksPlatform::Agent (class)">Agent</a></span>, <span class='object_link'><a href="Company.html" title="MoxiworksPlatform::Company (class)">Company</a></span>, <span class='object_link'><a href="Contact.html" title="MoxiworksPlatform::Contact (class)">Contact</a></span>, <span class='object_link'><a href="EmailCampaign.html" title="MoxiworksPlatform::EmailCampaign (class)">EmailCampaign</a></span>, <span class='object_link'><a href="Event.html" title="MoxiworksPlatform::Event (class)">Event</a></span>, <span class='object_link'><a href="Group.html" title="MoxiworksPlatform::Group (class)">Group</a></span>, <span class='object_link'><a href="Listing.html" title="MoxiworksPlatform::Listing (class)">Listing</a></span>, <span class='object_link'><a href="Task.html" title="MoxiworksPlatform::Task (class)">Task</a></span></p>
+  <p class="children"><span class='object_link'><a href="ActionLog.html" title="MoxiworksPlatform::ActionLog (class)">ActionLog</a></span>, <span class='object_link'><a href="Agent.html" title="MoxiworksPlatform::Agent (class)">Agent</a></span>, <span class='object_link'><a href="BuyerTransaction.html" title="MoxiworksPlatform::BuyerTransaction (class)">BuyerTransaction</a></span>, <span class='object_link'><a href="Company.html" title="MoxiworksPlatform::Company (class)">Company</a></span>, <span class='object_link'><a href="Contact.html" title="MoxiworksPlatform::Contact (class)">Contact</a></span>, <span class='object_link'><a href="EmailCampaign.html" title="MoxiworksPlatform::EmailCampaign (class)">EmailCampaign</a></span>, <span class='object_link'><a href="Event.html" title="MoxiworksPlatform::Event (class)">Event</a></span>, <span class='object_link'><a href="Group.html" title="MoxiworksPlatform::Group (class)">Group</a></span>, <span class='object_link'><a href="Listing.html" title="MoxiworksPlatform::Listing (class)">Listing</a></span>, <span class='object_link'><a href="Office.html" title="MoxiworksPlatform::Office (class)">Office</a></span>, <span class='object_link'><a href="SellerTransaction.html" title="MoxiworksPlatform::SellerTransaction (class)">SellerTransaction</a></span>, <span class='object_link'><a href="Task.html" title="MoxiworksPlatform::Task (class)">Task</a></span></p>
 </div>
 
 
@@ -403,6 +403,28 @@ as floats.</p>
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#init_attrs_from_hash-instance_method" title="#init_attrs_from_hash (instance method)">#<strong>init_attrs_from_hash</strong>(hash = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(hash = {})  &#x21d2; Resource </a>
     
 
@@ -582,17 +604,13 @@ our Class attributes</p>
 
 81
 82
-83
-84
-85</pre>
+83</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_hash'>hash</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_hash'>hash</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span><span class='id identifier rubyid_val'>val</span><span class='op'>|</span>
-    <span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_init_attrs_from_hash'>init_attrs_from_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_hash'>hash</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -622,17 +640,17 @@ our Class attributes</p>
       <pre class="lines">
 
 
-87
-88
-89
-90
 91
 92
 93
-94</pre>
+94
+95
+96
+97
+98</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_meth'>meth</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_meth'>meth</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
@@ -1117,20 +1135,20 @@ in Moxi Works Platform</p>
       <pre class="lines">
 
 
-112
-113
-114
-115
 116
 117
 118
 119
 120
 121
-122</pre>
+122
+123
+124
+125
+126</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 116</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_url'>url</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='const'>RestClient</span><span class='op'>::</span><span class='const'>Request</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='id identifier rubyid_method'>method</span><span class='comma'>,</span>
@@ -1163,16 +1181,16 @@ in Moxi Works Platform</p>
       <pre class="lines">
 
 
-161
-162
-163
-164
 165
 166
-167</pre>
+167
+168
+169
+170
+171</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 165</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_underscore'>underscore</span><span class='lparen'>(</span><span class='id identifier rubyid_attr'>attr</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_attr'>attr</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>::</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span>
@@ -1238,12 +1256,12 @@ in Moxi Works Platform</p>
       <pre class="lines">
 
 
-99
-100
-101</pre>
+103
+104
+105</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 99</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 103</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attributes'>attributes</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>+</span> <span class='id identifier rubyid_numeric_attrs'>numeric_attrs</span>
@@ -1281,15 +1299,49 @@ as floats</p>
       <pre class="lines">
 
 
-157
-158
-159</pre>
+161
+162
+163</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 157</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 161</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_float_attrs'>float_attrs</span>
   <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="init_attrs_from_hash-instance_method">
+  
+    #<strong>init_attrs_from_hash</strong>(hash = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+85
+86
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 85</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_init_attrs_from_hash'>init_attrs_from_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_hash'>hash</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_hash'>hash</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span><span class='id identifier rubyid_val'>val</span><span class='op'>|</span>
+    <span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1324,12 +1376,12 @@ ints</p>
       <pre class="lines">
 
 
-151
-152
-153</pre>
+155
+156
+157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 151</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 155</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_int_attrs'>int_attrs</span>
   <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -1366,12 +1418,12 @@ be</p>
       <pre class="lines">
 
 
-145
-146
-147</pre>
+149
+150
+151</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 145</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 149</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_numeric_attrs'>numeric_attrs</span>
   <span class='id identifier rubyid_int_attrs'>int_attrs</span> <span class='op'>+</span> <span class='id identifier rubyid_float_attrs'>float_attrs</span>
@@ -1396,10 +1448,6 @@ be</p>
       <pre class="lines">
 
 
-124
-125
-126
-127
 128
 129
 130
@@ -1414,16 +1462,20 @@ be</p>
 139
 140
 141
-142</pre>
+142
+143
+144
+145
+146</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_numeric_value_for'>numeric_value_for</span><span class='lparen'>(</span><span class='id identifier rubyid_attr_name'>attr_name</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_attr_name'>attr_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='kw'>if</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Numeric</span> <span class='kw'>and</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:type</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='symbol'>:integer</span>
   <span class='kw'>return</span> <span class='id identifier rubyid_val'>val</span> <span class='kw'>if</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Numeric</span>
-  <span class='kw'>return</span> <span class='int'>0</span> <span class='kw'>if</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
   <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[^[:digit:]|\.]</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>String</span>
   <span class='kw'>case</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:type</span><span class='rbracket'>]</span>
     <span class='kw'>when</span> <span class='symbol'>:integer</span>
@@ -1488,14 +1540,14 @@ names and attribute values are Hash values</p>
       <pre class="lines">
 
 
-106
-107
-108
-109
-110</pre>
+110
+111
+112
+113
+114</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/resource.rb', line 110</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_hash'>to_hash</span>
   <span class='id identifier rubyid_hash'>hash</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
@@ -1512,7 +1564,7 @@ names and attribute values are Hash values</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Nov 14 10:39:55 2016 by
+  Generated on Thu Dec 15 13:35:50 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.2.4).
 </div>
