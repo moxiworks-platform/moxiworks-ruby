@@ -5,7 +5,7 @@ http_interactions:
     uri: https://abc123:secret@api.moxiworks.com/api/events/17c58ff85172093286272cffa4897610
     body:
       encoding: UTF-8
-      string: moxi_works_agent_id=BiaB_test9%40moxiworkstest.com&partner_event_id=17c58ff85172093286272cffa4897610&event_id=17c58ff85172093286272cffa4897610
+      string: moxi_works_agent_id=testis%40moxiworkstest.com&partner_event_id=17c58ff85172093286272cffa4897610&event_id=17c58ff85172093286272cffa4897610
     headers:
       Accept:
       - application/vnd.moxi-platform+json;version=1
@@ -51,7 +51,7 @@ http_interactions:
         path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '{"partner_event_id":"17c58ff85172093286272cffa4897610","moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","event_subject":"foo
+      string: '{"partner_event_id":"17c58ff85172093286272cffa4897610","moxi_works_agent_id":"testis@moxiworkstest.com","event_subject":"foo
         deeaz","event_location":"1234 there ave","note":"yo, whatup?","send_reminder":true,"remind_minutes_before":10,"is_meeting":false,"event_start":1462376100,"event_end":1462462520,"cancelled":false,"recurring":false,"all_day":false,"required_attendees":null,"optional_attendees":null}'
     http_version: 
   recorded_at: Thu, 05 May 2016 18:58:19 GMT

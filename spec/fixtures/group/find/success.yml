@@ -5,7 +5,7 @@ http_interactions:
     uri: https://abc123:secret@api.moxiworks.com/api/groups/foobar
     body:
       encoding: UTF-8
-      string: moxi_works_agent_id=BiaB_test9%40moxiworkstest.com&moxi_works_group_name=foo
+      string: moxi_works_agent_id=testis%40moxiworkstest.com&moxi_works_group_name=foo
     headers:
       Accept:
       - application/vnd.moxi-platform+json;version=1
@@ -51,7 +51,7 @@ http_interactions:
         path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_id":"abc123","moxi_works_group_name":"foobar","contacts":[{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":"s123213dljfsldjflsjdsoo","contact_name":"Firstname
+      string: '{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_id":"abc123","moxi_works_group_name":"foobar","contacts":[{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":"s123213dljfsldjflsjdsoo","contact_name":"Firstname
         Middlenyme Larstnam","gender":"M","primary_email_address":"me@justabout.right.here","secondary_email_address":"me.too@justabout.right.here","primary_phone_number":"9995551212","secondary_phone_number":"(333)
         555-1185","home_street_address":"1234 Sesame St.","home_city":"Cityville","home_state":"Stateland","home_zip":"12345-6789","home_country":"Ottoman
         Empire","job_title":"Junior Bacon Burner","note":null,"occupation":"chef","property_url":"http://my.property.website.is/here","property_mls_id":"abc123","property_street_address":"2345

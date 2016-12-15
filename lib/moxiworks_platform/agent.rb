@@ -133,7 +133,7 @@ module MoxiworksPlatform
 
     # Find an Agent on the  Moxi Works Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this contact is to be associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent
     #
     # @return [MoxiworksPlatform::Agent]
     #

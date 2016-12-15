@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://abc123:secret@api.moxiworks.com/api/seller_transactions/feedface-dead-beef-bad4-dad2feedface
+    body:
+      encoding: UTF-8
+      string: moxi_works_agent_id=n8eq&moxi_works_transaction_id=5ce0e9a5-6015-fec5-aadf-a328ae39854f&moxi_works_contact_id=feedface-dead-beef-bad4-dad2feedface&partner_contact_id=fuzzynipplesersz&name&notes&stage=1&stage_name=initialized&address&city&state&zip_code&sqft&beds&baths&is_mls_transaction=false&mls_number&start_timestamp&commission_percentage&commission_flat_fee&target_price&min_price&max_price&closing_price&closing_timestamp&promote_transaction=true
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.2.0 x86_64) ruby/2.2.4p230
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '452'
+      Host:
+      - localhost:3000
+  response:
+    status:
+      code: 500
+      message: 'Internal Server Error '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 78b4e7ab-35a9-442f-9df1-a1f0a5843786
+      X-Runtime:
+      - '3.057096'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Sat, 10 Dec 2016 00:22:25 GMT
+      Content-Length:
+      - '208'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"status":"error","messages":["Internal Error. **IMPORTANT** Include
+        this COMPLETE response, INCLUDING request_id in support requests."],"status_code":5000,"request_id":"78b4e7ab-35a9-442f-9df1-a1f0a5843786"}'
+    http_version: 
+  recorded_at: Sat, 10 Dec 2016 00:22:25 GMT
+recorded_with: VCR 3.0.3

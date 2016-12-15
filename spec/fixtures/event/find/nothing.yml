@@ -5,7 +5,7 @@ http_interactions:
     uri: https://abc123:secret@api.moxiworks.com/api/events/17c58ff85172093286272cffa4897610
     body:
       encoding: UTF-8
-      string: moxi_works_agent_id=BiaB_test9%40moxiworkstest.com&partner_event_id=17c58ff85172093286272cffa4897610&event_id=17c58ff85172093286272cffa4897610
+      string: moxi_works_agent_id=testis%40moxiworkstest.com&partner_event_id=17c58ff85172093286272cffa4897610&event_id=17c58ff85172093286272cffa4897610
     headers:
       Accept:
       - application/vnd.moxi-platform+json;version=1

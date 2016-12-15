@@ -5,7 +5,7 @@ http_interactions:
     uri: https://abc123:secret@api.moxiworks.com/api/action_logs
     body:
       encoding: UTF-8
-      string: moxi_works_agent_id=BiaB_test9%40moxiworkstest.com&partner_contact_id=booyuh
+      string: moxi_works_agent_id=testis%40moxiworkstest.com&partner_contact_id=booyuh
     headers:
       Accept:
       - application/vnd.moxi-platform+json;version=1
@@ -51,7 +51,7 @@ http_interactions:
         path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":"booyuh","actions":[{"moxi_works_action_log_id":"6b35dcae-3fd4-11e6-8a08-5254000f954a","type":"lead_update_api","timestamp":1467409228,"log_data":{"source":"yepperdupper","timestamp":"1467409224","user_info":"{\"property_info\":{\"PropertyURL\":\"http://my.property.website.is/here\",\"MLSNumber\":\"2486\",\"StreetAddress\":\"919
+      string: '{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":"booyuh","actions":[{"moxi_works_action_log_id":"6b35dcae-3fd4-11e6-8a08-5254000f954a","type":"lead_update_api","timestamp":1467409228,"log_data":{"source":"yepperdupper","timestamp":"1467409224","user_info":"{\"property_info\":{\"PropertyURL\":\"http://my.property.website.is/here\",\"MLSNumber\":\"2486\",\"StreetAddress\":\"919
         High St\",\"City\":\"Bellingham\",\"State\":\"WA\",\"Zip\":\"98225\",\"Beds\":\"3\",\"Baths\":\"2.25\",\"ListingPrice\":\"225000\",\"ListingStatus\":\"Active\",\"PhotoURL\":\"http://photos2.squirrelstatic.com/p_h/IS5ypcjbjrsapw0000000000.jpg\"},\"search_criteria\":{\"City\":\"Bellevue\",\"State\":\"WA\",\"ZIP\":\"98005\",\"MinBeds\":\"2\",\"MinBaths\":\"1.75\",\"MinPrice\":\"350000\",\"MaxPrice\":\"500000\",\"MinSqFt\":\"2400\",\"MaxSqFt\":\"4000\",\"MinLotSize\":\"500\",\"MaxLotSize\":\"6000\",\"MinYearBuilt\":\"1990\",\"MaxYearBuilt\":\"2008\",\"PropertyTypes\":\"Condo,
         Single Family\"},\"contact\":{\"first_name\":\"20160629T133940\",\"message\":\"Created
         via SoapU\",\"source\":\"yepperdupper\"}}"}},{"moxi_works_action_log_id":"6f040374-3fd4-11e6-8af0-5254000f954a","type":"lead_auto_email_sent","timestamp":1467409233,"log_data":{"contact_id":"1056","date":"2016-07-01

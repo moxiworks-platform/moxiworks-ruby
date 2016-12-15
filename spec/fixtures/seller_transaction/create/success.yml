@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://abc123:secret@api.moxiworks.com/api/seller_transactions
+    body:
+      encoding: UTF-8
+      string: moxi_works_agent_id=n8eq&partner_contact_id=fuzzynipples&transaction_name=waaat%3F
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.2.0 x86_64) ruby/2.2.4p230
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '82'
+      Host:
+      - api.moxiworks.com
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a4256a951a25ee6aa13a38586a41c152"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 94569fe2-7cad-4b2a-b9ba-a061d066e5a7
+      X-Runtime:
+      - '5.187946'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Wed, 14 Dec 2016 00:08:12 GMT
+      Content-Length:
+      - '580'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"moxi_works_agent_id":"abc123","moxi_works_transaction_id":"feedface-dead-beef-bad4-dad2feedface","moxi_works_contact_id":"babebeef-feed-bad4-dad2-2496f5789b6c","stage":3,"stage_name":"active","is_mls_transaction":false,"zip_code":null,"partner_contact_id":"booyuh","notes":null,"transaction_name":"waaat?","address":null,"city":null,"state":null,"sqft":null,"beds":null,"baths":null,"mls_number":null,"start_timestamp":1481674091,"commission_percentage":null,"commission_flat_fee":null,"target_price":null,"min_price":null,"max_price":null,"closing_price":null,"closing_timestamp":null}'
+    http_version: 
+  recorded_at: Wed, 14 Dec 2016 00:08:12 GMT
+recorded_with: VCR 3.0.3

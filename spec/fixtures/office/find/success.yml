@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://abc123:secret@api.moxiworks.com/api/offices/feedface-dead-beef-bad4-dad2feedface
+    body:
+      encoding: UTF-8
+      string: moxi_works_office_id=feedface-dead-beef-bad4-dad2feedface&moxi_works_company_id=brokeroker
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.2.0 x86_64) ruby/2.2.4p230
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '10'
+      Host:
+      - api.moxiworks.com
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2bd2415711113820e173a582e0320540"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ffcae1d2-ff57-4db3-8efe-6e447dd40ad3
+      X-Runtime:
+      - '5.085153'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Mon, 05 Dec 2016 21:21:11 GMT
+      Content-Length:
+      - '475'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _wms_svc_public_session=MkRjTW53d2F0c1JaVElZL2lDQmxydkxXazU2blBBR3pVK01uMGtOdmZqa2UzWDNiZHR2UWVrL0tzWnBjRnlQTC1jZzVRbkJEbG1pUWJXUFd4S2ZaUFhFQ0VIbnBqMFBxK3NWQXdnZ3Bzb1dRaE1BbTh0REpUeTZPNHc0WUp4clo0QmhqK2dpVkRxQ3JJdkxHeS1aWW1OUlFQS2x2VG1qeC84ejJmUEFNWDhFPS0tRmlnVCt5V21ZUUYyd3lBajUvMkJVZz01--e4867607ffa126db4c7780d66aab1a043324d1d4;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"moxi_works_office_id":"feedface-dead-beef-bad4-dad2feedface","image_url":"http://imagic.moxiworks.com/static/images/br/clear-1x1.png","name":"Brokeroker
+        Real Estate/All Star Realty","address":"320 East Main","address2":null,"city":"Hicksville","county":null,"state":"ID","zip_code":"23530","alt_phone":"","email":"Hicksville@brokeroker.com","facebook":null,"google_plus":null,"phone":"2021232000","timezone":"Pacific
+        Time (US \u0026 Canada)","twitter":null}'
+    http_version: 
+  recorded_at: Mon, 05 Dec 2016 21:21:11 GMT
+recorded_with: VCR 3.0.3

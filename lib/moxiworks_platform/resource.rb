@@ -79,6 +79,10 @@ module MoxiworksPlatform
     # maps Hash values to Instance variables for mapping JSON object values to our Class attributes
     #
     def initialize(hash={})
+      self.init_attrs_from_hash(hash)
+    end
+
+    def init_attrs_from_hash(hash={})
       hash.each do |key,val|
         instance_variable_set("@#{key}", val)
       end
@@ -125,7 +129,7 @@ module MoxiworksPlatform
       val = self.instance_variable_get("@#{attr_name}")
       return val.to_i if val.is_a? Numeric and opts[:type] == :integer
       return val if val.is_a? Numeric
-      return 0 if val.nil? or val.empty?
+      return nil if val.nil? or val.empty?
       val.gsub!(/[^[:digit:]|\.]/, '') if val.is_a? String
       case opts[:type]
         when :integer

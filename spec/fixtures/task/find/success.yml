@@ -5,7 +5,7 @@ http_interactions:
     uri: https://abc123:secret@api.moxiworks.com/api/tasks/whaterfverss
     body:
       encoding: UTF-8
-      string: moxi_works_agent_id=moxi_works_agent_id=BiaB_test9%40moxiworkstest.com&partner_contact_id=booyuh&partner_task_id=whaterfverss
+      string: moxi_works_agent_id=moxi_works_agent_id=testis%40moxiworkstest.com&partner_contact_id=booyuh&partner_task_id=whaterfverss
     headers:
       Accept:
       - application/vnd.moxi-platform+json;version=1
@@ -51,7 +51,7 @@ http_interactions:
         path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated
+      string: '{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated
         Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}'
     http_version: 
   recorded_at: Tue, 12 Jul 2016 20:56:07 GMT

@@ -164,7 +164,7 @@ module  MoxiworksPlatform
     #     named parameters aren't included
     #
     # @example
-    #     results = MoxiworksPlatform::Contact.search(
+    #     results = MoxiworksPlatform::Task.search(
     #     moxi_works_agent_id: '123abc',
     #     due_date_start:  Time.now.to_i - 1296000,
     #     due_date_end: Time.now.to_i,

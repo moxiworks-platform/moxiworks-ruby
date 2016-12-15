@@ -5,7 +5,7 @@ http_interactions:
     uri: https://abc123:secret@api.moxiworks.com/api/email_campaigns
     body:
       encoding: UTF-8
-      string: moxi_works_agent_id=BiaB_test9%40moxiworkstest.com&partner_contact_id=booyuh
+      string: moxi_works_agent_id=testis%40moxiworkstest.com&partner_contact_id=booyuh
     headers:
       Accept:
       - application/vnd.moxi-platform+json;version=1

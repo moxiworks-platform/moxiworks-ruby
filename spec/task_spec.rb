@@ -88,7 +88,7 @@ describe MoxiworksPlatform::Task do
     let!(:platform_id){'abc123'}
     let!(:platform_secret) { 'secret' }
     let!(:task_id) {'whaterfverss'}
-    let!(:agent_id) { 'BiaB_test9@moxiworkstest.com' }
+    let!(:agent_id) { 'testis@moxiworkstest.com' }
     let!(:partner_contact_id) { 'booyuh' }
 
 
@@ -126,7 +126,7 @@ describe MoxiworksPlatform::Task do
 
         context :full_response do
           it 'should return a MoxiworksPlatform::Task Object when find is called' do
-            full_response = JSON.parse('{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}')
+            full_response = JSON.parse('{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}')
             VCR.use_cassette('task/find/success', record: :none) do
               search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id partner_task_id).include?(key) }
               task = MoxiworksPlatform::Task.find(symbolize_keys(search_attrs))
@@ -135,7 +135,7 @@ describe MoxiworksPlatform::Task do
           end
 
           task_accessors.each do |attr_accessor|
-            full_response = JSON.parse('{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}')
+            full_response = JSON.parse('{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}')
             next if integer_accessors.include? attr_accessor or float_accessors.include? attr_accessor
             it "should have populated attribute #{attr_accessor} when update with all attributes populated" do
               VCR.use_cassette('task/find/success', record: :none) do
@@ -149,7 +149,7 @@ describe MoxiworksPlatform::Task do
           integer_accessors.each do |attr_accessor|
             it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
               VCR.use_cassette('task/find/success', record: :none) do
-                full_response = JSON.parse('{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}')
+                full_response = JSON.parse('{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}')
                 search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id partner_task_id).include?(key) }
                 task = MoxiworksPlatform::Task.find(symbolize_keys(search_attrs))
                 expect(task.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_i)
@@ -160,7 +160,7 @@ describe MoxiworksPlatform::Task do
           float_accessors.each do |attr_accessor|
             it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
               VCR.use_cassette('task/find/success', record: :none) do
-                full_response = JSON.parse('{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}')
+                full_response = JSON.parse('{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}')
                 search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id partner_task_id).include?(key) }
                 task = MoxiworksPlatform::Task.find(symbolize_keys(search_attrs))
                 expect(task.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_f)
@@ -198,7 +198,7 @@ describe MoxiworksPlatform::Task do
 
 
         context :full_response do
-          full_response = JSON.parse('{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}')
+          full_response = JSON.parse('{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}')
           it 'should return a MoxiworksPlatform::Task Object when find is called' do
             VCR.use_cassette('task/search/success', record: :none) do
               search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id task_name).include?(key) }
@@ -240,7 +240,7 @@ describe MoxiworksPlatform::Task do
         end
 
         context :full_response do
-          full_response = JSON.parse('{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}')
+          full_response = JSON.parse('{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}')
           it 'should return a MoxiworksPlatform::Task Object when update is called' do
             VCR.use_cassette('task/update/success', record: :none) do
               task = MoxiworksPlatform::Task.update(symbolize_keys(full_response))
@@ -278,7 +278,7 @@ describe MoxiworksPlatform::Task do
         end
 
         context :empty_response do
-          empty_response = JSON.parse( '{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}')
+          empty_response = JSON.parse( '{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}')
 
           it 'should return a MoxiworksPlatform::Task Object when update is called' do
             VCR.use_cassette('task/update/success', record: :none) do
@@ -316,7 +316,7 @@ describe MoxiworksPlatform::Task do
         end
 
         context :full_response do
-          full_response = JSON.parse('{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"active","created_at":"1467951409","completed_at":null}')
+          full_response = JSON.parse('{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"active","created_at":"1467951409","completed_at":null}')
           it 'should return a MoxiworksPlatform::Task Object when create is called' do
             VCR.use_cassette('task/create/success', record: :none) do
               task = MoxiworksPlatform::Task.create(symbolize_keys(full_response))
@@ -361,7 +361,7 @@ describe MoxiworksPlatform::Task do
     let!(:platform_id){'abc123'}
     let!(:platform_secret) { 'secret' }
     let!(:partner_task_id) {'whaterfverss'}
-    let!(:agent_id) { 'BiaB_test9@moxiworkstest.com' }
+    let!(:agent_id) { 'testis@moxiworkstest.com' }
     let!(:partner_contact_id) { 'booyuh' }
 
     let!(:create_params) do

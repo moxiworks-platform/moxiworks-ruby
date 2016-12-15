@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://abc123:secret@api.moxiworks.com/api/buyer_transactions/feedface-dead-beef-bad4-dad2feedface
+    body:
+      encoding: UTF-8
+      string: moxi_works_agent_id=abc123&moxi_works_transaction_id=feedface-dead-beef-bad4-dad2feedface
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.2.0 x86_64) ruby/2.2.4p230
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '87'
+      Host:
+      - api.moxiworks.com
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a55e788b4bf13315aeccefe66877320c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3bd8c918-ad4f-4aaf-a333-19ea4b291c74
+      X-Runtime:
+      - '0.657673'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 06 Dec 2016 23:31:49 GMT
+      Content-Length:
+      - '726'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _wms_svc_public_session=bGZtaEoxalJ0b0NLcFlaUm44VVM2OE9mcnJYOFREOHRBRVRZcTN3L01XOHM4L2tQVCs4M25Zc2JQQmp4T1VtSC9hOGd2UVl2emUwVGRxbXRBQVVmMTcyZnVwUjRrSkZ1MG1ldlpHZkNxci90NldZT2VYL3hTUkExZE1laEpXeGJsM2tHdXlXS3pJalRjb3FnaWkrVW9iMmozL3I1eE45UmU5UkZPREdkcUQ4PS0tdGNNYVZiU0ZKSTM3RTN5SkdkdURiUT09--c91c51e72257411dacac7354f49b53b341f0fdb3;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{}'
+    http_version: 
+  recorded_at: Tue, 06 Dec 2016 23:31:49 GMT
+recorded_with: VCR 3.0.3

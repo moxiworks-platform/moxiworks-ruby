@@ -12,6 +12,9 @@ require 'moxiworks_platform/task'
 require 'moxiworks_platform/email_campaign'
 require 'moxiworks_platform/company'
 require 'moxiworks_platform/listing'
+require 'moxiworks_platform/office'
+require 'moxiworks_platform/buyer_transaction'
+require 'moxiworks_platform/seller_transaction'
 
 
 module MoxiworksPlatform

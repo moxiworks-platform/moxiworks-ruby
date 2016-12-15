@@ -5,7 +5,7 @@ http_interactions:
     uri: https://abc123:secret@api.moxiworks.com/api/events
     body:
       encoding: UTF-8
-      string: moxi_works_agent_id=BiaB_test9%40moxiworkstest.com&date_start=1461178675&date_end=1462388205
+      string: moxi_works_agent_id=testis%40moxiworkstest.com&date_start=1461178675&date_end=1462388205
     headers:
       Accept:
       - application/vnd.moxi-platform+json;version=1
@@ -51,7 +51,7 @@ http_interactions:
         path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '[{"04/20/2016":[{"partner_event_id":"17c58ff85172093286272cffa4897610","moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","event_subject":"foo deeaz","event_location":"1234 there ave","note":"yo, whatup?","send_reminder":true,"remind_minutes_before":10,"is_meeting":false,"event_start":1462376100,"event_end":1462462520,"cancelled":false,"recurring":false,"all_day":false,"required_attendees":null,"optional_attendees":null}]},{"04/21/2016":[]},{"04/22/2016":[]},{"04/23/2016":[]},{"04/24/2016":[]},{"04/25/2016":[]},{"04/26/2016":[]},{"04/27/2016":[]},{"04/28/2016":[]},{"04/29/2016":[]},{"04/30/2016":[]},{"05/01/2016":[]},{"05/02/2016":[{"partner_event_id":null,"moxi_works_agent_id":null,"event_subject":"foo
+      string: '[{"04/20/2016":[{"partner_event_id":"17c58ff85172093286272cffa4897610","moxi_works_agent_id":"testis@moxiworkstest.com","event_subject":"foo deeaz","event_location":"1234 there ave","note":"yo, whatup?","send_reminder":true,"remind_minutes_before":10,"is_meeting":false,"event_start":1462376100,"event_end":1462462520,"cancelled":false,"recurring":false,"all_day":false,"required_attendees":null,"optional_attendees":null}]},{"04/21/2016":[]},{"04/22/2016":[]},{"04/23/2016":[]},{"04/24/2016":[]},{"04/25/2016":[]},{"04/26/2016":[]},{"04/27/2016":[]},{"04/28/2016":[]},{"04/29/2016":[]},{"04/30/2016":[]},{"05/01/2016":[]},{"05/02/2016":[{"partner_event_id":null,"moxi_works_agent_id":null,"event_subject":"foo
         deeaz","event_location":"1234 there ave","note":"yo, whatup?","send_reminder":false,"remind_minutes_before":10,"is_meeting":false,"event_start":1462235880,"event_end":1462322280,"cancelled":false,"recurring":false,"all_day":false,"required_attendees":null,"optional_attendees":null}]},{"05/03/2016":[{"partner_event_id":null,"moxi_works_agent_id":null,"event_subject":"foo
         deeaz","event_location":"1234 there ave","note":"yo, whatup?","send_reminder":false,"remind_minutes_before":10,"is_meeting":false,"event_start":1462235880,"event_end":1462322280,"cancelled":false,"recurring":false,"all_day":false,"required_attendees":null,"optional_attendees":null}]}]'
     http_version: 

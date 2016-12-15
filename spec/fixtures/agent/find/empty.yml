@@ -51,7 +51,7 @@ http_interactions:
         path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '{"moxi_works_agent_id": "abc123", "mls": [], "accreditation": null, "address_street": null, "address_city": null, "address_state": null, "address_zip": null, "office_address_street": null, "office_address_city": null, "office_address_state": null, "office_address_zip": null, "name": null, "license": null, "mobile_phone_number": null, "home_phone_number": null, "fax_phone_number": null, "main_phone_number": null, "office_phone_number": null, "primary_email_address": null, "secondary_email_address": null, "languages": [], "twitter": null, "google_plus": null, "facebook": null, "home_page": null,  "birth_date": null, "title": null, "profile_image_url": null, "profile_thumb_url": null}'
+      string: '{"moxi_works_agent_id": "abc123", "mls": [], "accreditation": null, "address_street": null, "address_city": null, "address_state": null, "address_zip": null, "office_address_street": null, "office_address_city": null, "office_address_state": null, "office_address_zip": null, "name": null, "license": null, "mobile_phone_number": null, "home_phone_number": null, "fax_phone_number": null, "main_phone_number": null, "office_phone_number": null, "primary_email_address": null, "secondary_email_address": null, "languages": [], "twitter": null, "google_plus": null, "facebook": null, "home_page": null, "title": null, "profile_image_url": null, "profile_thumb_url": null}'
     http_version:
   recorded_at: Sat, 30 Apr 2016 18:03:47 GMT
 recorded_with: VCR 3.0.1

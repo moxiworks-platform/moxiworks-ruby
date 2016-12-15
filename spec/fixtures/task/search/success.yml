@@ -5,7 +5,7 @@ http_interactions:
     uri: https://abc123:secret@api.moxiworks.com/api/tasks
     body:
       encoding: UTF-8
-      string: moxi_works_agent_id=BiaB_test9%40moxiworkstest.com&due_date_start=1467067247&due_date_end=1468363247
+      string: moxi_works_agent_id=testis%40moxiworkstest.com&due_date_start=1467067247&due_date_end=1468363247
     headers:
       Accept:
       - application/vnd.moxi-platform+json;version=1
@@ -51,13 +51,13 @@ http_interactions:
         path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '{"page_number":1,"total_pages":1,"tasks":[{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":null,"partner_task_id":null,"name":"Reach
+      string: '{"page_number":1,"total_pages":1,"tasks":[{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":null,"partner_task_id":null,"name":"Reach
         Out to this New Lead!","description":"Call your new lead while it''s still
-        hot! The longer you wait to make first contact, the colder this lead becomes.","due_at":"1467841223","duration":15,"status":"active","created_at":"1467409223","completed_at":null},{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":null,"partner_task_id":null,"name":"Follow-up
+        hot! The longer you wait to make first contact, the colder this lead becomes.","due_at":"1467841223","duration":15,"status":"active","created_at":"1467409223","completed_at":null},{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":null,"partner_task_id":null,"name":"Follow-up
         Email","description":"Send a follow-up email after your call to make sure
-        your new lead has your contact information and confirmation on the next steps.","due_at":"1467841223","duration":15,"status":"active","created_at":"1467409223","completed_at":null},{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":null,"partner_task_id":null,"name":"Update
+        your new lead has your contact information and confirmation on the next steps.","due_at":"1467841223","duration":15,"status":"active","created_at":"1467409223","completed_at":null},{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":null,"partner_task_id":null,"name":"Update
         Team on Status of Lead","description":"Don''t forget to send an update to
-        your team or manager on the status of this lead.","due_at":"1468273223","duration":15,"status":"active","created_at":"1467409223","completed_at":null},{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":null,"partner_task_id":"whaterfverss","name":"Updated
+        your team or manager on the status of this lead.","due_at":"1468273223","duration":15,"status":"active","created_at":"1467409223","completed_at":null},{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":null,"partner_task_id":"whaterfverss","name":"Updated
         Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}]}'
     http_version: 
   recorded_at: Tue, 12 Jul 2016 22:40:48 GMT

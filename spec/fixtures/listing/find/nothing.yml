@@ -13,14 +13,12 @@ http_interactions:
       - gzip, deflate
       User-Agent:
       - rest-client/2.0.0 (darwin15.2.0 x86_64) ruby/2.2.4p230
-      Authorization:
-      - Basic NWQzOWJhNTgtYmZjMy0xMWU1LWE0ZTMtZDBlMTQwOGU4MDI2OmE1NnN0aGhpZFRsVXNMeXA4ZUZaQlF0dA==
       Content-Type:
       - application/x-www-form-urlencoded
       Content-Length:
       - '91'
       Host:
-      - localhost:3000
+      - api.moxiworks.com
   response:
     status:
       code: 200
