@@ -241,13 +241,13 @@ module  MoxiworksPlatform
     # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this transaction is to be associated
     # @option opts [String]  :moxi_works_contact_id *REQUIRED* The unique identifier for the Contact on the Moxi Works Platform. Either moxi_works_contact_id or partner_contact_id is required when creating SellerTransaction objects
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique id for associated contact. should already have been created in Moxi Works Platform. If the Contact was not created by your system, use the moxi_works_contact_id attribute. Either moxi_works_contact_id or partner_contact_id is required when creating SellerTransaction objects
+    # @option opts [String] :transaction_name *REQUIRED* short description of the transaction meaningful to the agent
     #
     # -- Either moxi_works_contact_id or partner_contact_id must be
     #      populated; however, you should only populate one of these attributes.
     #
     #     optional SellerTransaction parameters
     #
-    # @option opts [String] :transaction_name short description of the transaction meaningful to the agent
     # @option opts [String] :notes human readable notes associated with the transaction meaningful to the agent
     # @option opts [String] :address street address of the property associated with the transaction
     # @option opts [String] :city city of the property associated with the transaction
@@ -460,10 +460,10 @@ module  MoxiworksPlatform
     # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this transaction is to be associated
     # @option opts [String]  :moxi_works_transaction_id *REQUIRED* The Moxi Works Platform unique ID for this transaction.
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for the Contact for whom this SellerTransaction is to be associated.
-    # @option opts [String] :transaction_name *REQUIRED* short description of the transaction meaningful to the agent
     #
     #     optional SellerTransaction parameters
     #
+    # @option opts [String] :transaction_name short description of the transaction meaningful to the agent
     # @option opts [String] :description longer description of the transaction
     # @option opts [Integer] :due_at Unix timestamp representing the due date
     # @option opts [Integer] :duration Length of time in minutes that the transaction should take
