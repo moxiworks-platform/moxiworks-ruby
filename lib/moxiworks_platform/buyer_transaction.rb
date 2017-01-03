@@ -304,7 +304,7 @@ module  MoxiworksPlatform
     #        agent_identifier:'testis@testomatical.com',
     #        moxi_works_contact_id:'deadbeef-dead-beef-bad4-feedfacebad',
     #        notes: 'foo deeaz',
-    #        name: 'whateverz'
+    #        transaction_name: 'whateverz'
     #        address: '1234 there ave',
     #        city: 'cityville'
     #        state:  'provinceland',
@@ -457,7 +457,7 @@ module  MoxiworksPlatform
     #        agent_identifier:'testis@testomatical.com',
     #        moxi_works_transaction_id:'deadbeef-dead-beef-bad4-feedfacebad',
     #        notes: 'foo deeaz',
-    #        name: 'whateverz'
+    #        transaction_name: 'whateverz'
     #        address: '1234 there ave',
     #        city: 'cityville'
     #        state:  'provinceland',
