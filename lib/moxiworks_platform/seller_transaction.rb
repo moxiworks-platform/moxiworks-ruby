@@ -258,7 +258,7 @@ module  MoxiworksPlatform
     # @option opts [Integer or Float] :baths number of bathrooms in the property being sold
     # @option opts [Boolean] :is_mls_transaction Whether the property being sold is being listed on an MLS. This should be false for paperwork-only, for sale by owner, off-market, or pocket listing type transactions or any transactions that will not be tracked through an MLS. If is_mls_transaction is false, then start_timestamp should be populated.
     # @option opts [String] :mls_number  mls number associated with the transaction -- mls_number should be populated only if is_mls_transaction is true.
-    # @option opts [Integer] :start_timestamp  Unix timestamp representing the date the property was put on sale -- start_timestamp should be populated only if is_mls_transaction is false.
+    # @option opts [Integer] :start_timestamp  Unix timestamp representing the date the property was put on sale.
     # @option opts [Float] :commission_percentage what percentage the commission is if percentage based -- A SellerTransaction can only have either commission_percentage or commission_flat_fee populated. Both can not be populated.
     # @option opts [Integer] :commission_flat_fee how much the commission is if flat fee -- A SellerTransaction can only have either commission_percentage or commission_flat_fee populated. Both can not be populated.
     # @option opts [Integer] :target_price  target price associated with the transaction if using a target price rather than price range
@@ -400,7 +400,7 @@ module  MoxiworksPlatform
     # @option opts [Integer or Float] :baths number of bathrooms in the property being sold
     # @option opts [Boolean] :is_mls_transaction Whether the property being sold is being listed on an MLS. This should be false for paperwork-only, for sale by owner, off-market, or pocket listing type transactions or any transactions that will not be tracked through an MLS. If is_mls_transaction is false, then start_timestamp should be populated.
     # @option opts [String] :mls_number  mls number associated with the transaction -- mls_number should be populated only if is_mls_transaction is true.
-    # @option opts [Integer] :start_timestamp  Unix timestamp representing the date the property was put on sale -- start_timestamp should be populated only if is_mls_transaction is false.
+    # @option opts [Integer] :start_timestamp  Unix timestamp representing the date the property was put on sale.
     # @option opts [Float] :commission_percentage what percentage the commission is if percentage based -- A SellerTransaction can only have either commission_percentage or commission_flat_fee populated. Both can not be populated.
     # @option opts [Integer] :commission_flat_fee how much the commission is if flat fee -- A SellerTransaction can only have either commission_percentage or commission_flat_fee populated. Both can not be populated.
     # @option opts [Integer] :target_price  target price associated with the transaction if using a target price rather than price range
