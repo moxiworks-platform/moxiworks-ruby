@@ -56,7 +56,7 @@ module  MoxiworksPlatform
     #
     #  This will be a single digit integer that can be [1,2,3,4,5].
     #   For more information on SellerTransaction stages see
-    #     <a href='https://moxiworks-platform.github.io/#sellertransaction-stages'>The Moxi Works Platform Documentation</a>
+    #     {https://moxiworks-platform.github.io/#sellertransaction-stages The Moxi Works Platform Documentation}
     #
     # @return [Integer] the stage the SellerTransaction is in.
     attr_accessor :stage
@@ -71,7 +71,7 @@ module  MoxiworksPlatform
     #   This will be an enumerated string that can be can be
     #   'initialized', 'configured' , 'active' , 'pending'  or 'complete'
     #   For more information on SellerTransaction stages see
-    #     <a href='https://moxiworks-platform.github.io/#sellertransaction-stages'>The Moxi Works Platform Documentation</a>
+    #     {https://moxiworks-platform.github.io/#sellertransaction-stages The Moxi Works Platform Documentation}
     #
     #
     # @return [String, enumerated] current state of SellerTransaction
@@ -226,7 +226,7 @@ module  MoxiworksPlatform
     #
     # In order to promote a SellerTransaction to the next stage, set  the
     # promote_transaction attribute to true. For more information about
-    # SellerTransaction stages, see <a href='https://moxiworks-platform.github.io/#promoting-sellertransaction-stage>The Moxi Works Platform Documentation</a>.
+    # SellerTransaction stages, see {https://moxiworks-platform.github.io/#promoting-sellertransaction-stageThe Moxi Works Platform Documentation}.
     # promote_transaction is only available for SellerTransaction updates.
     # Newly created SellerTransaction objects will automatically be created in
     # stage 3 (active)
