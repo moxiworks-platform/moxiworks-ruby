@@ -168,7 +168,7 @@ module  MoxiworksPlatform
 
     # @!attribute start_timestamp
     #
-    # **NON MLS TRANSACTIONS ONLY ** this is the Unix timestamp
+    #  this is the Unix timestamp
     #   representing the date the agent initiated transaction discussions
     #   with the client.
     #
