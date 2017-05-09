@@ -19,11 +19,23 @@ module MoxiworksPlatform
     #   @return [String] your system's unique ID for the contact
     attr_accessor :partner_contact_id
 
+    # @!attribute anniversary
+    #   the Contact's anniversary displayed as a Unix Timestamp. This will be empty if the data is unavailable
+    #
+    # @return [Integer or nil] -- Unix Timestamp
+    attr_accessor :anniversary
+
+    # @!attribute birthday
+    #   the Contact's birthday displayed as a Unix Timestamp. This will be empty if the data is unavailable
+    #
+    # @return [Integer or nil] -- Unix Timestamp
+    attr_accessor :birthday
+
     # @!attribute contact_name
     #   the full name of this Contact
     #
     #   @return [String] -- Default ''
-    attr_accessor :contact_name
+    attr_accessor :contact_namer
 
     # @!attribute gender
     #   the gender  of this Contact. the first initial of either gender type may
@@ -45,6 +57,12 @@ module MoxiworksPlatform
     #
     #   @return [String] -- Default ''
     attr_accessor :home_city
+
+    # @!attribute home_purchase_anniversary
+    #   the anniversary of the purchase of contact's home displayed as a Unix Timestamp. This will be empty if the data is unavailable
+    #
+    # @return [Integer or nil] -- Unix Timestamp
+    attr_accessor :home_purchase_anniversary
 
     # @!attribute home_state
     #   the state in which the residence of this Contact is located
@@ -73,6 +91,12 @@ module MoxiworksPlatform
     #
     #   @return [String] -- Default ''
     attr_accessor :home_country
+
+    # @!attribute is_new_contact
+    # whether the Contact is considered new
+    #
+    # @return [Boolean]
+    attr_accessor :is_new_contact
 
     # @!attribute job_title
     #   the specific job title this contact has; ex: 'Senior VP of Operations'

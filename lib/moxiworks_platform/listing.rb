@@ -137,7 +137,7 @@ module MoxiworksPlatform
 
     # @!attribute waterfront_yn
     #
-    # @return [Boolean] whether the property has waterfront acreage
+    # @return [Boolean|nil] whether the property has waterfront acreage
     attr_accessor :waterfront_yn
 
     # @!attribute high_school
@@ -164,6 +164,18 @@ module MoxiworksPlatform
     #
     # @return [String] the mls number associated with the listing
     attr_accessor :listing_id
+
+    # @!attribute listing_images
+    #
+    # @return [Array] array of image Hashes in the format
+    #  {
+    #     image_thumb_url: [String] url to thumbail size image (smallest),
+    #     image_small_url: [String] url to small size image (small),
+    #     image_full_url: [String] url to full size image (medium),
+    #     image_gallery_url: [String] url to gallery size image (large),
+    #     image_raw_url: [String] url to raw image (largest)
+    #  }
+    attr_accessor :listing_images
 
     # @!attribute list_agent_full_name
     #
@@ -200,6 +212,11 @@ module MoxiworksPlatform
     # @return [Boolean] whether there is a pool
     attr_accessor :pool_yn
 
+    # @!attribute property_features
+    #
+    # @return [Hash] property features associated with this listing
+    attr_accessor :property_features
+
     # @!attribute property_type
     #
     # @return [String] type of property, could be 'Rental' 'Residential' 'Condo-Coop' 'Townhouse' 'Land' 'Multifamily'
@@ -234,18 +251,6 @@ module MoxiworksPlatform
     #
     # @return [Integer] year the building was built
     attr_accessor :year_built
-
-    # @!attribute listing_images
-    #
-    # @return [Array] array of image Hashes in the format
-    #  {
-    #     image_thumb_url: [String] url to thumbail size image (smallest),
-    #     image_small_url: [String] url to small size image (small),
-    #     image_full_url: [String] url to full size image (medium),
-    #     image_gallery_url: [String] url to gallery size image (large),
-    #     image_raw_url: [String] url to raw image (largest)
-    #  }
-    attr_accessor :listing_images
 
 
 
@@ -295,12 +300,11 @@ module MoxiworksPlatform
     #
     #     optional Search parameters
     #
-    # @option opts [Integer] :page_number the page of results to return
+    # @option opts [String] :last_moxi_works_listing_id For multi-page responses (where the response value 'last_page' is false), send the listing ID of the last Listing in the previous page.
     #
     # @return [Hash] with the format:
     #   {
-    #     page_number: [Integer],
-    #     total_pages: [Integer],
+    #     last_page: [Boolean],
     #     listings:  [Array] containing MoxiworkPlatform::Listing objects
     #   }
     #

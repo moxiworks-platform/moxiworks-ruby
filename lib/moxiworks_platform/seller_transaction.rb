@@ -119,7 +119,7 @@ module  MoxiworksPlatform
     # @return [Float] number of bathrooms in property being sold
     attr_accessor :baths
 
-        # @!attribute is_mls_transaction
+    # @!attribute is_mls_transaction
     #
     #
     # @return [Boolean] Whether the property being sold is being listed on an MLS.
