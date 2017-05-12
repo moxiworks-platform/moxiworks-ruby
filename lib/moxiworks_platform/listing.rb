@@ -2,19 +2,6 @@ module MoxiworksPlatform
   # = Moxi Works Platform Listing
   class Listing < MoxiworksPlatform::Resource
 
-    # @!attribute moxi_works_listing_id
-    #   moxi_works_listing_id is the Moxi Works Platform ID of the listing
-    #
-    #   this must be set for any Moxi Works Platform transaction
-    #
-    #   @return [String] the Moxi Works Platform ID of the listing
-    attr_accessor :moxi_works_listing_id
-
-    # @!attribute lot_size_acres
-    #
-    # @return [float] the property acreage of the listing
-    attr_accessor :lot_size_acres
-
     # @!attribute address
     #
     # @return [String] street address of property
@@ -25,35 +12,15 @@ module MoxiworksPlatform
     # @return [String] a second line for street address if needed
     attr_accessor :address2
 
-    # @!attribute city
+    # @!attribute agent_created_listing
     #
-    # @return [String] city of property address
-    attr_accessor :city
+    # @return [Boolean] whether the agent created the listing
+    attr_accessor :agent_created_listing
 
-    # @!attribute state
+    # @!attribute association_fee
     #
-    # @return [String] state of property address
-    attr_accessor :state_or_province
-
-    # @!attribute postal_code
-    #
-    # @return [String] zip code of property address
-    attr_accessor :postal_code
-
-    # @!attribute county_or_parish
-    #
-    # @return [String] county of property address
-    attr_accessor :county_or_parish
-
-    # @!attribute latitude
-    #
-    # @return [String] latitude of the property
-    attr_accessor :latitude
-
-    # @!attribute longitude
-    #
-    # @return [String] longitude of the property
-    attr_accessor :longitude
+    # @return [Integer] HOA fees for property
+    attr_accessor :association_fee
 
     # @!attribute bathrooms_full
     #
@@ -95,35 +62,25 @@ module MoxiworksPlatform
     # @return [Integer] number of bedrooms
     attr_accessor :bedrooms_total
 
-    # @!attribute public_remarks
+    # @!attribute city
     #
-    # @return [String] agent generated comments regarding the property
-    attr_accessor :public_remarks
+    # @return [String] city of property address
+    attr_accessor :city
 
-    # @!attribute modification_timestamp
+    # @!attribute county_or_parish
     #
-    # @return [String] string representing date in format 'MM/DD/YYYY'
-    attr_accessor :modification_timestamp
-
-    # @!attribute internet_address_display_yn
-    #
-    # @return [Boolean] whether to display the address publicly
-    attr_accessor :internet_address_display_yn
-
-    # @!attribute days_on_market
-    #
-    # @return [Integer] days listing has been on market
-    attr_accessor :days_on_market
-
-    # @!attribute listing_contract_date
-    #
-    # @return [String] string representing date in format 'MM/DD/YYYY'
-    attr_accessor :listing_contract_date
+    # @return [String] county of property address
+    attr_accessor :county_or_parish
 
     # @!attribute created_date
     #
     # @return [String] string representing date in format 'MM/DD/YYYY'
     attr_accessor :created_date
+
+    # @!attribute days_on_market
+    #
+    # @return [Integer] days listing has been on market
+    attr_accessor :days_on_market
 
     # @!attribute elementary_school
     #
@@ -135,20 +92,30 @@ module MoxiworksPlatform
     # @return [Integer] garage spaces for the property
     attr_accessor :garage_spaces
 
-    # @!attribute waterfront_yn
-    #
-    # @return [Boolean|nil] whether the property has waterfront acreage
-    attr_accessor :waterfront_yn
-
     # @!attribute high_school
     #
     # @return [String] High school for property
     attr_accessor :high_school
 
-    # @!attribute association_fee
+    # @!attribute internet_address_display_yn
     #
-    # @return [Integer] HOA fees for property
-    attr_accessor :association_fee
+    # @return [Boolean] whether to display the address publicly
+    attr_accessor :internet_address_display_yn
+
+    # @!attribute internet_entire_listing_display_yn
+    #
+    # @return [Boolean] whether to display listing on internet
+    attr_accessor :internet_entire_listing_display_yn
+
+    # @!attribute latitude
+    #
+    # @return [String] latitude of the property
+    attr_accessor :latitude
+
+    # @!attribute list_agent_full_name
+    #
+    # @return [String] name of listing agent
+    attr_accessor :list_agent_full_name
 
     # @!attribute list_office_name
     #
@@ -159,6 +126,16 @@ module MoxiworksPlatform
     #
     # @return [Integer] listed price
     attr_accessor :list_price
+
+    # @!attribute list_office_aor
+    #
+    # @return [String] MLS the listing is listed with
+    attr_accessor :list_office_aor
+
+    # @!attribute listing_contract_date
+    #
+    # @return [String] string representing date in format 'MM/DD/YYYY'
+    attr_accessor :listing_contract_date
 
     # @!attribute listing_id
     #
@@ -177,10 +154,20 @@ module MoxiworksPlatform
     #  }
     attr_accessor :listing_images
 
-    # @!attribute list_agent_full_name
+    # @!attribute living_area
     #
-    # @return [String] name of listing agent
-    attr_accessor :list_agent_full_name
+    # @return [Integer] square footage of the building
+    attr_accessor :living_area
+
+    # @!attribute longitude
+    #
+    # @return [String] longitude of the property
+    attr_accessor :longitude
+
+    # @!attribute lot_size_acres
+    #
+    # @return [float] the property acreage of the listing
+    attr_accessor :lot_size_acres
 
     # @!attribute lot_size_square_feet
     #
@@ -192,15 +179,18 @@ module MoxiworksPlatform
     # @return [String] Middle school for property
     attr_accessor :middle_or_junior_school
 
-    # @!attribute list_office_aor
+    # @!attribute moxi_works_listing_id
+    #   moxi_works_listing_id is the Moxi Works Platform ID of the listing
     #
-    # @return [String] MLS the listing is listed with
-    attr_accessor :list_office_aor
+    #   this must be set for any Moxi Works Platform transaction
+    #
+    #   @return [String] the Moxi Works Platform ID of the listing
+    attr_accessor :moxi_works_listing_id
 
-    # @!attribute internet_entire_listing_display_yn
+    # @!attribute modification_timestamp
     #
-    # @return [Boolean] whether to display listing on internet
-    attr_accessor :internet_entire_listing_display_yn
+    # @return [String] string representing date in format 'MM/DD/YYYY'
+    attr_accessor :modification_timestamp
 
     # @!attribute on_market
     #
@@ -212,6 +202,11 @@ module MoxiworksPlatform
     # @return [Boolean] whether there is a pool
     attr_accessor :pool_yn
 
+    # @!attribute postal_code
+    #
+    # @return [String] zip code of property address
+    attr_accessor :postal_code
+
     # @!attribute property_features
     #
     # @return [Hash] property features associated with this listing
@@ -221,6 +216,21 @@ module MoxiworksPlatform
     #
     # @return [String] type of property, could be 'Rental' 'Residential' 'Condo-Coop' 'Townhouse' 'Land' 'Multifamily'
     attr_accessor :property_type
+
+    # @!attribute public_remarks
+    #
+    # @return [String] agent generated comments regarding the property
+    attr_accessor :public_remarks
+
+    # @!attribute single_story
+    #
+    # @return [Boolean] whether the building is single story
+    attr_accessor :single_story
+
+    # @!attribute state
+    #
+    # @return [String] state of property address
+    attr_accessor :state_or_province
 
     # @!attribute tax_annual_amount
     #
@@ -232,20 +242,15 @@ module MoxiworksPlatform
     # @return [Integer] assessment year that property_tax reflects
     attr_accessor :tax_year
 
-    # @!attribute single_story
-    #
-    # @return [Boolean] whether the building is single story
-    attr_accessor :single_story
-
-    # @!attribute living_area
-    #
-    # @return [Integer] square footage of the building
-    attr_accessor :living_area
-
     # @!attribute view_yn
     #
     # @return [Boolean] whether the property has a view
     attr_accessor :view_yn
+
+    # @!attribute waterfront_yn
+    #
+    # @return [Boolean|nil] whether the property has waterfront acreage
+    attr_accessor :waterfront_yn
 
     # @!attribute year_built
     #
@@ -301,6 +306,7 @@ module MoxiworksPlatform
     #     optional Search parameters
     #
     # @option opts [String] :last_moxi_works_listing_id For multi-page responses (where the response value 'last_page' is false), send the listing ID of the last Listing in the previous page.
+    # @option opts [Hash] :previous_page For multi-page responses (where the response value 'last_page' is false), send the listing ID of the last Listing in the previous page.
     #
     # @return [Hash] with the format:
     #   {
@@ -331,12 +337,24 @@ module MoxiworksPlatform
     def self.search(opts={}, &block)
       url ||= "#{MoxiworksPlatform::Config.url}/api/listings"
       required_opts = [:moxi_works_company_id, :updated_since]
+
       required_opts.each do |opt|
         raise ::MoxiworksPlatform::Exception::ArgumentError, "#{opt} required" if
             opts[opt].nil? or opts[opt].to_s.empty?
       end
+
+      prev_page = opts[:previous_page] || opts['previous_page']
+      unless(prev_page.nil? or
+          prev_page.empty? or
+          not prev_page.is_a?(Hash) or
+          prev_page['listings'].nil? or
+          prev_page['listings'].empty? or
+          not prev_page['listings'].is_a?(Array))
+        opts[:last_moxi_works_listing_id] ||= prev_page['listings'].last.moxi_works_listing_id
+      end
+
       results = []
-      json = {'listings': [], 'last_page': true}
+      json = {'listings' => [], 'last_page' => true}
       RestClient::Request.execute(method: :get,
                                   url: url,
                                   payload: opts, headers: self.headers) do |response|
@@ -359,24 +377,6 @@ module MoxiworksPlatform
       end
       json
     end
-
-    def self.underscore_attribute_names(hash)
-      hash.keys.each do |key|
-        hash[key] = self.underscore_attribute_names hash[key] if hash[key].is_a? Hash
-        if hash[key].is_a? Array
-          array = hash[key]
-          new_array = []
-          array.each do |member|
-            new_array << self.underscore_attribute_names(member)
-          end
-          hash[key] = new_array
-        end
-        underscored = Resource.underscore(key)
-        hash[underscored] = hash.delete(key)
-      end
-      hash
-    end
-
 
   end
 end

@@ -1,6 +1,49 @@
 module MoxiworksPlatform
   # = Moxi Works Platform Event
   class Event < MoxiworksPlatform::Resource
+
+    # @!attribute all_day
+    # whether the event is an all day event
+    #
+    # @return [Boolean]
+    attr_accessor :all_day
+
+    # @!attribute attendees
+    # a comma separated list of attendee IDs
+    #
+    # @return [String]
+    attr_accessor :attendees
+
+    # @!attribute event_end
+    # a unix timestamp representing the end time of the event
+    #
+    # @return [Integer]
+    attr_writer :event_end
+
+    # @!attribute location
+    # a short description of the location of the event
+    #
+    # @return [String]
+    attr_accessor :event_location
+
+    # @!attribute event_start
+    # a unix timestamp representing the start time of the event
+    #
+    # @return [Integer]
+    attr_writer :event_start
+
+    # @!attribute event_subject
+    # a short description of the event
+    #
+    # @return [String]
+    attr_accessor :event_subject
+
+    # @!attribute is_meeting
+    # whether this event is a meeting
+    #
+    # @return [Boolean]
+    attr_accessor :is_meeting
+
     # @!attribute moxi_works_agent_id
     #   moxi_works_agent_id is the Moxi Works Platform ID of the agent which a event is
     #   or is to be associated with.
@@ -10,29 +53,17 @@ module MoxiworksPlatform
     #   @return [String] the Moxi Works Platform ID of the agent
     attr_accessor :moxi_works_agent_id
 
-    # @!attribute partner_event_id
-    # your system's event ID for the event
-    #
-    # @return [String] representing the ID of the event in your system
-    attr_accessor :partner_event_id
-
-    # @!attribute event_subject
-    # a short description of the event
-    #
-    # @return [String]
-    attr_accessor :event_subject
-
-    # @!attribute location
-    # a short description of the location of the event
-    #
-    # @return [String]
-    attr_accessor :event_location
-
     # @!attribute note
     # a more detailed description of the event
     #
     # @return [String]
     attr_accessor :note
+
+    # @!attribute partner_event_id
+    # your system's event ID for the event
+    #
+    # @return [String] representing the ID of the event in your system
+    attr_accessor :partner_event_id
 
     # @!attribute remind_minutes_before
     # how many minutes before the event a reminder should be sent
@@ -40,41 +71,11 @@ module MoxiworksPlatform
     # @return [Integer]
     attr_writer :remind_minutes_before
 
-    # @!attribute is_meeting
-    # whether this event is a meeting
+    # @!attribute send_reminder
+    # whether to send a reminder to attendees
     #
     # @return [Boolean]
-    attr_accessor :is_meeting
-
-    # @!attribute event_start
-    # a unix timestamp representing the start time of the event
-    #
-    # @return [Integer]
-    attr_writer :event_start
-
-    # @!attribute event_end
-    # a unix timestamp representing the end time of the event
-    #
-    # @return [Integer]
-    attr_writer :event_end
-
-    # @!attribute all_day
-    # whether the event is an all day event
-    #
-    # @return [Boolean]
-    attr_accessor :all_day
-
-    # @!attribute required_attendees
-    # a comma separated list of attendee IDs
-    #
-    # @return [String]
-    attr_accessor :required_attendees
-
-    # @!attribute optional_attendees
-    # a comma separated list of attendee IDs
-    #
-    # @return [String]
-    attr_accessor :optional_attendees
+    attr_accessor :send_reminder
 
     # Creates a new Event in Moxi Works Platform
     # @param [Hash] opts named parameter Hash

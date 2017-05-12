@@ -1,4 +1,5 @@
 require 'moxiworks_platform/version'
+require 'moxiworks_platform/session'
 require 'moxiworks_platform/config'
 require 'moxiworks_platform/exception'
 require 'moxiworks_platform/resource'

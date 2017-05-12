@@ -149,6 +149,7 @@ module MoxiworksPlatform
                                   payload: opts, headers: self.headers) do |response|
         puts response if MoxiworksPlatform::Config.debug
         self.check_for_error_in_response(response)
+        
         json = JSON.parse(response)
         json['offices'].each do |r|
           results << MoxiworksPlatform::Office.new(r) unless r.nil? or r.empty?
