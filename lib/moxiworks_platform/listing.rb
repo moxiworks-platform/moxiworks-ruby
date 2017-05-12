@@ -306,7 +306,7 @@ module MoxiworksPlatform
     #     optional Search parameters
     #
     # @option opts [String] :last_moxi_works_listing_id For multi-page responses (where the response value 'last_page' is false), send the listing ID of the last Listing in the previous page.
-    # @option opts [Hash] :previous_page For multi-page responses (where the response value 'last_page' is false), send the listing ID of the last Listing in the previous page.
+    # @option opts [Hash] :previous_page For multi-page responses (where the response value 'last_page' is false), send the entire response from the previous page.
     #
     # @return [Hash] with the format:
     #   {
@@ -323,6 +323,13 @@ module MoxiworksPlatform
     #     moxi_works_company_id: 'the_company',
     #     updated_since:  Time.now.to_i - 1296000,
     #     moxi_works_agent_id: 'abc123'
+    #     )
+    #
+    #     next_page = MoxiworksPlatform::Listing.search(
+    #     moxi_works_company_id: 'the_company',
+    #     updated_since:  Time.now.to_i - 1296000,
+    #     moxi_works_agent_id: 'abc123',
+    #     previous_page: results
     #     )
     #
     # @block |Array|
