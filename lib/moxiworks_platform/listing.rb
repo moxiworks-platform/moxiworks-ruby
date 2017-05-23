@@ -146,11 +146,19 @@ module MoxiworksPlatform
     #
     # @return [Array] array of image Hashes in the format
     #  {
-    #     image_thumb_url: [String] url to thumbail size image (smallest),
-    #     image_small_url: [String] url to small size image (small),
-    #     image_full_url: [String] url to full size image (medium),
-    #     image_gallery_url: [String] url to gallery size image (large),
-    #     image_raw_url: [String] url to raw image (largest)
+    #     thumb_url: [String] url to thumbail size image (smallest),
+    #     small_url: [String] url to small size image (small),
+    #     full_url: [String] url to full size image (medium),
+    #     gallery_url: [String] url to gallery size image (large),
+    #     raw_url: [String] url to raw image (largest)
+    #     title: [String] human readable title of image
+    #     is_main_listing_image: [Boolean] whether the image is the main image for the listing
+    #     caption: [String] human readable caption for the image
+    #     description: [String] human readable description of the image
+    #     width: [Integer] width of the raw image
+    #     height: [Integer] height of the raw image
+    #     mime_type: [String] MIME or media type of the image
+    #
     #  }
     attr_accessor :listing_images
 
