@@ -69,8 +69,8 @@ module MoxiworksPlatform
         json = JSON.parse(response)
         MoxiworksPlatform::Session.instance.cookie = response.headers[:set_cookie].first rescue nil
         return if json.is_a?(Array)
-        # rescue => e
-        # raise MoxiworksPlatform::Exception::RemoteRequestFailure, "unable to parse remote response #{e}\n response:\n  #{response}"
+        rescue => e
+        raise MoxiworksPlatform::Exception::RemoteRequestFailure, "unable to parse remote response #{e}\n response:\n  #{response}"
       end
       message = "unable to perform remote action on Moxi Works platform\n"
       message << json['messages'].join(',') unless json['messages'].nil?
