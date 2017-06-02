@@ -5400,7 +5400,6 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-618
 619
 620
 621
@@ -5414,10 +5413,11 @@ aren&#39;t included</p>
 629
 630
 631
-632</pre>
+632
+633</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 618</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 619</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/contacts/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:partner_contact_id</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -5685,6 +5685,19 @@ this contact is associated</p>
           
         </li>
       
+        <li>
+          <span class="name">:updated_since</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>return all Contacts updated after this Unix timestamp</p>
+</div>
+          
+        </li>
+      
     </ul>
   
 
@@ -5732,7 +5745,6 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-493
 494
 495
 496
@@ -5751,10 +5763,11 @@ aren&#39;t included</p>
 509
 510
 511
-512</pre>
+512
+513</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 493</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 494</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_url'>url</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/contacts</span><span class='tstring_end'>&quot;</span></span>
@@ -6470,7 +6483,6 @@ Condo, Townhouse&#39;</p>
       <pre class="lines">
 
 
-696
 697
 698
 699
@@ -6481,10 +6493,11 @@ Condo, Townhouse&#39;</p>
 704
 705
 706
-707</pre>
+707
+708</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 696</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 697</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_url'>url</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Exception</span><span class='op'>::</span><span class='const'>ArgumentError</span><span class='comma'>,</span>
@@ -7182,14 +7195,14 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-596
 597
 598
 599
-600</pre>
+600
+601</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 596</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 597</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:contact_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:partner_contact_id</span><span class='rbracket'>]</span>
@@ -7261,12 +7274,12 @@ that your system has previously created</p>
       <pre class="lines">
 
 
-732
 733
-734</pre>
+734
+735</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 732</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 733</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span>
   <span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Contact</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='rparen'>)</span>
@@ -7328,12 +7341,12 @@ that your system has previously created</p>
       <pre class="lines">
 
 
-720
 721
-722</pre>
+722
+723</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 720</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/contact.rb', line 721</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_save'>save</span>
   <span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Contact</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='rparen'>)</span>
@@ -7348,7 +7361,7 @@ that your system has previously created</p>
 </div>
 
       <div id="footer">
-  Generated on Tue May 23 11:33:48 2017 by
+  Generated on Fri Jun  2 12:32:49 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.2.4).
 </div>
