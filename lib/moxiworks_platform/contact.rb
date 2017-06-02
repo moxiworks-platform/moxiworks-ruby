@@ -478,6 +478,7 @@ module MoxiworksPlatform
     # @option opts [String] :contact_name  full name of the contact
     # @option opts [String] :email_address full email address of the contact
     # @option opts [String] :phone_number  full phone number of the contact
+    # @option opts [Integer] :updated_since return all Contacts updated after this Unix timestamp
     #
     # @return [Array] containing MoxiworkPlatform::Contact objects
     #
