@@ -116,6 +116,41 @@ module MoxiworksPlatform
     #   @return [String] -- Default ''
     attr_accessor :occupation
 
+    # @!attribute is_new_contact
+    #   Whether the contact was recently added to the Agent's database.
+    #
+    #   @return [Boolean]
+    attr_accessor :is_new_contact
+
+    # @!attribute birthday
+    #   Birthday of the contact represented as a Unix Timestamp.
+    #
+    #   @return [Integer]
+    attr_accessor :birthday
+
+    # @!attribute anniversary
+    #   Anniversary of the contact represented as a Unix Timestamp.
+    #
+    #   @return [Integer]
+    attr_accessor :anniversary
+
+    # @!attribute home_purchase_anniversary
+    #   Anniversary of the contact's home purchase represented as a Unix Timestamp.
+    #
+    #   @return [Integer]
+    attr_accessor :home_purchase_anniversary
+
+    # @!attribute social_media_profiles
+    #   URLs to any social media profiles that the agent has defined.
+    #
+    # The structure of each social media profile entry will be a Hash with the following
+    #  format
+    #
+    #  { 'key': 'KEY_VAL_AS_STRING', 'url': 'URL_OF_SOCIAL_MEDIA_PROFILE' }
+    #
+    #   @return [Array]
+    attr_accessor :social_media_profiles
+
     # @!attribute partner_agent_id
     #   your system's unique identifier for the agent that this contact will be associated with
     #
