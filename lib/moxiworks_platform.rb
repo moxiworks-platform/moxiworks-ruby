@@ -16,6 +16,7 @@ require 'moxiworks_platform/listing'
 require 'moxiworks_platform/office'
 require 'moxiworks_platform/buyer_transaction'
 require 'moxiworks_platform/seller_transaction'
+require 'moxiworks_platform/brand'
 
 
 module MoxiworksPlatform

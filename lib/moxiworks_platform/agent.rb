@@ -16,6 +16,21 @@ module MoxiworksPlatform
     # @return [String] the UUID of the office which the Agent is associated
     attr_accessor :moxi_works_office_id
 
+     # @!attribute string the id of the agent used by the company of the agent
+    #
+    # @return [String] the UUID of the office which the Agent is associated
+    attr_accessor :client_agent_id
+
+     # @!attribute string the id office used by the company of the agent
+    #
+    # @return [String] the internal of the office which the Agent is associated used by the company
+    attr_accessor :client_office_id
+
+     # @!attribute string the id of the company used by the company of the agent
+    #
+    # @return [String] the UUID of the office which the Agent is associated
+    attr_accessor :client_company_id
+
     # @!attribute address_street
     #
     # @return [String] the agent's address, street and number
