@@ -308,7 +308,9 @@ module MoxiworksPlatform
     # @param [Hash] opts named parameter Hash
     # @option opts [String]  :moxi_works_company_id *REQUIRED* The Moxi Works Company ID For the search (use Company.search to determine available moxi_works_company_id)
     # @option opts [Integer] :updated_since  *REQUIRED*  Unix timestamp; Only Listings updated after this date will be returned
-    # @option opts [String]  :moxi_works_agent_id  The Moxi Works Agent ID For the search (use Agent.search to determine available moxi_works_agent_id)
+    # @option opts [String]  :moxi_works_agent_id  The Moxi Works Agent ID For the search (use Agent.search to determine available moxi_works_agent_id) -- only agent_uuid or moxi_works_agent_id are needed when searching for listings by agent
+    # @option opts [String]  :agent_uuid  The Agent UUID For the search (use Agent.search to determine available agent_uuid) -- only agent_uuid or moxi_works_agent_id are needed when searching for listings by agent
+    # @option opts [String]  :moxi_works_office_id  The Moxi Works Office ID For the search (use Office.search or Agent response to determine available moxi_works_office_id)
     #
     #
     #     optional Search parameters
