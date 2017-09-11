@@ -6,7 +6,7 @@ module MoxiworksPlatform
     #   moxi_works_agent_id is the Moxi Works Platform ID of the agent which a contact is
     #   or is to be associated with.
     #
-    #   this must be set for any Moxi Works Platform transaction
+    #   this or agent_uuid must be set for any Moxi Works Platform transaction
     #
     #   @return [String] the Moxi Works Platform ID of the agent
     attr_accessor :moxi_works_agent_id
@@ -18,6 +18,15 @@ module MoxiworksPlatform
     #
     #   @return [String] your system's unique ID for the contact
     attr_accessor :partner_contact_id
+
+    # @!attribute agent_uuid
+    #   The UUID of the agent the that the contact is to be associated with.
+    #
+    #   this or moxi_works_agent_id must be set for any Moxi Works Platform transaction
+    #
+    #   @return [String] the UUID of the agent
+    attr_accessor :agent_uuid
+
 
     # @!attribute anniversary
     #   the Contact's anniversary displayed as a Unix Timestamp. This will be empty if the data is unavailable
@@ -671,7 +680,8 @@ module MoxiworksPlatform
     #
     # @param [String] method The HTTP method to be used when connecting; ex: :put, :post, :get
     # @param [Hash] opts
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this contact is to be associated
+    # @option opts [String]  :moxi_works_agent_id *-- either moxi_works_agent_id or agent_uuid is REQUIRED*  The Moxi Works Agent ID for the agent to which this contact is to be associated
+    # @option opts [String]  :agent_uuid *-- either moxi_works_agent_id or agent_uuid is REQUIRED* The Agent UUID for the agent to which this contact is to be associated
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for this contact.
     #
     #     optional Contact parameters
@@ -733,11 +743,17 @@ module MoxiworksPlatform
       raise ::MoxiworksPlatform::Exception::ArgumentError,
             'arguments must be passed as named parameters' unless opts.is_a? Hash
       url ||= "#{MoxiworksPlatform::Config.url}/api/contacts"
-      required_opts = [:moxi_works_agent_id, :partner_contact_id]
+      required_opts = [:partner_contact_id]
       required_opts.each do |opt|
         raise ::MoxiworksPlatform::Exception::ArgumentError, "#{opt} required" if
             opts[opt].nil? or opts[opt].to_s.empty?
       end
+
+      raise ::MoxiworksPlatform::Exception::ArgumentError, "#{:moxi_works_agent_id} required" if
+            (opts[:moxi_works_agent_id].nil? or opts[:moxi_works_agent_id].to_s.empty?) and
+            (opts[:agent_uuid].nil? or opts[:agent_uuid].to_s.empty?)
+
+
       opts[:contact_id] = opts[:partner_contact_id]
       super(method, opts, url)
     end
