@@ -5,7 +5,7 @@ describe MoxiworksPlatform::Agent do
   agent_accesors = [:moxi_works_agent_id, :address_street,
                     :address_city, :address_state, :address_zip, :office_address_street,
                     :office_address_city, :office_address_state, :office_address_zip,
-                    :name, :mobile_phone_number,
+                    :name, :mobile_phone_number, :first_name, :last_name,
                     :fax_phone_number, :main_phone_number, :primary_email_address,
                     :secondary_email_address, :twitter, :google_plus,
                     :facebook, :home_page, :profile_image_url,
@@ -70,7 +70,7 @@ describe MoxiworksPlatform::Agent do
         end
 
         context :full_response do
-          full_response = JSON.parse('{"moxi_works_agent_id": "abc123","address_street": "1234 Agent St.","title": "REALTOR", "address_city": "Agentville","address_state": "AG","address_zip": "12345","office_address_street": "3456 Office Ln.","office_address_city": "Officeville","office_address_state": "AG","office_address_zip": "12345","name": "Buckminster Fuller","mobile_phone_number": "222 333 4567","fax_phone_number": "4567891011","main_phone_number": "678) 9101112","office_phone_number": "(234)456-7890","primary_email_address": "the_agent@agentdomain.com","secondary_email_address": "the_agent_alt@otherdomain.com","twitter": "@agentguy","google_plus": "https://plus.google.com/1234567891011121314/posts","facebook": "https://www.facebook.com/moxiworks/","home_page": "foo.com","profile_image_url": "http://picturererer.com/pics37/ImageStore.dll?id=852087C5D3A533DD&w=200","profile_thumb_url": "http://picturererer.com/pics37/ImageStore.dll?id=852087C5D3A533DD&w=75"}')
+          full_response = JSON.parse('{"moxi_works_agent_id": "abc123","address_street": "1234 Agent St.","title": "REALTOR", "address_city": "Agentville","address_state": "AG","address_zip": "12345","office_address_street": "3456 Office Ln.","office_address_city": "Officeville","office_address_state": "AG","office_address_zip": "12345", "name": "Buckminster Fuller", "first_name": "Buckminster", "last_name": "Fuller", "mobile_phone_number": "222 333 4567","fax_phone_number": "4567891011","main_phone_number": "678) 9101112","office_phone_number": "(234)456-7890","primary_email_address": "the_agent@agentdomain.com","secondary_email_address": "the_agent_alt@otherdomain.com","twitter": "@agentguy","google_plus": "https://plus.google.com/1234567891011121314/posts","facebook": "https://www.facebook.com/moxiworks/","home_page": "foo.com","profile_image_url": "http://picturererer.com/pics37/ImageStore.dll?id=852087C5D3A533DD&w=200","profile_thumb_url": "http://picturererer.com/pics37/ImageStore.dll?id=852087C5D3A533DD&w=75"}')
           it 'should return a MoxiworksPlatform::Agent Object when find is called' do
             VCR.use_cassette('agent/find/success', record: :none) do
               search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id ).include?(key) }
@@ -91,7 +91,7 @@ describe MoxiworksPlatform::Agent do
         end
 
         context :empty_response do
-          empty_response = JSON.parse( '{"moxi_works_agent_id": "abc123", "address_street": null, "address_city": null, "address_state": null, "address_zip": null, "office_address_street": null, "office_address_city": null, "office_address_state": null, "office_address_zip": null, "name": null, "mobile_phone_number": null, "fax_phone_number": null, "main_phone_number": null, "office_phone_number": null, "primary_email_address": null, "secondary_email_address": null,  "twitter": null, "google_plus": null, "facebook": null, "home_page": null, "title": null, "profile_image_url": null, "profile_thumb_url": null}')
+          empty_response = JSON.parse( '{"moxi_works_agent_id": "abc123", "address_street": null, "address_city": null, "address_state": null, "address_zip": null, "office_address_street": null, "office_address_city": null, "office_address_state": null, "office_address_zip": null, "name": null, "first_name": "Buckminster","last_name": "Fuller", "mobile_phone_number": null, "fax_phone_number": null, "main_phone_number": null, "office_phone_number": null, "primary_email_address": null, "secondary_email_address": null,  "twitter": null, "google_plus": null, "facebook": null, "home_page": null, "title": null, "profile_image_url": null, "profile_thumb_url": null}')
           it 'should return a MoxiworksPlatform::Agent Object when find is called' do
             VCR.use_cassette('agent/find/empty', record: :none) do
               search_attrs = empty_response.select {|key, value| %w(moxi_works_agent_id).include?(key) }
