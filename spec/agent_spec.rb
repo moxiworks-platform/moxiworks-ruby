@@ -91,7 +91,7 @@ describe MoxiworksPlatform::Agent do
         end
 
         context :empty_response do
-          empty_response = JSON.parse( '{"moxi_works_agent_id": "abc123", "address_street": null, "address_city": null, "address_state": null, "address_zip": null, "office_address_street": null, "office_address_city": null, "office_address_state": null, "office_address_zip": null, "name": null, "first_name": "Buckminster","last_name": "Fuller", "mobile_phone_number": null, "fax_phone_number": null, "main_phone_number": null, "office_phone_number": null, "primary_email_address": null, "secondary_email_address": null,  "twitter": null, "google_plus": null, "facebook": null, "home_page": null, "title": null, "profile_image_url": null, "profile_thumb_url": null}')
+          empty_response = JSON.parse( '{"moxi_works_agent_id": "abc123", "address_street": null, "address_city": null, "address_state": null, "address_zip": null, "office_address_street": null, "office_address_city": null, "office_address_state": null, "office_address_zip": null, "name": null, "first_name": null,"last_name": null, "mobile_phone_number": null, "fax_phone_number": null, "main_phone_number": null, "office_phone_number": null, "primary_email_address": null, "secondary_email_address": null,  "twitter": null, "google_plus": null, "facebook": null, "home_page": null, "title": null, "profile_image_url": null, "profile_thumb_url": null}')
           it 'should return a MoxiworksPlatform::Agent Object when find is called' do
             VCR.use_cassette('agent/find/empty', record: :none) do
               search_attrs = empty_response.select {|key, value| %w(moxi_works_agent_id).include?(key) }
