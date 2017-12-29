@@ -76,6 +76,16 @@ module MoxiworksPlatform
     # @return [String] the agent's office address, zip code
     attr_accessor :office_address_zip
 
+    # @!attribute first_name
+    #
+    # @return [String] the agent's first name
+    attr_accessor :first_name
+
+    # @!attribute last_name
+    #
+    # @return [String] the agent's last name
+    attr_accessor :last_name
+
     # @!attribute name
     #
     # @return [String] the agent's full name
