@@ -158,7 +158,8 @@ module MoxiworksPlatform
 
     # Find an Agent on the  Moxi Works Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent
+    # @option opts [String]  :moxi_works_agent_id  *REQUIRED* -- either :moxi_works_agent_id or :agent_uuid is required -- The Moxi Works Agent ID for the agent
+    # @option opts [String]  :agent_uuid *REQUIRED* -- either :moxi_works_agent_id or :agent_uuid is required -- The Moxi Works Agent ID for the agent
     #
     # @return [MoxiworksPlatform::Agent]
     #
@@ -166,13 +167,17 @@ module MoxiworksPlatform
     #     named parameters aren't included
     #
     def self.find(opts={})
-      url = "#{MoxiworksPlatform::Config.url}/api/agents/#{opts[:moxi_works_agent_id]}"
+      agent_identifier = opts[:agent_uuid] unless(opts[:agent_uuid].nil? or opts[:agent_uuid].empty?)
+       agent_identifier ||= opts[:moxi_works_agent_id] unless(opts[:moxi_works_agent_id].nil? or opts[:moxi_works_agent_id].empty?)
+      raise ::MoxiworksPlatform::Exception::ArgumentError, "#agent_uuid or moxi_works_agent_id required" if
+          agent_identifier.nil?
+      url = "#{MoxiworksPlatform::Config.url}/api/agents/#{agent_identifier}"
       self.send_request(:get, opts, url)
     end
 
     def self.send_request(method, opts={}, url=nil)
       url ||= "#{MoxiworksPlatform::Config.url}/api/agents"
-      required_opts = [:moxi_works_agent_id]
+      required_opts = [:moxi_works_company_id]
       raise ::MoxiworksPlatform::Exception::ArgumentError,
             'arguments must be passed as named parameters' unless opts.is_a? Hash
       required_opts.each do |opt|
