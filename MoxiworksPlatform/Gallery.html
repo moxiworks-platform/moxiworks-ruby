@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: MoxiworksPlatform::Gallery
+  
+    &mdash; Documentation by YARD 0.9.5
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "MoxiworksPlatform::Gallery";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (G)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span>
+     &raquo; 
+    <span class="title">Gallery</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <iframe id="search_frame" src="../class_list.html"></iframe>
+
+      <div id="content"><h1>Class: MoxiworksPlatform::Gallery
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="Resource.html" title="MoxiworksPlatform::Resource (class)">Resource</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="Resource.html" title="MoxiworksPlatform::Resource (class)">Resource</a></span></li>
+          
+            <li class="next">MoxiworksPlatform::Gallery</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/moxiworks_platform/gallery.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<h1 id="label-Moxi+Works+Platform+Gallery">Moxi Works Platform Gallery</h1>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#gallery_images-instance_method" title="#gallery_images (instance method)">#<strong>gallery_images</strong>  &#x21d2; Array </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Array of image Hashes in the format {    thumb_url: [String] url to
+thumbail size image (smallest),    small_url: [String] url to small size
+image (small),    full_url: [String] url to full size image (medium),   
+gallery_url: [String] url to gallery size image (large),    raw_url:
+[String] url to raw image (largest)    title: [String] human readable title
+of image    is_main_listing_image: [Boolean] whether the image is the main
+image for the listing    caption: [String] human readable caption for the
+image    description: [String] human readable description of the image   
+width: [Integer] width of the raw image    height: [Integer] height of the
+raw image    mime_type: [String] MIME or media type of the image.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#list_office_aor-instance_method" title="#list_office_aor (instance method)">#<strong>list_office_aor</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>MLS the listing is listed with.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#listing_id-instance_method" title="#listing_id (instance method)">#<strong>listing_id</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The mls number associated with the listing.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#listing_images-instance_method" title="#listing_images (instance method)">#<strong>listing_images</strong>  &#x21d2; Array </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Array of image Hashes in the format {    thumb_url: [String] url to
+thumbail size image (smallest),    small_url: [String] url to small size
+image (small),    full_url: [String] url to full size image (medium),   
+gallery_url: [String] url to gallery size image (large),    raw_url:
+[String] url to raw image (largest)    title: [String] human readable title
+of image    is_main_listing_image: [Boolean] whether the image is the main
+image for the listing    caption: [String] human readable caption for the
+image    description: [String] human readable description of the image   
+width: [Integer] width of the raw image    height: [Integer] height of the
+raw image    mime_type: [String] MIME or media type of the image.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find-class_method" title="find (class method)">.<strong>find</strong>(opts = {})  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Search For Galleries in Moxi Works Platform.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Resource.html" title="MoxiworksPlatform::Resource (class)">Resource</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Resource.html#accept_header-class_method" title="MoxiworksPlatform::Resource.accept_header (method)">accept_header</a></span>, <span class='object_link'><a href="Resource.html#attr_accessor-class_method" title="MoxiworksPlatform::Resource.attr_accessor (method)">attr_accessor</a></span>, <span class='object_link'><a href="Resource.html#attributes-class_method" title="MoxiworksPlatform::Resource.attributes (method)">attributes</a></span>, <span class='object_link'><a href="Resource.html#attributes-instance_method" title="MoxiworksPlatform::Resource#attributes (method)">#attributes</a></span>, <span class='object_link'><a href="Resource.html#auth_header-class_method" title="MoxiworksPlatform::Resource.auth_header (method)">auth_header</a></span>, <span class='object_link'><a href="Resource.html#check_for_error_in_response-class_method" title="MoxiworksPlatform::Resource.check_for_error_in_response (method)">check_for_error_in_response</a></span>, <span class='object_link'><a href="Resource.html#content_type_header-class_method" title="MoxiworksPlatform::Resource.content_type_header (method)">content_type_header</a></span>, <span class='object_link'><a href="Resource.html#float_attrs-instance_method" title="MoxiworksPlatform::Resource#float_attrs (method)">#float_attrs</a></span>, <span class='object_link'><a href="Resource.html#headers-class_method" title="MoxiworksPlatform::Resource.headers (method)">headers</a></span>, <span class='object_link'><a href="Resource.html#init_attrs_from_hash-instance_method" title="MoxiworksPlatform::Resource#init_attrs_from_hash (method)">#init_attrs_from_hash</a></span>, <span class='object_link'><a href="Resource.html#initialize-instance_method" title="MoxiworksPlatform::Resource#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="Resource.html#int_attrs-instance_method" title="MoxiworksPlatform::Resource#int_attrs (method)">#int_attrs</a></span>, <span class='object_link'><a href="Resource.html#method_missing-instance_method" title="MoxiworksPlatform::Resource#method_missing (method)">#method_missing</a></span>, <span class='object_link'><a href="Resource.html#numeric_attrs-instance_method" title="MoxiworksPlatform::Resource#numeric_attrs (method)">#numeric_attrs</a></span>, <span class='object_link'><a href="Resource.html#numeric_value_for-instance_method" title="MoxiworksPlatform::Resource#numeric_value_for (method)">#numeric_value_for</a></span>, <span class='object_link'><a href="Resource.html#send_request-class_method" title="MoxiworksPlatform::Resource.send_request (method)">send_request</a></span>, <span class='object_link'><a href="Resource.html#to_hash-instance_method" title="MoxiworksPlatform::Resource#to_hash (method)">#to_hash</a></span>, <span class='object_link'><a href="Resource.html#underscore-class_method" title="MoxiworksPlatform::Resource.underscore (method)">underscore</a></span>, <span class='object_link'><a href="Resource.html#underscore_array-class_method" title="MoxiworksPlatform::Resource.underscore_array (method)">underscore_array</a></span>, <span class='object_link'><a href="Resource.html#underscore_attribute_names-class_method" title="MoxiworksPlatform::Resource.underscore_attribute_names (method)">underscore_attribute_names</a></span>, <span class='object_link'><a href="Resource.html#underscore_hash-class_method" title="MoxiworksPlatform::Resource.underscore_hash (method)">underscore_hash</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="Resource.html#initialize-instance_method" title="MoxiworksPlatform::Resource#initialize (method)">MoxiworksPlatform::Resource</a></span></p>
+  
+</div>
+<div id="method_missing_details" class="method_details_list">
+  <h2>Dynamic Method Handling</h2>
+  <p class="notice super">
+    This class handles dynamic methods through the <tt>method_missing</tt> method
+    
+      in the class <span class='object_link'><a href="Resource.html#method_missing-instance_method" title="MoxiworksPlatform::Resource#method_missing (method)">MoxiworksPlatform::Resource</a></span>
+    
+  </p>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="gallery_images=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="gallery_images-instance_method">
+  
+    #<strong>gallery_images</strong>  &#x21d2; <tt>Array</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns array of image Hashes in the format 
+<pre class="code ruby"><code class="ruby">thumb_url: [String] url to thumbail size image (smallest),
+small_url: [String] url to small size image (small),
+full_url: [String] url to full size image (medium),
+gallery_url: [String] url to gallery size image (large),
+raw_url: [String] url to raw image (largest)
+title: [String] human readable title of image
+is_main_listing_image: [Boolean] whether the image is the main image for the listing
+caption: [String] human readable caption for the image
+description: [String] human readable description of the image
+width: [Integer] width of the raw image
+height: [Integer] height of the raw image
+mime_type: [String] MIME or media type of the image</code></pre>
+
+<p></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>array of image Hashes in the format 
+<pre class="code ruby"><code class="ruby">thumb_url: [String] url to thumbail size image (smallest),
+small_url: [String] url to small size image (small),
+full_url: [String] url to full size image (medium),
+gallery_url: [String] url to gallery size image (large),
+raw_url: [String] url to raw image (largest)
+title: [String] human readable title of image
+is_main_listing_image: [Boolean] whether the image is the main image for the listing
+caption: [String] human readable caption for the image
+description: [String] human readable description of the image
+width: [Integer] width of the raw image
+height: [Integer] height of the raw image
+mime_type: [String] MIME or media type of the image</code></pre>
+
+<p></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/gallery.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_gallery_images'>gallery_images</span>
+  <span class='ivar'>@gallery_images</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="list_office_aor=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="list_office_aor-instance_method">
+  
+    #<strong>list_office_aor</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns MLS the listing is listed with</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>MLS the listing is listed with</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/gallery.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_list_office_aor'>list_office_aor</span>
+  <span class='ivar'>@list_office_aor</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="listing_id=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="listing_id-instance_method">
+  
+    #<strong>listing_id</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the mls number associated with the listing</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the mls number associated with the listing</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/gallery.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_listing_id'>listing_id</span>
+  <span class='ivar'>@listing_id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="listing_images=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="listing_images-instance_method">
+  
+    #<strong>listing_images</strong>  &#x21d2; <tt>Array</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns array of image Hashes in the format 
+<pre class="code ruby"><code class="ruby">thumb_url: [String] url to thumbail size image (smallest),
+small_url: [String] url to small size image (small),
+full_url: [String] url to full size image (medium),
+gallery_url: [String] url to gallery size image (large),
+raw_url: [String] url to raw image (largest)
+title: [String] human readable title of image
+is_main_listing_image: [Boolean] whether the image is the main image for the listing
+caption: [String] human readable caption for the image
+description: [String] human readable description of the image
+width: [Integer] width of the raw image
+height: [Integer] height of the raw image
+mime_type: [String] MIME or media type of the image</code></pre>
+
+<p></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>array of image Hashes in the format 
+<pre class="code ruby"><code class="ruby">thumb_url: [String] url to thumbail size image (smallest),
+small_url: [String] url to small size image (small),
+full_url: [String] url to full size image (medium),
+gallery_url: [String] url to gallery size image (large),
+raw_url: [String] url to raw image (largest)
+title: [String] human readable title of image
+is_main_listing_image: [Boolean] whether the image is the main image for the listing
+caption: [String] human readable caption for the image
+description: [String] human readable description of the image
+width: [Integer] width of the raw image
+height: [Integer] height of the raw image
+mime_type: [String] MIME or media type of the image</code></pre>
+
+<p></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/gallery.rb', line 34</span>
+
+<span class='id identifier rubyid_attr_accessor'>attr_accessor</span> <span class='symbol'>:gallery_images</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="find-class_method">
+  
+    .<strong>find</strong>(opts = {})  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Search For Galleries in Moxi Works Platform</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_results'>results</span> <span class='op'>=</span> <span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Gallery</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span>
+<span class='label'>moxi_works_company_id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>the_company</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+<span class='label'>moxi_works_agent_id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>abc123</span><span class='tstring_end'>&#39;</span></span>
+<span class='rparen'>)</span></code></pre>
+    
+      
+      <pre class="example code"><code>MoxiworksPlatform::Gallery.search(
+   moxi_works_company_id: &#39;the_company&#39;,
+     moxi_works_agent_id: &#39;abc123&#39;
+    agent_uuid: &#39;abc123&#39;) { |galleries| puts galleries.count }</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>named parameter Hash</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>opts</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:moxi_works_company_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p><strong>REQUIRED</strong> The Moxi Works Company ID For the search (use
+Company.search to determine available moxi_works_company_id)</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:moxi_works_agent_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The Moxi Works Agent ID For the search (use Agent.search to determine
+available moxi_works_agent_id) – only agent_uuid or moxi_works_agent_id are
+needed when searching for galleries by agent</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:agent_uuid</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The Agent UUID For the search (use Agent.search to determine available
+agent_uuid) – only agent_uuid or moxi_works_agent_id are needed when
+searching for galleries by agent</p>
+
+<p>optional Search parameters</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>with the format: 
+<pre class="code ruby"><code class="ruby">last_page: [Boolean],
+galleries:  [Array] containing MoxiworkPlatform::Gallery objects</code></pre>
+
+<p></p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>::MoxiworksPlatform::Exception::ArgumentError if required named parameters
+aren&#39;t included</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/gallery.rb', line 74</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_required_opts'>required_opts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:moxi_works_company_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_required_opts'>required_opts</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_opt'>opt</span><span class='op'>|</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Exception</span><span class='op'>::</span><span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opt'>opt</span><span class='embexpr_end'>}</span><span class='tstring_content'> required</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span>
+        <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='id identifier rubyid_opt'>opt</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='id identifier rubyid_opt'>opt</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_agent_identifier'>agent_identifier</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:agent_uuid</span><span class='rbracket'>]</span> <span class='kw'>unless</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:agent_uuid</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:agent_uuid</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_agent_identifier'>agent_identifier</span> <span class='op'>||=</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:moxi_works_agent_id</span><span class='rbracket'>]</span> <span class='kw'>unless</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:moxi_works_agent_id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:moxi_works_agent_id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Exception</span><span class='op'>::</span><span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#agent_uuid or moxi_works_agent_id required</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span>
+      <span class='id identifier rubyid_agent_identifier'>agent_identifier</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/galleries/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_agent_identifier'>agent_identifier</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='id identifier rubyid_results'>results</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>galleries</span><span class='label_end'>&#39;:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbrace'>}</span>
+  <span class='const'>RestClient</span><span class='op'>::</span><span class='const'>Request</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:get</span><span class='comma'>,</span>
+                              <span class='label'>url:</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span>
+                              <span class='label'>payload:</span> <span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='label'>headers:</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_response'>response</span><span class='op'>|</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_response'>response</span> <span class='kw'>if</span> <span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_for_error_in_response'>check_for_error_in_response</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_underscore_attribute_names'>underscore_attribute_names</span> <span class='id identifier rubyid_json'>json</span>
+    <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>galleries</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
+      <span class='id identifier rubyid_results'>results</span> <span class='op'>&lt;&lt;</span> <span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Gallery</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_r'>r</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>galleries</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_results'>results</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+    <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>galleries</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_json'>json</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Jan 22 11:20:28 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.5 (ruby-2.2.4).
+</div>
+
+    </div>
+  </body>
+</html>
