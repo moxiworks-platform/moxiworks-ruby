@@ -131,7 +131,7 @@ describe MoxiworksPlatform::Listing do
                   moxi_works_company_id: moxi_works_company_id,
                   updated_since: updated_since)
               expect(results.class).to eq(Hash)
-              expect(results['listings'].class).to eq(Array)
+              expect(results['listings'].class).to eq(MoxiResponseArray)
               expect(results['listings'].first.class).to eq(MoxiworksPlatform::Listing)
             end
           end

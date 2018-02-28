@@ -110,7 +110,7 @@ describe MoxiworksPlatform::Company do
           it 'should return a MoxiworksPlatform::Company Object when find is called' do
             VCR.use_cassette('company/search/success', record: :none) do
               results = MoxiworksPlatform::Company.search
-              expect(results.class).to eq(Array)
+              expect(results.class).to eq(MoxiResponseArray)
               expect(results.first.class).to eq(MoxiworksPlatform::Company)
             end
           end

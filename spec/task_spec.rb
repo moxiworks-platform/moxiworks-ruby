@@ -206,7 +206,7 @@ describe MoxiworksPlatform::Task do
               search_attrs[:due_date_end] = due_date_end
               results = MoxiworksPlatform::Task.search(symbolize_keys(search_attrs))
               expect(results.class).to eq(Hash)
-              expect(results['tasks'].class).to eq(Array)
+              expect(results['tasks'].class).to eq(MoxiResponseArray)
               expect(results['tasks'].first.class).to eq(MoxiworksPlatform::Task)
               end
             end
@@ -333,16 +333,7 @@ describe MoxiworksPlatform::Task do
               end
             end
           end
-
-          integer_accessors.each do |attr_accessor|
-            it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
-              VCR.use_cassette('task/create/success', record: :none) do
-                task = MoxiworksPlatform::Task.create(symbolize_keys(full_response))
-                expect(task.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_i)
-              end
-            end
-          end
-
+          
           float_accessors.each do |attr_accessor|
             it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
               VCR.use_cassette('task/create/success', record: :none) do

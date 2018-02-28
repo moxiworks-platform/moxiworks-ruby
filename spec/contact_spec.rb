@@ -314,65 +314,6 @@ describe MoxiworksPlatform::Contact do
             end
           end
         end
-
-        context :empty_response do
-          empty_response = JSON.parse( '{"moxi_works_agent_id":"1234abcd","partner_agent_id":"","partner_contact_id":"booyuh","moxi_works_contact_id":"009b9297977c","contact_name":null,"gender":null,"primary_email_address":null,"secondary_email_address":null,"primary_phone_number":null,"secondary_phone_number":null,"home_street_address":null,"home_city":null,"home_state":null,"home_zip":null,"home_neighborhood":null,"home_country":null,"job_title":null,"occupation":null,"property_url":"","property_mls_id":"","property_street_address":"","property_city":"","property_state":"","property_zip":"","property_beds":"","property_baths":"","property_list_price":"","property_listing_status":"","property_photo_url":"","search_city":"","search_state":"","search_zip":"","search_min_beds":"","search_min_baths":"","search_min_price":"","search_max_price":"","search_min_sq_ft":"","search_max_sq_ft":"","search_min_lot_size":"","search_max_lot_size":"","search_min_year_built":"","search_max_year_built":"","search_property_types":""}')
-          it 'should return a MoxiworksPlatform::Contact Object when find is called' do
-            VCR.use_cassette('contact/find/empty', record: :none) do
-              search_attrs = empty_response.select {|key, value| %w(moxi_works_agent_id partner_contact_id).include?(key) }
-              contact = MoxiworksPlatform::Contact.find(symbolize_keys(search_attrs))
-              expect(contact.class).to eq(MoxiworksPlatform::Contact)
-            end
-          end
-
-          it 'should populate moxi_works_agent_id' do
-            VCR.use_cassette('contact/find/empty', record: :none) do
-              search_attrs = empty_response.select {|key, value| %w(moxi_works_agent_id partner_contact_id).include?(key) }
-              contact = MoxiworksPlatform::Contact.find(symbolize_keys(search_attrs))
-              expect(contact.moxi_works_agent_id).to eq(empty_response['moxi_works_agent_id'])
-            end
-          end
-
-          it 'should populate partner_contact_id' do
-            VCR.use_cassette('contact/find/empty', record: :none) do
-              search_attrs = empty_response.select {|key, value| %w(moxi_works_agent_id partner_contact_id).include?(key) }
-              contact = MoxiworksPlatform::Contact.find(symbolize_keys(search_attrs))
-              expect(contact.partner_contact_id).to eq(empty_response['partner_contact_id'])
-            end
-          end
-
-          contact_accessors.each do |attr_accessor|
-            next if integer_accessors.include? attr_accessor or float_accessors.include? attr_accessor
-            next if attr_accessor.to_s == 'moxi_works_agent_id' or attr_accessor.to_s == 'partner_contact_id'
-            it "should not have populated attribute #{attr_accessor} when update with all attributes not populated" do
-              VCR.use_cassette('contact/find/empty', record: :none) do
-                search_attrs = empty_response.select {|key, value| %w(moxi_works_agent_id partner_contact_id).include?(key) }
-                contact = MoxiworksPlatform::Contact.find(symbolize_keys(search_attrs))
-                expect(contact.send(attr_accessor.to_s)).to eq('').or(be_nil)
-              end
-            end
-          end
-
-          integer_accessors.each do |attr_accessor|
-            it "should return 0 for integer attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
-              VCR.use_cassette('contact/find/empty', record: :none) do
-                search_attrs = empty_response.select {|key, value| %w(moxi_works_agent_id partner_contact_id).include?(key) }
-                contact = MoxiworksPlatform::Contact.find(symbolize_keys(search_attrs))
-                expect(contact.send(attr_accessor.to_s)).to equal(0)
-              end
-            end
-          end
-
-          float_accessors.each do |attr_accessor|
-            it "should return 0 for  float attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
-              VCR.use_cassette('contact/find/empty', record: :none) do
-                search_attrs = empty_response.select {|key, value| %w(moxi_works_agent_id partner_contact_id).include?(key) }
-                contact = MoxiworksPlatform::Contact.find(symbolize_keys(search_attrs))
-                expect(contact.send(attr_accessor.to_s)).to equal(0)
-              end
-            end
-          end
-        end
       end
     end
 
@@ -453,7 +394,7 @@ describe MoxiworksPlatform::Contact do
             VCR.use_cassette('contact/search/nothing', record: :none) do
               search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id contact_name).include?(key) }
               results = MoxiworksPlatform::Contact.search(symbolize_keys(search_attrs))
-              expect(results).to be_an_instance_of(Array)
+              expect(results).to be_an_instance_of(MoxiResponseArray)
             end
           end
 
@@ -529,60 +470,6 @@ describe MoxiworksPlatform::Contact do
           end
         end
 
-        context :empty_response do
-          empty_response = JSON.parse( '{"moxi_works_agent_id":"1234abcd","partner_agent_id":"","partner_contact_id":"booyuh","moxi_works_contact_id":"009b9297977c","contact_name":null,"gender":null,"primary_email_address":null,"secondary_email_address":null,"primary_phone_number":null,"secondary_phone_number":null,"home_street_address":null,"home_city":null,"home_state":null,"home_zip":null,"home_neighborhood":null,"home_country":null,"job_title":null,"occupation":null,"property_url":"","property_mls_id":"","property_street_address":"","property_city":"","property_state":"","property_zip":"","property_beds":"","property_baths":"","property_list_price":"","property_listing_status":"","property_photo_url":"","search_city":"","search_state":"","search_zip":"","search_min_beds":"","search_min_baths":"","search_min_price":"","search_max_price":"","search_min_sq_ft":"","search_max_sq_ft":"","search_min_lot_size":"","search_max_lot_size":"","search_min_year_built":"","search_max_year_built":"","search_property_types":""}')
-
-          it 'should return a MoxiworksPlatform::Contact Object when update is called' do
-            VCR.use_cassette('contact/update/success', record: :none) do
-              contact = MoxiworksPlatform::Contact.update(symbolize_keys(empty_response))
-              expect(contact.class).to eq(MoxiworksPlatform::Contact)
-            end
-          end
-
-          it 'should populate moxi_works_agent_id' do
-            VCR.use_cassette('contact/update/empty', record: :none) do
-              contact = MoxiworksPlatform::Contact.update(symbolize_keys(empty_response))
-              expect(contact.moxi_works_agent_id).to eq(empty_response['moxi_works_agent_id'])
-            end
-          end
-
-          it 'should populate partner_contact_id' do
-            VCR.use_cassette('contact/update/empty', record: :none) do
-              contact = MoxiworksPlatform::Contact.update(symbolize_keys(empty_response))
-              expect(contact.partner_contact_id).to eq(empty_response['partner_contact_id'])
-            end
-          end
-
-          contact_accessors.each do |attr_accessor|
-            next if integer_accessors.include? attr_accessor or float_accessors.include? attr_accessor
-            next if attr_accessor.to_s == 'moxi_works_agent_id' or attr_accessor.to_s == 'partner_contact_id'
-            it "should not have populated attribute #{attr_accessor} when update with all attributes not populated" do
-              VCR.use_cassette('contact/update/empty', record: :none) do
-                contact = MoxiworksPlatform::Contact.update(symbolize_keys(empty_response))
-                expect(contact.send(attr_accessor.to_s)).to eq('').or(be_nil)
-              end
-            end
-          end
-
-          integer_accessors.each do |attr_accessor|
-            it "should return 0 for integer attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
-              VCR.use_cassette('contact/update/empty', record: :none) do
-                contact = MoxiworksPlatform::Contact.update(symbolize_keys(empty_response))
-                expect(contact.send(attr_accessor.to_s)).to equal(0)
-              end
-            end
-          end
-
-          float_accessors.each do |attr_accessor|
-            it "should return 0 for  float attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
-              VCR.use_cassette('contact/update/empty', record: :none) do
-                contact = MoxiworksPlatform::Contact.update(symbolize_keys(empty_response))
-                expect(contact.send(attr_accessor.to_s)).to equal(0)
-              end
-            end
-          end
-        end
-
       end
     end
 
@@ -646,53 +533,6 @@ describe MoxiworksPlatform::Contact do
           end
         end
 
-        context :empty_response do
-          empty_response = JSON.parse( '{"moxi_works_agent_id":"1234abcd","partner_agent_id":"","partner_contact_id":"booyuh","moxi_works_contact_id":"009b9297977c","contact_name":null,"gender":null,"primary_email_address":null,"secondary_email_address":null,"primary_phone_number":null,"secondary_phone_number":null,"home_street_address":null,"home_city":null,"home_state":null,"home_zip":null,"home_neighborhood":null,"home_country":null,"job_title":null,"occupation":null,"property_url":"","property_mls_id":"","property_street_address":"","property_city":"","property_state":"","property_zip":"","property_beds":"","property_baths":"","property_list_price":"","property_listing_status":"","property_photo_url":"","search_city":"","search_state":"","search_zip":"","search_min_beds":"","search_min_baths":"","search_min_price":"","search_max_price":"","search_min_sq_ft":"","search_max_sq_ft":"","search_min_lot_size":"","search_max_lot_size":"","search_min_year_built":"","search_max_year_built":"","search_property_types":""}')
-
-          it 'should populate moxi_works_agent_id' do
-            VCR.use_cassette('contact/create/empty', record: :none) do
-              contact = MoxiworksPlatform::Contact.create(symbolize_keys(empty_response))
-              expect(contact.moxi_works_agent_id).to eq(empty_response['moxi_works_agent_id'])
-            end
-          end
-
-          it 'should populate partner_contact_id' do
-            VCR.use_cassette('contact/create/empty', record: :none) do
-              contact = MoxiworksPlatform::Contact.create(symbolize_keys(empty_response))
-              expect(contact.partner_contact_id).to eq(empty_response['partner_contact_id'])
-            end
-          end
-
-
-          contact_accessors.each do |attr_accessor|
-            next if integer_accessors.include? attr_accessor or float_accessors.include? attr_accessor
-            next if attr_accessor.to_s == 'moxi_works_agent_id' or attr_accessor.to_s == 'partner_contact_id'
-            it "should not have populated attribute #{attr_accessor} when create with all attributes not populated" do
-              VCR.use_cassette('contact/create/empty', record: :none) do
-                contact = MoxiworksPlatform::Contact.create(symbolize_keys(empty_response))
-                expect(contact.send(attr_accessor.to_s)).to eq('').or(be_nil)
-              end
-            end
-          end
-
-          integer_accessors.each do |attr_accessor|
-            it "should return 0 for integer attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
-              VCR.use_cassette('contact/create/empty', record: :none) do
-                contact = MoxiworksPlatform::Contact.create(symbolize_keys(empty_response))
-                expect(contact.send(attr_accessor.to_s)).to equal(0)
-              end
-            end
-          end
-
-          float_accessors.each do |attr_accessor|
-            it "should return 0 for  float attribute #{attr_accessor} not populated by Moxi Works Platform remote response" do
-              VCR.use_cassette('contact/create/empty', record: :none) do
-                contact = MoxiworksPlatform::Contact.create(symbolize_keys(empty_response))
-                expect(contact.send(attr_accessor.to_s)).to equal(0)
-              end
-            end
-          end
-        end
       end
 
 

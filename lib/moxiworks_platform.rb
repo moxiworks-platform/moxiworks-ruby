@@ -1,3 +1,4 @@
+require 'moxiworks_platform/moxi_response_array'
 require 'moxiworks_platform/version'
 require 'moxiworks_platform/session'
 require 'moxiworks_platform/config'

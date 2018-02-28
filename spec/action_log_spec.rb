@@ -78,7 +78,7 @@ describe MoxiworksPlatform::ActionLog do
             VCR.use_cassette('action_logs/search/nothing', record: :none) do
               search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id partner_contact_id).include?(key) }
               results = MoxiworksPlatform::ActionLog.search(symbolize_keys(search_attrs))
-              expect(results).to be_an_instance_of(Array)
+              expect(results).to be_an_instance_of(MoxiResponseArray)
             end
           end
 

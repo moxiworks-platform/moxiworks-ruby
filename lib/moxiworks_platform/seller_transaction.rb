@@ -364,12 +364,13 @@ module  MoxiworksPlatform
         raise ::MoxiworksPlatform::Exception::ArgumentError, "#{opt} required" if
             opts[opt].nil? or opts[opt].to_s.empty?
       end
-      results = []
+      results = MoxiResponseArray.new()
       json = { 'page_number': 1, 'total_pages': 0, 'transactions':[]}
       RestClient::Request.execute(method: :get,
                                   url: url,
                                   payload: opts, headers: self.headers) do |response|
         puts response if MoxiworksPlatform::Config.debug
+        results.headers = response.headers
         self.check_for_error_in_response(response)
         json = JSON.parse(response)
         json['transactions'].each do |r|

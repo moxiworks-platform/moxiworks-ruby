@@ -136,12 +136,13 @@ module MoxiworksPlatform
       end
 
 
-      results = []
+      results = MoxiResponseArray.new()
       json = { 'presentations':[]}
       RestClient::Request.execute(method: :get,
                                   url: url,
                                   payload: opts, headers: self.headers) do |response|
         puts response if MoxiworksPlatform::Config.debug
+        results.headers = response.headers
         self.check_for_error_in_response(response)
         json = JSON.parse(response)
         json['presentations'].each do |r|

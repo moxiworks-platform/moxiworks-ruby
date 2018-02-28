@@ -51,7 +51,7 @@ http_interactions:
         path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '[{"moxi_works_agent_id":"1234abcd","partner_contact_id":"buckminsterfuller","contact_name":"buckminster
+      string: '{"page_number":1,"total_pages":1,"contacts":[{"moxi_works_agent_id":"1234abcd","partner_contact_id":"buckminsterfuller","contact_name":"buckminster
         fuller","gender":null,"primary_email_address":"whatevers2009@bearwrasslers.com","secondary_email_address":"meow@23bearwrassler.com","primary_phone_number":"8675309","secondary_phone_number":"99999999","home_street_address":"1234
         bear wrassler st","home_city":"ooville","home_state":"IN","home_zip":null,"home_country":"oosa","job_title":"senior
         bear wrassler","occupation":"bear wrassler","property_url":"http://bear-wrassler-properties.com/properteeeeeeeee=12321321","property_mls_id":"bear-wrassler-123123","property_street_address":"1234
@@ -65,7 +65,7 @@ http_interactions:
         bear wrassler ave ne Bear Wrasslerville, IN 918181","property_city":"Bear
         Wrasslerville","property_state":"IN","property_zip":"918181","property_beds":"123","property_baths":"3.5","property_list_price":"123445","property_listing_status":"sold","property_photo_url":"http://bear-wrassler-properties.com/imageeeeeeeee=2kljdslojfs","search_city":"Great
         Wrassles","search_state":"OH","search_zip":"229999","search_min_beds":"1","search_min_baths":"0.125","search_min_price":"12","search_max_price":"34","search_min_sq_ft":"12","search_max_sq_ft":"23","search_min_lot_size":"","search_max_lot_size":"199292992","search_min_year_built":"1992","search_max_year_built":"1993","search_property_types":"condo,
-        townhouse, single-family"}]'
+        townhouse, single-family"}]}'
     http_version: 
   recorded_at: Fri, 29 Apr 2016 11:32:18 GMT
 recorded_with: VCR 3.0.1

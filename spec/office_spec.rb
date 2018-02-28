@@ -119,7 +119,7 @@ describe MoxiworksPlatform::Office do
             VCR.use_cassette('office/search/success', record: :none) do
               results = MoxiworksPlatform::Office.search( moxi_works_company_id: moxi_works_company_id)
               expect(results.class).to eq(Hash)
-              expect(results['offices'].class).to eq(Array)
+              expect(results['offices'].class).to eq(MoxiResponseArray)
               expect(results['offices'].first.class).to eq(MoxiworksPlatform::Office)
             end
           end

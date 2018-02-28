@@ -300,7 +300,9 @@ module MoxiworksPlatform
         json = JSON.parse(response)
         json = self.underscore_attribute_names json
         return false if not json['status'].nil? and json['status'] =='fail'
-        self.new(json) unless json.nil? or json.empty?
+        r = self.new(json) unless json.nil? or json.empty?
+        r.headers = response.headers unless r.nil?
+        r
       end
     end
 
@@ -370,12 +372,13 @@ module MoxiworksPlatform
         opts[:last_moxi_works_listing_id] ||= prev_page['listings'].last.moxi_works_listing_id
       end
 
-      results = []
+      results = MoxiResponseArray.new()
       json = {'listings' => [], 'last_page' => true}
       RestClient::Request.execute(method: :get,
                                   url: url,
                                   payload: opts, headers: self.headers) do |response|
         puts response if MoxiworksPlatform::Config.debug
+        results.headers = response.headers
         self.check_for_error_in_response(response)
         json = JSON.parse(response)
         json = self.underscore_attribute_names json

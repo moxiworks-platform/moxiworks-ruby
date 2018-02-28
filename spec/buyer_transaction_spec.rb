@@ -214,7 +214,7 @@ describe MoxiworksPlatform::BuyerTransaction do
                   moxi_works_agent_id: agent_id
               )
               expect(results.class).to eq(Hash)
-              expect(results['transactions'].class).to eq(Array)
+              expect(results['transactions'].class).to eq(MoxiResponseArray)
               expect(results['transactions'].first.class).to eq(MoxiworksPlatform::BuyerTransaction)
             end
           end

@@ -136,7 +136,7 @@ describe MoxiworksPlatform::EmailCampaign do
             VCR.use_cassette('email_campaign/search/nothing', record: :none) do
               search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id partner_contact_id).include?(key) }
               results = MoxiworksPlatform::EmailCampaign.search(symbolize_keys(search_attrs))
-              expect(results).to be_an_instance_of(Array)
+              expect(results).to be_an_instance_of(MoxiResponseArray)
             end
           end
 

@@ -186,11 +186,12 @@ module MoxiworksPlatform
 
       url = "#{MoxiworksPlatform::Config.url}/api/teams"
 
-      results = []
+      results = MoxiResponseArray.new()
       RestClient::Request.execute(method: :get,
                                   url: url,
                                   payload: opts, headers: self.headers) do |response|
         puts response if MoxiworksPlatform::Config.debug
+        results.headers = response.headers
         self.check_for_error_in_response(response)
         json = JSON.parse(response)
         json = self.underscore_attribute_names json

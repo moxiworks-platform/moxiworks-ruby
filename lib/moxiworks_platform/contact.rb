@@ -44,7 +44,7 @@ module MoxiworksPlatform
     #   the full name of this Contact
     #
     #   @return [String] -- Default ''
-    attr_accessor :contact_namer
+    attr_accessor :contact_name
 
     # @!attribute gender
     #   the gender  of this Contact. the first initial of either gender type may
@@ -542,15 +542,18 @@ module MoxiworksPlatform
         raise ::MoxiworksPlatform::Exception::ArgumentError, "#{opt} required" if
             opts[opt].nil? or opts[opt].to_s.empty?
       end
-      results = []
+      results = MoxiResponseArray.new()
       RestClient::Request.execute(method: :get,
                                   url: url,
                                   payload: opts, headers: self.headers) do |response|
         puts response if MoxiworksPlatform::Config.debug
+        results.headers = response.headers
         self.check_for_error_in_response(response)
         json = JSON.parse(response)
-        json.each do |r|
-          results << MoxiworksPlatform::Contact.new(r) unless r.nil? or r.empty?
+        if json and json['contacts']
+          json['contacts'].each do |r|
+            results << MoxiworksPlatform::Contact.new(r) unless r.nil? or r.empty?
+          end
         end
       end
       results
@@ -793,9 +796,9 @@ module MoxiworksPlatform
 
     def int_attrs
       [:property_beds, :property_list_price, :search_min_year_built,
-                         :search_min_sq_ft, :search_min_price, :search_min_beds,
-                         :search_max_year_built, :search_max_sq_ft, :search_max_price,
-                         :search_min_lot_size, :search_max_lot_size]
+       :search_min_sq_ft, :search_min_price, :search_min_beds,
+       :search_max_year_built, :search_max_sq_ft, :search_max_price,
+       :search_min_lot_size, :search_max_lot_size]
     end
 
   end

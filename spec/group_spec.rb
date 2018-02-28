@@ -22,38 +22,12 @@ describe MoxiworksPlatform::Group do
       end
     end
 
-    context :contact_accessor do
-      integer_accessors =  [:property_beds, :property_list_price, :search_min_year_built,
-                            :search_min_sq_ft, :search_min_price, :search_min_beds,
-                            :search_max_year_built, :search_max_sq_ft, :search_max_price,
-                            :search_max_lot_size]
-
-
-      float_accessors = [:property_baths, :search_min_baths]
-      contacts = JSON.parse '[{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":"s123213dljfsldjflsjdsoo","contact_name":"Firstname Middlenyme Larstnam","gender":"M","primary_email_address":"me@justabout.right.here","secondary_email_address":"me.too@justabout.right.here","primary_phone_number":"9995551212","secondary_phone_number":"(333) 555-1185","home_street_address":"1234 Sesame St.","home_city":"Cityville","home_state":"Stateland","home_zip":"12345-6789","home_country":"Ottoman Empire","job_title":"Junior Bacon Burner","note":null,"occupation":"chef","property_url":"http://my.property.website.is/here","property_mls_id":"abc123","property_street_address":"2345 67th place","property_city":"Townland","property_state":"Statesville","property_zip":"98765-4321","property_beds":"","property_baths":"","property_list_price":"","property_listing_status":"Active","property_photo_url":"http://property.photo.is/here.jpg","search_city":"Searchland","search_state":"Searchsylvania","search_zip":"12345-6789","search_min_beds":"","search_min_baths":"","search_min_price":"","search_max_price":"","search_min_sq_ft":"","search_max_sq_ft":"","search_min_lot_size":"","search_max_lot_size":"","search_min_year_built":"","search_max_year_built":"","search_property_types":"Condo, Single Family, Treehouse"}]'
-      it "should return for group attribute #{:contacts}" do
-        expect(@group.contacts).to eq nil
-
-        @group.contacts = contacts
-        contact = contacts.first
-        expect(@group.contacts.first.class).to eq MoxiworksPlatform::Contact
-        contact.each do |k, v|
-          puts "#{k} => #{@group.contacts.first.send(k.to_s)} == #{contact[k.to_s]}"
-          if integer_accessors.include? k.to_sym
-            expect(@group.contacts.first.send(k.to_s)).to eq contact[k.to_s].to_i
-          elsif float_accessors.include? k.to_sym
-            expect(@group.contacts.first.send(k.to_s)).to eq contact[k.to_s].to_f
-          end
-        end
-      end
-    end
-
 
     it 'should raise exception when trying to set an attribute that is not defined' do
       expect {@group.foobar = 'broked' }.to raise_exception(NoMethodError)
     end
   end
-  
+
   describe :class_methods do
     let!(:platform_id){'abc123'}
     let!(:platform_secret) { 'secret' }
@@ -98,7 +72,7 @@ describe MoxiworksPlatform::Group do
           it 'should return a MoxiworksPlatform::Group Object when find is called' do
             VCR.use_cassette('group/find/success', record: :none) do
               group = MoxiworksPlatform::Group.find(
-                      moxi_works_agent_id: agent_id, moxi_works_group_name: group_name)
+                  moxi_works_agent_id: agent_id, moxi_works_group_name: group_name)
               expect(group.class).to eq(MoxiworksPlatform::Group)
             end
           end
@@ -107,7 +81,7 @@ describe MoxiworksPlatform::Group do
             it "should have populated attribute #{attr_accessor} when update with all attributes populated" do
               VCR.use_cassette('group/find/success', record: :none) do
                 group = MoxiworksPlatform::Group.find(
-                        moxi_works_agent_id: agent_id, moxi_works_group_name: group_name)
+                    moxi_works_agent_id: agent_id, moxi_works_group_name: group_name)
                 expect(group.send(attr_accessor.to_s)).to eq(full_response.send(attr_accessor.to_s))
               end
             end
@@ -154,5 +128,5 @@ describe MoxiworksPlatform::Group do
       end
     end
   end
-  
+
 end

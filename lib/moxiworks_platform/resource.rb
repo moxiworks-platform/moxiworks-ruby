@@ -6,6 +6,8 @@ module MoxiworksPlatform
   #  provides underlying logic for connecting to Moxi Works Platform over HTTPS
   class Resource
 
+    attr_accessor :headers
+
     # class methods
 
     # keep a list of attr_accessors defined in this class
@@ -87,7 +89,9 @@ module MoxiworksPlatform
         self.check_for_error_in_response(response)
         json = JSON.parse(response)
         return false if not json['status'].nil? and json['status'] =='fail'
-        self.new(json) unless json.nil? or json.empty?
+        r = self.new(json) unless json.nil? or json.empty?
+        r.headers = response.headers unless r.nil?
+        r
       end
     end
 

@@ -51,7 +51,7 @@ http_interactions:
         path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: "[]"
-    http_version: 
+      string: '{"page_number":1,"total_pages":0,"contacts":[]}'
+    http_version:
   recorded_at: Fri, 29 Apr 2016 11:40:30 GMT
 recorded_with: VCR 3.0.1
