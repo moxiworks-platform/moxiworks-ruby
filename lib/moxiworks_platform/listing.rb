@@ -67,6 +67,11 @@ module MoxiworksPlatform
     # @return [String] city of property address
     attr_accessor :city
 
+    # @!attribute company_listing_attributes
+    #
+    # @return [Array] company specific attributes
+    attr_accessor :company_listing_attributes
+
     # @!attribute county_or_parish
     #
     # @return [String] county of property address
@@ -117,6 +122,11 @@ module MoxiworksPlatform
     # @return [String] name of listing agent
     attr_accessor :list_agent_full_name
 
+    # @!attribute list_agent_uuid
+    #
+    # @return [String] UUID of listing agent
+    attr_accessor :list_agent_uuid
+
     # @!attribute list_office_name
     #
     # @return [String] name office responsible for listing
@@ -141,6 +151,11 @@ module MoxiworksPlatform
     #
     # @return [String] the mls number associated with the listing
     attr_accessor :listing_id
+
+    # @!attribute listing_url
+    #
+    # @return [String] the URL of the listing
+    attr_accessor :listing_url
 
     # @!attribute listing_images
     #
@@ -239,6 +254,11 @@ module MoxiworksPlatform
     #
     # @return [String] state of property address
     attr_accessor :state_or_province
+
+    # @!attribute status
+    #
+    # @return [String] status of listing
+    attr_accessor :status
 
     # @!attribute tax_annual_amount
     #
