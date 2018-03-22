@@ -156,6 +156,13 @@ module MoxiworksPlatform
     # @return [String] any business related titles associated with the agent
     attr_accessor :title
 
+    # @!attribute uuid
+    #
+    # @return [String] UUID of the agent. Can be used as a unique
+    # identifier in determining associations between Agent objects and Listing
+    # objects.
+    attr_accessor :uuid
+
     # Find an Agent on the  Moxi Works Platform
     # @param [Hash] opts named parameter Hash
     # @option opts [String]  :moxi_works_agent_id  *REQUIRED* -- either :moxi_works_agent_id or :agent_uuid is required -- The Moxi Works Agent ID for the agent
