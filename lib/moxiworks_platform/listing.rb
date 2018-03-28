@@ -310,6 +310,10 @@ module MoxiworksPlatform
     # @return [String] If there is a second listing agent, the name of the second listing agent.
     attr_accessor :secondary_list_agent_full_name
 
+    # @!attribute title
+    #
+    # @return [String] Title of the listing
+    attr_accessor :title
 
 
     # Find a listing on the  Moxi Works Platform
