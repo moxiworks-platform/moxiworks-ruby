@@ -82,6 +82,11 @@ module MoxiworksPlatform
     # @return [String] the office's twitter handle
     attr_accessor :twitter
 
+    # @!attribute office_website
+    #
+    # @return [String] url of the office's website
+    attr_accessor :office_website
+
 
     # Find an Office on the  Moxi Works Platform
     # @param [Hash] opts named parameter Hash

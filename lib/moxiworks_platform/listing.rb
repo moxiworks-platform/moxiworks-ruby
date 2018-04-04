@@ -285,6 +285,35 @@ module MoxiworksPlatform
     # @return [Integer] year the building was built
     attr_accessor :year_built
 
+    # @!attribute virtual_tour_url
+    #
+    # @return [String] Virtual tour URL for this listing.
+    attr_accessor :virtual_tour_url
+
+    # @!attribute open_house
+    #
+    # @return [Array] open house Hashes associated with the listing in the format
+    #       {
+    #           "date" => "(string) YYYY-MM-DD formatted string representing the date of the open house"
+    #           "start_time" => "(string) HH:MM:SS formatted string representing the time when the open house starts. This is expressed in the local time where the listing is located."
+    #           "end_time" => "(string) HH:MM:SS formatted string representing the time when the open house ends. This is expressed in the local time where the listing is located."
+    #       }
+    attr_accessor :open_house
+
+    # @!attribute secondary_list_agent_uuid
+    #
+    # @return [String] If there is a second listing agent, the unique identifier for the second listing agent. This will correspond to the uuid field of an Agent.
+    attr_accessor :secondary_list_agent_uuid
+
+    # @!attribute secondary_list_agent_full_name
+    #
+    # @return [String] If there is a second listing agent, the name of the second listing agent.
+    attr_accessor :secondary_list_agent_full_name
+
+    # @!attribute title
+    #
+    # @return [String] Title of the listing
+    attr_accessor :title
 
 
     # Find a listing on the  Moxi Works Platform

@@ -36,7 +36,8 @@ module MoxiworksPlatform
           Authorization: auth_header,
           Accept: accept_header,
           'Content-Type' =>  content_type_header,
-          Cookie: Session.instance.cookie
+          Cookie: Session.instance.cookie,
+          'X-Moxi-Library-User-Agent' => user_agent_header
       }
     end
 
@@ -64,6 +65,10 @@ module MoxiworksPlatform
     # @return [String] Content-Type header content
     def self.content_type_header
       'application/x-www-form-urlencoded'
+    end
+
+    def self.user_agent_header
+      'moxiworks_platform ruby client'
     end
 
     def self.check_for_error_in_response(response)

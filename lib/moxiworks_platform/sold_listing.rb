@@ -275,6 +275,16 @@ module MoxiworksPlatform
     # @return [Integer] price listing was sold for
     attr_accessor :sold_price
 
+    # @!attribute title
+    #
+    # @return [String] Title of the listing
+    attr_accessor :title
+
+    # @!attribute company_listing_attributes
+    #
+    # @return [Array] company specific attributes
+    attr_accessor :company_listing_attributes
+
 
     # Find a listing on the  Moxi Works Platform
     # @param [Hash] opts named parameter Hash
