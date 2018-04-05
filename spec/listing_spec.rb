@@ -12,7 +12,7 @@ describe MoxiworksPlatform::Listing do
       :postal_code, :lot_size_square_feet, :internet_entire_listing_display_yn, :middle_or_junior_school,
       :list_office_aor, :pool_yn, :property_type, :tax_annual_amount, :tax_year, :single_story,
       :living_area, :view_yn, :year_built, :on_market, :moxi_works_listing_id, :list_agent_uuid, :listing_url,
-      :status, :company_listing_attributes
+      :status, :company_listing_attributes, :list_agent_moxi_works_office_id
   ]
 
 
