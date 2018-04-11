@@ -163,6 +163,12 @@ module MoxiworksPlatform
     # objects.
     attr_accessor :uuid
 
+    # @!attribute has_engage_access
+    #
+    # @return [String] whether the agent has access to MoxiWorks Engage
+    attr_accessor :has_engage_access
+
+
     # Find an Agent on the  Moxi Works Platform
     # @param [Hash] opts named parameter Hash
     # @option opts [String]  :moxi_works_agent_id  *REQUIRED* -- either :moxi_works_agent_id or :agent_uuid is required -- The Moxi Works Agent ID for the agent

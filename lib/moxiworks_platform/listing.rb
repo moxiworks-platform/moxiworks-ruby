@@ -127,6 +127,11 @@ module MoxiworksPlatform
     # @return [String] MoxiWorks ID of listing agent office
     attr_accessor :list_agent_moxi_works_office_id
 
+    # @!attribute list_agent_office_id
+    #
+    # @return [String] ID of listing agent office
+    attr_accessor :list_agent_office_id
+
     # @!attribute list_agent_uuid
     #
     # @return [String] UUID of listing agent
