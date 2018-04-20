@@ -2,6 +2,10 @@
 
 mv doc /tmp/doc/
 
+git checkout master
+
+git commit -a -m "Documentation Update"
+
 yard doc
 
 git checkout gh-pages
