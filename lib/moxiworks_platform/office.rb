@@ -87,6 +87,12 @@ module MoxiworksPlatform
     # @return [String] url of the office's website
     attr_accessor :office_website
 
+    # @!attribute region
+    #
+    # @return [String] office's region
+    attr_accessor :region
+
+
 
     # Find an Office on the  Moxi Works Platform
     # @param [Hash] opts named parameter Hash
