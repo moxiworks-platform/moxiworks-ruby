@@ -170,8 +170,39 @@ module MoxiworksPlatform
 
     # @!attribute available_mls
     #
-    # @return [Hash] available MLSs for this agent
+    # @return [Array] available MLSs for this agent
     attr_accessor :available_mls
+
+
+    # @!attribute altnernate_offices
+    #
+    # @return [Array] alternate offices for this agent
+    attr_accessor :altnernate_offices
+
+
+    # @!attribute gci_goal
+    #
+    # @return [Integer] GCI Goal for this agent
+    attr_accessor :gci_goal
+
+
+    # @!attribute region
+    #
+    # @return [String] region for this agent
+    attr_accessor :region
+
+
+    # @!attribute buyer_commission_rate
+    #
+    # @return [Hash] buyer commission rate for this agent
+    attr_accessor :buyer_commission_rate
+
+
+    # @!attribute seller_commission_rate
+    #
+    # @return [Hash]  seller commission rate for this agent
+    attr_accessor :seller_commission_rate
+
 
 
     # Find an Agent on the  Moxi Works Platform
