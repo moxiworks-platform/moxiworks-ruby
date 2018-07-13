@@ -168,6 +168,11 @@ module MoxiworksPlatform
     # @return [String] whether the agent has access to MoxiWorks Engage
     attr_accessor :has_engage_access
 
+    # @!attribute available_mls
+    #
+    # @return [Hash] available MLSs for this agent
+    attr_accessor :available_mls
+
 
     # Find an Agent on the  Moxi Works Platform
     # @param [Hash] opts named parameter Hash
