@@ -232,7 +232,34 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#available_mls-instance_method" title="#available_mls (instance method)">#<strong>available_mls</strong>  &#x21d2; Hash </a>
+      <a href="#altnernate_offices-instance_method" title="#altnernate_offices (instance method)">#<strong>altnernate_offices</strong>  &#x21d2; Array </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Alternate offices for this agent.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#available_mls-instance_method" title="#available_mls (instance method)">#<strong>available_mls</strong>  &#x21d2; Array </a>
     
 
     
@@ -251,6 +278,33 @@
   
     <span class="summary_desc"><div class='inline'>
 <p>Available MLSs for this agent.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#buyer_commission_rate-instance_method" title="#buyer_commission_rate (instance method)">#<strong>buyer_commission_rate</strong>  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Buyer commission rate for this agent.</p>
 </div></span>
   
 </li>
@@ -414,6 +468,33 @@ company.</p>
   
     <span class="summary_desc"><div class='inline'>
 <p>The agent&#39;s first name.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#gci_goal-instance_method" title="#gci_goal (instance method)">#<strong>gci_goal</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>GCI Goal for this agent.</p>
 </div></span>
   
 </li>
@@ -909,6 +990,33 @@ contact is or is to be associated with.</p>
       <li class="public ">
   <span class="summary_signature">
     
+      <a href="#region-instance_method" title="#region (instance method)">#<strong>region</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Region for this agent.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#secondary_email_address-instance_method" title="#secondary_email_address (instance method)">#<strong>secondary_email_address</strong>  &#x21d2; String </a>
     
 
@@ -928,6 +1036,33 @@ contact is or is to be associated with.</p>
   
     <span class="summary_desc"><div class='inline'>
 <p>The agent&#39;s secondary email address.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#seller_commission_rate-instance_method" title="#seller_commission_rate (instance method)">#<strong>seller_commission_rate</strong>  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Seller commission rate for this agent.</p>
 </div></span>
   
 </li>
@@ -1457,11 +1592,72 @@ objects.</p>
 </div>
     
       
+      <span id="altnernate_offices=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="altnernate_offices-instance_method">
+  
+    #<strong>altnernate_offices</strong>  &#x21d2; <tt>Array</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns alternate offices for this agent</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>alternate offices for this agent</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+180
+181
+182</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 180</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_altnernate_offices'>altnernate_offices</span>
+  <span class='ivar'>@altnernate_offices</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
       <span id="available_mls=-instance_method"></span>
       <div class="method_details ">
   <h3 class="signature " id="available_mls-instance_method">
   
-    #<strong>available_mls</strong>  &#x21d2; <tt>Hash</tt> 
+    #<strong>available_mls</strong>  &#x21d2; <tt>Array</tt> 
   
 
   
@@ -1483,7 +1679,7 @@ objects.</p>
     <li>
       
       
-        <span class='type'>(<tt>Hash</tt>)</span>
+        <span class='type'>(<tt>Array</tt>)</span>
       
       
       
@@ -1511,6 +1707,67 @@ objects.</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_available_mls'>available_mls</span>
   <span class='ivar'>@available_mls</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="buyer_commission_rate=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="buyer_commission_rate-instance_method">
+  
+    #<strong>buyer_commission_rate</strong>  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns buyer commission rate for this agent</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>buyer commission rate for this agent</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+198
+199
+200</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 198</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_buyer_commission_rate'>buyer_commission_rate</span>
+  <span class='ivar'>@buyer_commission_rate</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1879,6 +2136,67 @@ company</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_first_name'>first_name</span>
   <span class='ivar'>@first_name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="gci_goal=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="gci_goal-instance_method">
+  
+    #<strong>gci_goal</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns GCI Goal for this agent</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>GCI Goal for this agent</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+186
+187
+188</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 186</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_gci_goal'>gci_goal</span>
+  <span class='ivar'>@gci_goal</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2987,6 +3305,67 @@ contact is or is to be associated with.</p>
 </div>
     
       
+      <span id="region=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="region-instance_method">
+  
+    #<strong>region</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns region for this agent</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>region for this agent</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+192
+193
+194</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 192</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_region'>region</span>
+  <span class='ivar'>@region</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
       <span id="secondary_email_address=-instance_method"></span>
       <div class="method_details ">
   <h3 class="signature " id="secondary_email_address-instance_method">
@@ -3041,6 +3420,67 @@ contact is or is to be associated with.</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_secondary_email_address'>secondary_email_address</span>
   <span class='ivar'>@secondary_email_address</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="seller_commission_rate=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="seller_commission_rate-instance_method">
+  
+    #<strong>seller_commission_rate</strong>  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns seller commission rate for this agent</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>seller commission rate for this agent</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+204
+205
+206</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 204</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_seller_commission_rate'>seller_commission_rate</span>
+  <span class='ivar'>@seller_commission_rate</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3439,17 +3879,17 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-187
-188
-189
-190
-191
-192
-193
-194</pre>
+218
+219
+220
+221
+222
+223
+224
+225</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 187</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 218</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_agent_identifier'>agent_identifier</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:agent_uuid</span><span class='rbracket'>]</span> <span class='kw'>unless</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:agent_uuid</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:agent_uuid</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span><span class='rparen'>)</span>
@@ -3618,32 +4058,32 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-236
-237
-238
-239
-240
-241
-242
-243
-244
-245
-246
-247
-248
-249
-250
-251
-252
-253
-254
-255
-256
-257
-258</pre>
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 236</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 267</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_url'>url</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/agents</span><span class='tstring_end'>&quot;</span></span>
@@ -3710,20 +4150,20 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-196
-197
-198
-199
-200
-201
-202
-203
-204
-205
-206</pre>
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 196</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 227</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_url'>url</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_url'>url</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/agents</span><span class='tstring_end'>&quot;</span></span>
@@ -3746,7 +4186,7 @@ aren&#39;t included</p>
 </div>
 
       <div id="footer">
-  Generated on Fri Jul 13 16:21:44 2018 by
+  Generated on Fri Jul 13 16:59:58 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.2.4).
 </div>
