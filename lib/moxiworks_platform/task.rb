@@ -189,6 +189,10 @@ module  MoxiworksPlatform
         self.check_for_error_in_response(response)
         results.headers = response.headers
         json = JSON.parse(response)
+
+        results.page_number = json['page_number'] if(json.is_a?(Hash) && json['page_number'])
+        results.total_pages = json['total_pages'] if(json.is_a?(Hash) && json['total_pages'])
+
         json['tasks'].each do |r|
           results << MoxiworksPlatform::Task.new(r) unless r.nil? or r.empty?
         end

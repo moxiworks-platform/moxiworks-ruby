@@ -94,6 +94,10 @@ module MoxiworksPlatform
         self.check_for_error_in_response(response)
         json = JSON.parse(response)
         json = self.underscore_attribute_names json
+
+        results.page_number = 1
+        results.total_pages = 1
+
         json['galleries'].each do |r|
           results << MoxiworksPlatform::Gallery.new(r) unless r.nil? or r.empty?
         end

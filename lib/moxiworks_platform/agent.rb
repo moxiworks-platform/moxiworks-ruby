@@ -280,6 +280,10 @@ module MoxiworksPlatform
         results.headers = response.headers
         self.check_for_error_in_response(response)
         json = JSON.parse(response)
+
+        results.page_number = json['page_number'] if(json.is_a?(Hash) && json['page_number'])
+        results.total_pages = json['total_pages'] if(json.is_a?(Hash) && json['total_pages'])
+
         json['agents'].each do |r|
           results << MoxiworksPlatform::Agent.new(r) unless r.nil? or r.empty?
         end

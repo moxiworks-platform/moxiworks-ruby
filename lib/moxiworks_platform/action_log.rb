@@ -85,6 +85,10 @@ module  MoxiworksPlatform
         results.headers = response.headers
         self.check_for_error_in_response(response)
         json = JSON.parse(response)
+
+        results.page_number = 1
+        results.total_pages = 1
+
         json['actions'].each do |r|
           results << MoxiworksPlatform::ActionLog.new(r) unless r.nil? or r.empty?
         end
