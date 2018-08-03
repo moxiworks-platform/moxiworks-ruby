@@ -3782,7 +3782,11 @@ aren&#39;t included</p>
 418
 419
 420
-421</pre>
+421
+422
+423
+424
+425</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 397</span>
@@ -3805,6 +3809,10 @@ aren&#39;t included</p>
     <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_headers'>headers</span>
     <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_for_error_in_response'>check_for_error_in_response</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_page_number'>page_number</span> <span class='op'>=</span> <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>page_number</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_json'>json</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>page_number</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_total_pages'>total_pages</span> <span class='op'>=</span> <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>total_pages</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_json'>json</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>total_pages</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
     <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>transactions</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
       <span class='id identifier rubyid_results'>results</span> <span class='op'>&lt;&lt;</span> <span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>BuyerTransaction</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_r'>r</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
     <span class='kw'>end</span>
@@ -4032,20 +4040,20 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-523
-524
-525
-526
 527
 528
 529
 530
 531
 532
-533</pre>
+533
+534
+535
+536
+537</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 523</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 527</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_url'>url</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Exception</span><span class='op'>::</span><span class='const'>ArgumentError</span><span class='comma'>,</span>
@@ -4546,18 +4554,18 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-491
-492
-493
-494
 495
 496
 497
 498
-499</pre>
+499
+500
+501
+502
+503</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 491</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 495</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_required_opts'>required_opts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:moxi_works_agent_id</span><span class='comma'>,</span> <span class='symbol'>:moxi_works_transaction_id</span><span class='rbracket'>]</span>
@@ -4594,13 +4602,13 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-555
-556
-557
-558</pre>
+559
+560
+561
+562</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 555</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 559</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_promote'>promote</span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_promote_transaction'>promote_transaction</span> <span class='op'>=</span> <span class='kw'>true</span>
@@ -4665,16 +4673,16 @@ Platform</p>
       <pre class="lines">
 
 
-547
-548
-549
-550
 551
 552
-553</pre>
+553
+554
+555
+556
+557</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 547</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 551</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_save'>save</span>
   <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>BuyerTransaction</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='rparen'>)</span>
@@ -4693,7 +4701,7 @@ Platform</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Jul 16 11:29:28 2018 by
+  Generated on Fri Aug  3 15:57:56 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.2.4).
 </div>

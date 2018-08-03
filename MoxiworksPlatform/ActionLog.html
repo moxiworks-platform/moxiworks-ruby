@@ -827,8 +827,23 @@ aren&#39;t included</p>
           </span>
           
             &mdash; <div class='inline'>
-<p><strong>REQUIRED</strong> The Moxi Works Agent ID for the agent to which
-this ActionLog is associated</p>
+<p><strong>REQUIRED</strong> The Moxi Works Agent ID  for the agent to which
+this ActionLog is associated – moxi_works_agent_id or agent_uuid must be
+passed</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:agent_uuid</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p><strong>REQUIRED</strong> The Agent UUID for the agent to which this
+ActionLog is associated – moxi_works_agent_id or agent_uuid must be passed</p>
 </div>
           
         </li>
@@ -842,7 +857,23 @@ this ActionLog is associated</p>
           
             &mdash; <div class='inline'>
 <p><strong>REQUIRED</strong> Your system&#39;s unique ID for the contact for
-whom the ActionLog entry is being created.</p>
+whom the ActionLog entry is being created. – partner_contact_id or
+moxi_works_contact_id must be passed</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:moxi_works_contact_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p><strong>REQUIRED</strong> MoxiWorks&#39;  unique ID for the contact for
+whom the ActionLog entry is being created. – partner_contact_id or
+moxi_works_contact_id must be passed</p>
 </div>
           
         </li>
@@ -894,8 +925,6 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-71
-72
 73
 74
 75
@@ -916,10 +945,16 @@ aren&#39;t included</p>
 90
 91
 92
-93</pre>
+93
+94
+95
+96
+97
+98
+99</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/action_log.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/action_log.rb', line 73</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Exception</span><span class='op'>::</span><span class='const'>ArgumentError</span><span class='comma'>,</span>
@@ -938,6 +973,10 @@ aren&#39;t included</p>
     <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_headers'>headers</span>
     <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_for_error_in_response'>check_for_error_in_response</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_page_number'>page_number</span> <span class='op'>=</span> <span class='int'>1</span>
+    <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_total_pages'>total_pages</span> <span class='op'>=</span> <span class='int'>1</span>
+
     <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>actions</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
       <span class='id identifier rubyid_results'>results</span> <span class='op'>&lt;&lt;</span> <span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>ActionLog</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_r'>r</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
     <span class='kw'>end</span>
@@ -1109,20 +1148,20 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-110
-111
-112
-113
-114
-115
 116
 117
 118
 119
-120</pre>
+120
+121
+122
+123
+124
+125
+126</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/action_log.rb', line 110</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/action_log.rb', line 116</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_url'>url</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Exception</span><span class='op'>::</span><span class='const'>ArgumentError</span><span class='comma'>,</span>
@@ -1145,7 +1184,7 @@ aren&#39;t included</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Jul 16 11:29:27 2018 by
+  Generated on Fri Aug  3 15:57:54 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.2.4).
 </div>
