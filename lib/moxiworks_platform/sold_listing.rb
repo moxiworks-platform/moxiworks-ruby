@@ -275,16 +275,50 @@ module MoxiworksPlatform
     # @return [Integer] price listing was sold for
     attr_accessor :sold_price
 
-    # @!attribute title
+    # @!attribute public_title
     #
     # @return [String] Title of the listing
-    attr_accessor :title
+    attr_accessor :public_title
 
     # @!attribute company_listing_attributes
     #
     # @return [Array] company specific attributes
     attr_accessor :company_listing_attributes
 
+    # @!attribute secondary_list_agent_full_name
+    #
+    # @return [String] Secondary listing agent full name
+    attr_accessor :secondary_list_agent_full_name
+
+    # @!attribute community
+    #
+    # @return [String] community the listing is located in
+    attr_accessor :community
+
+    # @!attribute list_office_aor_area
+    #
+    # @return [String] The MLS Area which this listing is in
+    attr_accessor :list_office_aor_area
+
+    # @!attribute status
+    #
+    # @return [String] status of the listing
+    attr_accessor :status
+
+    # @!attribute virtual_tour_url
+    #
+    # @return [String] virtual tour url of the listing
+    attr_accessor :virtual_tour_url
+
+    # @!attribute list_agent_uuid
+    #
+    # @return [String] listing agent UUID
+    attr_accessor :list_agent_uuid
+
+    # @!attribute secondary_list_agent_uuid
+    #
+    # @return [String] Secondary list agent UUID
+    attr_accessor :secondary_list_agent_uuid
 
     # Find a listing on the  Moxi Works Platform
     # @param [Hash] opts named parameter Hash

@@ -55,8 +55,10 @@ module  MoxiworksPlatform
 
     # Search an Agent's ActionLog entries in Moxi Works Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this ActionLog is associated
-    # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for the contact for whom the ActionLog entry is being created.
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID  for the agent to which this ActionLog is associated -- moxi_works_agent_id or agent_uuid must be passed
+    # @option opts [String]  :agent_uuid *REQUIRED* The Agent UUID for the agent to which this ActionLog is associated -- moxi_works_agent_id or agent_uuid must be passed
+    # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for the contact for whom the ActionLog entry is being created. -- partner_contact_id or moxi_works_contact_id must be passed
+    # @option opts [String]  :moxi_works_contact_id *REQUIRED* MoxiWorks'  unique ID for the contact for whom the ActionLog entry is being created. -- partner_contact_id or moxi_works_contact_id must be passed
     #
     # @return [Array] containing MoxiworksPlatform::ActionLog objects
     #
