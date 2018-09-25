@@ -2,8 +2,7 @@ require 'spec_helper'
 require 'vcr'
 
 describe MoxiworksPlatform::Agent do
-  agent_accesors = [:moxi_works_agent_id, :address_street,
-                    :address_city, :address_state, :address_zip, :office_address_street,
+  agent_accesors = [:moxi_works_agent_id, :office_address_street,
                     :office_address_city, :office_address_state, :office_address_zip,
                     :name, :mobile_phone_number, :first_name, :last_name,
                     :fax_phone_number, :main_phone_number, :primary_email_address,
