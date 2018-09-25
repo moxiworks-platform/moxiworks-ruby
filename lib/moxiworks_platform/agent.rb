@@ -340,7 +340,7 @@ module MoxiworksPlatform
     #
     def self.search(opts={})
       url ||= "#{MoxiworksPlatform::Config.url}/api/agents"
-      required_opts = [:moxi_works_company_id, :updated_since]
+      required_opts = [:moxi_works_company_id]
       required_opts.each do |opt|
         raise ::MoxiworksPlatform::Exception::ArgumentError, "#{opt} required" if
             opts[opt].nil? or opts[opt].to_s.empty?
