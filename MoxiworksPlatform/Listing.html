@@ -6,7 +6,7 @@
 <title>
   Class: MoxiworksPlatform::Listing
   
-    &mdash; Documentation by YARD 0.9.5
+    &mdash; Documentation by YARD 0.9.16
   
 </title>
 
@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="../class_list.html"></iframe>
+      <iframe id="nav" src="../class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -58,8 +58,6 @@
 </div>
         <div class="clear"></div>
       </div>
-
-      <iframe id="search_frame" src="../class_list.html"></iframe>
 
       <div id="content"><h1>Class: MoxiworksPlatform::Listing
   
@@ -3886,7 +3884,8 @@ caption: [String] human readable caption for the image
 description: [String] human readable description of the image
 width: [Integer] width of the raw image
 height: [Integer] height of the raw image
-mime_type: [String] MIME or media type of the image</code></pre>
+mime_type: [String] MIME or media type of the image
+</code></pre>
 
 <p></p>
 
@@ -3919,7 +3918,8 @@ caption: [String] human readable caption for the image
 description: [String] human readable description of the image
 width: [Integer] width of the raw image
 height: [Integer] height of the raw image
-mime_type: [String] MIME or media type of the image</code></pre>
+mime_type: [String] MIME or media type of the image
+</code></pre>
 
 <p></p>
 </div>
@@ -4517,7 +4517,8 @@ mime_type: [String] MIME or media type of the image</code></pre>
 <p>Returns open house Hashes associated with the listing in the format 
 <pre class="code ruby"><code class="ruby">&quot;date&quot; =&gt; &quot;(string) YYYY-MM-DD formatted string representing the date of the open house&quot;
 &quot;start_time&quot; =&gt; &quot;(string) HH:MM:SS formatted string representing the time when the open house starts. This is expressed in the local time where the listing is located.&quot;
-&quot;end_time&quot; =&gt; &quot;(string) HH:MM:SS formatted string representing the time when the open house ends. This is expressed in the local time where the listing is located.&quot;</code></pre>
+&quot;end_time&quot; =&gt; &quot;(string) HH:MM:SS formatted string representing the time when the open house ends. This is expressed in the local time where the listing is located.&quot;
+</code></pre>
 
 <p></p>
 
@@ -4541,7 +4542,8 @@ mime_type: [String] MIME or media type of the image</code></pre>
 <p>open house Hashes associated with the listing in the format 
 <pre class="code ruby"><code class="ruby">&quot;date&quot; =&gt; &quot;(string) YYYY-MM-DD formatted string representing the date of the open house&quot;
 &quot;start_time&quot; =&gt; &quot;(string) HH:MM:SS formatted string representing the time when the open house starts. This is expressed in the local time where the listing is located.&quot;
-&quot;end_time&quot; =&gt; &quot;(string) HH:MM:SS formatted string representing the time when the open house ends. This is expressed in the local time where the listing is located.&quot;</code></pre>
+&quot;end_time&quot; =&gt; &quot;(string) HH:MM:SS formatted string representing the time when the open house ends. This is expressed in the local time where the listing is located.&quot;
+</code></pre>
 
 <p></p>
 </div>
@@ -5804,7 +5806,7 @@ aren&#39;t included</p>
       <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/listing.rb', line 339</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/listings/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:moxi_works_listing_id</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Config.html" title="MoxiworksPlatform::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_url'><span class='object_link'><a href="Config.html#url-class_method" title="MoxiworksPlatform::Config.url (method)">url</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/listings/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:moxi_works_listing_id</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='symbol'>:get</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -5835,13 +5837,13 @@ aren&#39;t included</p>
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_results'>results</span> <span class='op'>=</span> <span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Listing</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span>
+      <pre class="example code"><code><span class='id identifier rubyid_results'>results</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="MoxiworksPlatform::Listing (class)">Listing</a></span></span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span>
 <span class='label'>moxi_works_company_id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>the_company</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
 <span class='label'>updated_since:</span>  <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>-</span> <span class='int'>1296000</span><span class='comma'>,</span>
 <span class='label'>moxi_works_agent_id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>abc123</span><span class='tstring_end'>&#39;</span></span>
 <span class='rparen'>)</span>
 
-<span class='id identifier rubyid_next_page'>next_page</span> <span class='op'>=</span> <span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Listing</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span>
+<span class='id identifier rubyid_next_page'>next_page</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="MoxiworksPlatform::Listing (class)">Listing</a></span></span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span>
 <span class='label'>moxi_works_company_id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>the_company</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
 <span class='label'>updated_since:</span>  <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>-</span> <span class='int'>1296000</span><span class='comma'>,</span>
 <span class='label'>moxi_works_agent_id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>abc123</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
@@ -5849,7 +5851,7 @@ aren&#39;t included</p>
 <span class='rparen'>)</span></code></pre>
     
       
-      <pre class="example code"><code><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Listing</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span>
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="MoxiworksPlatform::Listing (class)">Listing</a></span></span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span>
    <span class='label'>moxi_works_company_id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>the_company</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
    <span class='label'>updated_since:</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>-</span> <span class='int'>131297832</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_page_of_listings'>page_of_listings</span><span class='op'>|</span> <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_page_of_listings'>page_of_listings</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span> <span class='rbrace'>}</span></code></pre>
     
@@ -6004,7 +6006,8 @@ false), send the entire response from the previous page.</p>
         <div class='inline'>
 <p>with the format: 
 <pre class="code ruby"><code class="ruby">last_page: [Boolean],
-listings:  [Array] containing MoxiworkPlatform::Listing objects</code></pre>
+listings:  [Array] containing MoxiworkPlatform::Listing objects
+</code></pre>
 
 <p></p>
 </div>
@@ -6087,11 +6090,11 @@ aren&#39;t included</p>
       <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/listing.rb', line 415</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_url'>url</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/listings</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_url'>url</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Config.html" title="MoxiworksPlatform::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_url'><span class='object_link'><a href="Config.html#url-class_method" title="MoxiworksPlatform::Config.url (method)">url</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/listings</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_required_opts'>required_opts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:moxi_works_company_id</span><span class='comma'>,</span> <span class='symbol'>:updated_since</span><span class='rbracket'>]</span>
 
   <span class='id identifier rubyid_required_opts'>required_opts</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_opt'>opt</span><span class='op'>|</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Exception</span><span class='op'>::</span><span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opt'>opt</span><span class='embexpr_end'>}</span><span class='tstring_content'> required</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception.html" title="MoxiworksPlatform::Exception (module)">Exception</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception/ArgumentError.html" title="MoxiworksPlatform::Exception::ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opt'>opt</span><span class='embexpr_end'>}</span><span class='tstring_content'> required</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span>
         <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='id identifier rubyid_opt'>opt</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='id identifier rubyid_opt'>opt</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
   <span class='kw'>end</span>
 
@@ -6105,18 +6108,18 @@ aren&#39;t included</p>
     <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:last_moxi_works_listing_id</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='id identifier rubyid_prev_page'>prev_page</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>listings</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='period'>.</span><span class='id identifier rubyid_moxi_works_listing_id'>moxi_works_listing_id</span>
   <span class='kw'>end</span>
 
-  <span class='id identifier rubyid_results'>results</span> <span class='op'>=</span> <span class='const'>MoxiResponseArray</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_results'>results</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../MoxiResponseArray.html" title="MoxiResponseArray (class)">MoxiResponseArray</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>listings</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>last_page</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rbrace'>}</span>
   <span class='const'>RestClient</span><span class='op'>::</span><span class='const'>Request</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:get</span><span class='comma'>,</span>
                               <span class='label'>url:</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span>
                               <span class='label'>payload:</span> <span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='label'>headers:</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_response'>response</span><span class='op'>|</span>
-    <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_response'>response</span> <span class='kw'>if</span> <span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_response'>response</span> <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Config.html" title="MoxiworksPlatform::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'><span class='object_link'><a href="Config.html#debug-class_method" title="MoxiworksPlatform::Config.debug (method)">debug</a></span></span>
     <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_headers'>headers</span>
     <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_for_error_in_response'>check_for_error_in_response</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_underscore_attribute_names'>underscore_attribute_names</span> <span class='id identifier rubyid_json'>json</span>
     <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>listings</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
-      <span class='id identifier rubyid_results'>results</span> <span class='op'>&lt;&lt;</span> <span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Listing</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_r'>r</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+      <span class='id identifier rubyid_results'>results</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="MoxiworksPlatform::Listing (class)">Listing</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Resource.html#initialize-instance_method" title="MoxiworksPlatform::Resource#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_r'>r</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
     <span class='kw'>end</span>
     <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>listings</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_results'>results</span>
   <span class='kw'>end</span>
@@ -6125,7 +6128,7 @@ aren&#39;t included</p>
     <span class='kw'>unless</span> <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>final_page</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
       <span class='id identifier rubyid_last_listing'>last_listing</span> <span class='op'>=</span> <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>listings</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span>
       <span class='id identifier rubyid_last_listing_id'>last_listing_id</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_last_listing'>last_listing</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='kw'>nil</span> <span class='op'>:</span> <span class='id identifier rubyid_last_listing'>last_listing</span><span class='period'>.</span><span class='id identifier rubyid_moxi_works_listing_id'>moxi_works_listing_id</span>
-      <span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Listing</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>last_moxi_works_listing_id:</span> <span class='id identifier rubyid_last_listing_id'>last_listing_id</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_last_listing_id'>last_listing_id</span>
+      <span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="MoxiworksPlatform::Listing (class)">Listing</a></span></span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='label'>last_moxi_works_listing_id:</span> <span class='id identifier rubyid_last_listing_id'>last_listing_id</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_last_listing_id'>last_listing_id</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
   <span class='id identifier rubyid_json'>json</span>
@@ -6200,19 +6203,19 @@ aren&#39;t included</p>
       <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/listing.rb', line 344</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_url'>url</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_url'>url</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/listings</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_url'>url</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Config.html" title="MoxiworksPlatform::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_url'><span class='object_link'><a href="Config.html#url-class_method" title="MoxiworksPlatform::Config.url (method)">url</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/listings</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_required_opts'>required_opts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:moxi_works_listing_id</span><span class='comma'>,</span> <span class='symbol'>:moxi_works_company_id</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Exception</span><span class='op'>::</span><span class='const'>ArgumentError</span><span class='comma'>,</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception.html" title="MoxiworksPlatform::Exception (module)">Exception</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception/ArgumentError.html" title="MoxiworksPlatform::Exception::ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span>
         <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>arguments must be passed as named parameters</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Hash</span>
   <span class='id identifier rubyid_required_opts'>required_opts</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_opt'>opt</span><span class='op'>|</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Exception</span><span class='op'>::</span><span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opt'>opt</span><span class='embexpr_end'>}</span><span class='tstring_content'> required</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception.html" title="MoxiworksPlatform::Exception (module)">Exception</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception/ArgumentError.html" title="MoxiworksPlatform::Exception::ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opt'>opt</span><span class='embexpr_end'>}</span><span class='tstring_content'> required</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span>
         <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='id identifier rubyid_opt'>opt</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='id identifier rubyid_opt'>opt</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
   <span class='kw'>end</span>
 
   <span class='const'>RestClient</span><span class='op'>::</span><span class='const'>Request</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='id identifier rubyid_method'>method</span><span class='comma'>,</span>
                               <span class='label'>url:</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span>
                               <span class='label'>payload:</span> <span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='label'>headers:</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_response'>response</span><span class='op'>|</span>
-    <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_response'>response</span> <span class='kw'>if</span> <span class='const'>MoxiworksPlatform</span><span class='op'>::</span><span class='const'>Config</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_response'>response</span> <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Config.html" title="MoxiworksPlatform::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'><span class='object_link'><a href="Config.html#debug-class_method" title="MoxiworksPlatform::Config.debug (method)">debug</a></span></span>
     <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_for_error_in_response'>check_for_error_in_response</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_underscore_attribute_names'>underscore_attribute_names</span> <span class='id identifier rubyid_json'>json</span>
@@ -6232,9 +6235,9 @@ aren&#39;t included</p>
 </div>
 
       <div id="footer">
-  Generated on Mon Oct  8 16:03:36 2018 by
+  Generated on Thu Oct 11 09:58:01 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.2.4).
+  0.9.16 (ruby-2.5.1).
 </div>
 
     </div>
