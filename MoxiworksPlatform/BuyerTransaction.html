@@ -1,0 +1,4709 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: MoxiworksPlatform::BuyerTransaction
+  
+    &mdash; Documentation by YARD 0.9.16
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "MoxiworksPlatform::BuyerTransaction";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (B)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span>
+     &raquo; 
+    <span class="title">BuyerTransaction</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: MoxiworksPlatform::BuyerTransaction
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="Resource.html" title="MoxiworksPlatform::Resource (class)">Resource</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="Resource.html" title="MoxiworksPlatform::Resource (class)">Resource</a></span></li>
+          
+            <li class="next">MoxiworksPlatform::BuyerTransaction</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/moxiworks_platform/buyer_transaction.rb</dd>
+  </dl>
+  
+</div>
+
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#address-instance_method" title="#address (instance method)">#<strong>address</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Street address of property being sold.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#area_of_interest-instance_method" title="#area_of_interest (instance method)">#<strong>area_of_interest</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>String representing a locality that the client is interested in purchasing
+a property in.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#city-instance_method" title="#city (instance method)">#<strong>city</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>City or township of property being sold.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#closing_price-instance_method" title="#closing_price (instance method)">#<strong>closing_price</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This is the closing price for the sale .</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#closing_timestamp-instance_method" title="#closing_timestamp (instance method)">#<strong>closing_timestamp</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A Unix timestamp representing the point in time when the transaction for
+this BuyerTransaction object was completed.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#commission_flat_fee-instance_method" title="#commission_flat_fee (instance method)">#<strong>commission_flat_fee</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If the agent is to receive a flat-rate commission upon sale of the property
+associated with this BuyerTransaction, then this will represent the
+commission that the agent is to receive.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#commission_percentage-instance_method" title="#commission_percentage (instance method)">#<strong>commission_percentage</strong>  &#x21d2; Float </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If the agent is to receive commission based on percentage of sale price for
+the property associated with this BuyerTransaction, then this will
+represent the commission that the agent is to receive.This should be null
+if the BuyerTransaction uses commission_flat_fee.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#is_mls_transaction-instance_method" title="#is_mls_transaction (instance method)">#<strong>is_mls_transaction</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Whether the property is being listed on an MLS.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#max_baths-instance_method" title="#max_baths (instance method)">#<strong>max_baths</strong>  &#x21d2; Float </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Maximum desired bathrooms in potential properties.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#max_beds-instance_method" title="#max_beds (instance method)">#<strong>max_beds</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Maximum desired bedrooms in potential properties.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#max_price-instance_method" title="#max_price (instance method)">#<strong>max_price</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The maximum desired price range for potential properties if using a price
+range rather than target price.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#max_sqft-instance_method" title="#max_sqft (instance method)">#<strong>max_sqft</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Maximum desired living area of potential properties.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#min_baths-instance_method" title="#min_baths (instance method)">#<strong>min_baths</strong>  &#x21d2; Float </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Minimum desired bathrooms in potential properties.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#min_beds-instance_method" title="#min_beds (instance method)">#<strong>min_beds</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Minimum desired bedrooms in potential properties.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#min_price-instance_method" title="#min_price (instance method)">#<strong>min_price</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The minimum desired price range for potential properties if using a price
+range rather than target price.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#min_sqft-instance_method" title="#min_sqft (instance method)">#<strong>min_sqft</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Minimum desired living area of potential properties.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#mls_number-instance_method" title="#mls_number (instance method)">#<strong>mls_number</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>**MLS TRANSACTIONS ONLY** mls number for the listing associated with this
+BuyerTransaction.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#moxi_works_agent_id-instance_method" title="#moxi_works_agent_id (instance method)">#<strong>moxi_works_agent_id</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>moxi_works_agent_id is the Moxi Works Platform ID of the agent which a
+BuyerTransaction is or is to be associated with.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#moxi_works_contact_id-instance_method" title="#moxi_works_contact_id (instance method)">#<strong>moxi_works_contact_id</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The Moxi Works Platform unique identifier for the Contact.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#moxi_works_transaction_id-instance_method" title="#moxi_works_transaction_id (instance method)">#<strong>moxi_works_transaction_id</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The Moxi Works Platform unique identifier for the BuyerTransaction.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#notes-instance_method" title="#notes (instance method)">#<strong>notes</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Brief, human readable content that is shown to the agent as notes about the
+BuyerTransaction.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#partner_contact_id-instance_method" title="#partner_contact_id (instance method)">#<strong>partner_contact_id</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>*your system&#39;s* unique ID for the Contact.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#promote_transaction-instance_method" title="#promote_transaction (instance method)">#<strong>promote_transaction</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>In order to promote a BuyerTransaction to the next stage, set  the
+promote_transaction attribute to true.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stage-instance_method" title="#stage (instance method)">#<strong>stage</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Each BuyerTransaction has five stages (1-5).</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stage_name-instance_method" title="#stage_name (instance method)">#<strong>stage_name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This attribute displays a human readable stage name that is associated with
+the current stage attribute.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_timestamp-instance_method" title="#start_timestamp (instance method)">#<strong>start_timestamp</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>this is the Unix timestamp  representing the date the agent initiated
+transaction discussions  with the client.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#state-instance_method" title="#state (instance method)">#<strong>state</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>State or province of property being sold.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#target_price-instance_method" title="#target_price (instance method)">#<strong>target_price</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The desired selling price for the property if using target rather than
+range.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#transaction_name-instance_method" title="#transaction_name (instance method)">#<strong>transaction_name</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A brief, human readable title that is shown to the agent as the subject of
+the BuyerTransaction.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#zip_code-instance_method" title="#zip_code (instance method)">#<strong>zip_code</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Postal code of property being sold.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Resource.html" title="MoxiworksPlatform::Resource (class)">Resource</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Resource.html#headers-instance_method" title="MoxiworksPlatform::Resource#headers (method)">#headers</a></span></p>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create-class_method" title="create (class method)">.<strong>create</strong>(opts = {})  &#x21d2; MoxiworksPlatform::BuyerTransaction </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Creates a new BuyerTransaction in Moxi Works Platform.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find-class_method" title="find (class method)">.<strong>find</strong>(opts = {})  &#x21d2; MoxiworksPlatform::BuyerTransaction </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Find a BuyerTransaction using The Moxi Works Platform.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#search-class_method" title="search (class method)">.<strong>search</strong>(opts = {})  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Search Agent&#39;s BuyerTransactions in Moxi Works Platform.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_request-class_method" title="send_request (class method)">.<strong>send_request</strong>(method, opts = {}, url = nil)  &#x21d2; MoxiworksPlatform::BuyerTransaction </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Send our remote request to the Moxi Works Platform.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update-class_method" title="update (class method)">.<strong>update</strong>(opts = {})  &#x21d2; MoxiworksPlatform::BuyerTransaction </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Updates an existing BuyerTransaction in Leads Gateway.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#promote-instance_method" title="#promote (instance method)">#<strong>promote</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#save-instance_method" title="#save (instance method)">#<strong>save</strong>  &#x21d2; MoxiWorksPlatform:BuyerTransaction </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Save an instance of MoxiWorksPlatform::BuyerTransaction to Moxi Works
+Platform.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Resource.html" title="MoxiworksPlatform::Resource (class)">Resource</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Resource.html#accept_header-class_method" title="MoxiworksPlatform::Resource.accept_header (method)">accept_header</a></span>, <span class='object_link'><a href="Resource.html#attr_accessor-class_method" title="MoxiworksPlatform::Resource.attr_accessor (method)">attr_accessor</a></span>, <span class='object_link'><a href="Resource.html#attributes-class_method" title="MoxiworksPlatform::Resource.attributes (method)">attributes</a></span>, <span class='object_link'><a href="Resource.html#attributes-instance_method" title="MoxiworksPlatform::Resource#attributes (method)">#attributes</a></span>, <span class='object_link'><a href="Resource.html#auth_header-class_method" title="MoxiworksPlatform::Resource.auth_header (method)">auth_header</a></span>, <span class='object_link'><a href="Resource.html#check_for_error_in_response-class_method" title="MoxiworksPlatform::Resource.check_for_error_in_response (method)">check_for_error_in_response</a></span>, <span class='object_link'><a href="Resource.html#content_type_header-class_method" title="MoxiworksPlatform::Resource.content_type_header (method)">content_type_header</a></span>, <span class='object_link'><a href="Resource.html#float_attrs-instance_method" title="MoxiworksPlatform::Resource#float_attrs (method)">#float_attrs</a></span>, <span class='object_link'><a href="Resource.html#headers-class_method" title="MoxiworksPlatform::Resource.headers (method)">headers</a></span>, <span class='object_link'><a href="Resource.html#init_attrs_from_hash-instance_method" title="MoxiworksPlatform::Resource#init_attrs_from_hash (method)">#init_attrs_from_hash</a></span>, <span class='object_link'><a href="Resource.html#initialize-instance_method" title="MoxiworksPlatform::Resource#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="Resource.html#int_attrs-instance_method" title="MoxiworksPlatform::Resource#int_attrs (method)">#int_attrs</a></span>, <span class='object_link'><a href="Resource.html#method_missing-instance_method" title="MoxiworksPlatform::Resource#method_missing (method)">#method_missing</a></span>, <span class='object_link'><a href="Resource.html#numeric_attrs-instance_method" title="MoxiworksPlatform::Resource#numeric_attrs (method)">#numeric_attrs</a></span>, <span class='object_link'><a href="Resource.html#numeric_value_for-instance_method" title="MoxiworksPlatform::Resource#numeric_value_for (method)">#numeric_value_for</a></span>, <span class='object_link'><a href="Resource.html#to_hash-instance_method" title="MoxiworksPlatform::Resource#to_hash (method)">#to_hash</a></span>, <span class='object_link'><a href="Resource.html#underscore-class_method" title="MoxiworksPlatform::Resource.underscore (method)">underscore</a></span>, <span class='object_link'><a href="Resource.html#underscore_array-class_method" title="MoxiworksPlatform::Resource.underscore_array (method)">underscore_array</a></span>, <span class='object_link'><a href="Resource.html#underscore_attribute_names-class_method" title="MoxiworksPlatform::Resource.underscore_attribute_names (method)">underscore_attribute_names</a></span>, <span class='object_link'><a href="Resource.html#underscore_hash-class_method" title="MoxiworksPlatform::Resource.underscore_hash (method)">underscore_hash</a></span>, <span class='object_link'><a href="Resource.html#user_agent_header-class_method" title="MoxiworksPlatform::Resource.user_agent_header (method)">user_agent_header</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="Resource.html#initialize-instance_method" title="MoxiworksPlatform::Resource#initialize (method)">MoxiworksPlatform::Resource</a></span></p>
+  
+</div>
+<div id="method_missing_details" class="method_details_list">
+  <h2>Dynamic Method Handling</h2>
+  <p class="notice super">
+    This class handles dynamic methods through the <tt>method_missing</tt> method
+    
+      in the class <span class='object_link'><a href="Resource.html#method_missing-instance_method" title="MoxiworksPlatform::Resource#method_missing (method)">MoxiworksPlatform::Resource</a></span>
+    
+  </p>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="address=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="address-instance_method">
+  
+    #<strong>address</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns street address of property being sold</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>street address of property being sold</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84
+85
+86</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 84</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_address'>address</span>
+  <span class='ivar'>@address</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="area_of_interest=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="area_of_interest-instance_method">
+  
+    #<strong>area_of_interest</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns string representing a locality that the client is interested in
+purchasing a property in</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>string representing a locality that the client is interested in purchasing
+a property in</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+149
+150
+151</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 149</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_area_of_interest'>area_of_interest</span>
+  <span class='ivar'>@area_of_interest</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="city=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="city-instance_method">
+  
+    #<strong>city</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns city or township of property being sold</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>city or township of property being sold</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91
+92</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 90</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_city'>city</span>
+  <span class='ivar'>@city</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="closing_price=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="closing_price-instance_method">
+  
+    #<strong>closing_price</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This is the closing price for the sale . This should be null if the
+BuyerTransaction is not yet in stage 5 (complete).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>closing price for this BuyerTransaction</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+243
+244
+245</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 243</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_closing_price'>closing_price</span>
+  <span class='ivar'>@closing_price</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="closing_timestamp=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="closing_timestamp-instance_method">
+  
+    #<strong>closing_timestamp</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A Unix timestamp representing the point in time when the transaction for
+this BuyerTransaction object was completed. This should be null if the
+BuyerTransaction is not yet in stage 5 (complete).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Unix timestamp representing the date the transaction closed</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+253
+254
+255</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 253</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_closing_timestamp'>closing_timestamp</span>
+  <span class='ivar'>@closing_timestamp</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="commission_flat_fee=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="commission_flat_fee-instance_method">
+  
+    #<strong>commission_flat_fee</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If the agent is to receive a flat-rate commission upon sale of the property
+associated with this BuyerTransaction, then this will represent the
+commission that the agent is to receive. This should be null if the
+BuyerTransaction uses commission_percentage.</p>
+
+<p>– both commission_flat_fee and commission_percentage cannot be set</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+201
+202
+203</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 201</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_commission_flat_fee'>commission_flat_fee</span>
+  <span class='ivar'>@commission_flat_fee</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="commission_percentage=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="commission_percentage-instance_method">
+  
+    #<strong>commission_percentage</strong>  &#x21d2; <tt>Float</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If the agent is to receive commission based on percentage of sale price for
+the property associated with this BuyerTransaction, then this will
+represent the commission that the agent is to receive.This should be null
+if the BuyerTransaction uses commission_flat_fee.</p>
+
+<p>– both commission_flat_fee and commission_percentage cannot be set</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+189
+190
+191</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 189</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_commission_percentage'>commission_percentage</span>
+  <span class='ivar'>@commission_percentage</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="is_mls_transaction=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="is_mls_transaction-instance_method">
+  
+    #<strong>is_mls_transaction</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns Whether the property is being listed on an MLS.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Whether the property is being listed on an MLS.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 156</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_is_mls_transaction'>is_mls_transaction</span>
+  <span class='ivar'>@is_mls_transaction</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="max_baths=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="max_baths-instance_method">
+  
+    #<strong>max_baths</strong>  &#x21d2; <tt>Float</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns maximum desired bathrooms in potential properties</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>maximum desired bathrooms in potential properties</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+142
+143
+144</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 142</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_max_baths'>max_baths</span>
+  <span class='ivar'>@max_baths</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="max_beds=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="max_beds-instance_method">
+  
+    #<strong>max_beds</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns maximum desired bedrooms in potential properties</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>maximum desired bedrooms in potential properties</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+128
+129
+130</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 128</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_max_beds'>max_beds</span>
+  <span class='ivar'>@max_beds</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="max_price=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="max_price-instance_method">
+  
+    #<strong>max_price</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The maximum desired price range for potential properties if using a price
+range rather than target price.</p>
+
+<p>– both target_price and max_price cannot be set</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+234
+235
+236</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 234</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_max_price'>max_price</span>
+  <span class='ivar'>@max_price</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="max_sqft=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="max_sqft-instance_method">
+  
+    #<strong>max_sqft</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns maximum desired living area of potential properties</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>maximum desired living area of potential properties</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+114
+115
+116</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 114</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_max_sqft'>max_sqft</span>
+  <span class='ivar'>@max_sqft</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="min_baths=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="min_baths-instance_method">
+  
+    #<strong>min_baths</strong>  &#x21d2; <tt>Float</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns minimum desired bathrooms in potential properties</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>minimum desired bathrooms in potential properties</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+135
+136
+137</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 135</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_min_baths'>min_baths</span>
+  <span class='ivar'>@min_baths</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="min_beds=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="min_beds-instance_method">
+  
+    #<strong>min_beds</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns minimum desired bedrooms in potential properties</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>minimum desired bedrooms in potential properties</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+121
+122
+123</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 121</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_min_beds'>min_beds</span>
+  <span class='ivar'>@min_beds</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="min_price=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="min_price-instance_method">
+  
+    #<strong>min_price</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The minimum desired price range for potential properties if using a price
+range rather than target price.</p>
+
+<p>– both target_price and min_price cannot be set</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+224
+225
+226</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 224</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_min_price'>min_price</span>
+  <span class='ivar'>@min_price</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="min_sqft=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="min_sqft-instance_method">
+  
+    #<strong>min_sqft</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns minimum desired living area of potential properties</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>minimum desired living area of potential properties</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 108</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_min_sqft'>min_sqft</span>
+  <span class='ivar'>@min_sqft</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="mls_number=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="mls_number-instance_method">
+  
+    #<strong>mls_number</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>**MLS TRANSACTIONS ONLY** mls number for the listing associated with this
+BuyerTransaction</p>
+
+<p>– mls_number should be populated only if is_mls_transaction is true.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+166
+167
+168</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 166</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_mls_number'>mls_number</span>
+  <span class='ivar'>@mls_number</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="moxi_works_agent_id=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="moxi_works_agent_id-instance_method">
+  
+    #<strong>moxi_works_agent_id</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>moxi_works_agent_id is the Moxi Works Platform ID of the agent which a
+BuyerTransaction is or is to be associated with.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the Moxi Works Platform ID of the agent</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_moxi_works_agent_id'>moxi_works_agent_id</span>
+  <span class='ivar'>@moxi_works_agent_id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="moxi_works_contact_id=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="moxi_works_contact_id-instance_method">
+  
+    #<strong>moxi_works_contact_id</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The Moxi Works Platform unique identifier for the Contact</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_moxi_works_contact_id'>moxi_works_contact_id</span>
+  <span class='ivar'>@moxi_works_contact_id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="moxi_works_transaction_id=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="moxi_works_transaction_id-instance_method">
+  
+    #<strong>moxi_works_transaction_id</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns The Moxi Works Platform unique identifier for the BuyerTransaction</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The Moxi Works Platform unique identifier for the BuyerTransaction</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_moxi_works_transaction_id'>moxi_works_transaction_id</span>
+  <span class='ivar'>@moxi_works_transaction_id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="notes=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="notes-instance_method">
+  
+    #<strong>notes</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Brief, human readable content that is shown to the agent as notes about the
+BuyerTransaction. Use this attribute to store and display data to the agent
+that is not otherwise explicitly available via attributes for the entity.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>human readable notes about this BuyerTransaction</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_notes'>notes</span>
+  <span class='ivar'>@notes</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="partner_contact_id=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="partner_contact_id-instance_method">
+  
+    #<strong>partner_contact_id</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>*your system&#39;s* unique ID for the Contact</p>
+
+<p>this or moxi_works_contact_id can be used in operations that require a
+Contact ID</p>
+
+<p>this will only be populated for Contact objects that your system has
+created on the Moxi Works Platform</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>your system&#39;s unique ID for the contact</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_partner_contact_id'>partner_contact_id</span>
+  <span class='ivar'>@partner_contact_id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="promote_transaction=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="promote_transaction-instance_method">
+  
+    #<strong>promote_transaction</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>In order to promote a BuyerTransaction to the next stage, set  the
+promote_transaction attribute to true. For more information about
+BuyerTransaction stages, see
+<a href="https://moxiworks-platform.github.io/#promoting-buyertransaction-stage" target="_parent" title="The Moxi Works Platform Documentation">The Moxi Works Platform Documentation</a>. promote_transaction is only available
+for BuyerTransaction updates. Newly created BuyerTransaction objects will
+automatically be created in stage 3 (active)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+263
+264
+265</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 263</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_promote_transaction'>promote_transaction</span>
+  <span class='ivar'>@promote_transaction</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="stage=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="stage-instance_method">
+  
+    #<strong>stage</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Each BuyerTransaction has five stages (1-5). stage displays the</p>
+
+<pre class="code ruby"><code class="ruby">stage number that the BuyerTransaction is currently in.</code></pre>
+
+<p>This will be a single digit integer that can be [1,2,3,4,5].</p>
+
+<pre class="code ruby"><code class="ruby">For more information on BuyerTransaction stages see
+  {https://moxiworks-platform.github.io/#buyertransaction-stages The Moxi Works Platform Documentation}</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 62</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_stage'>stage</span>
+  <span class='ivar'>@stage</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="stage_name=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="stage_name-instance_method">
+  
+    #<strong>stage_name</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This attribute displays a human readable stage name that is associated with
+the current stage attribute. When created through the Moxi Works Platform
+BuyerTransaction objects will automatically be configured as
+&#39;active&#39; transactions.</p>
+
+<p>This will be an enumerated string that can be can be &#39;initialized&#39;,
+&#39;configured&#39; , &#39;active&#39; , &#39;pending&#39;  or
+&#39;complete&#39; For more information on BuyerTransaction stages see</p>
+
+<pre class="code ruby"><code class="ruby">{https://moxiworks-platform.github.io/#buyertransaction-stages The Moxi Works Platform Documentation}</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_stage_name'>stage_name</span>
+  <span class='ivar'>@stage_name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="start_timestamp=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="start_timestamp-instance_method">
+  
+    #<strong>start_timestamp</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>this is the Unix timestamp</p>
+
+<pre class="code ruby"><code class="ruby">representing the date the agent initiated transaction discussions
+with the client.</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+176
+177
+178</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 176</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start_timestamp'>start_timestamp</span>
+  <span class='ivar'>@start_timestamp</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="state=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="state-instance_method">
+  
+    #<strong>state</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns state or province of property being sold</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>state or province of property being sold</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97
+98</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 96</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_state'>state</span>
+  <span class='ivar'>@state</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="target_price=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="target_price-instance_method">
+  
+    #<strong>target_price</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The desired selling price for the property if using target rather than
+range.</p>
+
+<p>– both target_price and min_price cannot be set – both target_price and
+max_price cannot be set</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+213
+214
+215</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 213</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_target_price'>target_price</span>
+  <span class='ivar'>@target_price</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="transaction_name=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="transaction_name-instance_method">
+  
+    #<strong>transaction_name</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A brief, human readable title that is shown to the agent as the subject of
+the BuyerTransaction.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>name of transaction</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_transaction_name'>transaction_name</span>
+  <span class='ivar'>@transaction_name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="zip_code=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="zip_code-instance_method">
+  
+    #<strong>zip_code</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns postal code of property being sold</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>postal code of property being sold</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+102
+103
+104</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 102</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_zip_code'>zip_code</span>
+  <span class='ivar'>@zip_code</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create-class_method">
+  
+    .<strong>create</strong>(opts = {})  &#x21d2; <tt><span class='object_link'><a href="" title="MoxiworksPlatform::BuyerTransaction (class)">MoxiworksPlatform::BuyerTransaction</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a new BuyerTransaction in Moxi Works Platform</p>
+
+<p>– Either moxi_works_contact_id or partner_contact_id must be</p>
+
+<pre class="code ruby"><code class="ruby"> populated; however, you should only populate one of these attributes.
+
+optional BuyerTransaction parameters</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code>Resource::TechConnectGateway::BuyerTransaction.create(
+     agent_identifier:&#39;testis@testomatical.com&#39;,
+     moxi_works_contact_id:&#39;deadbeef-dead-beef-bad4-feedfacebad&#39;,
+     notes: &#39;foo deeaz&#39;,
+     transaction_name: &#39;whateverz&#39;
+     address: &#39;1234 there ave&#39;,
+     city: &#39;cityville&#39;
+     state:  &#39;provinceland&#39;,
+     zip_code: &#39;12323&#39;,
+     min_beds: 12,
+     max_beds: 34,
+     min_baths: 1.25,
+     max_baths: 3.75,
+     min_sqft: 12345,
+     max_sqft: 34567,
+     area_of_interest: &#39;Lake Interesting&#39;
+     is_mls_transaction: true,
+     commission_flat_fee: nil,
+     commission_percentage: 12.34,
+     target_price: 12345,
+     min_price: nil,
+     max_price: nil,
+     mls_number: &#39;abc1234&#39;
+)</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>named parameter Hash</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>opts</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:moxi_works_agent_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p><strong>REQUIRED</strong> The Moxi Works Agent ID for the agent to which
+this transaction is to be associated</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:moxi_works_contact_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p><strong>REQUIRED</strong> The unique identifier for the Contact on the Moxi
+Works Platform. Either moxi_works_contact_id or partner_contact_id is
+required when creating BuyerTransaction objects</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:partner_contact_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p><strong>REQUIRED</strong> Your system&#39;s unique id for associated
+contact. should already have been created in Moxi Works Platform. If the
+Contact was not created by your system, use the moxi_works_contact_id
+attribute. Either moxi_works_contact_id or partner_contact_id is required
+when creating BuyerTransaction objects</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:transaction_name</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p><strong>REQUIRED</strong> short description of the transaction meaningful
+to the agent</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:notes</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>human readable notes associated with the transaction meaningful to the
+agent</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:address</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>street address of the property associated with the transaction</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:city</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>city of the property associated with the transaction</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:state</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>state or province of the property associated with the transaction</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:zip_code</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>postal code of the property associated with the transaction</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:min_sqft</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>minimum desired square feet of living area in potential properties</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:max_sqft</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>maximum desired square feet of living area in potential properties</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:min_beds</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>minimum desired number of bedrooms in potential properties</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:max_beds</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>maximum desired number of bedrooms in potential properties</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:area_of_interest</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>string representing a locality that the client has expressed interest in
+purchasing a property within</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:min_baths</span>
+          <span class="type">(<tt>Integer or Float</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>minimum desired number of bathrooms in potential properties</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:max_baths</span>
+          <span class="type">(<tt>Integer or Float</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>maximum desired number of bathrooms in potential properties</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:is_mls_transaction</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Whether the property being purchased is being listed on an MLS. This should
+be false for paperwork-only, for sale by owner, off-market, or pocket
+listing type transactions or any transactions that will not be tracked
+through an MLS.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:mls_number</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>mls number associated with the transaction – mls_number should be populated
+only if is_mls_transaction is true.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:start_timestamp</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Unix timestamp representing the date the agent initiated transaction
+discussions with the client.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:commission_percentage</span>
+          <span class="type">(<tt>Float</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>what percentage the commission is if percentage based – A BuyerTransaction
+can only have either commission_percentage or commission_flat_fee
+populated. Both can not be populated.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:commission_flat_fee</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>how much the commission is if flat fee – A BuyerTransaction can only have
+either commission_percentage or commission_flat_fee populated. Both can not
+be populated.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:target_price</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>target price associated with the transaction if using a target price rather
+than price range</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:min_price</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>minimum acceptable price associated with the transaction if using a price
+range rather than target price</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:max_price</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>maximum price associated with the transaction if using a price range rather
+than target price</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="MoxiworksPlatform::BuyerTransaction (class)">MoxiworksPlatform::BuyerTransaction</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>::MoxiworksPlatform::Exception::ArgumentError if required named parameters
+aren&#39;t included</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 334</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+ <span class='id identifier rubyid_required_opts'>required_opts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:moxi_works_agent_id</span><span class='rbracket'>]</span>
+ <span class='id identifier rubyid_required_opts'>required_opts</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_opt'>opt</span><span class='op'>|</span>
+   <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception.html" title="MoxiworksPlatform::Exception (module)">Exception</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception/ArgumentError.html" title="MoxiworksPlatform::Exception::ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opt'>opt</span><span class='embexpr_end'>}</span><span class='tstring_content'> required</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span>
+       <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='id identifier rubyid_opt'>opt</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='id identifier rubyid_opt'>opt</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+ <span class='kw'>end</span>
+ <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception.html" title="MoxiworksPlatform::Exception (module)">Exception</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception/ArgumentError.html" title="MoxiworksPlatform::Exception::ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span>
+       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>moxi_works_contact_id or partner_contact_id required</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span>
+     <span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='symbol'>:moxi_works_contact_id</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='symbol'>:partner_contact_id</span><span class='rparen'>)</span><span class='rparen'>)</span>
+ <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='symbol'>:post</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find-class_method">
+  
+    .<strong>find</strong>(opts = {})  &#x21d2; <tt><span class='object_link'><a href="" title="MoxiworksPlatform::BuyerTransaction (class)">MoxiworksPlatform::BuyerTransaction</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Find a BuyerTransaction using The Moxi Works Platform</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>named parameter Hash</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>opts</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:moxi_works_agent_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p><strong>REQUIRED</strong> The Moxi Works Agent ID for the agent to which
+this transaction is associated</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:moxi_works_transaction_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p><strong>REQUIRED</strong> The Moxi Works Platform ID for this transaction.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="MoxiworksPlatform::BuyerTransaction (class)">MoxiworksPlatform::BuyerTransaction</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>::MoxiworksPlatform::Exception::ArgumentError if required named parameters
+aren&#39;t included</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+356
+357
+358
+359
+360
+361
+362
+363
+364</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 356</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_required_opts'>required_opts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:moxi_works_agent_id</span><span class='comma'>,</span> <span class='symbol'>:moxi_works_transaction_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_required_opts'>required_opts</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_opt'>opt</span><span class='op'>|</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception.html" title="MoxiworksPlatform::Exception (module)">Exception</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception/ArgumentError.html" title="MoxiworksPlatform::Exception::ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opt'>opt</span><span class='embexpr_end'>}</span><span class='tstring_content'> required</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span>
+        <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='id identifier rubyid_opt'>opt</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='id identifier rubyid_opt'>opt</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Config.html" title="MoxiworksPlatform::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_url'><span class='object_link'><a href="Config.html#url-class_method" title="MoxiworksPlatform::Config.url (method)">url</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/buyer_transactions/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:moxi_works_transaction_id</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='symbol'>:get</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="search-class_method">
+  
+    .<strong>search</strong>(opts = {})  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Search Agent&#39;s BuyerTransactions in Moxi Works Platform</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_results'>results</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="MoxiworksPlatform::BuyerTransaction (class)">BuyerTransaction</a></span></span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span>
+<span class='label'>moxi_works_agent_id:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>123abc</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+<span class='label'>page_number:</span> <span class='int'>2</span>
+<span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>named parameter Hash</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>opts</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:moxi_works_agent_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p><strong>REQUIRED</strong> The Moxi Works Agent ID for the agent to which
+this contact is associated</p>
+
+<p>optional Search parameters</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:moxi_works_contact_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The Moxi Works Contact ID for the contact whose BuyerTransactions you are
+searching for</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:partner_contact_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>The partner&#39;s ID for the contact whose BuyerTransactions they are
+looking for</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:page_number</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>the page of results to return</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:include_unconfigured</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>whether to include stage 1 transactions in response</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>with the format: 
+<pre class="code ruby"><code class="ruby">page_number: [Integer],
+total_pages: [Integer],
+transactions:  [Array] containing MoxiworkPlatform::BuyerTransaction objects</code></pre>
+
+<p></p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>::MoxiworksPlatform::Exception::ArgumentError if required named parameters
+aren&#39;t included</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 397</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception.html" title="MoxiworksPlatform::Exception (module)">Exception</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception/ArgumentError.html" title="MoxiworksPlatform::Exception::ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>arguments must be passed as named parameters</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Hash</span>
+  <span class='id identifier rubyid_url'>url</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Config.html" title="MoxiworksPlatform::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_url'><span class='object_link'><a href="Config.html#url-class_method" title="MoxiworksPlatform::Config.url (method)">url</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/buyer_transactions</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_required_opts'>required_opts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:moxi_works_agent_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_required_opts'>required_opts</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_opt'>opt</span><span class='op'>|</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception.html" title="MoxiworksPlatform::Exception (module)">Exception</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception/ArgumentError.html" title="MoxiworksPlatform::Exception::ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opt'>opt</span><span class='embexpr_end'>}</span><span class='tstring_content'> required</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span>
+        <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='id identifier rubyid_opt'>opt</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='id identifier rubyid_opt'>opt</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_results'>results</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../MoxiResponseArray.html" title="MoxiResponseArray (class)">MoxiResponseArray</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>page_number</span><span class='label_end'>&#39;:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>total_pages</span><span class='label_end'>&#39;:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>transactions</span><span class='label_end'>&#39;:</span><span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbrace'>}</span>
+  <span class='const'>RestClient</span><span class='op'>::</span><span class='const'>Request</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='label'>method:</span> <span class='symbol'>:get</span><span class='comma'>,</span>
+                              <span class='label'>url:</span> <span class='id identifier rubyid_url'>url</span><span class='comma'>,</span>
+                              <span class='label'>payload:</span> <span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='label'>headers:</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_headers'>headers</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_response'>response</span><span class='op'>|</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_response'>response</span> <span class='kw'>if</span> <span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Config.html" title="MoxiworksPlatform::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'><span class='object_link'><a href="Config.html#debug-class_method" title="MoxiworksPlatform::Config.debug (method)">debug</a></span></span>
+    <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_headers'>headers</span> <span class='op'>=</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_headers'>headers</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_check_for_error_in_response'>check_for_error_in_response</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_json'>json</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_page_number'>page_number</span> <span class='op'>=</span> <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>page_number</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_json'>json</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>page_number</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_total_pages'>total_pages</span> <span class='op'>=</span> <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>total_pages</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_json'>json</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>total_pages</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>transactions</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
+      <span class='id identifier rubyid_results'>results</span> <span class='op'>&lt;&lt;</span> <span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="MoxiworksPlatform::BuyerTransaction (class)">BuyerTransaction</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Resource.html#initialize-instance_method" title="MoxiworksPlatform::Resource#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_r'>r</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_json'>json</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>transactions</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_results'>results</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_json'>json</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send_request-class_method">
+  
+    .<strong>send_request</strong>(method, opts = {}, url = nil)  &#x21d2; <tt><span class='object_link'><a href="" title="MoxiworksPlatform::BuyerTransaction (class)">MoxiworksPlatform::BuyerTransaction</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Send our remote request to the Moxi Works Platform</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>named parameter Hash</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>opts</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:moxi_works_agent_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p><strong>REQUIRED</strong> The Moxi Works Agent ID for the agent to which
+this transaction is to be associated</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:moxi_works_transaction_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p><strong>REQUIRED</strong> The Moxi Works Platform unique ID for this
+transaction.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:partner_contact_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p><strong>REQUIRED</strong> Your system&#39;s unique ID for the Contact for
+whom this BuyerTransaction is to be associated.</p>
+
+<p>optional BuyerTransaction parameters</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:transaction_name</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>short description of the transaction</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:description</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>longer description of the transaction</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:due_at</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Unix timestamp representing the due date</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:duration</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Length of time in minutes that the transaction should take</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:completed_at</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Unix timestamp representing the date the transaction was completed</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:status</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>enumerated string representing transaction status</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+    
+    
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="MoxiworksPlatform::BuyerTransaction (class)">MoxiworksPlatform::BuyerTransaction</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>::MoxiworksPlatform::Exception::ArgumentError if required named parameters
+aren&#39;t included</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 527</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_url'>url</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception.html" title="MoxiworksPlatform::Exception (module)">Exception</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception/ArgumentError.html" title="MoxiworksPlatform::Exception::ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span>
+        <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>arguments must be passed as named parameters</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_opts'>opts</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>Hash</span>
+  <span class='id identifier rubyid_url'>url</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Config.html" title="MoxiworksPlatform::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_url'><span class='object_link'><a href="Config.html#url-class_method" title="MoxiworksPlatform::Config.url (method)">url</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/buyer_transactions</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_required_opts'>required_opts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:moxi_works_agent_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_required_opts'>required_opts</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_opt'>opt</span><span class='op'>|</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception.html" title="MoxiworksPlatform::Exception (module)">Exception</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception/ArgumentError.html" title="MoxiworksPlatform::Exception::ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opt'>opt</span><span class='embexpr_end'>}</span><span class='tstring_content'> required</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span>
+        <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='id identifier rubyid_opt'>opt</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='id identifier rubyid_opt'>opt</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+  <span class='kw'>end</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update-class_method">
+  
+    .<strong>update</strong>(opts = {})  &#x21d2; <tt><span class='object_link'><a href="" title="MoxiworksPlatform::BuyerTransaction (class)">MoxiworksPlatform::BuyerTransaction</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Updates an existing BuyerTransaction in Leads Gateway</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code>Resource::TechConnectGateway::BuyerTransaction.update(
+     agent_identifier:&#39;testis@testomatical.com&#39;,
+     moxi_works_transaction_id:&#39;deadbeef-dead-beef-bad4-feedfacebad&#39;,
+     notes: &#39;foo deeaz&#39;,
+     transaction_name: &#39;whateverz&#39;
+     address: &#39;1234 there ave&#39;,
+     city: &#39;cityville&#39;
+     state:  &#39;provinceland&#39;,
+     zip_code: &#39;12323&#39;,
+     min_beds: 12,
+     max_beds: 34,
+     min_baths: 1.25,
+     max_baths: 3.75,
+     min_sqft: 12345,
+     max_sqft: 34567,
+     area_of_interest: &#39;Lake Interesting&#39;
+     is_mls_transaction: true,
+     commission_flat_fee: nil,
+     commission_percentage: 12.34,
+     target_price: 12345,
+     min_price: nil,
+     max_price: nil,
+     mls_number: &#39;abc1234&#39;
+     closing_price: 123456,
+     closing_timestamp: Time.now.to_i,
+     promote_transaction: true
+)</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>opts</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>named parameter Hash</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>opts</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:moxi_works_agent_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p><strong>REQUIRED</strong> The Moxi Works Agent ID for the agent to which
+this transaction is associated</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:moxi_works_transaction_id</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p><strong>REQUIRED</strong> partner system&#39;s unique ID for this
+transaction.</p>
+
+<p>optional BuyerTransaction parameters</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:transaction_name</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>short description of the transaction meaningful to the agent</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:notes</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>human readable notes associated with the transaction meaningful to the
+agent</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:address</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>street address of the property associated with the transaction</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:city</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>city of the property associated with the transaction</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:state</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>state or province of the property associated with the transaction</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:zip_code</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>postal code of the property associated with the transaction</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:min_sqft</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>minimum desired square feet of living area in potential properties</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:max_sqft</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>maximum desired square feet of living area in potential properties</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:min_beds</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>minimum desired number of bedrooms in potential properties</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:max_beds</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>maximum desired number of bedrooms in potential properties</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:area_of_interest</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>string representing a locality that the client has expressed interest in
+purchasing a property within</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:min_baths</span>
+          <span class="type">(<tt>Integer or Float</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>minimum desired number of bathrooms in potential properties</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:max_baths</span>
+          <span class="type">(<tt>Integer or Float</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>maximum desired number of bathrooms in potential properties</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:is_mls_transaction</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Whether the property being purchased is being listed on an MLS. This should
+be false for paperwork-only, for sale by owner, off-market, or pocket
+listing type transactions or any transactions that will not be tracked
+through an MLS.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:mls_number</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>mls number associated with the transaction – mls_number should be populated
+only if is_mls_transaction is true.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:start_timestamp</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Unix timestamp representing the date the agent initiated transaction
+discussions with the client.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:commission_percentage</span>
+          <span class="type">(<tt>Float</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>what percentage the commission is if percentage based – A BuyerTransaction
+can only have either commission_percentage or commission_flat_fee
+populated. Both can not be populated.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:commission_flat_fee</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>how much the commission is if flat fee – A BuyerTransaction can only have
+either commission_percentage or commission_flat_fee populated. Both can not
+be populated.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:target_price</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>target price associated with the transaction if using a target price rather
+than price range</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:min_price</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>minimum acceptable price associated with the transaction if using a price
+range rather than target price</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:max_price</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>maximum price associated with the transaction if using a price range rather
+than target price</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:closing_timestamp</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Unix timestamp representing the date the sale of the property closed –
+closing_timestamp should only be used when the SellerTransaction state = 5
+(complete)</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:closing_price</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>selling price of the property – closing_price should only be used when the
+SellerTransaction state = 5 (complete)</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:promote_transaction</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>If this is set to true then The Moxi Works Platform will promote this
+transaction to the next stage</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="MoxiworksPlatform::BuyerTransaction (class)">MoxiworksPlatform::BuyerTransaction</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>::MoxiworksPlatform::Exception::ArgumentError if required named parameters
+aren&#39;t included</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+495
+496
+497
+498
+499
+500
+501
+502
+503</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 495</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_required_opts'>required_opts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:moxi_works_agent_id</span><span class='comma'>,</span> <span class='symbol'>:moxi_works_transaction_id</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_required_opts'>required_opts</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_opt'>opt</span><span class='op'>|</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception.html" title="MoxiworksPlatform::Exception (module)">Exception</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Exception/ArgumentError.html" title="MoxiworksPlatform::Exception::ArgumentError (class)">ArgumentError</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opt'>opt</span><span class='embexpr_end'>}</span><span class='tstring_content'> required</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span>
+        <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='id identifier rubyid_opt'>opt</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='id identifier rubyid_opt'>opt</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Config.html" title="MoxiworksPlatform::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_url'><span class='object_link'><a href="Config.html#url-class_method" title="MoxiworksPlatform::Config.url (method)">url</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/buyer_transactions/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:moxi_works_transaction_id</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+   <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='symbol'>:put</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='comma'>,</span> <span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="promote-instance_method">
+  
+    #<strong>promote</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+559
+560
+561
+562</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 559</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_promote'>promote</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_promote_transaction'>promote_transaction</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="save-instance_method">
+  
+    #<strong>save</strong>  &#x21d2; <tt>MoxiWorksPlatform:BuyerTransaction</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Save an instance of MoxiWorksPlatform::BuyerTransaction to Moxi Works
+Platform</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_transaction'>transaction</span> <span class='op'>=</span> <span class='const'>MoxiWorksPlatform</span><span class='op'>::</span><span class='const'>BuyerTransaction</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_moxi_works_agent_id'>moxi_works_agent_id</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>1234abc</span><span class='tstring_end'>&#39;</span></span>
+<span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_moxi_works_transaction_id'>moxi_works_transaction_id</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>burbywurb</span><span class='tstring_end'>&#39;</span></span>
+<span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_promote_transaction'>promote_transaction</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_closing_timestamp'>closing_timestamp</span> <span class='op'>=</span>  <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+<span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_closing_price'>closing_price</span> <span class='op'>=</span> <span class='int'>1234567</span>
+<span class='id identifier rubyid_transaction'>transaction</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>MoxiWorksPlatform:BuyerTransaction</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+551
+552
+553
+554
+555
+556
+557</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/buyer_transaction.rb', line 551</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_save'>save</span>
+  <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="MoxiworksPlatform::BuyerTransaction (class)">BuyerTransaction</a></span></span><span class='period'>.</span><span class='id identifier rubyid_update'><span class='object_link'><a href="#update-class_method" title="MoxiworksPlatform::BuyerTransaction.update (method)">update</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_moxi_works_transaction_id'>moxi_works_transaction_id</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_moxi_works_transaction_id'>moxi_works_transaction_id</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+  <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_r'>r</span><span class='embexpr_end'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_r'>r</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rbrace'>}</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_promote_transaction'>promote_transaction</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='kw'>self</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Dec 21 12:25:40 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.16 (ruby-2.2.4).
+</div>
+
+    </div>
+  </body>
+</html>
