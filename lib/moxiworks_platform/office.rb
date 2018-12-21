@@ -19,8 +19,7 @@ module MoxiworksPlatform
 
     # @!attribute common_name
     #
-    # @return [String] the commonly known name of the office
-
+    # @return [String] the commonly used name of the office
     attr_accessor :common_name
 
     # @!attribute address
