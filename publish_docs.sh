@@ -2,7 +2,15 @@
 
 mv doc /tmp/doc/
 
+git fetch upstream
+
 git checkout master
+
+git stash
+
+git merge upstream/master
+
+git stash pop
 
 git commit -a -m "Documentation Update"
 
@@ -23,8 +31,8 @@ git add MoxiworksPlatform
 
 git commit -a -m "Documentation Update"
 
-git push origin gh-pages
-git push upstream gh-pages
+git push origin gh-pages --force
+git push upstream gh-pages --force
 
 git checkout master
 
