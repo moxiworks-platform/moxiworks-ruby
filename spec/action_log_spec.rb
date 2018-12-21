@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'vcr'
 
 describe MoxiworksPlatform::ActionLog do
-  accessors = [:moxi_works_agent_id, :partner_contact_id, :title, :body]
+  accessors = [:moxi_works_agent_id, :agent_uuid, :moxi_works_contact_id, :partner_contact_id, :title, :body, :actions]
   describe :attr_accessors do
     before :each do
       @al = MoxiworksPlatform::ActionLog.new

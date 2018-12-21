@@ -20,9 +20,6 @@ module MoxiworksPlatform
     #   @return [Array] the partner data associated with this company
     attr_accessor :partners
 
-
-
-
     # Find a Company by ID in Moxi Works Platform
     # @param [Hash] opts named parameter Hash
     # @option opts [String]  :moxi_works_company_id *REQUIRED* The Moxi Works Company ID
