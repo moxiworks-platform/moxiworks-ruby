@@ -41,6 +41,9 @@
           <entry key="PLAIN_TEXT" value="4" />
 =======
           <entry key="PLAIN_TEXT" value="3" />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
           <entry key="Ruby" value="33" />
           <entry key="YAML" value="2" />
@@ -64,8 +67,11 @@
   </component>
   <component name="FileEditorManager">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <leaf />
 =======
+=======
+>>>>>>> Stashed changes
     <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/moxiworks_platform/version.rb">
@@ -78,6 +84,9 @@
         </entry>
       </file>
     </leaf>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   </component>
   <component name="FindInProjectRecents">
@@ -248,10 +257,18 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="27660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="-634" width="1080" height="1897" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="27289000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1680" y="-634" width="1080" height="1897" extended-state="6" />
+    <editor active="true" />
+>>>>>>> Stashed changes
 =======
     <option name="totallyTimeSpent" value="27289000" />
   </component>
@@ -379,12 +396,17 @@
       </provider>
     </entry>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/lib/moxiworks_platform/office.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
         </state>
       </provider>
+=======
+    <entry file="file://$PROJECT_DIR$/lib/moxiworks_platform/version.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> Stashed changes
 =======
     <entry file="file://$PROJECT_DIR$/lib/moxiworks_platform/version.rb">
       <provider selected="true" editor-type-id="text-editor" />
@@ -401,6 +423,7 @@
       </provider>
     </entry>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/publish_docs.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -416,6 +439,12 @@
       </provider>
 =======
     <entry file="file://$PROJECT_DIR$/publish_package.sh">
+=======
+    <entry file="file://$PROJECT_DIR$/publish_package.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/publish_docs.sh">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/publish_docs.sh">
