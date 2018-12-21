@@ -24,6 +24,7 @@ done
 
 cd -
 git add MoxiworksPlatform
+git add *.html
 
 git commit -a -m "Documentation Update"
 
