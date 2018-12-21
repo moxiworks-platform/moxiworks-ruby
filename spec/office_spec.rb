@@ -3,7 +3,7 @@ require 'vcr'
 
 describe MoxiworksPlatform::Office do
   office_accesors = [:moxi_works_office_id, :image_url,
-                    :name, :address, :address2, :city,
+                    :name, :common_name, :address, :address2, :city,
                     :county, :state, :zip_code,
                     :alt_phone, :email,
                     :facebook, :google_plus, :phone,

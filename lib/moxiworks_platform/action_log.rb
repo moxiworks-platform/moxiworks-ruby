@@ -1,18 +1,36 @@
 module  MoxiworksPlatform
   class ActionLog < MoxiworksPlatform::Resource
+    # @!attribute agent_uuid
+    #   agent_uuid is the Moxi Works Platform ID of the agent which an ActionLog entry is
+    #   or is to be associated with. This will be an RFC 4122 compliant UUID.
+    #
+    #   this or moxi_works_agent_id must be set for any Moxi Works Platform transaction
+    #
+    #   @return [String] the Moxi Works Platform ID of the agent
+    attr_accessor :agent_uuid
+
     # @!attribute moxi_works_agent_id
     #   moxi_works_agent_id is the Moxi Works Platform ID of the agent which an ActionLog entry is
     #   or is to be associated with.
     #
-    #   this must be set for any Moxi Works Platform transaction
+    #   this or agent_uuid must be set for any Moxi Works Platform transaction
     #
     #   @return [String] the Moxi Works Platform ID of the agent
     attr_accessor :moxi_works_agent_id
 
+    # @!attribute moxi_works_contact_id
+    #   This is the Moxi Works Platform ID of this Contact that this ActionLog entry is about.
+    #   This will be an RFC 4122 compliant UUID
+    #
+    #   this or partner_contact_id must be set for any Moxi Works Platform transaction
+    #
+    #   @return [String] your system's unique ID for the contact
+    attr_accessor :moxi_works_contact_id
+
     # @!attribute partner_contact_id
     #   *your system's* unique ID for the Contact
     #
-    #   this must be set for any Moxi Works Platform transaction
+    #   this or moxi_works_contact_id must be set for any Moxi Works Platform transaction
     #
     #   @return [String] your system's unique ID for the contact
     attr_accessor :partner_contact_id
@@ -28,6 +46,17 @@ module  MoxiworksPlatform
     #
     #   @return [String]
     attr_accessor :body
+
+    # @!attribute actions
+    #
+    # @return [Array] array containing any ActionLog entries found by search request
+    #  {
+    #     moxi_works_action_log_id: [String] unique identifier for the Moxi Works Platform ActionLog entry,
+    #     type: [String] the type of ActionLog entry this is. The string should be formatted in lowercase with an underscore between each word,
+    #     timestamp: [Integer] Unix timestamp for the creation time of the ActionLog entry,
+    #     log_data: [Dictionary] the payload data of the ActionLog entry. The structure returned is dependent on the kind of ActionLog entry this is
+    #  }
+    attr_accessor :actions
 
     # Creates a new ActionLog entry in Moxi Works Platform
     # @param [Hash] opts named parameter Hash
