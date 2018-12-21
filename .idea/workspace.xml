@@ -26,6 +26,10 @@
         <counts>
           <entry key="Gemfile" value="3" />
           <entry key="gemspec" value="2" />
+<<<<<<< Updated upstream
+=======
+          <entry key="gitignore" value="1" />
+>>>>>>> Stashed changes
           <entry key="html" value="1" />
           <entry key="rb" value="28" />
           <entry key="sh" value="6" />
@@ -36,7 +40,11 @@
         <counts>
           <entry key="Bash" value="3" />
           <entry key="HTML" value="1" />
+<<<<<<< Updated upstream
           <entry key="PLAIN_TEXT" value="3" />
+=======
+          <entry key="PLAIN_TEXT" value="4" />
+>>>>>>> Stashed changes
           <entry key="Ruby" value="33" />
           <entry key="YAML" value="2" />
         </counts>
@@ -58,6 +66,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
+<<<<<<< Updated upstream
     <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/moxiworks_platform/version.rb">
@@ -70,6 +79,9 @@
         </entry>
       </file>
     </leaf>
+=======
+    <leaf />
+>>>>>>> Stashed changes
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -238,11 +250,18 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="27289000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="-634" width="1080" height="1897" extended-state="6" />
     <editor active="true" />
+=======
+    <option name="totallyTimeSpent" value="27660000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1680" y="-634" width="1080" height="1897" extended-state="6" />
+>>>>>>> Stashed changes
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33429673" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -362,9 +381,12 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/lib/moxiworks_platform/version.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+=======
+>>>>>>> Stashed changes
     <entry file="file://$PROJECT_DIR$/lib/moxiworks_platform/office.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -375,8 +397,31 @@
     <entry file="file://$PROJECT_DIR$/publish_package.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/publish_docs.sh">
       <provider selected="true" editor-type-id="text-editor" />
+=======
+    <entry file="file://$PROJECT_DIR$/lib/moxiworks_platform/version.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/publish_docs.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+>>>>>>> Stashed changes
     </entry>
   </component>
 </project>
