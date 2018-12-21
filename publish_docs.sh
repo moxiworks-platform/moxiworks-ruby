@@ -6,11 +6,7 @@ git fetch upstream
 
 git checkout master
 
-git stash
-
 git merge upstream/master
-
-git stash pop
 
 git commit -a -m "Documentation Update"
 
