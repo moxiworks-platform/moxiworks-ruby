@@ -540,7 +540,7 @@ module MoxiworksPlatform
       url ||= "#{MoxiworksPlatform::Config.url}/api/contacts"
       agent_identifier = opts[:moxi_works_agent_id] || opts[:agent_uuid]
       raise ::MoxiworksPlatform::Exception::ArgumentError, "#agent_uuid or moxi_works_agent_id required" if
-        agent_identifier.nil?
+        agent_identifier.blank?
       results = MoxiResponseArray.new()
       RestClient::Request.execute(method: :get,
                                   url: url,
