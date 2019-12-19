@@ -515,7 +515,8 @@ module MoxiworksPlatform
 
     # Search an Agent's Contacts in Moxi Works Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this contact is associated
+    # @option opts [String]  :moxi_works_agent_id  *REQUIRED* -- either :moxi_works_agent_id or :agent_uuid is required -- The Moxi Works Agent ID for the agent
+    # @option opts [String]  :agent_uuid *REQUIRED* -- either :moxi_works_agent_id or :agent_uuid is required -- The Moxi Works Agent ID for the agent
     #
     #     optional Search parameters
     #
@@ -537,11 +538,9 @@ module MoxiworksPlatform
     #
     def self.search(opts={})
       url ||= "#{MoxiworksPlatform::Config.url}/api/contacts"
-      required_opts = [:moxi_works_agent_id]
-      required_opts.each do |opt|
-        raise ::MoxiworksPlatform::Exception::ArgumentError, "#{opt} required" if
-            opts[opt].nil? or opts[opt].to_s.empty?
-      end
+      agent_identifier = opts[:moxi_works_agent_id] || opts[:agent_uuid]
+      raise ::MoxiworksPlatform::Exception::ArgumentError, "#agent_uuid or moxi_works_agent_id required" if
+        agent_identifier.blank?
       results = MoxiResponseArray.new()
       RestClient::Request.execute(method: :get,
                                   url: url,
