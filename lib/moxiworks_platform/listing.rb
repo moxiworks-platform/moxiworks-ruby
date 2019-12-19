@@ -177,6 +177,13 @@ module MoxiworksPlatform
     # @return [String] the URL of the listing
     attr_accessor :listing_url
 
+    # @!attribute images_last_modified
+    #
+    # @return [Integer] timestamp representing when the images associated with
+    #       the listing were last updated
+    #
+    attr_accessor :images_last_modified
+
     # @!attribute listing_images
     #
     # @return [Array] array of image Hashes in the format
