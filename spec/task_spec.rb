@@ -147,7 +147,7 @@ describe MoxiworksPlatform::Task do
           end
 
           integer_accessors.each do |attr_accessor|
-            it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return integer values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('task/find/success', record: :none) do
                 full_response = JSON.parse('{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}')
                 search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id partner_task_id).include?(key) }
@@ -158,7 +158,7 @@ describe MoxiworksPlatform::Task do
           end
 
           float_accessors.each do |attr_accessor|
-            it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return float values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('task/find/success', record: :none) do
                 full_response = JSON.parse('{"moxi_works_agent_id":"testis@moxiworkstest.com","partner_contact_id":"booyuh","partner_task_id":"whaterfverss","name":"Updated Task2","description":"Updated Task","due_at":"1467932072","duration":20,"status":"completed","created_at":"1467951409","completed_at":"1467953349"}')
                 search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id partner_task_id).include?(key) }
@@ -259,7 +259,7 @@ describe MoxiworksPlatform::Task do
           end
 
           integer_accessors.each do |attr_accessor|
-            it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return integer values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('task/update/success', record: :none) do
                 task = MoxiworksPlatform::Task.update(symbolize_keys(full_response))
                 expect(task.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_i)
@@ -268,7 +268,7 @@ describe MoxiworksPlatform::Task do
           end
 
           float_accessors.each do |attr_accessor|
-            it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return float values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('task/update/success', record: :none) do
                 task = MoxiworksPlatform::Task.update(symbolize_keys(full_response))
                 expect(task.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_f)
@@ -335,7 +335,7 @@ describe MoxiworksPlatform::Task do
           end
           
           float_accessors.each do |attr_accessor|
-            it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return float values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('task/create/success', record: :none) do
                 task = MoxiworksPlatform::Task.create(symbolize_keys(full_response))
                 expect(task.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_f)

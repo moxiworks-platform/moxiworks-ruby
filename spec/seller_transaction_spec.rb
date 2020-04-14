@@ -161,7 +161,7 @@ describe MoxiworksPlatform::SellerTransaction do
 
         integer_accessors.each do |attr_accessor|
           fr = JSON.parse('{"moxi_works_agent_id":"testis@moxiworkstest.com","moxi_works_transaction_id":"feedface-dead-beef-bad4-dad2feedface","moxi_works_contact_id":"babebeef-feed-bad4-dad2-2496f5789b6c","stage":1,"stage_name":"initialized","is_mls_transaction":false,"partner_contact_id":"booyuh","notes":null,"transaction_name":null,"address":null,"city":null,"state":null,"zip_code":null,"sqft":null,"beds":null,"baths":null,"mls_number":null,"start_timestamp":null,"commission_percentage":null,"commission_flat_fee":null,"target_price":null,"min_price":null,"max_price":null,"closing_price":null,"closing_timestamp":null}')
-          it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+          it "should return integer values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
             VCR.use_cassette('seller_transaction/find/success', record: :none) do
               seller_transaction = MoxiworksPlatform::SellerTransaction.find(
                   moxi_works_agent_id: agent_id,
@@ -174,7 +174,7 @@ describe MoxiworksPlatform::SellerTransaction do
 
         float_accessors.each do |attr_accessor|
           fr = JSON.parse('{"moxi_works_agent_id":"testis@moxiworkstest.com","moxi_works_transaction_id":"feedface-dead-beef-bad4-dad2feedface","moxi_works_contact_id":"babebeef-feed-bad4-dad2-2496f5789b6c","stage":1,"stage_name":"initialized","is_mls_transaction":false,"partner_contact_id":"booyuh","notes":null,"transaction_name":null,"address":null,"city":null,"state":null,"zip_code":null,"sqft":null,"beds":null,"baths":null,"mls_number":null,"start_timestamp":null,"commission_percentage":null,"commission_flat_fee":null,"target_price":null,"min_price":null,"max_price":null,"closing_price":null,"closing_timestamp":null}')
-          it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+          it "should return float values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
             VCR.use_cassette('seller_transaction/find/success', record: :none) do
               seller_transaction = MoxiworksPlatform::SellerTransaction.find(
                   moxi_works_agent_id: agent_id,
@@ -274,7 +274,7 @@ describe MoxiworksPlatform::SellerTransaction do
           end
 
           integer_accessors.each do |attr_accessor|
-            it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return integer values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('seller_transaction/update/success', record: :none) do
                 seller_transaction = MoxiworksPlatform::SellerTransaction.update(symbolize_keys(full_response))
                 expect(seller_transaction.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_i)
@@ -283,7 +283,7 @@ describe MoxiworksPlatform::SellerTransaction do
           end
 
           float_accessors.each do |attr_accessor|
-            it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return float values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('seller_transaction/update/success', record: :none) do
                 seller_transaction = MoxiworksPlatform::SellerTransaction.update(symbolize_keys(full_response))
                 expect(seller_transaction.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_f)
@@ -350,7 +350,7 @@ describe MoxiworksPlatform::SellerTransaction do
           end
 
           integer_accessors.each do |attr_accessor|
-            it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return integer values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('seller_transaction/create/success', record: :none) do
                 seller_transaction = MoxiworksPlatform::SellerTransaction.create(symbolize_keys(full_response))
                 expect(seller_transaction.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_i)
@@ -359,7 +359,7 @@ describe MoxiworksPlatform::SellerTransaction do
           end
 
           float_accessors.each do |attr_accessor|
-            it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return float values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('seller_transaction/create/success', record: :none) do
                 seller_transaction = MoxiworksPlatform::SellerTransaction.create(symbolize_keys(full_response))
                 expect(seller_transaction.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_f)

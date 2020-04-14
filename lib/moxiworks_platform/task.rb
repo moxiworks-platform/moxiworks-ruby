@@ -1,18 +1,18 @@
 module  MoxiworksPlatform
   class Task < MoxiworksPlatform::Resource
     # @!attribute moxi_works_agent_id
-    #   moxi_works_agent_id is the Moxi Works Platform ID of the agent which a Task is
+    #   moxi_works_agent_id is the MoxiWorks Platform ID of the agent which a Task is
     #   or is to be associated with.
     #
-    #   this must be set for any Moxi Works Platform transaction
+    #   this must be set for any MoxiWorks Platform transaction
     #
-    #   @return [String] the Moxi Works Platform ID of the agent
+    #   @return [String] the MoxiWorks Platform ID of the agent
     attr_accessor :moxi_works_agent_id
 
     # @!attribute partner_contact_id
     #   *your system's* unique ID for the Contact
     #
-    #   this must be set for any Moxi Works Platform transaction
+    #   this must be set for any MoxiWorks Platform transaction
     #
     #   @return [String] your system's unique ID for the contact
     attr_accessor :partner_contact_id
@@ -81,9 +81,9 @@ module  MoxiworksPlatform
     #   @return [Integer|nil] -- Default nil
     attr_writer :completed_at
 
-    # Creates a new Task in Moxi Works Platform
+    # Creates a new Task in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this task is to be associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this task is to be associated
     # @option opts [String]  :partner_task_id *REQUIRED* Your system's unique ID for this task.
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for the Contact for whom this Task is to be associated.
     # @option opts [Integer] :due_at *REQUIRED* Unix timestamp representing the due date
@@ -119,9 +119,9 @@ module  MoxiworksPlatform
       self.send_request(:post, opts)
      end
 
-    # Find an Task  your system has previously created in Moxi Works Platform
+    # Find an Task  your system has previously created in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this task is associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this task is associated
     # @option opts [String]  :partner_task_id *REQUIRED* Your system's unique ID for this task.
     #
     # @return [MoxiworksPlatform::Task]
@@ -140,9 +140,9 @@ module  MoxiworksPlatform
     end
 
 
-    # Search Agent's Tasks in Moxi Works Platform
+    # Search Agent's Tasks in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this contact is associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this contact is associated
     # @option opts [Integer] :due_date_start  *REQUIRED*  Tasks due after specified date
     # @options opts [Integer] :due_date_end  *REQUIRED*  tasks due before specified date
     #
@@ -201,9 +201,9 @@ module  MoxiworksPlatform
       json
     end
 
-    # Updates an existing Task in Moxi Works Platform
+    # Updates an existing Task in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this task is to be associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this task is to be associated
     # @option opts [String]  :partner_task_id *REQUIRED* Your system's unique ID for this task.
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for the Contact for whom this Task is to be associated.
     # @option opts [Integer] :due_at Unix timestamp representing the due date
@@ -245,10 +245,10 @@ module  MoxiworksPlatform
     end
     
     
-    # Send our remote request to the Moxi Works Platform
+    # Send our remote request to the MoxiWorks Platform
     #
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this task is to be associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this task is to be associated
     # @option opts [String]  :partner_task_id *REQUIRED* Your system's unique ID for this task.
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for the Contact for whom this Task is to be associated.
     #
@@ -278,7 +278,7 @@ module  MoxiworksPlatform
       super(method, opts, url)
     end
 
-    # Save an instance of MoxiWorksPlatform::Task to Moxi Works Platform
+    # Save an instance of MoxiWorksPlatform::Task to MoxiWorks Platform
     #
     # @return [MoxiWorksPlatform:Task]
     #

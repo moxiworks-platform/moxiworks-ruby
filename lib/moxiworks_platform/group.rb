@@ -1,19 +1,19 @@
 module MoxiworksPlatform
-  # = Moxi Works Platform Group
+  # = MoxiWorks Platform Group
   class Group < MoxiworksPlatform::Resource
     # @!attribute moxi_works_agent_id
-    #   moxi_works_agent_id is the Moxi Works Platform ID of the agent which the group is
+    #   moxi_works_agent_id is the MoxiWorks Platform ID of the agent which the group is
     #   associated with.
     #
-    #   this must be set for any Moxi Works Platform transaction
+    #   this must be set for any MoxiWorks Platform transaction
     #
-    #   @return [String] the Moxi Works Platform ID of the agent
+    #   @return [String] the MoxiWorks Platform ID of the agent
     attr_accessor :moxi_works_agent_id
 
     # @!attribute moxi_works_group_id
     # your system's group ID for the group
     #
-    # @return [String] representing the name of the group on the Moxi Works Platform
+    # @return [String] representing the name of the group on the MoxiWorks Platform
     attr_accessor :moxi_works_group_name
 
     # @!attribute contacts
@@ -22,10 +22,10 @@ module MoxiworksPlatform
     # @return [Array] of MoxiworksPlatform::Contact objects
     attr_reader :contacts
 
-    # Find a Group  your system has previously created in Moxi Works Platform
+    # Find a Group  your system has previously created in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this group is associated
-    # @option opts [Integer]  :moxi_works_group_id *REQUIRED* The Moxi Works Group ID for this group.
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this group is associated
+    # @option opts [Integer]  :moxi_works_group_id *REQUIRED* The MoxiWorks Group ID for this group.
     #
     # @return [MoxiworksPlatform::Group]
     #
@@ -46,9 +46,9 @@ module MoxiworksPlatform
       self.send_request(:get, opts, url)
     end
 
-    # Search an Agent's Groups in Moxi Works Platform
+    # Search an Agent's Groups in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this group is associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this group is associated
     # @option opts [String]  :name optional name to search for. If no name is provided, all of the Agent's Groups will be returned
     #
     # @return [Array] containing MoxiworksPlatform::Group objects formatted as follows:

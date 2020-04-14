@@ -1,14 +1,14 @@
 module MoxiworksPlatform
-  # = Moxi Works Platform Agent
+  # = MoxiWorks Platform Agent
   class Agent < MoxiworksPlatform::Resource
 
     # @!attribute moxi_works_agent_id
-    #   moxi_works_agent_id is the Moxi Works Platform ID of the agent which a contact is
+    #   moxi_works_agent_id is the MoxiWorks Platform ID of the agent which a contact is
     #   or is to be associated with.
     #
-    #   this must be set for any Moxi Works Platform transaction
+    #   this must be set for any MoxiWorks Platform transaction
     #
-    #   @return [String] the Moxi Works Platform ID of the agent
+    #   @return [String] the MoxiWorks Platform ID of the agent
     attr_accessor :moxi_works_agent_id
 
     # @!attribute moxi_works_office_id
@@ -279,10 +279,10 @@ module MoxiworksPlatform
 
 
 
-    # Find an Agent on the  Moxi Works Platform
+    # Find an Agent on the  MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id  *REQUIRED* -- either :moxi_works_agent_id or :agent_uuid is required -- The Moxi Works Agent ID for the agent
-    # @option opts [String]  :agent_uuid *REQUIRED* -- either :moxi_works_agent_id or :agent_uuid is required -- The Moxi Works Agent ID for the agent
+    # @option opts [String]  :moxi_works_agent_id  *REQUIRED* -- either :moxi_works_agent_id or :agent_uuid is required -- The MoxiWorks Agent ID for the agent
+    # @option opts [String]  :agent_uuid *REQUIRED* -- either :moxi_works_agent_id or :agent_uuid is required -- The MoxiWorks Agent ID for the agent
     #
     # @return [MoxiworksPlatform::Agent]
     #
@@ -310,9 +310,9 @@ module MoxiworksPlatform
       super(method, opts, url)
     end
 
-    # Search For Agents in Moxi Works Platform
+    # Search For Agents in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_company_id *REQUIRED* The Moxi Works Company ID For the search (use Company.search to determine available moxi_works_company_id)
+    # @option opts [String]  :moxi_works_company_id *REQUIRED* The MoxiWorks Company ID For the search (use Company.search to determine available moxi_works_company_id)
     # @option opts [Integer] :updated_since Unix timestamp; Only Agents updated after this date will be returned
     #
     #

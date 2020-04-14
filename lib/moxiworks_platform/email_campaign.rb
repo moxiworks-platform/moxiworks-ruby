@@ -1,18 +1,18 @@
 module  MoxiworksPlatform
   class EmailCampaign < MoxiworksPlatform::Resource
     # @!attribute moxi_works_agent_id
-    #   moxi_works_agent_id is the Moxi Works Platform ID of the agent which an ActionLog entry is
+    #   moxi_works_agent_id is the MoxiWorks Platform ID of the agent which an ActionLog entry is
     #   or is to be associated with.
     #
-    #   this must be set for any Moxi Works Platform transaction
+    #   this must be set for any MoxiWorks Platform transaction
     #
-    #   @return [String] the Moxi Works Platform ID of the agent
+    #   @return [String] the MoxiWorks Platform ID of the agent
     attr_accessor :moxi_works_agent_id
 
     # @!attribute partner_contact_id
     #   *your system's* unique ID for the Contact
     #
-    #   this must be set for any Moxi Works Platform transaction
+    #   this must be set for any MoxiWorks Platform transaction
     #
     #   @return [String] your system's unique ID for the contact
     attr_accessor :partner_contact_id
@@ -60,9 +60,9 @@ module  MoxiworksPlatform
     #   @return [Integer]
     attr_writer :next_scheduled
 
-    # Search an Agent's Email Campaigns in Moxi Works Platform
+    # Search an Agent's Email Campaigns in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this contact is associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this contact is associated
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for this contact.
     #
     # @return [Array] containing MoxiworkPlatform::EmailCampaign objects

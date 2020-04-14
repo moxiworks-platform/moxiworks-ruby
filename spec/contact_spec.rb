@@ -295,7 +295,7 @@ describe MoxiworksPlatform::Contact do
           end
 
           integer_accessors.each do |attr_accessor|
-            it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return integer values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('contact/find/success', record: :none) do
                 search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id partner_contact_id).include?(key) }
                 contact = MoxiworksPlatform::Contact.find(symbolize_keys(search_attrs))
@@ -305,7 +305,7 @@ describe MoxiworksPlatform::Contact do
           end
 
           float_accessors.each do |attr_accessor|
-            it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return float values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('contact/find/success', record: :none) do
                 search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id partner_contact_id).include?(key) }
                 contact = MoxiworksPlatform::Contact.find(symbolize_keys(search_attrs))
@@ -366,7 +366,7 @@ describe MoxiworksPlatform::Contact do
           end
 
           integer_accessors.each do |attr_accessor|
-            it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return integer values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('contact/search/success', record: :none) do
                 search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id contact_name).include?(key) }
                 results = MoxiworksPlatform::Contact.search(symbolize_keys(search_attrs))
@@ -377,7 +377,7 @@ describe MoxiworksPlatform::Contact do
           end
 
           float_accessors.each do |attr_accessor|
-            it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return float values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('contact/search/success', record: :none) do
                 search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id contact_name).include?(key) }
                 results = MoxiworksPlatform::Contact.search(symbolize_keys(search_attrs))
@@ -452,7 +452,7 @@ describe MoxiworksPlatform::Contact do
           end
 
           integer_accessors.each do |attr_accessor|
-            it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return integer values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('contact/update/success', record: :none) do
                 contact = MoxiworksPlatform::Contact.update(symbolize_keys(full_response))
                 expect(contact.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_i)
@@ -461,7 +461,7 @@ describe MoxiworksPlatform::Contact do
           end
 
           float_accessors.each do |attr_accessor|
-            it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return float values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('contact/update/success', record: :none) do
                 contact = MoxiworksPlatform::Contact.update(symbolize_keys(full_response))
                 expect(contact.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_f)
@@ -515,7 +515,7 @@ describe MoxiworksPlatform::Contact do
           end
 
           integer_accessors.each do |attr_accessor|
-            it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return integer values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('contact/create/success', record: :none) do
                 contact = MoxiworksPlatform::Contact.create(symbolize_keys(full_response))
                 expect(contact.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_i)
@@ -524,7 +524,7 @@ describe MoxiworksPlatform::Contact do
           end
 
           float_accessors.each do |attr_accessor|
-            it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return float values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('contact/create/success', record: :none) do
                 contact = MoxiworksPlatform::Contact.create(symbolize_keys(full_response))
                 expect(contact.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_f)

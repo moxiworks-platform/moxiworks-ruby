@@ -1,20 +1,20 @@
 module MoxiworksPlatform
-  # = Moxi Works Platform Contact
+  # = MoxiWorks Platform Contact
   class Contact < MoxiworksPlatform::Resource
 
     # @!attribute moxi_works_agent_id
-    #   moxi_works_agent_id is the Moxi Works Platform ID of the agent which a contact is
+    #   moxi_works_agent_id is the MoxiWorks Platform ID of the agent which a contact is
     #   or is to be associated with.
     #
-    #   this or agent_uuid must be set for any Moxi Works Platform transaction
+    #   this or agent_uuid must be set for any MoxiWorks Platform transaction
     #
-    #   @return [String] the Moxi Works Platform ID of the agent
+    #   @return [String] the MoxiWorks Platform ID of the agent
     attr_accessor :moxi_works_agent_id
 
     # @!attribute partner_contact_id
     #   *your system's* unique ID for the Contact
     #
-    #   this must be set for any Moxi Works Platform transaction
+    #   this must be set for any MoxiWorks Platform transaction
     #
     #   @return [String] your system's unique ID for the contact
     attr_accessor :partner_contact_id
@@ -22,7 +22,7 @@ module MoxiworksPlatform
     # @!attribute agent_uuid
     #   The UUID of the agent the that the contact is to be associated with.
     #
-    #   this or moxi_works_agent_id must be set for any Moxi Works Platform transaction
+    #   this or moxi_works_agent_id must be set for any MoxiWorks Platform transaction
     #
     #   @return [String] the UUID of the agent
     attr_accessor :agent_uuid
@@ -50,7 +50,7 @@ module MoxiworksPlatform
     #   the gender  of this Contact. the first initial of either gender type may
     #   be used or the full word 'male' or 'female.'
     #
-    #   @note The single character representation will be used after saving to Moxi Works Platform  no matter whether the word or single character representation is passed in.
+    #   @note The single character representation will be used after saving to MoxiWorks Platform  no matter whether the word or single character representation is passed in.
     #
     #   @return [String, Enumerated] -- a single character 'm' or 'f' or -- Default ''
     attr_accessor :gender
@@ -415,9 +415,9 @@ module MoxiworksPlatform
     #   @return [String] -- Default nil
     attr_accessor :search_property_types
 
-    # Creates a new Contact in Moxi Works Platform
+    # Creates a new Contact in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this contact is to be associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this contact is to be associated
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for this contact.
     #
     #     optional Contact parameters
@@ -498,9 +498,9 @@ module MoxiworksPlatform
       self.send_request(:post, opts)
     end
 
-    # Find a Contact  your system has previously created in Moxi Works Platform
+    # Find a Contact  your system has previously created in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this contact is associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this contact is associated
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for this contact.
     #
     # @return [MoxiworksPlatform::Contact]
@@ -513,10 +513,10 @@ module MoxiworksPlatform
       self.send_request(:get, opts, url)
     end
 
-    # Search an Agent's Contacts in Moxi Works Platform
+    # Search an Agent's Contacts in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id  *REQUIRED* -- either :moxi_works_agent_id or :agent_uuid is required -- The Moxi Works Agent ID for the agent
-    # @option opts [String]  :agent_uuid *REQUIRED* -- either :moxi_works_agent_id or :agent_uuid is required -- The Moxi Works Agent ID for the agent
+    # @option opts [String]  :moxi_works_agent_id  *REQUIRED* -- either :moxi_works_agent_id or :agent_uuid is required -- The MoxiWorks Agent ID for the agent
+    # @option opts [String]  :agent_uuid *REQUIRED* -- either :moxi_works_agent_id or :agent_uuid is required -- The MoxiWorks Agent ID for the agent
     #
     #     optional Search parameters
     #
@@ -564,9 +564,9 @@ module MoxiworksPlatform
 
 
 
-    # Updates a previously created Contact in Moxi Works Platform
+    # Updates a previously created Contact in MoxiWorks Platform
     # @param [Hash] opts
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this contact is to be associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this contact is to be associated
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for this contact.
     #
     #     optional Contact parameters
@@ -650,12 +650,12 @@ module MoxiworksPlatform
       self.send_request(:put, opts, url)
     end
 
-    # Delete a Contact your system has previously created in Moxi Works Platform
+    # Delete a Contact your system has previously created in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
     #
     #     required parameters
     #
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this contact is to be associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this contact is to be associated
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for this contact.
     #
     # @return [Boolean] -- success of the delete action
@@ -682,11 +682,11 @@ module MoxiworksPlatform
       end
     end
 
-    # Send our remote request to the Moxi Works Platform
+    # Send our remote request to the MoxiWorks Platform
     #
     # @param [String] method The HTTP method to be used when connecting; ex: :put, :post, :get
     # @param [Hash] opts
-    # @option opts [String]  :moxi_works_agent_id *-- either moxi_works_agent_id or agent_uuid is REQUIRED*  The Moxi Works Agent ID for the agent to which this contact is to be associated
+    # @option opts [String]  :moxi_works_agent_id *-- either moxi_works_agent_id or agent_uuid is REQUIRED*  The MoxiWorks Agent ID for the agent to which this contact is to be associated
     # @option opts [String]  :agent_uuid *-- either moxi_works_agent_id or agent_uuid is REQUIRED* The Agent UUID for the agent to which this contact is to be associated
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for this contact.
     #
@@ -764,7 +764,7 @@ module MoxiworksPlatform
       super(method, opts, url)
     end
 
-    # Save an instance of MoxiWorksPlatform::Contact to Moxi Works Platform
+    # Save an instance of MoxiWorksPlatform::Contact to MoxiWorks Platform
     #
     # @return [MoxiWorksPlatform::Contact]
     #
@@ -779,7 +779,7 @@ module MoxiworksPlatform
       MoxiworksPlatform::Contact.update(self.to_hash)
     end
 
-    # Delete an instance of MoxiWorksPlatform::Contact from Moxi Works Platform that your system has previously created
+    # Delete an instance of MoxiWorksPlatform::Contact from MoxiWorks Platform that your system has previously created
     #
     # @return [Boolean] -- success of the delete action
     #

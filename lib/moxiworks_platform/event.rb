@@ -1,5 +1,5 @@
 module MoxiworksPlatform
-  # = Moxi Works Platform Event
+  # = MoxiWorks Platform Event
   class Event < MoxiworksPlatform::Resource
 
     # @!attribute all_day
@@ -45,12 +45,12 @@ module MoxiworksPlatform
     attr_accessor :is_meeting
 
     # @!attribute moxi_works_agent_id
-    #   moxi_works_agent_id is the Moxi Works Platform ID of the agent which a event is
+    #   moxi_works_agent_id is the MoxiWorks Platform ID of the agent which a event is
     #   or is to be associated with.
     #
-    #   this must be set for any Moxi Works Platform transaction
+    #   this must be set for any MoxiWorks Platform transaction
     #
-    #   @return [String] the Moxi Works Platform ID of the agent
+    #   @return [String] the MoxiWorks Platform ID of the agent
     attr_accessor :moxi_works_agent_id
 
     # @!attribute note
@@ -77,9 +77,9 @@ module MoxiworksPlatform
     # @return [Boolean]
     attr_accessor :send_reminder
 
-    # Creates a new Event in Moxi Works Platform
+    # Creates a new Event in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this event is to be associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this event is to be associated
     # @option opts [String]  :partner_event_id *REQUIRED* Your system's unique ID for this event.
     #
     #     optional Event parameters
@@ -92,7 +92,7 @@ module MoxiworksPlatform
     # @option opts [Integer] :event_start Unix timestamp representing the start time of the event
     # @option opts [Integer] :event_end Unix timestamp representing the end time of the event
     # @option opts [Boolean] :all_day whether the event is an all day event
-    # @option opts [String] :attendees comma separated list of attendee IDs using Contact IDs from your system (partner_contact_id) that have already been added to The Moxi Works Platform as a Contact
+    # @option opts [String] :attendees comma separated list of attendee IDs using Contact IDs from your system (partner_contact_id) that have already been added to The MoxiWorks Platform as a Contact
     #
     # @return [MoxiworksPlatform::Event]
     #
@@ -116,9 +116,9 @@ module MoxiworksPlatform
        self.send_request(:post, opts)
      end
 
-    # Find an Event  your system has previously created in Moxi Works Platform
+    # Find an Event  your system has previously created in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this event is associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this event is associated
     # @option opts [String]  :partner_event_id *REQUIRED* Your system's unique ID for this event.
     #
     # @return [MoxiworksPlatform::Event]
@@ -132,9 +132,9 @@ module MoxiworksPlatform
     end
 
 
-    # Search an Agent's Events in Moxi Works Platform
+    # Search an Agent's Events in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this event is associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this event is associated
     # @option opts [Integer]  :date_start *REQUIRED* The Unix timestamp representing the date after which to search
     # @option opts [Integer]  :date_end *REQUIRED* The Unix timestamp representing the date before which to search
     #
@@ -187,9 +187,9 @@ module MoxiworksPlatform
       results
     end
 
-    # Updates a new Event in Moxi Works Platform
+    # Updates a new Event in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this event is to be associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this event is to be associated
     # @option opts [String]  :partner_event_id *REQUIRED* Your system's unique ID for this event.
     #
     #     optional Event parameters
@@ -202,7 +202,7 @@ module MoxiworksPlatform
     # @option opts [Integer] :event_start Unix timestamp representing the start time of the event
     # @option opts [Integer] :event_end Unix timestamp representing the end time of the event
     # @option opts [Boolean] :all_day whether the event is an all day event
-    # @option opts [String] :attendees comma separated list of attendee IDs using Contact IDs from your system (partner_contact_id) that have already been added to The Moxi Works Platform as a Contact
+    # @option opts [String] :attendees comma separated list of attendee IDs using Contact IDs from your system (partner_contact_id) that have already been added to The MoxiWorks Platform as a Contact
     #
     # @return [MoxiworksPlatform::Event]
     #
@@ -228,12 +228,12 @@ module MoxiworksPlatform
        self.send_request(:put, opts, url)
      end
 
-    # Delete an Event your system has previously created in Moxi Works Platform
+    # Delete an Event your system has previously created in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
     #
     #     required parameters
     #
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this event is associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this event is associated
     # @option opts [String]  :partner_event_id *REQUIRED* Your system's unique ID for this event.
     #
     # @return [Boolean] -- success of the delete action
@@ -264,11 +264,11 @@ module MoxiworksPlatform
       end
     end
 
-    # Send our remote request to the Moxi Works Platform
+    # Send our remote request to the MoxiWorks Platform
     #
     # @param [String] method The HTTP method to be used when connecting; ex: :put, :post, :get
     # @param [Hash] opts
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this event is associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this event is associated
     # @option opts [String]  :partner_event_id *REQUIRED* Your system's unique ID for this event.
     #
     #     optional Event parameters
@@ -282,7 +282,7 @@ module MoxiworksPlatform
     # @option opts [Integer] :event_end Unix timestamp representing the end time of the event
     # @option opts [Boolean] :recurring whether the event is a recurring event
     # @option opts [Boolean] :all_day whether the event is an all day event
-    # @option opts [String] :attendees comma separated list of attendee IDs using Contact IDs from your system (partner_contact_id) that have already been added to The Moxi Works Platform as a Contact
+    # @option opts [String] :attendees comma separated list of attendee IDs using Contact IDs from your system (partner_contact_id) that have already been added to The MoxiWorks Platform as a Contact
     #
     # @return [MoxiworksPlatform::Event]
     #
@@ -302,7 +302,7 @@ module MoxiworksPlatform
       super(method, opts, url)
     end
 
-    # Save an instance of MoxiWorksPlatform::Event to Moxi Works Platform
+    # Save an instance of MoxiWorksPlatform::Event to MoxiWorks Platform
     #
     # @return [MoxiWorksPlatform:Event]
     #
@@ -316,7 +316,7 @@ module MoxiworksPlatform
       MoxiworksPlatform::Event.update(self.to_hash)
     end
 
-    # Delete an instance of MoxiWorksPlatform::Event from Moxi Works Platform that your system has previously created
+    # Delete an instance of MoxiWorksPlatform::Event from MoxiWorks Platform that your system has previously created
     #
     # @return [Boolean] -- success of the delete action
     #

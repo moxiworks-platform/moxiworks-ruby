@@ -1,5 +1,5 @@
 module MoxiworksPlatform
-  # = Moxi Works Platform Gallery
+  # = MoxiWorks Platform Gallery
   class Gallery < MoxiworksPlatform::Resource
 
     # @!attribute list_office_aor
@@ -34,10 +34,10 @@ module MoxiworksPlatform
     attr_accessor :gallery_images
 
 
-    # Search For Galleries in Moxi Works Platform
+    # Search For Galleries in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_company_id *REQUIRED* The Moxi Works Company ID For the search (use Company.search to determine available moxi_works_company_id)
-    # @option opts [String]  :moxi_works_agent_id  The Moxi Works Agent ID For the search (use Agent.search to determine available moxi_works_agent_id) -- only agent_uuid or moxi_works_agent_id are needed when searching for galleries by agent
+    # @option opts [String]  :moxi_works_company_id *REQUIRED* The MoxiWorks Company ID For the search (use Company.search to determine available moxi_works_company_id)
+    # @option opts [String]  :moxi_works_agent_id  The MoxiWorks Agent ID For the search (use Agent.search to determine available moxi_works_agent_id) -- only agent_uuid or moxi_works_agent_id are needed when searching for galleries by agent
     # @option opts [String]  :agent_uuid  The Agent UUID For the search (use Agent.search to determine available agent_uuid) -- only agent_uuid or moxi_works_agent_id are needed when searching for galleries by agent
     #
     #

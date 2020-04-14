@@ -3,22 +3,22 @@ module  MoxiworksPlatform
 
 
     # @!attribute moxi_works_agent_id
-    #   moxi_works_agent_id is the Moxi Works Platform ID of the agent which a SellerTransaction is
+    #   moxi_works_agent_id is the MoxiWorks Platform ID of the agent which a SellerTransaction is
     #   or is to be associated with.
     #
     #
-    #   @return [String] the Moxi Works Platform ID of the agent
+    #   @return [String] the MoxiWorks Platform ID of the agent
     attr_accessor :moxi_works_agent_id
 
     # @!attribute moxi_works_transaction_id
     #
-    # @return [String] The Moxi Works Platform unique identifier for the SellerTransaction
+    # @return [String] The MoxiWorks Platform unique identifier for the SellerTransaction
     attr_accessor :moxi_works_transaction_id
 
     # @!attribute moxi_works_contact_id
-    #   The Moxi Works Platform unique identifier for the Contact
+    #   The MoxiWorks Platform unique identifier for the Contact
     #  this or partner_contact_id can be used in operations that require a Contact ID
-    #   @return [String] The Moxi Works Platform unique ID for the contact
+    #   @return [String] The MoxiWorks Platform unique ID for the contact
     attr_accessor :moxi_works_contact_id
 
     # @!attribute partner_contact_id
@@ -26,7 +26,7 @@ module  MoxiworksPlatform
     #
     #   this or moxi_works_contact_id can be used in operations that require a Contact ID
     #
-    #   this will only be populated for Contact objects that your system has created on the Moxi Works Platform
+    #   this will only be populated for Contact objects that your system has created on the MoxiWorks Platform
     #
     #   @return [String] your system's unique ID for the contact
     attr_accessor :partner_contact_id
@@ -56,7 +56,7 @@ module  MoxiworksPlatform
     #
     #  This will be a single digit integer that can be [1,2,3,4,5].
     #   For more information on SellerTransaction stages see
-    #     {https://moxiworks-platform.github.io/#sellertransaction-stages The Moxi Works Platform Documentation}
+    #     {https://moxiworks-platform.github.io/#sellertransaction-stages The MoxiWorks Platform Documentation}
     #
     # @return [Integer] the stage the SellerTransaction is in.
     attr_accessor :stage
@@ -65,13 +65,13 @@ module  MoxiworksPlatform
     #
     #   This attribute displays a human readable stage name that is
     #   associated with the current stage attribute. When created
-    #   through the Moxi Works Platform SellerTransaction objects
+    #   through the MoxiWorks Platform SellerTransaction objects
     #   will automatically be configured as 'active' transactions.
     #
     #   This will be an enumerated string that can be can be
     #   'initialized', 'configured' , 'active' , 'pending'  or 'complete'
     #   For more information on SellerTransaction stages see
-    #     {https://moxiworks-platform.github.io/#sellertransaction-stages The Moxi Works Platform Documentation}
+    #     {https://moxiworks-platform.github.io/#sellertransaction-stages The MoxiWorks Platform Documentation}
     #
     #
     # @return [String, enumerated] current state of SellerTransaction
@@ -226,7 +226,7 @@ module  MoxiworksPlatform
     #
     # In order to promote a SellerTransaction to the next stage, set  the
     # promote_transaction attribute to true. For more information about
-    # SellerTransaction stages, see {https://moxiworks-platform.github.io/#promoting-sellertransaction-stageThe Moxi Works Platform Documentation}.
+    # SellerTransaction stages, see {https://moxiworks-platform.github.io/#promoting-sellertransaction-stageThe MoxiWorks Platform Documentation}.
     # promote_transaction is only available for SellerTransaction updates.
     # Newly created SellerTransaction objects will automatically be created in
     # stage 3 (active)
@@ -235,12 +235,12 @@ module  MoxiworksPlatform
 
     #### CLASS METHODS ####
 
-    # Creates a new SellerTransaction in Moxi Works Platform
+    # Creates a new SellerTransaction in MoxiWorks Platform
     #
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this transaction is to be associated
-    # @option opts [String]  :moxi_works_contact_id *REQUIRED* The unique identifier for the Contact on the Moxi Works Platform. Either moxi_works_contact_id or partner_contact_id is required when creating SellerTransaction objects
-    # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique id for associated contact. should already have been created in Moxi Works Platform. If the Contact was not created by your system, use the moxi_works_contact_id attribute. Either moxi_works_contact_id or partner_contact_id is required when creating SellerTransaction objects
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this transaction is to be associated
+    # @option opts [String]  :moxi_works_contact_id *REQUIRED* The unique identifier for the Contact on the MoxiWorks Platform. Either moxi_works_contact_id or partner_contact_id is required when creating SellerTransaction objects
+    # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique id for associated contact. should already have been created in MoxiWorks Platform. If the Contact was not created by your system, use the moxi_works_contact_id attribute. Either moxi_works_contact_id or partner_contact_id is required when creating SellerTransaction objects
     # @option opts [String] :transaction_name *REQUIRED* short description of the transaction meaningful to the agent
     #
     # -- Either moxi_works_contact_id or partner_contact_id must be
@@ -305,10 +305,10 @@ module  MoxiworksPlatform
       self.send_request(:post, opts)
      end
 
-    # Find a SellerTransaction using The Moxi Works Platform
+    # Find a SellerTransaction using The MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this transaction is associated
-    # @option opts [String]  :moxi_works_transaction_id *REQUIRED* The Moxi Works Platform ID for this transaction.
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this transaction is associated
+    # @option opts [String]  :moxi_works_transaction_id *REQUIRED* The MoxiWorks Platform ID for this transaction.
     #
     # @return [MoxiworksPlatform::SellerTransaction]
     #
@@ -326,15 +326,15 @@ module  MoxiworksPlatform
     end
 
 
-    # Search Agent's SellerTransactions in Moxi Works Platform
+    # Search Agent's SellerTransactions in MoxiWorks Platform
     #
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this contact is associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this contact is associated
     #
     #
     #     optional Search parameters
     #
-    # @option opts [String]  :moxi_works_contact_id The Moxi Works Contact ID for the contact whose SellerTransactions you are searching for
+    # @option opts [String]  :moxi_works_contact_id The MoxiWorks Contact ID for the contact whose SellerTransactions you are searching for
     # @option opts [String]  :partner_contact_id The partner's ID for the contact whose SellerTransactions they are looking for
     # @option opts [Integer] :page_number the page of results to return
     #
@@ -389,7 +389,7 @@ module  MoxiworksPlatform
     # Updates an existing SellerTransaction in Leads Gateway
     #
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this transaction is associated
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this transaction is associated
     # @option opts [String]  :moxi_works_transaction_id *REQUIRED* partner system's unique ID for this transaction.
     #
     #     optional SellerTransaction parameters
@@ -413,7 +413,7 @@ module  MoxiworksPlatform
     # @option opts [Integer] :max_price maximum price associated with the transaction if using a price range rather than target price
     # @option opts [Integer] :closing_timestamp  Unix timestamp representing the date the sale of the property closed -- closing_timestamp should only be used when the SellerTransaction state = 5 (complete)
     # @option opts [Integer] :closing_price  selling price of the property -- closing_price should only be used when the SellerTransaction state = 5 (complete)
-    # @option opts [Boolean] :promote_transaction If this is set to true then The Moxi Works Platform will promote this transaction to the next stage
+    # @option opts [Boolean] :promote_transaction If this is set to true then The MoxiWorks Platform will promote this transaction to the next stage
     #
     #
     # @example
@@ -459,11 +459,11 @@ module  MoxiworksPlatform
 
     
     
-    # Send our remote request to the Moxi Works Platform
+    # Send our remote request to the MoxiWorks Platform
     #
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The Moxi Works Agent ID for the agent to which this transaction is to be associated
-    # @option opts [String]  :moxi_works_transaction_id *REQUIRED* The Moxi Works Platform unique ID for this transaction.
+    # @option opts [String]  :moxi_works_agent_id *REQUIRED* The MoxiWorks Agent ID for the agent to which this transaction is to be associated
+    # @option opts [String]  :moxi_works_transaction_id *REQUIRED* The MoxiWorks Platform unique ID for this transaction.
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for the Contact for whom this SellerTransaction is to be associated.
     #
     #     optional SellerTransaction parameters
@@ -492,7 +492,7 @@ module  MoxiworksPlatform
        super(method, opts, url)
      end
 
-    # Save an instance of MoxiWorksPlatform::SellerTransaction to Moxi Works Platform
+    # Save an instance of MoxiWorksPlatform::SellerTransaction to MoxiWorks Platform
     #
     # @return [MoxiWorksPlatform:SellerTransaction]
     #

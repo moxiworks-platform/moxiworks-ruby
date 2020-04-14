@@ -1,5 +1,5 @@
 module MoxiworksPlatform
-  # = Moxi Works Platform Teams
+  # = MoxiWorks Platform Teams
   class Team < MoxiworksPlatform::Resource
 
 
@@ -128,9 +128,9 @@ module MoxiworksPlatform
     #
     attr_accessor :active
 
-    # Find a Team by ID in Moxi Works Platform
+    # Find a Team by ID in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_team_id *REQUIRED* The Moxi Works TEam ID
+    # @option opts [String]  :moxi_works_team_id *REQUIRED* The MoxiWorks TEam ID
     #
     # @return [MoxiworksPlatform::Team]
     #
@@ -149,9 +149,9 @@ module MoxiworksPlatform
       self.send_request(:get, opts, url)
     end
 
-    # Search For Teams in Moxi Works Platform
+    # Search For Teams in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_company_id *REQUIRED* The Moxi Works Company ID For the search (use Company.search to determine available moxi_works_company_id)
+    # @option opts [String]  :moxi_works_company_id *REQUIRED* The MoxiWorks Company ID For the search (use Company.search to determine available moxi_works_company_id)
     #
     #
     #     optional Search parameters

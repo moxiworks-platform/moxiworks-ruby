@@ -159,7 +159,7 @@ describe MoxiworksPlatform::BuyerTransaction do
         end
 
         integer_accessors.each do |attr_accessor|
-          it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+          it "should return integer values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
             VCR.use_cassette('buyer_transaction/find/success', record: :none) do
               buyer_transaction = MoxiworksPlatform::BuyerTransaction.find(
                   moxi_works_agent_id: agent_id,
@@ -171,7 +171,7 @@ describe MoxiworksPlatform::BuyerTransaction do
         end
 
         float_accessors.each do |attr_accessor|
-          it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+          it "should return float values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
             VCR.use_cassette('buyer_transaction/find/success', record: :none) do
               buyer_transaction = MoxiworksPlatform::BuyerTransaction.find(
                   moxi_works_agent_id: agent_id,
@@ -271,7 +271,7 @@ describe MoxiworksPlatform::BuyerTransaction do
           end
 
           integer_accessors.each do |attr_accessor|
-            it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return integer values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('buyer_transaction/update/success', record: :none) do
                 buyer_transaction = MoxiworksPlatform::BuyerTransaction.update(symbolize_keys(full_response))
                 expect(buyer_transaction.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_i)
@@ -280,7 +280,7 @@ describe MoxiworksPlatform::BuyerTransaction do
           end
 
           float_accessors.each do |attr_accessor|
-            it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return float values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('buyer_transaction/update/success', record: :none) do
                 buyer_transaction = MoxiworksPlatform::BuyerTransaction.update(symbolize_keys(full_response))
                 expect(buyer_transaction.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_f)
@@ -347,7 +347,7 @@ describe MoxiworksPlatform::BuyerTransaction do
           end
 
           integer_accessors.each do |attr_accessor|
-            it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return integer values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('buyer_transaction/create/success', record: :none) do
                 buyer_transaction = MoxiworksPlatform::BuyerTransaction.create(symbolize_keys(full_response))
                 expect(buyer_transaction.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_i)
@@ -356,7 +356,7 @@ describe MoxiworksPlatform::BuyerTransaction do
           end
 
           float_accessors.each do |attr_accessor|
-            it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return float values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('buyer_transaction/create/success', record: :none) do
                 buyer_transaction = MoxiworksPlatform::BuyerTransaction.create(symbolize_keys(full_response))
                 expect(buyer_transaction.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_f)

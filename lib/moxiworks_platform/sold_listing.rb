@@ -1,5 +1,5 @@
 module MoxiworksPlatform
-  # = Moxi Works Platform Listing
+  # = MoxiWorks Platform Listing
   class SoldListing < MoxiworksPlatform::Resource
 
     # @!attribute address
@@ -188,11 +188,11 @@ module MoxiworksPlatform
     attr_accessor :middle_or_junior_school
 
     # @!attribute moxi_works_listing_id
-    #   moxi_works_listing_id is the Moxi Works Platform ID of the listing
+    #   moxi_works_listing_id is the MoxiWorks Platform ID of the listing
     #
-    #   this must be set for any Moxi Works Platform transaction
+    #   this must be set for any MoxiWorks Platform transaction
     #
-    #   @return [String] the Moxi Works Platform ID of the listing
+    #   @return [String] the MoxiWorks Platform ID of the listing
     attr_accessor :moxi_works_listing_id
 
     # @!attribute modification_timestamp
@@ -320,10 +320,10 @@ module MoxiworksPlatform
     # @return [String] Secondary list agent UUID
     attr_accessor :secondary_list_agent_uuid
 
-    # Find a listing on the  Moxi Works Platform
+    # Find a listing on the  MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_listing_id *REQUIRED* The Moxi Works Listing ID for the listing
-    # @option opts [String]  :moxi_works_company_id *REQUIRED* The Moxi Works Company ID For the search (use Company.search to determine available moxi_works_company_id)
+    # @option opts [String]  :moxi_works_listing_id *REQUIRED* The MoxiWorks Listing ID for the listing
+    # @option opts [String]  :moxi_works_company_id *REQUIRED* The MoxiWorks Company ID For the search (use Company.search to determine available moxi_works_company_id)
     #
     # @return [MoxiworksPlatform::Listing]
     #
@@ -359,13 +359,13 @@ module MoxiworksPlatform
       end
     end
 
-    # Search For Listings in Moxi Works Platform
+    # Search For Listings in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_company_id *REQUIRED* The Moxi Works Company ID For the search (use Company.search to determine available moxi_works_company_id)
+    # @option opts [String]  :moxi_works_company_id *REQUIRED* The MoxiWorks Company ID For the search (use Company.search to determine available moxi_works_company_id)
     # @option opts [Integer] :sold_since  *REQUIRED*  Unix timestamp; Only Listings updated after this date will be returned
-    # @option opts [String]  :moxi_works_agent_id  The Moxi Works Agent ID For the search (use Agent.search to determine available moxi_works_agent_id) -- only agent_uuid or moxi_works_agent_id are needed when searching for listings by agent
+    # @option opts [String]  :moxi_works_agent_id  The MoxiWorks Agent ID For the search (use Agent.search to determine available moxi_works_agent_id) -- only agent_uuid or moxi_works_agent_id are needed when searching for listings by agent
     # @option opts [String]  :agent_uuid  The Agent UUID For the search (use Agent.search to determine available agent_uuid) -- only agent_uuid or moxi_works_agent_id are needed when searching for listings by agent
-    # @option opts [String]  :moxi_works_office_id  The Moxi Works Office ID For the search (use Office.search or Agent response to determine available moxi_works_office_id)
+    # @option opts [String]  :moxi_works_office_id  The MoxiWorks Office ID For the search (use Office.search or Agent response to determine available moxi_works_office_id)
     #
     #
     #     optional Search parameters

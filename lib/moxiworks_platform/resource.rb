@@ -3,7 +3,7 @@ require 'base64'
 require 'json'
 
 module MoxiworksPlatform
-  #  provides underlying logic for connecting to Moxi Works Platform over HTTPS
+  #  provides underlying logic for connecting to MoxiWorks Platform over HTTPS
   class Resource
 
     attr_accessor :headers
@@ -13,7 +13,7 @@ module MoxiworksPlatform
     # keep a list of attr_accessors defined in this class
     #
     # used to convert Resource child object into parameters required for saving
-    # in Moxi Works Platform
+    # in MoxiWorks Platform
     #
     def self.attr_accessor(*vars)
       @attributes ||= []
@@ -28,7 +28,7 @@ module MoxiworksPlatform
       @attributes
     end
 
-    # HTTP headers required to connect to Moxi Works Platform
+    # HTTP headers required to connect to MoxiWorks Platform
     #
     # @return [Hash] formatted headers suitable for a RestClient connection
     def self.headers
@@ -79,7 +79,7 @@ module MoxiworksPlatform
         rescue => e
         raise MoxiworksPlatform::Exception::RemoteRequestFailure, "unable to parse remote response #{e}\n response:\n  #{response}"
       end
-      message = "unable to perform remote action on Moxi Works platform\n"
+      message = "unable to perform remote action on MoxiWorks platform\n"
       message << json['messages'].join(',') unless json['messages'].nil?
 
       raise MoxiworksPlatform::Exception::RemoteRequestFailure, message  if

@@ -1,10 +1,10 @@
 module MoxiworksPlatform
-  # = Moxi Works Platform PresentationLog
+  # = MoxiWorks Platform PresentationLog
   class PresentationLog < MoxiworksPlatform::Resource
 
     # @!attribute  agent_uuid
     #
-    # @return [string] This is the Moxi Works Platform ID of the presentation_log which an ActionLog entry is associated with. This will be an RFC 4122 compliant UUID.
+    # @return [string] This is the MoxiWorks Platform ID of the presentation_log which an ActionLog entry is associated with. This will be an RFC 4122 compliant UUID.
     #
     attr_accessor :agent_uuid
 
@@ -100,9 +100,9 @@ module MoxiworksPlatform
 
 
 
-    # Search For Agents in Moxi Works Platform
+    # Search For Agents in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_company_id *REQUIRED* The Moxi Works Company ID For the search (use Company.search to determine available moxi_works_company_id)
+    # @option opts [String]  :moxi_works_company_id *REQUIRED* The MoxiWorks Company ID For the search (use Company.search to determine available moxi_works_company_id)
     #
     #
     #     optional Search parameters

@@ -1,5 +1,5 @@
 module MoxiworksPlatform
-  # = Moxi Works Platform Office
+  # = MoxiWorks Platform Office
   class Office < MoxiworksPlatform::Resource
 
     # @!attribute moxi_works_office_id
@@ -99,9 +99,9 @@ module MoxiworksPlatform
 
 
 
-    # Find an Office on the  Moxi Works Platform
+    # Find an Office on the  MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_office_id *REQUIRED* The Moxi Works Office ID for the office
+    # @option opts [String]  :moxi_works_office_id *REQUIRED* The MoxiWorks Office ID for the office
     #
     # @return [MoxiworksPlatform::Office]
     #
@@ -125,9 +125,9 @@ module MoxiworksPlatform
       super(method, opts, url)
     end
 
-    # Search For Offices in Moxi Works Platform
+    # Search For Offices in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_company_id *REQUIRED* The Moxi Works Company ID For the search (use Company.search to determine available moxi_works_company_id)
+    # @option opts [String]  :moxi_works_company_id *REQUIRED* The MoxiWorks Company ID For the search (use Company.search to determine available moxi_works_company_id)
     #
     #
     #     optional Search parameters

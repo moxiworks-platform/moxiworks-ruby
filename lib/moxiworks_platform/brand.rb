@@ -1,5 +1,5 @@
 module MoxiworksPlatform
-  # = Moxi Works Platform Brand
+  # = MoxiWorks Platform Brand
   class Brand < MoxiworksPlatform::Resource
 
      # @!attribute  URL to logo for the company
@@ -77,9 +77,9 @@ module MoxiworksPlatform
      # @return [String]
     attr_accessor :pres_block_text_color
 
-     # Find an Brand on the  Moxi Works Platform
+     # Find an Brand on the  MoxiWorks Platform
      # @param [Hash] opts named parameter Hash
-     # @option opts [String]  :moxi_works_company_id *REQUIRED* The Moxi Works Brand ID for the brand
+     # @option opts [String]  :moxi_works_company_id *REQUIRED* The MoxiWorks Brand ID for the brand
      #
      # @return [MoxiworksPlatform::Brand]
      #
@@ -99,10 +99,10 @@ module MoxiworksPlatform
      end
 
 
-     # Search For Brands in Moxi Works Platform
+     # Search For Brands in MoxiWorks Platform
      # @param [Hash] opts named parameter Hash
-     # @option opts [String]  :moxi_works_company_id The Moxi Works Company ID For the search (use Company.search to determine available moxi_works_company_id)
-     # @option opts [String]  :moxi_works_agent_id  The Moxi Works Agent ID For the search (use Agent.search to determine available moxi_works_agent_id)
+     # @option opts [String]  :moxi_works_company_id The MoxiWorks Company ID For the search (use Company.search to determine available moxi_works_company_id)
+     # @option opts [String]  :moxi_works_agent_id  The MoxiWorks Agent ID For the search (use Agent.search to determine available moxi_works_agent_id)
      #
      #
      #     optional Search parameters

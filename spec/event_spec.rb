@@ -302,7 +302,7 @@ describe MoxiworksPlatform::Event do
           end
 
           integer_accessors.each do |attr_accessor|
-            it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return integer values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('event/find/success', record: :none) do
                 search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id partner_event_id).include?(key) }
                 event = MoxiworksPlatform::Event.find(symbolize_keys(search_attrs))
@@ -312,7 +312,7 @@ describe MoxiworksPlatform::Event do
           end
 
           float_accessors.each do |attr_accessor|
-            it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return float values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('event/find/success', record: :none) do
                 search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id partner_event_id).include?(key) }
                 event = MoxiworksPlatform::Event.find(symbolize_keys(search_attrs))
@@ -394,7 +394,7 @@ describe MoxiworksPlatform::Event do
           end
 
           integer_accessors.each do |attr_accessor|
-            it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return integer values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('event/search/success', record: :none) do
                 search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id event_name).include?(key) }
                 search_attrs[:date_start] = 1461178675
@@ -414,7 +414,7 @@ describe MoxiworksPlatform::Event do
           end
 
           float_accessors.each do |attr_accessor|
-            it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return float values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('event/search/success', record: :none) do
                 search_attrs = full_response.select {|key, value| %w(moxi_works_agent_id event_name).include?(key) }
                 results = MoxiworksPlatform::Event.search(symbolize_keys(search_attrs))
@@ -470,7 +470,7 @@ describe MoxiworksPlatform::Event do
           end
 
           integer_accessors.each do |attr_accessor|
-            it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return integer values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('event/update/success', record: :none) do
                 event = MoxiworksPlatform::Event.update(symbolize_keys(full_response))
                 expect(event.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_i)
@@ -479,7 +479,7 @@ describe MoxiworksPlatform::Event do
           end
 
           float_accessors.each do |attr_accessor|
-            it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return float values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('event/update/success', record: :none) do
                 event = MoxiworksPlatform::Event.update(symbolize_keys(full_response))
                 expect(event.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_f)
@@ -544,7 +544,7 @@ describe MoxiworksPlatform::Event do
           end
 
           integer_accessors.each do |attr_accessor|
-            it "should return integer values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return integer values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('event/create/success', record: :none) do
                 event = MoxiworksPlatform::Event.create(symbolize_keys(full_response))
                 expect(event.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_i)
@@ -553,7 +553,7 @@ describe MoxiworksPlatform::Event do
           end
 
           float_accessors.each do |attr_accessor|
-            it "should return float values for integer attribute #{attr_accessor} populated by Moxi Works Platform remote response" do
+            it "should return float values for integer attribute #{attr_accessor} populated by MoxiWorks Platform remote response" do
               VCR.use_cassette('event/create/success', record: :none) do
                 event = MoxiworksPlatform::Event.create(symbolize_keys(full_response))
                 expect(event.send(attr_accessor.to_s)).to eq(full_response[attr_accessor.to_s].to_f)

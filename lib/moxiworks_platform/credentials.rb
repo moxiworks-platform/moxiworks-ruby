@@ -1,7 +1,7 @@
 module MoxiworksPlatform
-  # = Moxi Works Platform Credentials
+  # = MoxiWorks Platform Credentials
   #
-  # A Singleton class used for authorization on the Moxi Works Platform
+  # A Singleton class used for authorization on the MoxiWorks Platform
   #
   class Credentials
 
@@ -15,7 +15,7 @@ module MoxiworksPlatform
 
       # @!attribute platform_identifier
       #
-      #   The Moxi Works Platform Identifier associated with the MoxiworksPlatform::Credentials instance
+      #   The MoxiWorks Platform Identifier associated with the MoxiworksPlatform::Credentials instance
       #
       #   This should be set when MoxiworksPlafform::Credentials is instantiated
       #
@@ -24,7 +24,7 @@ module MoxiworksPlatform
 
       # @!attribute platform_secret
       #
-      #   The Moxi Works Platform Secret associated with the MoxiworksPlatform::Credentials instance
+      #   The MoxiWorks Platform Secret associated with the MoxiworksPlatform::Credentials instance
       #
       #   This should be set when MoxiworksPlafform::Credentials is instantiated
       #
@@ -33,8 +33,8 @@ module MoxiworksPlatform
     end
 
 
-    # @param [String] platform_id Your provided Moxi Works Platform Identifier
-    # @param [String] platform_secret Your provided Moxi Works Platform Secret
+    # @param [String] platform_id Your provided MoxiWorks Platform Identifier
+    # @param [String] platform_secret Your provided MoxiWorks Platform Secret
     #
     # @return [MoxiWorksPlatform::Credentials]
     #
@@ -63,8 +63,8 @@ module MoxiworksPlatform
               platform_secret.empty?))
     end
 
-    # @param [String] platform_id Your provided Moxi Works Platform Identifier
-    # @param [String] platform_secret Your provided Moxi Works Platform Secret
+    # @param [String] platform_id Your provided MoxiWorks Platform Identifier
+    # @param [String] platform_secret Your provided MoxiWorks Platform Secret
     #
     def initialize(platform_identifier, platform_secret)
       return if MoxiworksPlatform::Credentials.instance
@@ -73,7 +73,7 @@ module MoxiworksPlatform
       MoxiworksPlatform::Credentials.instance = self
     end
 
-    # The Moxi Works Platform Identifier associated with the MoxiworksPlatform::Credentials instance
+    # The MoxiWorks Platform Identifier associated with the MoxiworksPlatform::Credentials instance
     #
     # This should be set when MoxiworksPlafform::Credentials is instantiated
     #
@@ -82,7 +82,7 @@ module MoxiworksPlatform
       MoxiworksPlatform::Credentials.platform_identifier
     end
 
-    # The Moxi Works Platform Secret associated with the MoxiworksPlatform::Credentials instance
+    # The MoxiWorks Platform Secret associated with the MoxiworksPlatform::Credentials instance
     #
     # This should be set when MoxiworksPlafform::Credentials is instantiated
     #

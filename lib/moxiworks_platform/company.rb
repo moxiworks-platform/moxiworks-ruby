@@ -1,11 +1,11 @@
 module MoxiworksPlatform
-  # = Moxi Works Platform Company
+  # = MoxiWorks Platform Company
   class Company < MoxiworksPlatform::Resource
 
     # @!attribute moxi_works_company_id
-    #   moxi_works_company_id is the Moxi Works Platform ID of the company
+    #   moxi_works_company_id is the MoxiWorks Platform ID of the company
     #
-    #   @return [String] the Moxi Works Platform ID of the company
+    #   @return [String] the MoxiWorks Platform ID of the company
     attr_accessor :moxi_works_company_id
 
     # @!attribute name
@@ -20,9 +20,9 @@ module MoxiworksPlatform
     #   @return [Array] the partner data associated with this company
     attr_accessor :partners
 
-    # Find a Company by ID in Moxi Works Platform
+    # Find a Company by ID in MoxiWorks Platform
     # @param [Hash] opts named parameter Hash
-    # @option opts [String]  :moxi_works_company_id *REQUIRED* The Moxi Works Company ID
+    # @option opts [String]  :moxi_works_company_id *REQUIRED* The MoxiWorks Company ID
     #
     # @return [MoxiworksPlatform::Company]
     #
@@ -42,7 +42,7 @@ module MoxiworksPlatform
     end
 
 
-    # Show all my Companies in Moxi Works Platform
+    # Show all my Companies in MoxiWorks Platform
     #
     # @return [Array] containing MoxiworksPlatform::Companies objects
     #
