@@ -69,6 +69,11 @@ module MoxiworksPlatform
 
     # @!attribute company_listing_attributes
     #
+    # @return [String] the community the property is located in.
+    attr_accessor :community
+
+    # @!attribute company_listing_attributes
+    #
     # @return [Array] company specific attributes
     attr_accessor :company_listing_attributes
 
@@ -152,6 +157,11 @@ module MoxiworksPlatform
     # @return [String] MLS the listing is listed with
     attr_accessor :list_office_aor
 
+    # @!attribute list_office_aor
+    #
+    # @return [String] MLS area the listing is listed with
+    attr_accessor :list_office_aor_area
+
     # @!attribute listing_contract_date
     #
     # @return [String] string representing date in format 'MM/DD/YYYY'
@@ -166,6 +176,13 @@ module MoxiworksPlatform
     #
     # @return [String] the URL of the listing
     attr_accessor :listing_url
+
+    # @!attribute images_last_modified
+    #
+    # @return [Integer] timestamp representing when the images associated with
+    #       the listing were last updated
+    #
+    attr_accessor :images_last_modified
 
     # @!attribute listing_images
     #
@@ -323,7 +340,7 @@ module MoxiworksPlatform
     # @!attribute title
     #
     # @return [String] Title of the listing
-    attr_accessor :title
+    attr_accessor :public_title
 
 
     # Find a listing on the  Moxi Works Platform

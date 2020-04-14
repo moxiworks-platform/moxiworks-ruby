@@ -8,4 +8,6 @@
 /spec/reports/
 /tmp/
 /old/
-.idea
+/.idea/
+.DS_Store
+
