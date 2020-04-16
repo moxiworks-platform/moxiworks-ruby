@@ -1,5 +1,13 @@
 module  MoxiworksPlatform
   class ActionLog < MoxiworksPlatform::Resource
+    # @!attribute moxi_works_action_log_id
+    #
+    # moxi_works_action_log_id is the unique MoxiWorks Platform ID an ActionLog entry
+    # This will be an RFC 4122 compliant UUID.
+    #
+    #    @return [String] the MoxiWorks Platform ID of the ActionLog entry
+    attr_accessor :moxi_works_action_log_id
+
     # @!attribute agent_uuid
     #   agent_uuid is the MoxiWorks Platform ID of the agent which an ActionLog entry is
     #   or is to be associated with. This will be an RFC 4122 compliant UUID.
@@ -47,6 +55,32 @@ module  MoxiworksPlatform
     #   @return [String]
     attr_accessor :body
 
+    # @!attribute agent_action
+    #the agent_action type (if this is an agent_action ActionLog entry)
+    #a valid agent_action is one of:  'inperson' 'mail' 'email' 'social' 'text' 'voicemail' 'phone' 'other'
+    #  @return [String]
+    attr_accessor :agent_action
+
+    # @!attribute agent_action_address
+    # the street address associated with the location of an agent_action entry (if applicable)
+    attr_accessor :agent_action_address
+
+    # @!attribute agent_action_address2
+    # additional street address information associated with the location of an agent_action entry (if applicable)
+    attr_accessor :agent_action_address2
+
+    # @!attribute agent_action_city
+    # the city associated with the location of an agent_action entry (if applicable)
+    attr_accessor :agent_action_city
+
+    # @!attribute agent_action_state
+    # the state associated with the location of an agent_action entry (if applicable)
+    attr_accessor :agent_action_state
+
+    # @!attribute agent_action_zip
+    # the postal code associated with the location of an agent_action entry (if applicable)
+    attr_accessor :agent_action_zip
+
     # @!attribute actions
     #
     # @return [Array] array containing any ActionLog entries found by search request
@@ -64,6 +98,12 @@ module  MoxiworksPlatform
     # @option opts [String]  :partner_contact_id *REQUIRED* Your system's unique ID for the contact for whom the ActionLog entry is being created.
     # @option opts [String]  :title *REQUIRED*  A brief title for this ActionLog entry (85 characters or less)
     # @option opts [String]  :body *REQUIRED*  The body of this ActionLog entry (255 characters or less)
+    # @option opts [String ] :agent_action  if creating an agent_action, set agent_action to one of 'inperson' 'mail' 'email' 'social' 'text' 'voicemail' 'phone' 'other'
+    # @option opts [String ] :agent_action_address  if creating an agent_action that has a location component ('inperson' 'other') use this field to denote the street address of the agent_action
+    # @option opts [String ] :agent_action_address2  if creating an agent_action that has a location component ('inperson' 'other') use this field to denote additional street address info of the agent_action
+    # @option opts [String ] :agent_action_city  if creating an agent_action that has a location component ('inperson' 'other') use this field to denote the city or locale of the agent_action
+    # @option opts [String ] :agent_action_state  if creating an agent_action that has a location component ('inperson' 'other') use this field to denote the state or province of the agent_action
+    # @option opts [String ] :agent_action_zip  if creating an agent_action that has a location component ('inperson' 'other') use this field to denote the postal code of the agent_action
     #
     # @return [MoxiworksPlatform::ActionLog]
     #
