@@ -325,7 +325,7 @@ module MoxiworksPlatform
     # @option opts [String]  :moxi_works_listing_id *REQUIRED* The Moxi Works Listing ID for the listing
     # @option opts [String]  :moxi_works_company_id *REQUIRED* The Moxi Works Company ID For the search (use Company.search to determine available moxi_works_company_id)
     #
-    # @return [MoxiworksPlatform::Listing]
+    # @return [MoxiworksPlatform::SoldListing]
     #
     # @raise ::MoxiworksPlatform::Exception::ArgumentError if required
     #     named parameters aren't included
@@ -376,7 +376,7 @@ module MoxiworksPlatform
     # @return [Hash] with the format:
     #   {
     #     last_page: [Boolean],
-    #     listings:  [Array] containing MoxiworkPlatform::Listing objects
+    #     listings:  [Array] containing MoxiworkPlatform::SoldListing objects
     #   }
     #
     #
@@ -384,13 +384,13 @@ module MoxiworksPlatform
     #     named parameters aren't included
     #
     # @example
-    #     results = MoxiworksPlatform::Listing.search(
+    #     results = MoxiworksPlatform::SoldListing.search(
     #     moxi_works_company_id: 'the_company',
     #     sold_since:  Time.now.to_i - 1296000,
     #     moxi_works_agent_id: 'abc123'
     #     )
     #
-    #     next_page = MoxiworksPlatform::Listing.search(
+    #     next_page = MoxiworksPlatform::SoldListing.search(
     #     moxi_works_company_id: 'the_company',
     #     sold_since:  Time.now.to_i - 1296000,
     #     moxi_works_agent_id: 'abc123',
@@ -402,7 +402,7 @@ module MoxiworksPlatform
     #    you can have all listings processed in a single call
     #
     # @example
-    #     MoxiworksPlatform::Listing.search(
+    #     MoxiworksPlatform::SoldListing.search(
     #        moxi_works_company_id: 'the_company',
     #        sold_since: Time.now.to_i - 131297832) { |page_of_listings| puts page_of_listings.count }
     #
@@ -436,7 +436,7 @@ module MoxiworksPlatform
         json = JSON.parse(response)
         json = self.underscore_attribute_names json
         json['listings'].each do |r|
-          results << MoxiworksPlatform::Listing.new(r) unless r.nil? or r.empty?
+          results << MoxiworksPlatform::SoldListing.new(r) unless r.nil? or r.empty?
         end
         json['listings'] = results
       end
@@ -445,7 +445,7 @@ module MoxiworksPlatform
         unless json['final_page']
           last_listing = json['listings'].last
           last_listing_id = (last_listing.nil?) ? nil : last_listing.moxi_works_listing_id
-          MoxiworksPlatform::Listing.search(opts.merge(last_moxi_works_listing_id: last_listing_id), &block) if last_listing_id
+          MoxiworksPlatform::SoldListing.search(opts.merge(last_moxi_works_listing_id: last_listing_id), &block) if last_listing_id
         end
       end
       json
