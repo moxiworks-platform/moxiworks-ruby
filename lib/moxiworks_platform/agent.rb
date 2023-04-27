@@ -94,12 +94,12 @@ module MoxiworksPlatform
     attr_accessor :alternate_offices
 
 
-     # @!attribute string the id office used by the company of the agent
+    # @!attribute string the id office used by the company of the agent
     #
     # @return [String] the internal of the office which the Agent is associated used by the company
     attr_accessor :client_office_id
 
-     # @!attribute string the id of the company used by the company of the agent
+    # @!attribute string the id of the company used by the company of the agent
     #
     # @return [String] the UUID of the office which the Agent is associated
     attr_accessor :client_company_id
@@ -241,6 +241,12 @@ module MoxiworksPlatform
     #
     # @return [String] whether the agent has access to MoxiWorks Engage
     attr_accessor :has_engage_access
+    
+    # @!attribute access_level
+    #
+    # @return [String] The access level of the agent. 
+    # If include_access_level was passed as true, this can return one of the possible access levels: company-admin, manager, office-admin, office-owner, region-admin, user.
+    attr_accessor :access_level
 
     # @!attribute available_mls
     #
