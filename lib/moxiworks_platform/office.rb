@@ -6,6 +6,11 @@ module MoxiworksPlatform
     #
     # @return [String] the UUID of the office
     attr_accessor :moxi_works_office_id
+    
+    # @!attribute client_office_id
+    #
+    # @return [String] This is the ID of the office utilized by the company.
+    attr_accessor :client_office_id
 
     # @!attribute image_url
     #
