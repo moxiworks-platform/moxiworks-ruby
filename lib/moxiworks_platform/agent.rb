@@ -237,6 +237,11 @@ module MoxiworksPlatform
     # objects.
     attr_accessor :uuid
 
+    # @!attribute website_base_url
+    #
+    # @return [String] the agent's website base url
+    attr_accessor :website_base_url
+
     # @!attribute has_engage_access
     #
     # @return [String] whether the agent has access to MoxiWorks Engage
