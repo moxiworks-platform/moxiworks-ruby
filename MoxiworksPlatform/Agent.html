@@ -6,15 +6,15 @@
 <title>
   Class: MoxiworksPlatform::Agent
   
-    &mdash; Documentation by YARD 0.9.16
+    &mdash; Documentation by YARD 0.9.25
   
 </title>
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "MoxiworksPlatform::Agent";
   relpath = '../';
 </script>
@@ -118,6 +118,35 @@
 
   <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
   <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#access_level-instance_method" title="#access_level (instance method)">#<strong>access_level</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>If include_access_level was passed as true, this can return one of the
+possible access levels: company-admin, manager, office-admin, office-owner,
+region-admin, user.</p>
+</div></span>
+  
+</li>
+
     
       <li class="public ">
   <span class="summary_signature">
@@ -1501,7 +1530,7 @@ contact is or is to be associated with.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#string+the+id+of+the+company+used+by+the+company+of+the+agent-instance_method" title="#string the id of the company used by the company of the agent (instance method)">#<strong>string the id of the company used by the company of the agent</strong>(theidofthecompanyusedbythecompanyoftheagent)  &#x21d2; Object </a>
+      <a href="#string+the+id+of+the+company+used+by+the+company+of+the+agent-instance_method" title="#string the id of the company used by the company of the agent (instance method)">#<strong>string the id of the company used by the company of the agent</strong>(theidofthecompanyusedbythecompanyoftheagent)  &#x21d2; String </a>
     
 
     
@@ -1518,7 +1547,9 @@ contact is or is to be associated with.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>The UUID of the office which the Agent is associated.</p>
+</div></span>
   
 </li>
 
@@ -1526,7 +1557,7 @@ contact is or is to be associated with.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#string+the+id+office+used+by+the+company+of+the+agent-instance_method" title="#string the id office used by the company of the agent (instance method)">#<strong>string the id office used by the company of the agent</strong>(theidofficeusedbythecompanyoftheagent)  &#x21d2; Object </a>
+      <a href="#string+the+id+office+used+by+the+company+of+the+agent-instance_method" title="#string the id office used by the company of the agent (instance method)">#<strong>string the id office used by the company of the agent</strong>(theidofficeusedbythecompanyoftheagent)  &#x21d2; String </a>
     
 
     
@@ -1543,7 +1574,10 @@ contact is or is to be associated with.</p>
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>The internal of the office which the Agent is associated used by the
+company.</p>
+</div></span>
   
 </li>
 
@@ -1711,6 +1745,33 @@ objects.</p>
 </li>
 
     
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#website_base_url-instance_method" title="#website_base_url (instance method)">#<strong>website_base_url</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The agent&#39;s website base url.</p>
+</div></span>
+  
+</li>
+
+    
   </ul>
 
 
@@ -1834,9 +1895,72 @@ objects.</p>
     <h2>Instance Attribute Details</h2>
     
       
-      <span id="agent_id=-instance_method"></span>
+      <span id="access_level=-instance_method"></span>
       <div class="method_details first">
-  <h3 class="signature first" id="agent_id-instance_method">
+  <h3 class="signature first" id="access_level-instance_method">
+  
+    #<strong>access_level</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>If include_access_level was passed as true, this can return one of the
+possible access levels: company-admin, manager, office-admin, office-owner,
+region-admin, user.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The access level of the agent.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+254
+255
+256</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 254</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_access_level'>access_level</span>
+  <span class='ivar'>@access_level</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="agent_id=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="agent_id-instance_method">
   
     #<strong>agent_id</strong>  &#x21d2; <tt>String</tt> 
   
@@ -1847,7 +1971,7 @@ objects.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the UUID of the Agent</p>
+<p>Returns the UUID of the Agent.</p>
 
 
   </div>
@@ -1908,7 +2032,7 @@ objects.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns alternate phone number for agent</p>
+<p>Returns alternate phone number for agent.</p>
 
 
   </div>
@@ -1969,7 +2093,7 @@ objects.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns any alternate offices the agent is associated with</p>
+<p>Returns any alternate offices the agent is associated with.</p>
 
 
   </div>
@@ -2030,7 +2154,7 @@ objects.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns alternate offices for this agent</p>
+<p>Returns alternate offices for this agent.</p>
 
 
   </div>
@@ -2062,12 +2186,12 @@ objects.</p>
       <pre class="lines">
 
 
-254
-255
-256</pre>
+265
+266
+267</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 254</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 265</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_altnernate_offices'>altnernate_offices</span>
   <span class='ivar'>@altnernate_offices</span>
@@ -2091,7 +2215,7 @@ objects.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns available MLSs for this agent</p>
+<p>Returns available MLSs for this agent.</p>
 
 
   </div>
@@ -2123,12 +2247,12 @@ objects.</p>
       <pre class="lines">
 
 
-248
-249
-250</pre>
+259
+260
+261</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 248</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 259</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_available_mls'>available_mls</span>
   <span class='ivar'>@available_mls</span>
@@ -2152,7 +2276,7 @@ objects.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns buyer commission rate for this agent</p>
+<p>Returns buyer commission rate for this agent.</p>
 
 
   </div>
@@ -2213,7 +2337,7 @@ objects.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the id of the agent used by the company of the agent</p>
+<p>Returns the id of the agent used by the company of the agent.</p>
 
 
   </div>
@@ -2274,7 +2398,7 @@ objects.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the UUID of the office which the Agent is associated</p>
+<p>Returns the UUID of the office which the Agent is associated.</p>
 
 
   </div>
@@ -2336,7 +2460,7 @@ objects.</p>
   <div class="discussion">
     
 <p>Returns the internal of the office which the Agent is associated used by
-the company</p>
+the company.</p>
 
 
   </div>
@@ -2398,7 +2522,7 @@ company</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the company id of the agent</p>
+<p>Returns the company id of the agent.</p>
 
 
   </div>
@@ -2459,7 +2583,7 @@ company</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s facebook page</p>
+<p>Returns the agent&#39;s facebook page.</p>
 
 
   </div>
@@ -2520,7 +2644,7 @@ company</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s fax phone number</p>
+<p>Returns the agent&#39;s fax phone number.</p>
 
 
   </div>
@@ -2581,7 +2705,7 @@ company</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s first name</p>
+<p>Returns the agent&#39;s first name.</p>
 
 
   </div>
@@ -2642,7 +2766,7 @@ company</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns GCI Goal for this agent</p>
+<p>Returns GCI Goal for this agent.</p>
 
 
   </div>
@@ -2703,7 +2827,7 @@ company</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s google plus acount</p>
+<p>Returns the agent&#39;s google plus acount.</p>
 
 
   </div>
@@ -2764,7 +2888,7 @@ company</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns whether the agent has access to MoxiWorks Engage</p>
+<p>Returns whether the agent has access to MoxiWorks Engage.</p>
 
 
   </div>
@@ -2796,12 +2920,12 @@ company</p>
       <pre class="lines">
 
 
-243
-244
-245</pre>
+248
+249
+250</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 243</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 248</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_has_engage_access'>has_engage_access</span>
   <span class='ivar'>@has_engage_access</span>
@@ -2825,7 +2949,7 @@ company</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s home page url</p>
+<p>Returns the agent&#39;s home page url.</p>
 
 
   </div>
@@ -2886,7 +3010,7 @@ company</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s last name</p>
+<p>Returns the agent&#39;s last name.</p>
 
 
   </div>
@@ -2947,7 +3071,7 @@ company</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the lead routing email address of the agent</p>
+<p>Returns the lead routing email address of the agent.</p>
 
 
   </div>
@@ -3008,7 +3132,7 @@ company</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns license number for the listing agent</p>
+<p>Returns license number for the listing agent.</p>
 
 
   </div>
@@ -3069,7 +3193,7 @@ company</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s main phone number</p>
+<p>Returns the agent&#39;s main phone number.</p>
 
 
   </div>
@@ -3131,7 +3255,7 @@ company</p>
   <div class="discussion">
     
 <p>Returns This is the standard abbreviation of the primary MLS utilized by
-the agent</p>
+the agent.</p>
 
 
   </div>
@@ -3192,7 +3316,7 @@ the agent</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns MLS ID for the listing agent</p>
+<p>Returns MLS ID for the listing agent.</p>
 
 
   </div>
@@ -3253,7 +3377,7 @@ the agent</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the name of the listing Agent&#39;s mls</p>
+<p>Returns the name of the listing Agent&#39;s mls.</p>
 
 
   </div>
@@ -3314,7 +3438,7 @@ the agent</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s fax phone number</p>
+<p>Returns the agent&#39;s fax phone number.</p>
 
 
   </div>
@@ -3439,7 +3563,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the UUID of the office which the Agent is associated</p>
+<p>Returns the UUID of the office which the Agent is associated.</p>
 
 
   </div>
@@ -3500,7 +3624,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s full name</p>
+<p>Returns the agent&#39;s full name.</p>
 
 
   </div>
@@ -3561,7 +3685,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s office address, city</p>
+<p>Returns the agent&#39;s office address, city.</p>
 
 
   </div>
@@ -3622,7 +3746,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s office address, state</p>
+<p>Returns the agent&#39;s office address, state.</p>
 
 
   </div>
@@ -3683,7 +3807,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s office address, street and number</p>
+<p>Returns the agent&#39;s office address, street and number.</p>
 
 
   </div>
@@ -3744,7 +3868,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s office address, suite or office number</p>
+<p>Returns the agent&#39;s office address, suite or office number.</p>
 
 
   </div>
@@ -3805,7 +3929,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s office address, zip code</p>
+<p>Returns the agent&#39;s office address, zip code.</p>
 
 
   </div>
@@ -3866,7 +3990,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the office ID of the agent</p>
+<p>Returns the office ID of the agent.</p>
 
 
   </div>
@@ -3927,7 +4051,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s office_phone number</p>
+<p>Returns the agent&#39;s office_phone number.</p>
 
 
   </div>
@@ -3988,7 +4112,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s primary email address</p>
+<p>Returns the agent&#39;s primary email address.</p>
 
 
   </div>
@@ -4049,7 +4173,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns url to a full size image of the agent</p>
+<p>Returns url to a full size image of the agent.</p>
 
 
   </div>
@@ -4110,7 +4234,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns url to a thumb size image of the agent</p>
+<p>Returns url to a thumb size image of the agent.</p>
 
 
   </div>
@@ -4171,7 +4295,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns region for this agent</p>
+<p>Returns region for this agent.</p>
 
 
   </div>
@@ -4203,12 +4327,12 @@ contact is or is to be associated with.</p>
       <pre class="lines">
 
 
-266
-267
-268</pre>
+277
+278
+279</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 266</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 277</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_region'>region</span>
   <span class='ivar'>@region</span>
@@ -4232,7 +4356,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s secondary email address</p>
+<p>Returns the agent&#39;s secondary email address.</p>
 
 
   </div>
@@ -4293,7 +4417,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns seller commission rate for this agent</p>
+<p>Returns seller commission rate for this agent.</p>
 
 
   </div>
@@ -4354,7 +4478,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the id of the agent used by the company of the agent</p>
+<p>Returns the id of the agent used by the company of the agent.</p>
 
 
   </div>
@@ -4411,7 +4535,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the UUID of the Agent</p>
+<p>Returns the UUID of the Agent.</p>
 
 
   </div>
@@ -4468,7 +4592,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns alternate phone number for agent</p>
+<p>Returns alternate phone number for agent.</p>
 
 
   </div>
@@ -4525,7 +4649,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns any alternate offices the agent is associated with</p>
+<p>Returns any alternate offices the agent is associated with.</p>
 
 
   </div>
@@ -4582,7 +4706,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the buyer commission rate of the Agent</p>
+<p>Returns the buyer commission rate of the Agent.</p>
 
 
   </div>
@@ -4639,7 +4763,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the company id of the agent</p>
+<p>Returns the company id of the agent.</p>
 
 
   </div>
@@ -4696,7 +4820,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the GCI goal of the Agent</p>
+<p>Returns the GCI goal of the Agent.</p>
 
 
   </div>
@@ -4753,7 +4877,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the lead routing email address of the agent</p>
+<p>Returns the lead routing email address of the agent.</p>
 
 
   </div>
@@ -4810,7 +4934,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the office ID of the agent</p>
+<p>Returns the office ID of the agent.</p>
 
 
   </div>
@@ -4867,7 +4991,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the seller commission rate of the Agent</p>
+<p>Returns the seller commission rate of the Agent.</p>
 
 
   </div>
@@ -4915,24 +5039,53 @@ contact is or is to be associated with.</p>
       <div class="method_details ">
   <h3 class="signature " id="string the id of the company used by the company of the agent-instance_method">
   
-    #<strong>string the id of the company used by the company of the agent</strong>(theidofthecompanyusedbythecompanyoftheagent)  &#x21d2; <tt>Object</tt> 
+    #<strong>string the id of the company used by the company of the agent</strong>(theidofthecompanyusedbythecompanyoftheagent)  &#x21d2; <tt>String</tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the UUID of the office which the Agent is associated.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the UUID of the office which the Agent is associated</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-</pre>
+105</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 102</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 105</span>
 
-</pre>
+<span class='id identifier rubyid_attr_accessor'>attr_accessor</span> <span class='symbol'>:client_company_id</span></pre>
     </td>
   </tr>
 </table>
@@ -4943,24 +5096,55 @@ contact is or is to be associated with.</p>
       <div class="method_details ">
   <h3 class="signature " id="string the id office used by the company of the agent-instance_method">
   
-    #<strong>string the id office used by the company of the agent</strong>(theidofficeusedbythecompanyoftheagent)  &#x21d2; <tt>Object</tt> 
+    #<strong>string the id office used by the company of the agent</strong>(theidofficeusedbythecompanyoftheagent)  &#x21d2; <tt>String</tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the internal of the office which the Agent is associated used by
+the company.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the internal of the office which the Agent is associated used by the
+company</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-</pre>
+100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 100</span>
 
-</pre>
+<span class='id identifier rubyid_attr_accessor'>attr_accessor</span> <span class='symbol'>:client_office_id</span></pre>
     </td>
   </tr>
 </table>
@@ -4980,7 +5164,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the title of the Agent</p>
+<p>Returns the title of the Agent.</p>
 
 
   </div>
@@ -5037,7 +5221,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the twitter handle of the agent</p>
+<p>Returns the twitter handle of the agent.</p>
 
 
   </div>
@@ -5094,7 +5278,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the UUID of the Agent</p>
+<p>Returns the UUID of the Agent.</p>
 
 
   </div>
@@ -5151,7 +5335,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns any business related titles associated with the agent</p>
+<p>Returns any business related titles associated with the agent.</p>
 
 
   </div>
@@ -5212,7 +5396,7 @@ contact is or is to be associated with.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the agent&#39;s twitter handle</p>
+<p>Returns the agent&#39;s twitter handle.</p>
 
 
   </div>
@@ -5315,6 +5499,67 @@ objects.</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_uuid'>uuid</span>
   <span class='ivar'>@uuid</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="website_base_url=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="website_base_url-instance_method">
+  
+    #<strong>website_base_url</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the agent&#39;s website base url.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the agent&#39;s website base url</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+243
+244
+245</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 243</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_website_base_url'>website_base_url</span>
+  <span class='ivar'>@website_base_url</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -5445,17 +5690,17 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-292
-293
-294
-295
-296
-297
-298
-299</pre>
+303
+304
+305
+306
+307
+308
+309
+310</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 292</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 303</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_agent_identifier'>agent_identifier</span> <span class='op'>=</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:agent_uuid</span><span class='rbracket'>]</span> <span class='kw'>unless</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:agent_uuid</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='id identifier rubyid_opts'>opts</span><span class='lbracket'>[</span><span class='symbol'>:agent_uuid</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span><span class='rparen'>)</span>
@@ -5624,17 +5869,6 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-341
-342
-343
-344
-345
-346
-347
-348
-349
-350
-351
 352
 353
 354
@@ -5650,10 +5884,21 @@ aren&#39;t included</p>
 364
 365
 366
-367</pre>
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 341</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 352</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_search'>search</span><span class='lparen'>(</span><span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_url'>url</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Config.html" title="MoxiworksPlatform::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_url'><span class='object_link'><a href="Config.html#url-class_method" title="MoxiworksPlatform::Config.url (method)">url</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/agents</span><span class='tstring_end'>&quot;</span></span>
@@ -5724,20 +5969,20 @@ aren&#39;t included</p>
       <pre class="lines">
 
 
-301
-302
-303
-304
-305
-306
-307
-308
-309
-310
-311</pre>
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 301</span>
+      <pre class="code"><span class="info file"># File 'lib/moxiworks_platform/agent.rb', line 312</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_opts'>opts</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_url'>url</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_url'>url</span> <span class='op'>||=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="../MoxiworksPlatform.html" title="MoxiworksPlatform (module)">MoxiworksPlatform</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Config.html" title="MoxiworksPlatform::Config (class)">Config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_url'><span class='object_link'><a href="Config.html#url-class_method" title="MoxiworksPlatform::Config.url (method)">url</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>/api/agents</span><span class='tstring_end'>&quot;</span></span>
@@ -5760,9 +6005,9 @@ aren&#39;t included</p>
 </div>
 
       <div id="footer">
-  Generated on Thu May  2 10:17:51 2019 by
+  Generated on Tue Jul 11 13:12:43 2023 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.16 (ruby-2.5.1).
+  0.9.25 (ruby-2.5.7).
 </div>
 
     </div>
