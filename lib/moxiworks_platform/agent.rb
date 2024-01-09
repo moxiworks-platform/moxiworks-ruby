@@ -27,6 +27,10 @@ module MoxiworksPlatform
     # @return [String] the UUID of the Agent
     attr_accessor :agent_id
 
+    # @!attribute string agent_uuid
+    #
+    # @return [String] the UUID of the Agent, equals :uuid attribute, needed for mapping Agent Index response with timestamps_only: true
+    attr_accessor :agent_uuid
 
     # @!attribute string office_id
     #
@@ -246,10 +250,10 @@ module MoxiworksPlatform
     #
     # @return [String] whether the agent has access to MoxiWorks Engage
     attr_accessor :has_engage_access
-    
+
     # @!attribute access_level
     #
-    # @return [String] The access level of the agent. 
+    # @return [String] The access level of the agent.
     # If include_access_level was passed as true, this can return one of the possible access levels: company-admin, manager, office-admin, office-owner, region-admin, user.
     attr_accessor :access_level
 
